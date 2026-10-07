@@ -1,0 +1,62 @@
+{
+  "_readme": "Mỗi tin = 1 khối {...}. Thêm tin mới: sao chép khối '_template', đổi id/ngày/nội dung rồi đặt hidden:false. Tin mới nhất tự lên đầu theo 'date'.",
+  "items": [
+    {
+      "id": "2026-01-top1-annotation",
+      "date": "2026-01-20",
+      "category": "award",
+      "hidden": false,
+      "image": "award_top1_04",
+      "link": "https://www.brycen.co.jp/news/2026/260120-1/",
+      "facebook_post": "",
+      "title": {
+        "vi": "Brycen đạt Top 1 thị trường annotation Nhật Bản (số liệu năm 2024)",
+        "en": "Brycen ranked #1 in Japan's annotation market (FY2024 results)",
+        "ja": "ブライセン、2024年度実績でアノテーション市場国内1位を獲得"
+      },
+      "summary": {
+        "vi": "Theo khảo sát của Fuji Chimera Research Institute, Brycen đứng đầu thị trường dịch vụ annotation tại Nhật Bản.",
+        "en": "According to Fuji Chimera Research Institute, Brycen leads Japan's annotation services market.",
+        "ja": "富士キメラ総研の調査で、ブライセンがアノテーションサービス市場の国内1位となりました。"
+      }
+    },
+    {
+      "id": "2026-09-us-driving-dataset",
+      "date": "2026-09-25",
+      "category": "announcement",
+      "hidden": false,
+      "image": "background_services_3d",
+      "link": "https://www.brycen.co.jp/news/2026/260925-3/",
+      "facebook_post": "",
+      "title": {
+        "vi": "Brycen mở rộng bộ dữ liệu lái xe thực tế tại Mỹ: 17 bang, 15.000 km",
+        "en": "Brycen expands its US real-driving dataset to 17 states and 15,000 km",
+        "ja": "ブライセン、米国実走行データセットを拡充 全17州・15,000kmに"
+      },
+      "summary": {
+        "vi": "Bổ sung dữ liệu 6 bang miền Đông, nâng vùng thu thập lên 17 bang. (Nguồn: Brycen Nhật Bản – cần xác nhận nội dung phù hợp để đăng.)",
+        "en": "Six East Coast states added, bringing coverage to 17 states. (Source: Brycen Japan — confirm it is appropriate to publish.)",
+        "ja": "東海岸6州を追加し、収録エリアが全17州に。（出典：ブライセン日本サイト／掲載可否を要確認）"
+      }
+    },
+    {
+      "id": "_template",
+      "date": "2026-01-01",
+      "category": "announcement",
+      "hidden": true,
+      "image": "background_main",
+      "link": "",
+      "facebook_post": "",
+      "title": {
+        "vi": "Tiêu đề tin",
+        "en": "News title",
+        "ja": "ニュースのタイトル"
+      },
+      "summary": {
+        "vi": "Mô tả ngắn 1–2 câu.",
+        "en": "1–2 sentence summary.",
+        "ja": "1〜2文の概要。"
+      }
+    }
+  ]
+}

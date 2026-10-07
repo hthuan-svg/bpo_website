@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const locales = ['vi', 'en', 'ja'];
+const ignoredContentRoots = ['content/_backup_r2', 'revision2', 'docs/reference'];
 const placeholderMarkers = ['[CẦN BỔ SUNG]', '[TO ADD]', '【要追記】'];
 const newsCategories = ['announcement', 'event', 'award', 'project', 'recruit', 'media'];
 const slotReferenceKeys = new Set(['image', 'images', 'icon', 'customers', 'badges']);
@@ -21,6 +22,10 @@ function warn(target, message) {
 }
 
 async function readJson(relativePath) {
+  const normalized = relativePath.split('\\').join('/');
+  const ignored = ignoredContentRoots.some((item) => normalized === item || normalized.startsWith(`${item}/`));
+  if (ignored) return undefined;
+
   const target = resolve(root, relativePath);
   try {
     const text = await readFile(target, 'utf8');
@@ -165,6 +170,9 @@ async function listFiles(directory, predicate = () => true) {
   for (const entry of entries) {
     if (entry.name === '.git' || entry.name === 'node_modules') continue;
     const fullPath = resolve(directory, entry.name);
+    const relativePath = relative(root, fullPath).split(sep).join('/');
+    const isIgnored = ignoredContentRoots.some((item) => relativePath === item || relativePath.startsWith(`${item}/`));
+    if (isIgnored) continue;
     if (entry.isDirectory()) results.push(...await listFiles(fullPath, predicate));
     else if (entry.isFile() && predicate(entry.name)) results.push(fullPath);
   }

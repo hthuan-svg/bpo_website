@@ -1,2 +1,14 @@
-# Công cụ quản trị chỉ chạy cục bộ; không được đưa lên bản phát hành website.
+# Công cụ quản trị và tài liệu hỗ trợ chỉ chạy cục bộ; không được đưa lên bản phát hành website.
 admin/
+content/_backup_r2/
+revision2/
+docs/reference/
+tools/
+docs/
+AGENTS.md
+CLAUDE.md
+.github/
+.git/
+node_modules/
+assets/styleguide.html
+release/
