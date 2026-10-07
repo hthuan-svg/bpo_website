@@ -53,7 +53,7 @@ function sanitizedMarkup(markup) {
   return fragment;
 }
 
-function applyImage(element, slotName, images, language) {
+function applyImage(element, slotName, images, language, placeholderLabel = '') {
   const slot = images.slots?.[slotName];
   if (!slot) {
     console.warn(`Missing image slot "${slotName}".`);
@@ -61,11 +61,31 @@ function applyImage(element, slotName, images, language) {
   }
   element.src = slot.src;
   element.alt = slot.alt?.[language] ?? slot.alt?.vi ?? '';
+  if (slot.placeholder) {
+    element.classList.add('is-placeholder');
+    if (placeholderLabel) {
+      element.dataset.placeholderLabel = placeholderLabel;
+    }
+  }
   if (Number.isInteger(slot.width) && Number.isInteger(slot.height)) {
     element.width = slot.width;
     element.height = slot.height;
   }
   element.loading = 'lazy';
+}
+
+function resolveContextValue(path, context, item = null) {
+  if (typeof path === 'string' && item && path !== '.') {
+    const itemValue = findValue(item, path);
+    if (itemValue !== undefined) {
+      return itemValue;
+    }
+  }
+  const configValue = findValue(context.siteConfig, path);
+  if (configValue !== undefined) {
+    return configValue;
+  }
+  return context.t(path);
 }
 
 function applyBackground(element, slotName, images) {
@@ -130,6 +150,28 @@ function bindList(element, context) {
 
   items.forEach((item) => {
     const fragment = template.content.cloneNode(true);
+    fragment.querySelectorAll('[data-i18n]').forEach((node) => {
+      const value = context.t(node.dataset.i18n);
+      node.textContent = value === null || value === undefined ? '' : String(value);
+    });
+    fragment.querySelectorAll('[data-i18n-html]').forEach((node) => {
+      const value = context.t(node.dataset.i18nHtml);
+      node.replaceChildren(sanitizedMarkup(value === null || value === undefined ? '' : String(value)));
+    });
+    fragment.querySelectorAll('[data-i18n-attr]').forEach((node) => {
+      node.dataset.i18nAttr.split(',').forEach((binding) => {
+        const separator = binding.indexOf(':');
+        if (separator < 1) {
+          return;
+        }
+        const attribute = binding.slice(0, separator).trim();
+        const path = binding.slice(separator + 1).trim();
+        const value = context.t(path);
+        if (attribute && value !== null && value !== undefined) {
+          node.setAttribute(attribute, String(value));
+        }
+      });
+    });
     fragment.querySelectorAll('[data-field]').forEach((field) => {
       const value = field.dataset.field === '.' && typeof item === 'string'
         ? item
@@ -141,8 +183,12 @@ function bindList(element, context) {
         ? item
         : findValue(item, image.dataset.imgField);
       if (typeof slotName === 'string') {
-        applyImage(image, slotName, context.images, context.language);
+        applyImage(image, slotName, context.images, context.language, context.t('ui.image_placeholder'));
       }
+    });
+    fragment.querySelectorAll('[data-show-if]').forEach((node) => {
+      const value = resolveContextValue(node.dataset.showIf, context, item);
+      node.hidden = value === '' || value === null || value === undefined || value === false;
     });
     fragment.querySelectorAll('[data-link-field]').forEach((link) => {
       const value = findValue(item, link.dataset.linkField);
@@ -209,7 +255,7 @@ export function renderPage(context, root = document) {
   });
 
   root.querySelectorAll('[data-img]').forEach((element) => {
-    applyImage(element, element.dataset.img, context.images, context.language);
+    applyImage(element, element.dataset.img, context.images, context.language, context.t('ui.image_placeholder'));
   });
 
   root.querySelectorAll('[data-bg]').forEach((element) => {
@@ -221,7 +267,7 @@ export function renderPage(context, root = document) {
   });
 
   root.querySelectorAll('[data-show-if]').forEach((element) => {
-    const value = resolveConfigOrContent(element.dataset.showIf, context);
+    const value = resolveContextValue(element.dataset.showIf, context);
     element.hidden = value === '' || value === null || value === undefined || value === false;
   });
 }

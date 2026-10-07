@@ -39,6 +39,10 @@ function createImage(context, slotName, className = '') {
   const image = createElement('img', className);
   image.src = slot.src;
   image.alt = slot.alt?.[context.language] ?? slot.alt?.vi ?? '';
+  if (slot.placeholder) {
+    image.classList.add('is-placeholder');
+    image.dataset.placeholderLabel = context.t('ui.image_placeholder');
+  }
   if (Number.isInteger(slot.width) && Number.isInteger(slot.height)) {
     image.width = slot.width;
     image.height = slot.height;
@@ -209,12 +213,16 @@ function createAnnotationItem(context, item, dialog) {
     if (typeof slotName !== 'string') {
       return;
     }
-    const button = createElement('button', 'service-item__image-button');
-    button.type = 'button';
     const image = createImage(context, slotName, 'service-item__image');
     if (!image) {
       return;
     }
+    if (image.classList.contains('is-placeholder')) {
+      images.append(image);
+      return;
+    }
+    const button = createElement('button', 'service-item__image-button');
+    button.type = 'button';
     button.append(image);
     button.addEventListener('click', () => {
       const lightboxImage = dialog.querySelector('.services-lightbox__image');
@@ -231,6 +239,9 @@ function createAnnotationItem(context, item, dialog) {
 }
 
 function attachLightbox(button, image, dialog) {
+  if (image.classList.contains('is-placeholder')) {
+    return;
+  }
   button.type = 'button';
   button.addEventListener('click', () => {
     const lightboxImage = dialog.querySelector('.services-lightbox__image');
@@ -259,6 +270,10 @@ function createAnnotationRow(context, modality, type, index, dialog) {
   (Array.isArray(type.images) ? type.images : []).forEach((slotName) => {
     const image = createImage(context, slotName, 'annotation-row__image');
     if (!image) {
+      return;
+    }
+    if (image.classList.contains('is-placeholder')) {
+      gallery.append(image);
       return;
     }
 
@@ -576,26 +591,34 @@ function renderCollection(context, main) {
   const content = context.t('services.collection');
   const section = createElement('section', 'service-collection section-shell');
   const container = createElement('div', 'page-container');
-  container.append(createSectionHeading(
+
+  const heading = createSectionHeading(
     context,
     'services.collection.title',
     'services.collection.lead'
-  ));
+  );
+  const status = createElement('span', 'service-collection__status', context.t('services.collection.status'));
+  heading.append(status);
+  container.append(heading);
 
-  const items = createElement('div', 'collection-items');
-  (Array.isArray(content?.items) ? content.items : []).forEach((item) => {
-    items.append(createCollectionItem(context, item));
-  });
-  container.append(items);
+  const message = createElement('p', 'service-collection__message', context.t('services.collection.message'));
+  container.append(message);
 
-  const todo = content?.todo;
-  if (typeof todo === 'string') {
-    if (todo.startsWith('[') || todo.startsWith('【')) {
-      const callout = createElement('aside', 'service-collection__callout', todo);
-      callout.setAttribute('role', 'note');
-      container.append(callout);
+  const gallery = createElement('div', 'service-collection__gallery');
+  (Array.isArray(content?.gallery) ? content.gallery : []).forEach((item) => {
+    const frame = createElement('figure', 'service-collection__frame');
+    const image = createImage(context, item.image, 'service-collection__image');
+    if (image) {
+      frame.append(image);
     }
-  }
+    if (typeof item.caption === 'string' && item.caption.trim()) {
+      const caption = createElement('figcaption', 'service-collection__caption', item.caption);
+      frame.append(caption);
+    }
+    gallery.append(frame);
+  });
+  container.append(gallery);
+
   section.append(container);
   main.append(section, createContactCta(context));
 }
