@@ -72,7 +72,12 @@ function headerMarkup(currentPage) {
     <header class="site-header">
       <div class="site-header__inner">
         <a class="site-header__brand" href="index.html" data-i18n-attr="aria-label:ui.nav.home">
-          <img class="site-header__logo" data-img="company_logo">
+          <img class="site-header__logo" data-img="company_logo_mark">
+          <span class="site-header__brand-mark" data-i18n="ui.brand.dept_short"></span>
+          <span class="site-header__brand-copy">
+            <span class="site-header__brand-dept" data-i18n="ui.brand.dept_full"></span>
+            <span class="site-header__brand-company" data-i18n="ui.brand.company"></span>
+          </span>
         </a>
         <nav class="site-nav" id="primary-navigation" data-i18n-attr="aria-label:ui.tabs_label" inert>
           ${navigationMarkup(currentPage)}

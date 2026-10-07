@@ -1,0 +1,45 @@
+{
+  "_readme": "Cấu hình chung. Để trống ('') = tự động ẩn mục đó trên web. Mạng xã hội hỗ trợ: facebook, youtube, linkedin, instagram, zalo.",
+  "siteName": "BRYCEN VIETNAM – BPO",
+  "defaultLang": "vi",
+  "languages": [
+    "vi",
+    "en",
+    "ja"
+  ],
+  "parentCompanySite": "https://www.brycen.co.jp/",
+  "social": {
+    "facebook": "",
+    "youtube": "",
+    "linkedin": "",
+    "instagram": "",
+    "zalo": ""
+  },
+  "facebookPagePlugin": {
+    "enabled": false,
+    "pageUrl": "",
+    "height": 600
+  },
+  "contact": {
+    "email": "",
+    "phone": "",
+    "address": {
+      "vi": "",
+      "en": "",
+      "ja": ""
+    },
+    "mapEmbedUrl": "",
+    "formUrl": ""
+  },
+  "analytics": {
+    "googleAnalyticsId": ""
+  },
+  "layout": {
+    "annotationRows": "image-left",
+    "_annotationRowsOptions": "image-left | zigzag"
+  },
+  "backToTop": {
+    "enabled": true,
+    "showAfterPx": 400
+  }
+}

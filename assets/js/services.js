@@ -64,6 +64,61 @@ function createSectionHeading(context, titleKey, leadKey, level = 'h1') {
   return header;
 }
 
+function createServiceNavigation(context, page) {
+  const isAnnotation = page === 'services-annotation';
+  const isCollection = page === 'services-collection';
+  const breadcrumbs = [
+    { key: 'ui.nav.home', href: 'index.html' },
+    { key: 'ui.nav.services', href: page === 'services' ? undefined : 'services.html' }
+  ];
+  if (isAnnotation || isCollection) {
+    breadcrumbs.push({
+      key: isAnnotation ? 'ui.nav.services_annotation' : 'ui.nav.services_collection'
+    });
+  }
+
+  const wrapper = createElement('div', 'service-page-navigation page-container');
+  const breadcrumb = createElement('nav', 'service-breadcrumb');
+  breadcrumb.setAttribute('aria-label', context.t('ui.breadcrumb'));
+  const breadcrumbList = createElement('ol', 'service-breadcrumb__list');
+  breadcrumbs.forEach((item, index) => {
+    const listItem = createElement('li', 'service-breadcrumb__item');
+    if (index === breadcrumbs.length - 1 && !item.href) {
+      const current = createElement('span', 'service-breadcrumb__current', context.t(item.key));
+      current.setAttribute('aria-current', 'page');
+      listItem.append(current);
+    } else {
+      const link = createElement('a', '', context.t(item.key));
+      link.href = item.href;
+      listItem.append(link);
+    }
+    breadcrumbList.append(listItem);
+  });
+  breadcrumb.append(breadcrumbList);
+
+  const switchNav = createElement('nav', 'service-page-switch');
+  switchNav.setAttribute('aria-label', context.t('ui.nav.services'));
+  const switchList = createElement('ul', 'service-page-switch__list');
+  [
+    { page: 'services-annotation', key: 'ui.nav.services_annotation', href: 'services-annotation.html' },
+    { page: 'services-collection', key: 'ui.nav.services_collection', href: 'services-collection.html' }
+  ].forEach((item) => {
+    const listItem = createElement('li', 'service-page-switch__item');
+    const link = createElement('a', 'service-page-switch__link', context.t(item.key));
+    link.href = item.href;
+    if (item.page === page) {
+      link.classList.add('is-current');
+      link.setAttribute('aria-current', 'page');
+    }
+    listItem.append(link);
+    switchList.append(listItem);
+  });
+  switchNav.append(switchList);
+
+  wrapper.append(breadcrumb, switchNav);
+  return wrapper;
+}
+
 function createContactCta(context) {
   const section = createElement('section', 'services-cta section-shell');
   const link = createElement('a', 'button button--primary', context.t('ui.nav.contact'));
@@ -716,6 +771,7 @@ export function renderServices(context) {
     return;
   }
   main.replaceChildren();
+  main.append(createServiceNavigation(context, page));
 
   if (page === 'services') {
     renderOverview(context, main);

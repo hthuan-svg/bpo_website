@@ -112,6 +112,7 @@
   },
   "home": {
     "hero": {
+      "eyebrow": "BRYCEN VIETNAM · BPO",
       "title": "High-quality data for trustworthy AI",
       "subtitle": "The BPO Division creates and collects training data for AI — since 2015, with 550 people and 235+ projects.",
       "cta_primary": "Explore services",
@@ -265,6 +266,68 @@
     "annotation": {
       "title": "AI Training Data Creation",
       "lead": "We turn raw LiDAR and camera data into model-ready training data — precisely labeled, checked through multiple layers and delivered on time.",
+      "group_3d": "3D data (PointCloud)",
+      "group_2d": "2D data (DashCam & satellite)",
+      "items": [
+        {
+          "id": "seg3d",
+          "group": "3d",
+          "images": [
+            "service_3d_segment_1",
+            "service_3d_segment_2"
+          ],
+          "title": "3D Segment",
+          "text": "Labeling each point of a LiDAR point cloud by object class (road, vehicle, person…)."
+        },
+        {
+          "id": "cuboid3d",
+          "group": "3d",
+          "images": [
+            "service_3d_cuboid_1",
+            "service_3d_cuboid_2"
+          ],
+          "title": "3D Cuboid (3D Bounding Box)",
+          "text": "Drawing 3D boxes around objects to define position, size and heading."
+        },
+        {
+          "id": "seg2d",
+          "group": "2d",
+          "images": [
+            "service_2d_segment_input",
+            "service_2d_segment_output"
+          ],
+          "title": "2D Segment",
+          "text": "Classifying every pixel of an image by object type."
+        },
+        {
+          "id": "bbox2d",
+          "group": "2d",
+          "images": [
+            "service_2d_bbox"
+          ],
+          "title": "2D Bounding Box",
+          "text": "Drawing rectangles around each object in an image."
+        },
+        {
+          "id": "keypoint",
+          "group": "2d",
+          "images": [
+            "service_keypoint"
+          ],
+          "title": "Keypoint",
+          "text": "Marking key points such as body joints for pose recognition."
+        },
+        {
+          "id": "satellite",
+          "group": "2d",
+          "images": [
+            "service_satellite_1",
+            "service_satellite_2"
+          ],
+          "title": "Satellite data",
+          "text": "Annotating objects in satellite imagery (e.g., aircraft, structures)."
+        }
+      ],
       "quality": {
         "title": "Quality control",
         "text": "Every project goes through quality checks at the interim and final stages, with feedback (FB) shared with the client.",
@@ -514,6 +577,19 @@
     "collection": {
       "title": "AI Training Data Collection",
       "lead": "Content is being prepared.",
+      "items": [
+        {
+          "image": "service_collection_lidar",
+          "title": "3D data from LiDAR",
+          "text": "3D (PointCloud) data captured by LiDAR scanners."
+        },
+        {
+          "image": "service_collection_dashcam",
+          "title": "2D data from dashcams",
+          "text": "2D (DashCam) data captured by dashcams mounted around the vehicle."
+        }
+      ],
+      "todo": "[TO ADD] Detailed collection process, equipment, coverage areas and data-security rules.",
       "status": "Coming soon",
       "message": "We are finalizing information about our AI training data collection service. Please check back soon or contact us for a direct consultation.",
       "gallery": [
@@ -534,6 +610,63 @@
   },
   "team": {
     "page_title": "Our team",
+    "structure": {
+      "title": "Organization",
+      "text": "Driven by large-scale data demand, the division operates with a large workforce.",
+      "stat_value": "550",
+      "stat_label": "Team members",
+      "detail": "37 full-time staff + 523 part-time members"
+    },
+    "flow": {
+      "title": "Operating flow",
+      "lanes": [
+        "Customer",
+        "BPO (JP)",
+        "BPO (VN)"
+      ],
+      "phases": [
+        {
+          "name": "Early stage",
+          "steps": [
+            "Request",
+            "Intake",
+            "Measurement (estimation)",
+            "Order",
+            "Order received",
+            "Set up team structure"
+          ]
+        },
+        {
+          "name": "Middle stage",
+          "steps": [
+            "Kickoff",
+            "Set up work environment",
+            "Training",
+            "Production",
+            "Quality check",
+            "Interim delivery",
+            "Send feedback"
+          ]
+        },
+        {
+          "name": "Final stage",
+          "steps": [
+            "Project review & lessons learned",
+            "Final delivery",
+            "Acceptance"
+          ]
+        }
+      ]
+    },
+    "growth": {
+      "title": "Career growth opportunities",
+      "text": "Our dispatch program sends staff from Brycen VN to Brycen JP to study and work, building skills and experiencing Japanese workplace mindset and culture, then applying them back in the division.",
+      "images": [
+        "team_japan_visit",
+        "team_training_meeting",
+        "team_event_booth"
+      ]
+    },
     "tabs": {
       "org": "Organization",
       "process": "Operating flow",
@@ -980,7 +1113,28 @@
     "page_title": "Vision",
     "direction": {
       "title": "Direction",
-      "text": "We will keep growing our annotation business in scale and quality, beyond Japan. Next, our Japan headquarters will expand into the United States to seek new opportunities and customers."
+      "text": "We will keep growing our annotation business in scale and quality, beyond Japan. Next, our Japan headquarters will expand into the United States to seek new opportunities and customers.",
+      "customers": [
+        "customer_honda",
+        "customer_subaru",
+        "customer_denso",
+        "customer_afeela",
+        "customer_sony"
+      ]
+    },
+    "recruit": {
+      "title": "People & recruitment",
+      "text": "Hiring needs may grow to meet new challenges. We work closely with universities, colleges and local ward/commune authorities to recruit, so we can always staff large-scale projects.",
+      "stats": [
+        {
+          "value": "79",
+          "label": "Current staff studying at the University of Economics"
+        },
+        {
+          "value": "187",
+          "label": "Total to date"
+        }
+      ]
     },
     "roadmap": {
       "title": "Growth roadmap",

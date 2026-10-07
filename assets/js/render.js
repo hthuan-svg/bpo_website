@@ -189,6 +189,7 @@ function bindList(element, context) {
     fragment.querySelectorAll('[data-show-if]').forEach((node) => {
       const value = resolveContextValue(node.dataset.showIf, context, item);
       node.hidden = value === '' || value === null || value === undefined || value === false;
+      node.removeAttribute('data-show-if');
     });
     fragment.querySelectorAll('[data-link-field]').forEach((link) => {
       const value = findValue(item, link.dataset.linkField);

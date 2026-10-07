@@ -112,6 +112,7 @@
   },
   "home": {
     "hero": {
+      "eyebrow": "BRYCEN VIETNAM · BPO",
       "title": "信頼できるAIのための高品質データ",
       "subtitle": "BPO部門は2015年から、550名の体制と235件超のプロジェクト実績でAI学習データの作成・収集を行っています。",
       "cta_primary": "サービスを見る",
@@ -265,6 +266,68 @@
     "annotation": {
       "title": "AI学習データ作成",
       "lead": "LiDARやカメラの生データを、AIモデルがすぐ使える学習データへ。高精度なラベル付け、多層検査、納期遵守でお届けします。",
+      "group_3d": "3Dデータ（点群）",
+      "group_2d": "2Dデータ（ドラレコ・衛星）",
+      "items": [
+        {
+          "id": "seg3d",
+          "group": "3d",
+          "images": [
+            "service_3d_segment_1",
+            "service_3d_segment_2"
+          ],
+          "title": "3Dセグメンテーション",
+          "text": "LiDAR点群の各点を物体クラス（道路・車両・人物など）ごとにラベル付けします。"
+        },
+        {
+          "id": "cuboid3d",
+          "group": "3d",
+          "images": [
+            "service_3d_cuboid_1",
+            "service_3d_cuboid_2"
+          ],
+          "title": "3Dキューボイド（3Dバウンディングボックス）",
+          "text": "物体を囲む3Dボックスを作成し、位置・大きさ・向きを定義します。"
+        },
+        {
+          "id": "seg2d",
+          "group": "2d",
+          "images": [
+            "service_2d_segment_input",
+            "service_2d_segment_output"
+          ],
+          "title": "2Dセグメンテーション",
+          "text": "画像の全ピクセルを物体の種類ごとに分類します。"
+        },
+        {
+          "id": "bbox2d",
+          "group": "2d",
+          "images": [
+            "service_2d_bbox"
+          ],
+          "title": "2Dバウンディングボックス",
+          "text": "画像内の各物体を矩形で囲みます。"
+        },
+        {
+          "id": "keypoint",
+          "group": "2d",
+          "images": [
+            "service_keypoint"
+          ],
+          "title": "キーポイント",
+          "text": "姿勢認識のため、関節などの特徴点をマーキングします。"
+        },
+        {
+          "id": "satellite",
+          "group": "2d",
+          "images": [
+            "service_satellite_1",
+            "service_satellite_2"
+          ],
+          "title": "衛星データ",
+          "text": "衛星画像上の物体（航空機・構造物など）にアノテーションを行います。"
+        }
+      ],
       "quality": {
         "title": "品質管理",
         "text": "すべてのプロジェクトで、中間・最終の各段階で品質検査を行い、お客様へのフィードバック（FB）を共有します。",
@@ -514,6 +577,19 @@
     "collection": {
       "title": "AI学習データ収集",
       "lead": "コンテンツは準備中です。",
+      "items": [
+        {
+          "image": "service_collection_lidar",
+          "title": "LiDARによる3Dデータ",
+          "text": "LiDARスキャナーで取得する3D（点群）データ。"
+        },
+        {
+          "image": "service_collection_dashcam",
+          "title": "ドライブレコーダーによる2Dデータ",
+          "text": "車両周囲に設置したドライブレコーダーで取得する2Dデータ。"
+        }
+      ],
+      "todo": "【要追記】収集プロセス、機材、対象エリア、データセキュリティ規程の詳細。",
       "status": "準備中",
       "message": "AI学習データ収集サービスの情報を準備中です。後日あらためてご確認いただくか、直接お問い合わせください。",
       "gallery": [
@@ -534,6 +610,63 @@
   },
   "team": {
     "page_title": "チーム",
+    "structure": {
+      "title": "体制",
+      "text": "大規模データの需要に応えるため、大人数体制で運営しています。",
+      "stat_value": "550",
+      "stat_label": "スタッフ数",
+      "detail": "正社員37名＋パートタイム523名"
+    },
+    "flow": {
+      "title": "運用フロー",
+      "lanes": [
+        "お客様",
+        "BPO（日本）",
+        "BPO（ベトナム）"
+      ],
+      "phases": [
+        {
+          "name": "初期段階",
+          "steps": [
+            "依頼",
+            "受付",
+            "計測・見積",
+            "発注",
+            "受注",
+            "体制構築"
+          ]
+        },
+        {
+          "name": "中間段階",
+          "steps": [
+            "キックオフ",
+            "作業環境の構築",
+            "トレーニング",
+            "本番作業",
+            "品質検査",
+            "中間納品",
+            "FB送付"
+          ]
+        },
+        {
+          "name": "最終段階",
+          "steps": [
+            "プロジェクト振り返り",
+            "最終納品",
+            "検収"
+          ]
+        }
+      ]
+    },
+    "growth": {
+      "title": "成長の機会",
+      "text": "当社の派遣制度では、ブライセンVNの社員をブライセンJPに派遣し、学びながら働くことでスキルを高め、日本のオフィス環境の考え方や文化を体験します。帰国後はその経験を部門の業務に活かします。",
+      "images": [
+        "team_japan_visit",
+        "team_training_meeting",
+        "team_event_booth"
+      ]
+    },
     "tabs": {
       "org": "組織体制",
       "process": "運用フロー",
@@ -980,7 +1113,28 @@
     "page_title": "ビジョン",
     "direction": {
       "title": "今後の方向性",
-      "text": "アノテーション事業を日本国内にとどまらず、規模・品質の両面でさらに発展させます。今後、日本の本社は米国へ市場を拡大し、新たな機会とお客様を開拓します。"
+      "text": "アノテーション事業を日本国内にとどまらず、規模・品質の両面でさらに発展させます。今後、日本の本社は米国へ市場を拡大し、新たな機会とお客様を開拓します。",
+      "customers": [
+        "customer_honda",
+        "customer_subaru",
+        "customer_denso",
+        "customer_afeela",
+        "customer_sony"
+      ]
+    },
+    "recruit": {
+      "title": "人材・採用",
+      "text": "新たな挑戦に対応するため、今後採用ニーズが拡大する可能性があります。大学・短大、地域の行政機関と緊密に連携して採用を行い、大規模プロジェクトにも十分な人材を確保しています。",
+      "stats": [
+        {
+          "value": "79",
+          "label": "経済大学に在学中の現スタッフ"
+        },
+        {
+          "value": "187",
+          "label": "累計"
+        }
+      ]
     },
     "roadmap": {
       "title": "成長ロードマップ",

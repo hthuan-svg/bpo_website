@@ -9,6 +9,7 @@ const ignoredContentRoots = ['content/_backup_r2', 'revision2', 'docs/reference'
 const placeholderMarkers = ['[CẦN BỔ SUNG]', '[TO ADD]', '【要追記】'];
 const newsCategories = ['announcement', 'event', 'award', 'project', 'recruit', 'media'];
 const slotReferenceKeys = new Set(['image', 'images', 'icon', 'customers', 'badges']);
+const optionalEmptyTextPaths = new Set(['contact.hours']);
 const errors = [];
 const warnings = [];
 const parsedFiles = new Map();
@@ -57,7 +58,8 @@ function flattenKeys(value, prefix = '', keys = new Set()) {
 function checkLocalizedStrings(value, filePath, prefix = '') {
   if (typeof value === 'string') {
     const key = prefix || '(root)';
-    if (value.trim() === '') {
+    const optionalGalleryCaption = /^services\.collection\.gallery\[\d+\]\.caption$/.test(key);
+    if (value.trim() === '' && !optionalEmptyTextPaths.has(key) && !optionalGalleryCaption) {
       warn(`${filePath} → ${key}`, 'Text is empty. Add content if this is meant to be shown.');
     }
     const marker = placeholderMarkers.find((item) => value.startsWith(item));
@@ -182,16 +184,19 @@ async function listFiles(directory, predicate = () => true) {
 async function checkHtmlSlotReferences(slots) {
   const htmlFiles = await listFiles(root, (name) => name.toLowerCase().endsWith('.html'));
   const attributePattern = /\bdata-(?:img|bg)\s*=\s*["']([^"']+)["']/gi;
+  const usedSlots = new Set();
   for (const filePath of htmlFiles) {
     const sourcePath = relative(root, filePath).split(sep).join('/');
     const html = await readFile(filePath, 'utf8');
     for (const match of html.matchAll(attributePattern)) {
       const slotName = match[1].trim();
+      if (slotName) usedSlots.add(slotName);
       if (slotName && !Object.hasOwn(slots, slotName)) {
         report(`${sourcePath} → data-${match[0].startsWith('data-bg') ? 'bg' : 'img'}="${slotName}"`, 'This image slot is not listed in content/images.json. Use an existing slot or add the slot there.');
       }
     }
   }
+  return usedSlots;
 }
 
 function checkNews(news, slots) {
@@ -248,6 +253,10 @@ function checkSiteConfig(config) {
     report('content/site.config.json', 'Expected a configuration object.');
     return;
   }
+  const annotationRows = config.layout?.annotationRows;
+  if (annotationRows !== 'image-left' && annotationRows !== 'zigzag') {
+    report('content/site.config.json → layout.annotationRows', 'Choose "image-left" or "zigzag" for annotation row layout.');
+  }
   const urlPaths = [
     'parentCompanySite',
     'social.facebook',
@@ -299,7 +308,15 @@ async function main() {
         report(`${reference.sourcePath} → ${reference.key}="${reference.slotName}"`, 'This image slot is not listed in content/images.json. Choose a listed slot or add the missing slot.');
       }
     }
-    await checkHtmlSlotReferences(slots);
+    const usedSlots = new Set(references.map((reference) => reference.slotName));
+    for (const slotName of await checkHtmlSlotReferences(slots)) {
+      usedSlots.add(slotName);
+    }
+    for (const [slotName, slot] of Object.entries(slots)) {
+      if (slot?.placeholder === true && usedSlots.has(slotName)) {
+        warn(`content/images.json → slots.${slotName}`, 'Placeholder image is still in use; replace this image before publishing.');
+      }
+    }
     if (news !== undefined) checkNews(news, slots);
   }
   if (config !== undefined) checkSiteConfig(config);

@@ -112,6 +112,7 @@
   },
   "home": {
     "hero": {
+      "eyebrow": "BRYCEN VIETNAM · BPO",
       "title": "Dữ liệu chất lượng cao cho AI đáng tin cậy",
       "subtitle": "Bộ phận BPO chuyên tạo và thu thập dữ liệu học cho AI – từ năm 2015, với đội ngũ 550 nhân sự và hơn 235 dự án.",
       "cta_primary": "Khám phá dịch vụ",
@@ -265,6 +266,68 @@
     "annotation": {
       "title": "Tạo dữ liệu học cho AI",
       "lead": "Chúng tôi biến dữ liệu thô từ LiDAR và camera thành dữ liệu học sẵn sàng cho mô hình AI – được gán nhãn chính xác, kiểm tra qua nhiều lớp và giao đúng hạn.",
+      "group_3d": "Dữ liệu 3D (PointCloud)",
+      "group_2d": "Dữ liệu 2D (DashCam & vệ tinh)",
+      "items": [
+        {
+          "id": "seg3d",
+          "group": "3d",
+          "images": [
+            "service_3d_segment_1",
+            "service_3d_segment_2"
+          ],
+          "title": "3D Segment",
+          "text": "Gán nhãn từng điểm trong đám mây điểm LiDAR theo loại đối tượng (đường, xe, người…)."
+        },
+        {
+          "id": "cuboid3d",
+          "group": "3d",
+          "images": [
+            "service_3d_cuboid_1",
+            "service_3d_cuboid_2"
+          ],
+          "title": "3D Cuboid (3D Bounding Box)",
+          "text": "Vẽ khối hộp 3D bao quanh đối tượng, xác định vị trí, kích thước và hướng."
+        },
+        {
+          "id": "seg2d",
+          "group": "2d",
+          "images": [
+            "service_2d_segment_input",
+            "service_2d_segment_output"
+          ],
+          "title": "2D Segment",
+          "text": "Phân vùng từng điểm ảnh của hình ảnh theo loại đối tượng."
+        },
+        {
+          "id": "bbox2d",
+          "group": "2d",
+          "images": [
+            "service_2d_bbox"
+          ],
+          "title": "2D Bounding Box",
+          "text": "Khoanh khung chữ nhật quanh từng đối tượng trên ảnh."
+        },
+        {
+          "id": "keypoint",
+          "group": "2d",
+          "images": [
+            "service_keypoint"
+          ],
+          "title": "Keypoint",
+          "text": "Đánh dấu các điểm đặc trưng như khớp cơ thể để nhận diện tư thế."
+        },
+        {
+          "id": "satellite",
+          "group": "2d",
+          "images": [
+            "service_satellite_1",
+            "service_satellite_2"
+          ],
+          "title": "Dữ liệu vệ tinh",
+          "text": "Gán nhãn đối tượng trên ảnh vệ tinh (ví dụ: máy bay, công trình)."
+        }
+      ],
       "quality": {
         "title": "Kiểm soát chất lượng",
         "text": "Mỗi dự án đều qua kiểm định chất lượng ở các giai đoạn trung gian và cuối cùng, kèm phản hồi (FB) với khách hàng.",
@@ -514,6 +577,19 @@
     "collection": {
       "title": "Thu thập dữ liệu học cho AI",
       "lead": "Nội dung đang được cập nhật.",
+      "items": [
+        {
+          "image": "service_collection_lidar",
+          "title": "Dữ liệu 3D từ LiDAR",
+          "text": "Dữ liệu 3D (PointCloud) được thu nhận từ máy quét LiDAR."
+        },
+        {
+          "image": "service_collection_dashcam",
+          "title": "Dữ liệu 2D từ camera hành trình",
+          "text": "Dữ liệu 2D (DashCam) được thu nhận từ các camera hành trình lắp quanh xe."
+        }
+      ],
+      "todo": "[CẦN BỔ SUNG] Mô tả chi tiết quy trình thu thập, thiết bị, phạm vi khu vực và quy định bảo mật dữ liệu.",
       "status": "Đang cập nhật",
       "message": "Chúng tôi đang hoàn thiện thông tin về dịch vụ thu thập dữ liệu học cho AI. Vui lòng quay lại sau hoặc liên hệ để được tư vấn trực tiếp.",
       "gallery": [
@@ -534,6 +610,63 @@
   },
   "team": {
     "page_title": "Đội ngũ",
+    "structure": {
+      "title": "Thể chế",
+      "text": "Với nhu cầu về dữ liệu lớn, bộ phận vận hành với số lượng nhân sự lớn.",
+      "stat_value": "550",
+      "stat_label": "Nhân sự",
+      "detail": "37 nhân viên chính thức + 523 nhân sự part-time"
+    },
+    "flow": {
+      "title": "Quy trình vận hành",
+      "lanes": [
+        "Khách hàng",
+        "BPO (JP)",
+        "BPO (VN)"
+      ],
+      "phases": [
+        {
+          "name": "Giai đoạn đầu",
+          "steps": [
+            "Yêu cầu",
+            "Tiếp nhận",
+            "Đo đạc (đánh giá)",
+            "Đặt hàng",
+            "Nhận order",
+            "Xây dựng thể chế"
+          ]
+        },
+        {
+          "name": "Giai đoạn giữa",
+          "steps": [
+            "Kickoff",
+            "Xây dựng môi trường làm việc",
+            "Training",
+            "Làm thực tế",
+            "Kiểm định chất lượng",
+            "Giao hàng trung gian",
+            "Gửi FB"
+          ]
+        },
+        {
+          "name": "Giai đoạn cuối",
+          "steps": [
+            "Nhìn nhận, rút kinh nghiệm dự án",
+            "Giao hàng lần cuối",
+            "Nghiệm thu"
+          ]
+        }
+      ]
+    },
+    "growth": {
+      "title": "Cơ hội phát triển trong công việc",
+      "text": "Công ty có chế độ nhân viên phái cử: đưa nhân sự từ Brycen VN sang Brycen JP để học tập và làm việc, nhằm nâng cao trình độ, trải nghiệm tư duy và lối sống của môi trường công sở Nhật, sau đó áp dụng vào công việc tại bộ phận.",
+      "images": [
+        "team_japan_visit",
+        "team_training_meeting",
+        "team_event_booth"
+      ]
+    },
     "tabs": {
       "org": "Cơ cấu bộ phận",
       "process": "Quy trình vận hành",
@@ -980,7 +1113,28 @@
     "page_title": "Tầm nhìn",
     "direction": {
       "title": "Định hướng phát triển",
-      "text": "Phát triển hơn nữa mảng chú thích (annotation), không chỉ tại Nhật Bản mà còn mở rộng cả về quy mô lẫn chất lượng. Sắp tới, công ty tại Nhật sẽ mở rộng thị trường sang Mỹ để tìm kiếm cơ hội và khách hàng mới."
+      "text": "Phát triển hơn nữa mảng chú thích (annotation), không chỉ tại Nhật Bản mà còn mở rộng cả về quy mô lẫn chất lượng. Sắp tới, công ty tại Nhật sẽ mở rộng thị trường sang Mỹ để tìm kiếm cơ hội và khách hàng mới.",
+      "customers": [
+        "customer_honda",
+        "customer_subaru",
+        "customer_denso",
+        "customer_afeela",
+        "customer_sony"
+      ]
+    },
+    "recruit": {
+      "title": "Nguồn nhân lực & tuyển dụng",
+      "text": "Nhu cầu tuyển dụng có thể mở rộng để đáp ứng các thử thách mới. Công ty hợp tác chặt chẽ với các trường đại học, cao đẳng và cơ quan quản lý cấp phường, xã trong khu vực để tuyển dụng, nhờ đó luôn duy trì nguồn nhân lực cho các dự án quy mô lớn.",
+      "stats": [
+        {
+          "value": "79",
+          "label": "Nhân sự đang là sinh viên Đại học Kinh tế"
+        },
+        {
+          "value": "187",
+          "label": "Tổng số từ trước đến nay"
+        }
+      ]
     },
     "roadmap": {
       "title": "Lộ trình phát triển",

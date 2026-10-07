@@ -14,16 +14,18 @@ Nguyên tắc: **khóa giống nhau ở cả 3 file ngôn ngữ**. Thiếu khóa
 ```
 meta.{title,description}
 ui.nav.{home,about,services,services_annotation,services_collection,team,achievements,vision,news,contact}
-ui.{skip,read_more,back,all,view_all_news,follow_us,footer_*,parent_site,news_empty,language,menu,copyright}
-home.{hero,stats[],stats_note,pillars[],commitments[],customers_title,news_title,cta}
+ui.{skip,read_more,back,all,view_all_news,follow_us,footer_*,parent_site,news_empty,language,language_options,menu,copyright,back_to_top,coming_soon,image_placeholder,tabs_label,breadcrumb,brand{dept_short,dept_full,company,dept_native,company_long}}
+home.{hero,stats[],stats_note,pillars_title,pillars_eyebrow,pillars[]{title,text,image,link,coming_soon},commitments_title,commitments[],customers_title,news_title,cta}
 about.{intro,history{lead,timeline[]},offices{items[]}}
-services.{lead,overview_note,annotation{items[],quality},collection{items[],todo}}
-team.{structure,flow{lanes,phases[]},growth}
+services.{lead,overview_note,annotation{lead,tabs,highlights[],modalities[]{id,label,tag,title,text,types[]{id,name,images[],captions[],title,summary,points[]}},workflow{steps[]},quality{lead,layers[],delivery_label,pass_label,fail_label,loop_label,principles[]},usecases{items[]},security,cta},collection{status,lead,message,gallery[]{image,caption}}}
+team.{tabs,org{lead,headcount,levels[],links_note},process{lanes[],phases[],nodes[],edges[],edge_note},people{lead,steps[],images[]},recruit{text,stats[]}}
 achievements.{awards,projects}
-vision.{direction,recruit}
+vision.roadmap.{title,lead,stages[]{id,phase,featured,image,title,text,countries[]}}
 news.{page_title,lead,categories{},facebook_title}
 contact.{lead,labels,note}
 ```
+
+Revision 2’s annotation types use `images[]` values as slot names from `images.json`. Data Collection’s `gallery[]` and the Vision roadmap’s `stages[]` also refer to image slots. The `services.annotation` page layout is selected by `site.config.json → layout.annotationRows` (`image-left` or `zigzag`).
 
 ## Cách gắn dữ liệu vào HTML (data-attributes)
 | Thuộc tính | Ý nghĩa | Ví dụ |
