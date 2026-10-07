@@ -593,6 +593,7 @@
 }
 
 .site-nav__link {
+  position: relative;
   display: flex;
   min-height: 44px;
   align-items: center;
@@ -846,6 +847,7 @@
     flex: 1 1 auto;
     overflow: visible;
     padding: 0;
+    clip-path: none;
     transform: none;
     border: 0;
     background: transparent;
@@ -866,6 +868,26 @@
     padding-inline: clamp(.45rem, .75vw, .8rem);
     white-space: nowrap;
     font-size: clamp(.78rem, .74rem + .15vw, .9rem);
+  }
+
+  .site-nav__link.is-current {
+    background: transparent;
+    font-weight: 700;
+  }
+
+  .site-nav__link.is-current::after {
+    position: absolute;
+    right: .75rem;
+    bottom: .25rem;
+    left: .75rem;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--brand-600);
+    content: "";
+  }
+
+  .site-nav__link:focus-visible {
+    outline-offset: 2px;
   }
 
   .site-nav__item--services {
@@ -945,7 +967,7 @@
   }
 }
 
-@media (min-width: 960px) and (max-width: 1199px) {
+@media (min-width: 960px) and (max-width: 1099px) {
   .site-header__inner {
     justify-content: space-between;
   }

@@ -72,7 +72,7 @@ function headerMarkup(currentPage) {
         <a class="site-header__brand" href="index.html" data-i18n-attr="aria-label:ui.nav.home">
           <img class="site-header__logo" data-img="company_logo">
         </a>
-        <nav class="site-nav" id="primary-navigation" data-i18n-attr="aria-label:ui.menu" inert>
+        <nav class="site-nav" id="primary-navigation" data-i18n-attr="aria-label:ui.tabs_label" inert>
           ${navigationMarkup(currentPage)}
         </nav>
         <div class="site-header__actions">
@@ -146,7 +146,7 @@ function setMenuOpen(header, open) {
   const nav = header.querySelector('.site-nav');
   const siteHeader = header.querySelector('.site-header');
   button.setAttribute('aria-expanded', String(open));
-  nav.inert = !open && window.matchMedia('(max-width: 1199px)').matches;
+  nav.inert = !open && window.matchMedia('(max-width: 1099px)').matches;
   siteHeader.classList.toggle('is-menu-open', open);
 }
 
@@ -194,7 +194,7 @@ function initializeInteractions(header, i18n) {
   const dropdownToggle = header.querySelector('.site-nav__toggle');
 
   const updateNavigationMode = () => {
-    const isMobile = window.matchMedia('(max-width: 1199px)').matches;
+    const isMobile = window.matchMedia('(max-width: 1099px)').matches;
     nav.inert = isMobile && menuButton.getAttribute('aria-expanded') !== 'true';
     if (!isMobile) {
       setMenuOpen(header, false);
@@ -243,7 +243,7 @@ function initializeInteractions(header, i18n) {
   nav.addEventListener('click', (event) => {
     if (
       event.target.closest('a')
-      && window.matchMedia('(max-width: 1199px)').matches
+      && window.matchMedia('(max-width: 1099px)').matches
     ) {
       setMenuOpen(header, false);
     }
