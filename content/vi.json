@@ -185,6 +185,15 @@
     "page_title": "Dịch vụ",
     "lead": "Bộ phận chuyên tạo dữ liệu học tập cho AI, với công việc chính là chú thích (annotation) trên hình ảnh thông qua các công cụ chuyên dụng.",
     "overview_note": "Hiện bộ phận đang thực hiện chính hai mảng dữ liệu: 3D và 2D. Dữ liệu 3D thu nhận từ máy quét LiDAR; dữ liệu 2D thu nhận từ camera hành trình lắp quanh xe.",
+    "diagram": {
+      "lidar_source": "Máy quét LiDAR",
+      "target_3d": "Dữ liệu 3D",
+      "dashcam_source": "Camera hành trình",
+      "target_2d": "Dữ liệu 2D"
+    },
+    "lightbox": {
+      "close_image": "Đóng ảnh"
+    },
     "annotation": {
       "title": "Tạo dữ liệu học cho AI",
       "lead": "Chú thích hình ảnh và đám mây điểm để AI học nhận biết thế giới thực – chính xác, đúng hạn, bảo mật.",

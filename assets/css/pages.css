@@ -1,4 +1,4 @@
-/* Page-specific styles for home and about pages. */
+/* Page-specific styles for home, about and service pages. */
 .page-container {
   width: min(var(--container), calc(100% - 2 * var(--space-4)));
   margin-inline: auto;
@@ -482,5 +482,289 @@
 
   .about-offices__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.services-page .section-shell {
+  padding-block: clamp(3.5rem, 7vw, var(--space-6));
+}
+
+.services-heading {
+  max-width: 52rem;
+  margin-bottom: var(--space-5);
+}
+
+.services-heading .section-title {
+  margin-bottom: var(--space-3);
+}
+
+.services-overview__note {
+  max-width: 58rem;
+  margin-top: calc(var(--space-5) * -1);
+  margin-bottom: var(--space-5);
+}
+
+.services-overview__cards {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.services-overview-card {
+  position: relative;
+  display: flex;
+  min-height: 18rem;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-3);
+  overflow: hidden;
+  padding: clamp(var(--space-4), 5vw, var(--space-5));
+  border-radius: var(--radius-l);
+  background-color: var(--ink-700);
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--shadow-s);
+  color: #fff;
+  text-decoration: none;
+  transition: transform 300ms var(--ease), box-shadow 300ms var(--ease);
+}
+
+.services-overview-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-m);
+  color: #fff;
+}
+
+.services-overview-card__copy {
+  display: grid;
+  gap: var(--space-2);
+  max-width: 38rem;
+}
+
+.services-overview-card__title {
+  font-size: clamp(1.5rem, 1.15rem + 1.6vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.services-overview-card__lead {
+  max-width: 42rem;
+  color: rgba(255, 255, 255, .92);
+}
+
+.services-overview-card__arrow {
+  flex: 0 0 auto;
+  font-size: 1.75rem;
+  transition: transform 300ms var(--ease);
+}
+
+.services-overview-card:hover .services-overview-card__arrow {
+  transform: translate(3px, -3px);
+}
+
+.services-diagram {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+  padding: clamp(var(--space-3), 4vw, var(--space-5));
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: var(--bg-soft);
+}
+
+.services-diagram__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 3.5rem minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.services-diagram__label {
+  color: var(--ink-700);
+  font-size: clamp(.95rem, .85rem + .45vw, 1.2rem);
+  font-weight: 600;
+  text-align: center;
+}
+
+.services-diagram__arrow {
+  width: 100%;
+  color: var(--brand-600);
+}
+
+.service-group:nth-of-type(even),
+.service-quality {
+  background: var(--bg-soft);
+}
+
+.service-group__title {
+  margin-bottom: var(--space-4);
+  font-size: clamp(1.7rem, 1.3rem + 1.8vw, 2.5rem);
+}
+
+.service-items,
+.collection-items {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.service-item {
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+  padding: clamp(var(--space-3), 3vw, var(--space-4));
+}
+
+.service-item__title,
+.collection-item__title {
+  font-size: clamp(1.2rem, 1.05rem + .65vw, 1.55rem);
+}
+
+.service-item__text {
+  color: var(--ink-500);
+}
+
+.service-item__images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: var(--space-2);
+  align-self: end;
+}
+
+.service-item__image-button {
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: var(--bg-soft);
+}
+
+.service-item__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 250ms var(--ease);
+}
+
+.service-item__image-button:hover .service-item__image {
+  transform: scale(1.03);
+}
+
+.service-quality__layout {
+  display: grid;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.service-quality__copy {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.service-quality__copy .section-title {
+  font-size: clamp(1.8rem, 1.4rem + 1.8vw, 2.6rem);
+}
+
+.service-quality__image {
+  width: 100%;
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-s);
+}
+
+.services-cta {
+  display: flex;
+  justify-content: center;
+  padding-block: var(--space-5) var(--space-6);
+}
+
+.service-collection__callout {
+  margin-top: var(--space-5);
+  padding: var(--space-4);
+  border: 1px solid #E8CF76;
+  border-left: 4px solid #B98913;
+  border-radius: var(--radius-m);
+  background: #FFF8DC;
+  color: var(--ink-900);
+}
+
+.collection-item {
+  overflow: hidden;
+}
+
+.collection-item__image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.collection-item__body {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4);
+}
+
+.collection-item__body p {
+  color: var(--ink-500);
+}
+
+.services-lightbox {
+  position: fixed;
+  width: min(94vw, 72rem);
+  max-width: none;
+  max-height: 92vh;
+  padding: var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  background: var(--bg);
+  box-shadow: var(--shadow-m);
+}
+
+.services-lightbox::backdrop {
+  background: rgba(14, 26, 18, .78);
+}
+
+.services-lightbox__title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.services-lightbox__form {
+  display: grid;
+  justify-items: end;
+  gap: var(--space-2);
+}
+
+.services-lightbox__close {
+  min-width: 44px;
+  min-height: 44px;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg-soft);
+  font-size: .95rem;
+}
+
+.services-lightbox__image {
+  max-width: 100%;
+  max-height: calc(92vh - 6rem);
+  margin-inline: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 640px) {
+  .services-overview__cards,
+  .service-items,
+  .collection-items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-quality__layout {
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, .9fr);
   }
 }

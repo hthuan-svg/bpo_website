@@ -185,6 +185,15 @@
     "page_title": "Services",
     "lead": "We specialize in creating training data for AI. Our main work is image annotation using dedicated tools.",
     "overview_note": "We mainly handle two kinds of data: 3D and 2D. 3D data comes from LiDAR scanners; 2D data comes from dashcams mounted around the vehicle.",
+    "diagram": {
+      "lidar_source": "LiDAR scanner",
+      "target_3d": "3D data",
+      "dashcam_source": "Dashcam",
+      "target_2d": "2D data"
+    },
+    "lightbox": {
+      "close_image": "Close image"
+    },
     "annotation": {
       "title": "AI Training Data Creation",
       "lead": "We annotate images and point clouds so AI can learn to understand the real world — accurately, on time and securely.",

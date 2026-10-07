@@ -185,6 +185,15 @@
     "page_title": "サービス",
     "lead": "AI学習データの作成を専門とし、主な業務は専用ツールによる画像アノテーションです。",
     "overview_note": "主に3Dと2Dの2種類のデータを扱います。3DデータはLiDARスキャナー、2Dデータは車両周囲に設置したドライブレコーダーから取得します。",
+    "diagram": {
+      "lidar_source": "LiDARスキャナー",
+      "target_3d": "3Dデータ",
+      "dashcam_source": "ドライブレコーダー",
+      "target_2d": "2Dデータ"
+    },
+    "lightbox": {
+      "close_image": "画像を閉じる"
+    },
     "annotation": {
       "title": "AI学習データ作成",
       "lead": "画像や点群にアノテーションを行い、AIが現実世界を学習できるようにします。正確・納期遵守・高セキュリティ。",

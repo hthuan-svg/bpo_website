@@ -4,6 +4,7 @@ import { initializeLayout } from './layout.js';
 import { renderPage } from './render.js';
 import { initReveal } from './reveal.js';
 import { initHomeCounters } from './home.js';
+import { renderServices } from './services.js';
 
 const openPageMessage = 'Hãy mở trang bằng Live Server (không bấm đúp file .html)';
 
@@ -33,10 +34,12 @@ async function start() {
 
     document.addEventListener('langchange', () => {
       renderPage(i18n);
+      renderServices(i18n);
       initReveal();
       initHomeCounters();
     });
     renderPage(i18n);
+    renderServices(i18n);
     initReveal();
     initHomeCounters();
   } catch (error) {
