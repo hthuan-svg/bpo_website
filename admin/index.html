@@ -1,0 +1,798 @@
+<!-- Công cụ chỉnh sửa nội dung cục bộ; không đưa thư mục admin lên website công khai. -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Công cụ quản lý nội dung BPO</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --green: #5e9a24;
+      --green-soft: #eaf5dc;
+      --ink: #17231a;
+      --muted: #5a6b5f;
+      --line: #dce5d8;
+      --paper: #fff;
+      --soft: #f5f8f3;
+      --danger: #a52b25;
+      font-family: Inter, "Be Vietnam Pro", "Noto Sans JP", system-ui, "Segoe UI", "Hiragino Sans", "Yu Gothic", sans-serif;
+      color: var(--ink);
+      background: var(--soft);
+      font-synthesis: none;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.55; }
+    button, input, select, textarea { font: inherit; }
+    button {
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      padding: 8px 14px;
+      background: white;
+      color: var(--ink);
+      cursor: pointer;
+    }
+    button:hover { border-color: var(--green); background: #f8fcf4; }
+    button.primary { border-color: var(--green); background: var(--green); color: white; font-weight: 700; }
+    button.primary:hover { background: #4b801c; }
+    button.danger { color: var(--danger); }
+    button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid #8cbe58;
+      outline-offset: 2px;
+    }
+    input, select, textarea {
+      width: 100%;
+      min-height: 42px;
+      border: 1px solid #cbd7c6;
+      border-radius: 8px;
+      padding: 9px 10px;
+      background: white;
+      color: var(--ink);
+    }
+    textarea { min-height: 88px; resize: vertical; }
+    label { display: block; font-weight: 650; }
+    label small, .hint { display: block; margin: 3px 0 7px; color: var(--muted); font-size: .84rem; font-weight: 400; }
+    .warning {
+      padding: 12px max(16px, calc((100vw - 1200px) / 2));
+      background: #fff0ca;
+      border-bottom: 1px solid #e7ce8d;
+      color: #5b4100;
+      font-weight: 750;
+    }
+    .warning span { display: block; max-width: 1200px; }
+    header, main { width: min(1200px, calc(100% - 32px)); margin-inline: auto; }
+    header { padding: 24px 0 16px; }
+    h1 { margin: 0 0 8px; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+    h2 { margin: 0 0 14px; font-size: 1.35rem; }
+    h3 { margin: 0 0 10px; font-size: 1.05rem; }
+    p { margin: 6px 0 12px; }
+    .toolbar, .actions, .row, .tabbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .toolbar { margin-top: 16px; }
+    .connection { color: var(--muted); font-size: .92rem; }
+    #status { min-height: 1.5em; margin: 8px 0 0; color: #315d15; font-weight: 650; }
+    #status.error { color: var(--danger); }
+    .tabbar { border-bottom: 1px solid var(--line); gap: 4px; margin: 12px 0 18px; }
+    .tabbar button { border: 0; border-radius: 8px 8px 0 0; background: transparent; }
+    .tabbar button[aria-selected="true"] { background: var(--green-soft); color: #315d15; font-weight: 750; }
+    .panel { display: none; padding-bottom: 42px; }
+    .panel.active { display: block; }
+    .card, .section-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 2px 10px #17231a08;
+    }
+    .section-card { margin: 14px 0; }
+    .grid { display: grid; gap: 14px; }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .news-layout { display: grid; grid-template-columns: minmax(250px, .8fr) minmax(0, 2fr); gap: 16px; align-items: start; }
+    .news-list { display: grid; gap: 8px; }
+    .news-item { text-align: left; min-height: 0; }
+    .news-item strong, .news-item small { display: block; }
+    .news-item small { color: var(--muted); margin-top: 4px; }
+    .news-item.selected { border-color: var(--green); background: var(--green-soft); }
+    .field { min-width: 0; }
+    .field + .field { margin-top: 12px; }
+    .language-heading { margin: 4px 0 10px; color: var(--green); font-size: .8rem; letter-spacing: .04em; }
+    .preview { display: block; width: 100%; max-height: 170px; object-fit: contain; background: #f0f3ee; border: 1px solid var(--line); border-radius: 8px; margin: 8px 0; }
+    .image-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 14px; }
+    .image-card { min-width: 0; }
+    .image-card .preview { height: 150px; }
+    .image-card code { overflow-wrap: anywhere; }
+    .tree { overflow: auto; }
+    .tree-head, .tree-row { display: grid; grid-template-columns: minmax(220px, 1.2fr) repeat(3, minmax(190px, 1fr)); gap: 10px; align-items: start; min-width: 850px; }
+    .tree-head { padding: 8px 10px; color: var(--muted); font-weight: 750; }
+    .tree-row { padding: 10px; border-top: 1px solid #edf1eb; }
+    .tree-row.empty { background: #fff4dc; }
+    .tree-path { overflow-wrap: anywhere; padding-top: 9px; font-family: ui-monospace, Consolas, monospace; font-size: .88rem; }
+    .tree-path .depth { color: #91a18d; }
+    .tree-row input { min-width: 0; }
+    .inline-check { display: flex; align-items: center; gap: 9px; font-weight: 500; }
+    .inline-check input { width: 20px; min-height: 20px; }
+    .notice { padding: 10px 12px; border-radius: 8px; background: #eef5e8; color: #315d15; }
+    .hint-box { margin: 10px 0 16px; padding: 12px 14px; border-left: 4px solid var(--green); background: white; color: var(--muted); }
+    [hidden] { display: none !important; }
+    @media (max-width: 780px) {
+      .grid.three, .news-layout { grid-template-columns: 1fr; }
+      .grid.two { grid-template-columns: 1fr; }
+      .toolbar button { flex: 1 1 100%; }
+      header, main { width: min(100% - 22px, 1200px); }
+      .card, .section-card { padding: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="warning" role="alert"><span>⚠ CÔNG CỤ NỘI BỘ – CHỈ DÙNG TRÊN MÁY CỤC BỘ. Không đưa thư mục <code>admin/</code> lên website công khai. Hãy sao lưu dự án trước khi chỉnh sửa.</span></div>
+  <header>
+    <h1>Công cụ quản lý nội dung BPO</h1>
+    <p>Chỉnh sửa tin tức, nội dung, hình ảnh và thông tin website. Các thay đổi chỉ được ghi khi bạn xác nhận lưu.</p>
+    <div class="toolbar">
+      <button class="primary" id="choose-folder" type="button">Chọn thư mục dự án</button>
+      <button id="choose-files" type="button">Tải file JSON lên (trình duyệt khác)</button>
+      <input id="file-input" type="file" accept=".json,application/json" multiple hidden>
+      <span id="connection" class="connection">Chưa chọn thư mục. Có thể mở bằng Live Server rồi tải JSON lên.</span>
+    </div>
+    <p id="status" role="status" aria-live="polite"></p>
+    <nav class="tabbar" aria-label="Các mục quản lý">
+      <button type="button" role="tab" aria-selected="true" aria-controls="news-panel" data-tab="news-panel">Tin tức</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="content-panel" data-tab="content-panel">Nội dung</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="images-panel" data-tab="images-panel">Hình ảnh</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="settings-panel" data-tab="settings-panel">Cài đặt</button>
+    </nav>
+  </header>
+  <main>
+    <section id="news-panel" class="panel active" role="tabpanel">
+      <div class="news-layout">
+        <aside class="section-card">
+          <div class="row" style="justify-content:space-between">
+            <h2>Danh sách tin</h2>
+            <button class="primary" id="add-news" type="button">+ Thêm tin</button>
+          </div>
+          <p class="hint">Chọn một tin để sửa. Tin ẩn vẫn được giữ trong dữ liệu.</p>
+          <div id="news-list" class="news-list"></div>
+        </aside>
+        <form id="news-form" class="section-card">
+          <h2 id="news-form-title">Thêm tin mới</h2>
+          <div class="grid two">
+            <div class="field">
+              <label for="news-id">Mã tin (id)<small>Mã ASCII duy nhất, tự gợi ý từ tiêu đề tiếng Việt.</small></label>
+              <input id="news-id" name="id" autocomplete="off" required>
+            </div>
+            <div class="field">
+              <label for="news-date">Ngày đăng<small>Chọn ngày hiển thị theo định dạng YYYY-MM-DD.</small></label>
+              <input id="news-date" name="date" type="date" required>
+            </div>
+            <div class="field">
+              <label for="news-category">Danh mục<small>Chọn loại tin phù hợp.</small></label>
+              <select id="news-category" name="category">
+                <option value="announcement">Thông báo</option><option value="event">Sự kiện</option><option value="award">Giải thưởng</option><option value="project">Dự án</option><option value="recruit">Tuyển dụng</option><option value="media">Truyền thông</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="news-image">Ảnh đại diện<small>Chọn một slot có sẵn trong images.json.</small></label>
+              <select id="news-image" name="image"></select>
+              <img id="news-image-preview" class="preview" alt="Xem trước ảnh đã chọn">
+            </div>
+            <div class="field">
+              <label for="news-link">Liên kết bài gốc<small>Để trống nếu không có liên kết bên ngoài.</small></label>
+              <input id="news-link" name="link" type="url" placeholder="https://">
+            </div>
+            <div class="field">
+              <label for="news-facebook">Liên kết bài Facebook<small>Không bắt buộc; để trống nếu không có.</small></label>
+              <input id="news-facebook" name="facebook_post" type="url" placeholder="https://">
+            </div>
+          </div>
+          <h3 style="margin-top:18px">Tiêu đề và mô tả theo ngôn ngữ</h3>
+          <p class="hint">Điền đủ tiếng Việt, tiếng Anh và tiếng Nhật để đăng. Có thể lưu bản nháp khi chưa đủ; bản nháp được tự ẩn.</p>
+          <div class="grid three">
+            <div>
+              <div class="language-heading">TIẾNG VIỆT (VI)</div>
+              <label for="title-vi">Tiêu đề<small>Ngắn gọn, dễ hiểu.</small></label><input id="title-vi" data-news-field="title.vi">
+              <label for="summary-vi" style="margin-top:10px">Mô tả<small>Tóm tắt nội dung trong 1–2 câu.</small></label><textarea id="summary-vi" data-news-field="summary.vi"></textarea>
+            </div>
+            <div>
+              <div class="language-heading">TIẾNG ANH (EN)</div>
+              <label for="title-en">Tiêu đề<small>Write the news title in English.</small></label><input id="title-en" data-news-field="title.en">
+              <label for="summary-en" style="margin-top:10px">Mô tả<small>Summarize the news in 1–2 sentences.</small></label><textarea id="summary-en" data-news-field="summary.en"></textarea>
+            </div>
+            <div>
+              <div class="language-heading">TIẾNG NHẬT (JA)</div>
+              <label for="title-ja">Tiêu đề<small>ニュースのタイトルを入力します。</small></label><input id="title-ja" data-news-field="title.ja">
+              <label for="summary-ja" style="margin-top:10px">Mô tả<small>概要を1～2文で入力します。</small></label><textarea id="summary-ja" data-news-field="summary.ja"></textarea>
+            </div>
+          </div>
+          <label class="inline-check" style="margin:16px 0"><input id="news-hidden" type="checkbox"> Ẩn tin (không hiển thị trên website)</label>
+          <div class="actions">
+            <button class="primary" type="submit">Lưu tin</button>
+            <button type="button" id="save-news-draft">Lưu bản nháp</button>
+            <button type="button" id="hide-news">Ẩn / hiện tin</button>
+            <button class="danger" type="button" id="delete-news">Xóa tin</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="content-panel" class="panel" role="tabpanel">
+      <div class="section-card">
+        <h2>Nội dung website</h2>
+        <p class="hint-box">Mỗi dòng là một giá trị trong cây khóa. Vùng màu vàng có nghĩa là giá trị đang trống hoặc thiếu ở ít nhất một ngôn ngữ. Sửa nội dung ở ba cột tương ứng rồi lưu cả ba file.</p>
+        <div class="actions" style="margin-bottom:14px"><button class="primary" id="save-content" type="button">Lưu VI + EN + JA</button><span class="hint">Các file được ghi lần lượt; xác nhận trước khi ghi đè.</span></div>
+        <div class="tree">
+          <div class="tree-head"><span>Khóa nội dung</span><span>Tiếng Việt</span><span>English</span><span>日本語</span></div>
+          <div id="content-tree"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="images-panel" class="panel" role="tabpanel">
+      <div class="section-card">
+        <h2>Thư viện slot hình ảnh</h2>
+        <p class="hint-box">Kích thước gợi ý: ảnh nền ≥ 2000×1000 px, ảnh dịch vụ/văn phòng/đội ngũ 1200×800 px, logo khách hàng rộng 400 px, logo công ty ≥ 800 px, browser_logo 512×512 px, og_share 1200×630 px. Giữ nguyên tên slot. Thay ảnh trực tiếp chỉ khả dụng sau khi chọn thư mục dự án trong Chrome/Edge.</p>
+        <div class="actions" style="margin-bottom:14px"><button class="primary" id="save-images" type="button">Lưu mô tả ảnh</button></div>
+        <div id="image-list" class="image-grid"></div>
+      </div>
+    </section>
+
+    <section id="settings-panel" class="panel" role="tabpanel">
+      <form id="settings-form" class="section-card">
+        <h2>Cài đặt website và liên hệ</h2>
+        <p class="hint-box">Để trống thông tin không sử dụng; website sẽ ẩn mục tương ứng. Chỉ URL công khai phù hợp mới nên được thêm.</p>
+        <div class="grid two">
+          <div class="field"><label for="setting-email">Email<small>Địa chỉ email liên hệ hiển thị trên website.</small></label><input id="setting-email" data-config="contact.email" type="email"></div>
+          <div class="field"><label for="setting-phone">Điện thoại<small>Số điện thoại có mã quốc gia nếu cần.</small></label><input id="setting-phone" data-config="contact.phone" type="tel"></div>
+          <div class="field"><label for="address-vi">Địa chỉ – tiếng Việt<small>Địa chỉ văn phòng hiển thị cho khách Việt Nam.</small></label><textarea id="address-vi" data-config="contact.address.vi"></textarea></div>
+          <div class="field"><label for="address-en">Địa chỉ – English<small>Address shown to English-speaking visitors.</small></label><textarea id="address-en" data-config="contact.address.en"></textarea></div>
+          <div class="field"><label for="address-ja">Địa chỉ – tiếng Nhật<small>日本語で表示する住所です。</small></label><textarea id="address-ja" data-config="contact.address.ja"></textarea></div>
+          <div class="field"><label for="form-url">Đường dẫn biểu mẫu<small>URL của biểu mẫu liên hệ (để trống nếu không có).</small></label><input id="form-url" data-config="contact.formUrl" type="url" placeholder="https://"></div>
+          <div class="field"><label for="map-url">Đường dẫn nhúng bản đồ<small>URL nhúng bản đồ được cung cấp từ dịch vụ bản đồ.</small></label><input id="map-url" data-config="contact.mapEmbedUrl" type="url" placeholder="https://"></div>
+          <div class="field"><label for="facebook-page">Trang Facebook cho plugin<small>URL trang Facebook công khai.</small></label><input id="facebook-page" data-config="facebookPagePlugin.pageUrl" type="url" placeholder="https://"></div>
+          <div class="field"><label for="facebook-height">Chiều cao plugin Facebook<small>Chiều cao khung tính bằng pixel.</small></label><input id="facebook-height" data-config="facebookPagePlugin.height" type="number" min="200"></div>
+        </div>
+        <label class="inline-check" style="margin:14px 0"><input id="facebook-enabled" data-config="facebookPagePlugin.enabled" type="checkbox"> Bật plugin Facebook</label>
+        <h3>Mạng xã hội</h3>
+        <div class="grid two">
+          <div class="field"><label for="social-facebook">Facebook<small>URL trang Facebook; để trống để ẩn.</small></label><input id="social-facebook" data-config="social.facebook" type="url" placeholder="https://"></div>
+          <div class="field"><label for="social-youtube">YouTube<small>URL kênh YouTube; để trống để ẩn.</small></label><input id="social-youtube" data-config="social.youtube" type="url" placeholder="https://"></div>
+          <div class="field"><label for="social-linkedin">LinkedIn<small>URL trang LinkedIn; để trống để ẩn.</small></label><input id="social-linkedin" data-config="social.linkedin" type="url" placeholder="https://"></div>
+          <div class="field"><label for="social-instagram">Instagram<small>URL trang Instagram; để trống để ẩn.</small></label><input id="social-instagram" data-config="social.instagram" type="url" placeholder="https://"></div>
+          <div class="field"><label for="social-zalo">Zalo<small>URL Zalo; để trống để ẩn.</small></label><input id="social-zalo" data-config="social.zalo" type="url" placeholder="https://"></div>
+        </div>
+        <div class="actions" style="margin-top:18px"><button class="primary" type="submit">Lưu cài đặt</button></div>
+      </form>
+    </section>
+  </main>
+  <script>
+    // Đọc và lưu các JSON của website, chỉ trên máy đang mở công cụ.
+    const languages = ['vi', 'en', 'ja'];
+    const fileNames = ['news.json', 'images.json', 'site.config.json', 'vi.json', 'en.json', 'ja.json'];
+    const data = Object.create(null);
+    const sourceFiles = Object.create(null);
+    let projectDirectory = null;
+    let editingNewsIndex = -1;
+    let slugWasEdited = false;
+    const $ = (selector, root = document) => root.querySelector(selector);
+    const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+    function showStatus(message, isError = false) {
+      const status = $('#status');
+      status.textContent = message;
+      status.classList.toggle('error', isError);
+    }
+    function updateConnection(message) { $('#connection').textContent = message; }
+    function safeJson(value, name) {
+      const text = JSON.stringify(value, null, 2);
+      if (typeof text !== 'string') throw new Error(`${name}: không thể chuyển dữ liệu thành JSON.`);
+      return JSON.parse(text);
+    }
+    function validateJsonFiles(names) {
+      for (const name of names) safeJson(data[name], name);
+    }
+    function setPath(object, path, value) {
+      const parts = path.split('.');
+      let target = object;
+      for (const part of parts.slice(0, -1)) {
+        if (!target[part] || typeof target[part] !== 'object') target[part] = {};
+        target = target[part];
+      }
+      target[parts[parts.length - 1]] = value;
+    }
+    function getPath(object, path) {
+      return path.split('.').reduce((value, part) => value == null ? undefined : value[part], object);
+    }
+    function assignPath(object, path, value) {
+      const parts = path.split('.');
+      let target = object;
+      for (const part of parts.slice(0, -1)) target = target[part];
+      target[parts[parts.length - 1]] = value;
+    }
+    function imageSlots() { return data['images.json']?.slots ?? {}; }
+    function imageUrl(slot) {
+      const src = imageSlots()[slot]?.src;
+      return src ? `../${src.split('/').map(encodeURIComponent).join('/')}` : '';
+    }
+    function newsItems() { return data['news.json']?.items ?? []; }
+
+    async function readDirectoryJson(root) {
+      const contentDirectory = await root.getDirectoryHandle('content');
+      const loaded = Object.create(null);
+      for (const name of fileNames) {
+        const handle = await contentDirectory.getFileHandle(name);
+        const file = await handle.getFile();
+        loaded[name] = JSON.parse(await file.text());
+        sourceFiles[name] = handle;
+      }
+      Object.assign(data, loaded);
+      projectDirectory = root;
+      updateConnection(`Đã mở thư mục dự án: ${root.name}. File JSON sẽ được ghi trực tiếp sau khi xác nhận.`);
+      renderAll();
+      showStatus('Đã tải dữ liệu của dự án.');
+    }
+    async function chooseProjectFolder() {
+      if (!('showDirectoryPicker' in window)) {
+        showStatus('Trình duyệt này không hỗ trợ chọn thư mục trực tiếp. Dùng “Tải file JSON lên” để chỉnh sửa và tải file đã sửa xuống.', true);
+        return;
+      }
+      try {
+        const root = await window.showDirectoryPicker({ mode: 'readwrite' });
+        await readDirectoryJson(root);
+      } catch (error) {
+        if (error.name === 'AbortError') return;
+        showStatus(`Không mở được thư mục dự án: ${error.message}`, true);
+      }
+    }
+    async function loadPickedFiles(files) {
+      if (!files.length) return;
+      const loaded = Object.create(null);
+      try {
+        for (const file of files) {
+          const name = file.name.toLowerCase();
+          if (!fileNames.includes(name)) continue;
+          loaded[name] = JSON.parse(await file.text());
+          sourceFiles[name] = file;
+        }
+        if (!Object.keys(loaded).length) throw new Error('Không tìm thấy file JSON hỗ trợ trong lựa chọn.');
+        Object.assign(data, loaded);
+        projectDirectory = null;
+        updateConnection(`Đã tải ${Object.keys(loaded).length} file. Lưu sẽ tải từng file JSON xuống; hãy chép chúng vào thư mục content/.`);
+        renderAll();
+        showStatus(`Đã tải ${Object.keys(loaded).length} file JSON.`);
+      } catch (error) {
+        showStatus(`Không đọc được file JSON: ${error.message}`, true);
+      }
+    }
+    async function writeFile(name, value) {
+      const parsed = safeJson(value, name);
+      const text = JSON.stringify(parsed, null, 2);
+      if (projectDirectory) {
+        const handle = sourceFiles[name] ?? await (await projectDirectory.getDirectoryHandle('content')).getFileHandle(name);
+        const writable = await handle.createWritable();
+        try {
+          await writable.write(text);
+          await writable.close();
+        } catch (error) {
+          await writable.abort();
+          throw error;
+        }
+      } else {
+        const blob = new Blob([text], { type: 'application/json;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = name;
+        link.click();
+        window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+      }
+    }
+    async function saveFiles(names, label) {
+      try {
+        validateJsonFiles(names);
+        const operation = projectDirectory
+          ? `Ghi đè ${names.join(', ')} trong content/ của dự án?`
+          : `Tải xuống ${names.join(', ')} đã chỉnh sửa?`;
+        if (!window.confirm(`${label}\n\n${operation}`)) return false;
+        for (const name of names) await writeFile(name, data[name]);
+        showStatus(projectDirectory ? `Đã lưu: ${names.join(', ')}.` : `Đã tải xuống: ${names.join(', ')}.`);
+        return true;
+      } catch (error) {
+        showStatus(`Lưu không thành công: ${error.message}`, true);
+        return false;
+      }
+    }
+
+    function renderImageOptions() {
+      const select = $('#news-image');
+      const previous = select.value;
+      select.replaceChildren();
+      const slots = imageSlots();
+      for (const slot of Object.keys(slots)) {
+        const option = document.createElement('option');
+        option.value = slot;
+        option.textContent = slot;
+        select.append(option);
+      }
+      if (slots[previous]) select.value = previous;
+      if (!slots[select.value] && select.options.length) select.selectedIndex = 0;
+      updateNewsImagePreview();
+    }
+    function updateNewsImagePreview() {
+      const slot = $('#news-image').value;
+      const preview = $('#news-image-preview');
+      preview.src = imageUrl(slot);
+      preview.alt = `Xem trước slot ${slot}`;
+      preview.hidden = !slot;
+    }
+    function renderNewsList() {
+      const list = $('#news-list');
+      list.replaceChildren();
+      const items = newsItems().map((item, index) => ({ item, index }))
+        .sort((a, b) => String(b.item.date).localeCompare(String(a.item.date)));
+      for (const { item, index } of items) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = `news-item${editingNewsIndex === index ? ' selected' : ''}`;
+        const title = document.createElement('strong');
+        title.textContent = item.title?.vi || item.id || '(Chưa có tiêu đề)';
+        const meta = document.createElement('small');
+        meta.textContent = `${item.date || 'Chưa có ngày'} · ${item.category || ''}${item.hidden ? ' · ĐANG ẨN' : ''}`;
+        button.append(title, meta);
+        button.addEventListener('click', () => editNews(index));
+        list.append(button);
+      }
+      if (!items.length) {
+        const empty = document.createElement('p');
+        empty.className = 'hint';
+        empty.textContent = 'Chưa có tin. Chọn “Thêm tin” để bắt đầu.';
+        list.append(empty);
+      }
+    }
+    function setNewsForm(item, index) {
+      editingNewsIndex = index;
+      $('#news-form-title').textContent = index < 0 ? 'Thêm tin mới' : `Sửa tin: ${item.id}`;
+      $('#news-id').value = item.id ?? '';
+      $('#news-date').value = item.date ?? new Date().toISOString().slice(0, 10);
+      $('#news-category').value = item.category ?? 'announcement';
+      $('#news-image').value = item.image ?? '';
+      $('#news-link').value = item.link ?? '';
+      $('#news-facebook').value = item.facebook_post ?? '';
+      $('#news-hidden').checked = Boolean(item.hidden);
+      for (const key of ['title', 'summary']) {
+        for (const language of languages) {
+          $(`[data-news-field="${key}.${language}"]`).value = item[key]?.[language] ?? '';
+        }
+      }
+      slugWasEdited = index >= 0;
+      updateNewsImagePreview();
+      renderNewsList();
+    }
+    function blankNews() {
+      return {
+        id: '',
+        date: new Date().toISOString().slice(0, 10),
+        category: 'announcement',
+        hidden: false,
+        image: Object.keys(imageSlots())[0] ?? '',
+        link: '',
+        facebook_post: '',
+        title: { vi: '', en: '', ja: '' },
+        summary: { vi: '', en: '', ja: '' }
+      };
+    }
+    function editNews(index) { setNewsForm(newsItems()[index], index); }
+    function slugify(value) {
+      return value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[đĐ]/g, 'd').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    }
+    function readNewsForm(forceDraft) {
+      const item = {
+        id: $('#news-id').value.trim(),
+        date: $('#news-date').value,
+        category: $('#news-category').value,
+        hidden: $('#news-hidden').checked,
+        image: $('#news-image').value,
+        link: $('#news-link').value.trim(),
+        facebook_post: $('#news-facebook').value.trim(),
+        title: { vi: '', en: '', ja: '' },
+        summary: { vi: '', en: '', ja: '' }
+      };
+      for (const key of ['title', 'summary']) {
+        for (const language of languages) item[key][language] = $(`[data-news-field="${key}.${language}"]`).value.trim();
+      }
+      const complete = ['title', 'summary'].every(key => languages.every(language => item[key][language]));
+      if (forceDraft || !complete) item.hidden = true;
+      return { item, complete };
+    }
+    async function saveNews(forceDraft) {
+      if (!data['news.json']) return showStatus('Hãy chọn thư mục dự án hoặc tải news.json lên trước.', true);
+      const { item, complete } = readNewsForm(forceDraft);
+      if (!item.id) item.id = slugify(item.title.vi);
+      if (!item.id || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id)) {
+        showStatus('Mã tin cần có chữ thường, số và dấu gạch nối; hãy nhập tiêu đề tiếng Việt hoặc sửa mã tin.', true);
+        return;
+      }
+      if (!item.date) return showStatus('Hãy chọn ngày đăng.', true);
+      const duplicate = newsItems().some((existing, index) => existing.id === item.id && index !== editingNewsIndex);
+      if (duplicate) return showStatus('Mã tin này đã được dùng. Hãy chọn mã khác.', true);
+      if (!imageSlots()[item.image]) return showStatus('Chọn một slot ảnh hợp lệ.', true);
+      if (!forceDraft && !complete && !window.confirm('Chưa đủ tiêu đề và mô tả ở cả ba ngôn ngữ. Lưu tin này làm bản nháp ẩn?')) return;
+      if (forceDraft) item.hidden = true;
+      const previousItems = safeJson(newsItems(), 'news.json');
+      const items = newsItems();
+      if (editingNewsIndex < 0) items.push(item);
+      else items[editingNewsIndex] = item;
+      data['news.json'].items = items;
+      if (await saveFiles(['news.json'], 'Lưu tin tức')) {
+        const index = editingNewsIndex < 0 ? items.length - 1 : editingNewsIndex;
+        setNewsForm(items[index], index);
+      } else {
+        data['news.json'].items = previousItems;
+        renderNewsList();
+      }
+    }
+    async function toggleNewsHidden() {
+      if (editingNewsIndex < 0) return showStatus('Hãy chọn một tin trước khi ẩn hoặc hiện.', true);
+      const item = newsItems()[editingNewsIndex];
+      const previousHidden = item.hidden;
+      item.hidden = !item.hidden;
+      $('#news-hidden').checked = item.hidden;
+      if (!await saveFiles(['news.json'], item.hidden ? 'Ẩn tin' : 'Hiện tin')) {
+        item.hidden = previousHidden;
+        $('#news-hidden').checked = previousHidden;
+      }
+      renderNewsList();
+    }
+    async function deleteNews() {
+      if (editingNewsIndex < 0) return showStatus('Hãy chọn một tin trước khi xóa.', true);
+      const item = newsItems()[editingNewsIndex];
+      if (!window.confirm(`Xóa tin “${item.title?.vi || item.id}” khỏi danh sách? Không thể tự khôi phục sau khi lưu.`)) return;
+      const previousItems = safeJson(newsItems(), 'news.json');
+      data['news.json'].items.splice(editingNewsIndex, 1);
+      if (await saveFiles(['news.json'], 'Xóa tin')) setNewsForm(blankNews(), -1);
+      else data['news.json'].items = previousItems;
+      renderNewsList();
+    }
+
+    function flattenTree(value, path = '', depth = 0, rows = []) {
+      if (value && typeof value === 'object') {
+        for (const [key, child] of Object.entries(value)) {
+          const next = path ? `${path}.${key}` : key;
+          if (child && typeof child === 'object') flattenTree(child, next, depth + 1, rows);
+          else rows.push({ path: next, depth, value: child });
+        }
+      }
+      return rows;
+    }
+    function renderContentTree() {
+      const host = $('#content-tree');
+      host.replaceChildren();
+      if (!languages.every(language => data[`${language}.json`])) {
+        host.textContent = 'Tải đủ vi.json, en.json và ja.json để chỉnh sửa nội dung.';
+        return;
+      }
+      const maps = Object.fromEntries(languages.map(language => [language, new Map(flattenTree(data[`${language}.json`]).map(row => [row.path, row.value]))]));
+      const paths = [...new Set(languages.flatMap(language => [...maps[language].keys()]))].sort((a, b) => a.localeCompare(b));
+      for (const path of paths) {
+        const row = document.createElement('div');
+        row.className = 'tree-row';
+        const values = languages.map(language => maps[language].get(path));
+        const incomplete = languages.some(language => {
+          const value = maps[language].get(path);
+          return value === undefined || value === null || value === '';
+        });
+        if (incomplete) row.classList.add('empty');
+        const label = document.createElement('div');
+        label.className = 'tree-path';
+        label.textContent = path;
+        row.append(label);
+        languages.forEach((language, index) => {
+          const current = values[index];
+          const input = typeof current === 'boolean'
+            ? document.createElement('input')
+            : current && String(current).length > 90 ? document.createElement('textarea') : document.createElement('input');
+          if (typeof current === 'boolean') {
+            input.type = 'checkbox';
+            input.checked = current;
+          } else {
+            input.value = current ?? '';
+            if (typeof current === 'number') input.type = 'number';
+          }
+          input.setAttribute('aria-label', `${path} – ${language}`);
+          input.addEventListener(typeof current === 'boolean' ? 'change' : 'input', () => {
+            const updatedValue = typeof current === 'boolean' ? input.checked : typeof current === 'number' ? Number(input.value) : input.value;
+            setPath(data[`${language}.json`], path, updatedValue);
+            const nowEmpty = languages.some(lang => {
+              const value = getPath(data[`${lang}.json`], path);
+              return value === undefined || value === null || value === '';
+            });
+            row.classList.toggle('empty', nowEmpty);
+          });
+          row.append(input);
+        });
+        host.append(row);
+      }
+    }
+
+    function renderImages() {
+      const host = $('#image-list');
+      host.replaceChildren();
+      if (!data['images.json']) {
+        host.textContent = 'Tải images.json lên hoặc chọn thư mục dự án để xem các slot.';
+        return;
+      }
+      for (const [slot, entry] of Object.entries(imageSlots())) {
+        const card = document.createElement('article');
+        card.className = 'card image-card';
+        const title = document.createElement('h3');
+        title.textContent = slot;
+        const image = document.createElement('img');
+        image.className = 'preview';
+        image.src = imageUrl(slot);
+        image.alt = entry.alt?.vi || slot;
+        image.onerror = () => { image.alt = `Không tải được ảnh: ${entry.src}`; };
+        const path = document.createElement('p');
+        path.className = 'hint';
+        path.innerHTML = '<code></code>';
+        $('code', path).textContent = entry.src || '(chưa có đường dẫn)';
+        card.append(title, image, path);
+        for (const language of languages) {
+          const field = document.createElement('div');
+          field.className = 'field';
+          const label = document.createElement('label');
+          label.textContent = `Mô tả ảnh – ${language.toUpperCase()}`;
+          const hint = document.createElement('small');
+          hint.textContent = 'Mô tả ngắn cho người dùng trình đọc màn hình.';
+          label.append(hint);
+          const input = document.createElement('input');
+          input.value = entry.alt?.[language] ?? '';
+          input.setAttribute('aria-label', `${slot} alt ${language}`);
+          input.addEventListener('input', () => {
+            if (!entry.alt) entry.alt = {};
+            entry.alt[language] = input.value;
+            image.alt = entry.alt.vi || slot;
+          });
+          field.append(label, input);
+          card.append(field);
+        }
+        const chooser = document.createElement('input');
+        chooser.type = 'file';
+        chooser.accept = 'image/*';
+        chooser.hidden = true;
+        const chooseButton = document.createElement('button');
+        chooseButton.type = 'button';
+        chooseButton.textContent = 'Chọn ảnh mới';
+        chooseButton.disabled = !projectDirectory;
+        chooseButton.addEventListener('click', () => chooser.click());
+        chooser.addEventListener('change', () => overwriteImage(entry.src, chooser.files?.[0], image));
+        const fileHint = document.createElement('small');
+        fileHint.className = 'hint';
+        fileHint.textContent = projectDirectory ? 'Ảnh mới sẽ ghi đè trực tiếp file hiện tại.' : 'Chọn thư mục dự án để bật thay ảnh trực tiếp; nếu không, hãy thay file thủ công.';
+        card.append(chooseButton, chooser, fileHint);
+        host.append(card);
+      }
+    }
+    async function overwriteImage(path, file, preview) {
+      if (!file) return;
+      if (!projectDirectory) return showStatus('Chọn thư mục dự án có quyền ghi trước khi thay ảnh.', true);
+      const segments = String(path || '').split('/');
+      if (!segments.length || segments.some(part => !part || part === '.' || part === '..')) {
+        return showStatus('Đường dẫn ảnh trong images.json không an toàn hoặc không hợp lệ.', true);
+      }
+      const existingExtension = segments.at(-1).split('.').pop().toLowerCase();
+      const selectedExtension = file.name.split('.').pop().toLowerCase();
+      if (existingExtension !== selectedExtension) return showStatus(`Ảnh cần có đuôi .${existingExtension} để giữ nguyên đường dẫn slot.`, true);
+      if (!window.confirm(`Ghi đè ảnh tại ${path} bằng “${file.name}”?`)) return;
+      try {
+        let directory = await projectDirectory.getDirectoryHandle(segments[0]);
+        for (const segment of segments.slice(1, -1)) directory = await directory.getDirectoryHandle(segment);
+        const handle = await directory.getFileHandle(segments.at(-1), { create: false });
+        const writable = await handle.createWritable();
+        try {
+          await writable.write(file);
+          await writable.close();
+        } catch (error) {
+          await writable.abort();
+          throw error;
+        }
+        preview.src = URL.createObjectURL(file);
+        showStatus(`Đã ghi đè ảnh ${path}.`);
+      } catch (error) {
+        showStatus(`Không thay được ảnh: ${error.message}`, true);
+      }
+    }
+
+    function renderSettings() {
+      const config = data['site.config.json'];
+      if (!config) return;
+      $$('[data-config]').forEach(input => {
+        const value = getPath(config, input.dataset.config);
+        if (input.type === 'checkbox') input.checked = Boolean(value);
+        else input.value = value ?? '';
+      });
+    }
+    function collectSettings() {
+      $$('[data-config]').forEach(input => {
+        const value = input.type === 'checkbox' ? input.checked : input.type === 'number' ? Number(input.value) : input.value.trim();
+        assignPath(data['site.config.json'], input.dataset.config, value);
+      });
+    }
+    function renderAll() {
+      renderImageOptions();
+      renderNewsList();
+      renderContentTree();
+      renderImages();
+      renderSettings();
+      if (editingNewsIndex < 0) setNewsForm(blankNews(), -1);
+    }
+
+    $('#choose-folder').addEventListener('click', chooseProjectFolder);
+    $('#choose-files').addEventListener('click', () => $('#file-input').click());
+    $('#file-input').addEventListener('change', event => loadPickedFiles([...event.target.files]));
+    $$('.tabbar [role="tab"]').forEach(tab => tab.addEventListener('click', () => {
+      $$('.tabbar [role="tab"]').forEach(button => button.setAttribute('aria-selected', String(button === tab)));
+      $$('.panel').forEach(panel => panel.classList.toggle('active', panel.id === tab.dataset.tab));
+    }));
+    $('#add-news').addEventListener('click', () => setNewsForm(blankNews(), -1));
+    $('#news-image').addEventListener('change', updateNewsImagePreview);
+    $('#title-vi').addEventListener('input', () => {
+      if (!slugWasEdited) $('#news-id').value = slugify($('#title-vi').value);
+    });
+    $('#news-id').addEventListener('input', () => { slugWasEdited = true; });
+    $('#news-form').addEventListener('submit', event => { event.preventDefault(); saveNews(false); });
+    $('#save-news-draft').addEventListener('click', () => saveNews(true));
+    $('#hide-news').addEventListener('click', toggleNewsHidden);
+    $('#delete-news').addEventListener('click', deleteNews);
+    $('#save-content').addEventListener('click', () => saveFiles(['vi.json', 'en.json', 'ja.json'], 'Lưu nội dung đa ngôn ngữ'));
+    $('#save-images').addEventListener('click', () => saveFiles(['images.json'], 'Lưu mô tả ảnh'));
+    $('#settings-form').addEventListener('submit', event => {
+      event.preventDefault();
+      if (!data['site.config.json']) return showStatus('Hãy tải site.config.json lên hoặc chọn thư mục dự án trước.', true);
+      collectSettings();
+      saveFiles(['site.config.json'], 'Lưu cài đặt website');
+    });
+    if ('showDirectoryPicker' in window) {
+      // Fetch chỉ hỗ trợ xem và tải; quyền ghi luôn yêu cầu người dùng chọn thư mục.
+      const loadErrors = [];
+      Promise.all(fileNames.map(async name => {
+        try {
+          const response = await fetch(`../content/${name}`);
+          if (!response.ok) throw new Error(`${name}: HTTP ${response.status}`);
+          data[name] = await response.json();
+        } catch (error) {
+          loadErrors.push(error.message);
+        }
+      })).then(() => {
+        if (Object.keys(data).length) {
+          updateConnection('Đã tải dữ liệu để xem. Chọn thư mục dự án để lưu trực tiếp, hoặc tải file JSON lên.');
+          renderAll();
+          if (loadErrors.length) showStatus(`Một số file chưa tải được: ${loadErrors.join('; ')}.`, true);
+        } else if (loadErrors.length) {
+          showStatus(`Chưa tải được file dự án: ${loadErrors.join('; ')}. Hãy chọn thư mục hoặc tải JSON lên.`, true);
+        }
+      });
+    } else {
+      // Trình duyệt không có File System Access API vẫn có thể tải file lên và xuống.
+      const loadErrors = [];
+      Promise.all(fileNames.map(async name => {
+        try {
+          const response = await fetch(`../content/${name}`);
+          if (!response.ok) throw new Error(`${name}: HTTP ${response.status}`);
+          data[name] = await response.json();
+        } catch (error) {
+          loadErrors.push(error.message);
+        }
+      })).then(() => {
+        if (Object.keys(data).length) {
+          updateConnection('Đã tải dữ liệu để xem. Lưu sẽ tải JSON đã sửa xuống; ảnh cần được thay thủ công trong thư mục dự án.');
+          renderAll();
+          if (loadErrors.length) showStatus(`Một số file chưa tải được: ${loadErrors.join('; ')}.`, true);
+        } else if (loadErrors.length) {
+          showStatus(`Chưa tải được file dự án: ${loadErrors.join('; ')}. Hãy tải JSON lên.`, true);
+        }
+      });
+    }
+  </script>
+</body>
+</html>
