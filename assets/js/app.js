@@ -1,5 +1,6 @@
 // Starts localization and page rendering; layout injection is added in a later step.
 import { initI18n } from './i18n.js';
+import { initializeLayout } from './layout.js';
 import { renderPage } from './render.js';
 import { initReveal } from './reveal.js';
 
@@ -15,10 +16,7 @@ async function start() {
   try {
     const i18n = await initI18n();
 
-    // LAYOUT HOOK: step 03 will load the shared header and footer here.
-    if (typeof window.initializeLayout === 'function') {
-      await window.initializeLayout(i18n);
-    }
+    await initializeLayout(i18n);
 
     window.siteI18n = i18n;
     window.setSiteLanguage = async (language) => {

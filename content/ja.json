@@ -22,6 +22,19 @@
     "all": "すべて",
     "view_all_news": "ニュース一覧へ",
     "follow_us": "公式SNS",
+    "quick_links": "クイックリンク",
+    "language_options": {
+      "vi": "VI",
+      "en": "EN",
+      "ja": "日本語"
+    },
+    "social_labels": {
+      "facebook": "Facebook",
+      "youtube": "YouTube",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "zalo": "Zalo"
+    },
     "footer_company": "BRYCEN VIETNAM Co., Ltd.",
     "footer_dept": "BPO部門（Business Process Outsourcing）",
     "parent_site": "ブライセン日本サイト",

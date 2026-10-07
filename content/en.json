@@ -22,6 +22,19 @@
     "all": "All",
     "view_all_news": "View all news",
     "follow_us": "Follow us",
+    "quick_links": "Quick links",
+    "language_options": {
+      "vi": "VI",
+      "en": "EN",
+      "ja": "日本語"
+    },
+    "social_labels": {
+      "facebook": "Facebook",
+      "youtube": "YouTube",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "zalo": "Zalo"
+    },
     "footer_company": "BRYCEN VIETNAM Co., Ltd.",
     "footer_dept": "BPO Division (Business Process Outsourcing)",
     "parent_site": "Brycen Japan website",
