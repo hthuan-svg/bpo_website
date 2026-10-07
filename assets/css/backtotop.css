@@ -39,7 +39,7 @@
 
 .back-to-top__progress {
   position: absolute;
-  inset: -4px;
+  inset: 0 px;
   width: calc(100% + 8px);
   height: calc(100% + 8px);
   transform: rotate(-90deg);
