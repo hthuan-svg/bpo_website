@@ -3,6 +3,8 @@
   "slots": {
     "company_logo": {
       "src": "assets/images/branding/company_logo.png",
+      "width": 1000,
+      "height": 315,
       "alt": {
         "vi": "Logo BRYCEN VIETNAM",
         "en": "BRYCEN VIETNAM logo",
@@ -11,6 +13,8 @@
     },
     "company_logo_mark": {
       "src": "assets/images/branding/company_logo_mark.png",
+      "width": 858,
+      "height": 912,
       "alt": {
         "vi": "Biểu tượng BRYCEN VIETNAM",
         "en": "BRYCEN VIETNAM emblem",
@@ -19,6 +23,8 @@
     },
     "browser_logo": {
       "src": "assets/images/branding/browser_logo.png",
+      "width": 512,
+      "height": 512,
       "alt": {
         "vi": "Biểu tượng trình duyệt",
         "en": "Browser icon",
@@ -27,6 +33,8 @@
     },
     "og_share": {
       "src": "assets/images/branding/og_share.jpg",
+      "width": 1200,
+      "height": 630,
       "alt": {
         "vi": "Ảnh chia sẻ mạng xã hội",
         "en": "Social share image",
@@ -35,6 +43,8 @@
     },
     "background_main": {
       "src": "assets/images/backgrounds/background_main.jpg",
+      "width": 1536,
+      "height": 1024,
       "alt": {
         "vi": "Công nghệ AI",
         "en": "AI technology",
@@ -43,6 +53,8 @@
     },
     "background_soft": {
       "src": "assets/images/backgrounds/background_soft.png",
+      "width": 944,
+      "height": 541,
       "alt": {
         "vi": "Nền sóng mềm",
         "en": "Soft wave background",
@@ -51,6 +63,8 @@
     },
     "background_services_3d": {
       "src": "assets/images/backgrounds/background_services_3d.jpg",
+      "width": 960,
+      "height": 527,
       "alt": {
         "vi": "Dữ liệu 3D LiDAR",
         "en": "LiDAR 3D data",
@@ -59,6 +73,8 @@
     },
     "background_services_2d": {
       "src": "assets/images/backgrounds/background_services_2d.jpg",
+      "width": 960,
+      "height": 565,
       "alt": {
         "vi": "Camera hành trình",
         "en": "Dashcams",
@@ -67,6 +83,8 @@
     },
     "office_nguyen_van_cu": {
       "src": "assets/images/about/office_nguyen_van_cu.jpg",
+      "width": 540,
+      "height": 350,
       "alt": {
         "vi": "Văn phòng 25 Nguyễn Văn Cừ",
         "en": "Office at 25 Nguyen Van Cu",
@@ -75,6 +93,8 @@
     },
     "office_pham_van_dong": {
       "src": "assets/images/about/office_pham_van_dong.jpg",
+      "width": 694,
+      "height": 849,
       "alt": {
         "vi": "Văn phòng 72 Phạm Văn Đồng",
         "en": "Office at 72 Pham Van Dong",
@@ -83,6 +103,8 @@
     },
     "office_ly_thuong_kiet": {
       "src": "assets/images/about/office_ly_thuong_kiet.jpg",
+      "width": 669,
+      "height": 898,
       "alt": {
         "vi": "Văn phòng 28 Lý Thường Kiệt",
         "en": "Office at 28 Ly Thuong Kiet",
@@ -91,6 +113,8 @@
     },
     "timeline_2015": {
       "src": "assets/images/timeline/timeline_2015.png",
+      "width": 384,
+      "height": 384,
       "alt": {
         "vi": "Biểu tượng xe ô tô",
         "en": "Car icon",
@@ -99,6 +123,8 @@
     },
     "timeline_2016": {
       "src": "assets/images/timeline/timeline_2016.png",
+      "width": 512,
+      "height": 512,
       "alt": {
         "vi": "Biểu tượng thẻ tag",
         "en": "Tag icon",
@@ -107,6 +133,8 @@
     },
     "timeline_2018": {
       "src": "assets/images/timeline/timeline_2018.png",
+      "width": 225,
+      "height": 225,
       "alt": {
         "vi": "Biểu tượng tàu điện",
         "en": "Train icon",
@@ -115,6 +143,8 @@
     },
     "timeline_2019": {
       "src": "assets/images/timeline/timeline_2019.png",
+      "width": 400,
+      "height": 400,
       "alt": {
         "vi": "Biểu tượng nhóm người",
         "en": "Team icon",
@@ -123,6 +153,8 @@
     },
     "timeline_2020": {
       "src": "assets/images/timeline/timeline_2020.png",
+      "width": 225,
+      "height": 225,
       "alt": {
         "vi": "Biểu tượng vệ tinh",
         "en": "Satellite icon",
@@ -131,6 +163,8 @@
     },
     "timeline_2023": {
       "src": "assets/images/timeline/timeline_2023.png",
+      "width": 190,
+      "height": 190,
       "alt": {
         "vi": "Biểu tượng cảm biến LiDAR",
         "en": "LiDAR sensor icon",
@@ -139,6 +173,8 @@
     },
     "timeline_2025": {
       "src": "assets/images/timeline/timeline_2025.png",
+      "width": 175,
+      "height": 175,
       "alt": {
         "vi": "Biểu tượng xe gắn LiDAR",
         "en": "Car with LiDAR icon",
@@ -147,6 +183,8 @@
     },
     "service_3d_segment_1": {
       "src": "assets/images/services/service_3d_segment_1.jpg",
+      "width": 1213,
+      "height": 549,
       "alt": {
         "vi": "Ví dụ 3D Segment",
         "en": "3D Segment example",
@@ -155,6 +193,8 @@
     },
     "service_3d_segment_2": {
       "src": "assets/images/services/service_3d_segment_2.jpg",
+      "width": 1143,
+      "height": 540,
       "alt": {
         "vi": "Ví dụ 3D Segment (2)",
         "en": "3D Segment example (2)",
@@ -163,6 +203,8 @@
     },
     "service_3d_cuboid_1": {
       "src": "assets/images/services/service_3d_cuboid_1.jpg",
+      "width": 1217,
+      "height": 773,
       "alt": {
         "vi": "Ví dụ 3D Cuboid",
         "en": "3D Cuboid example",
@@ -171,6 +213,8 @@
     },
     "service_3d_cuboid_2": {
       "src": "assets/images/services/service_3d_cuboid_2.jpg",
+      "width": 1220,
+      "height": 776,
       "alt": {
         "vi": "Ví dụ 3D Cuboid (2)",
         "en": "3D Cuboid example (2)",
@@ -179,6 +223,8 @@
     },
     "service_2d_segment_input": {
       "src": "assets/images/services/service_2d_segment_input.jpg",
+      "width": 719,
+      "height": 540,
       "alt": {
         "vi": "Ảnh gốc trước khi segment",
         "en": "Original image before segmentation",
@@ -187,6 +233,8 @@
     },
     "service_2d_segment_output": {
       "src": "assets/images/services/service_2d_segment_output.jpg",
+      "width": 719,
+      "height": 540,
       "alt": {
         "vi": "Kết quả 2D Segment",
         "en": "2D Segment result",
@@ -195,6 +243,8 @@
     },
     "service_2d_bbox": {
       "src": "assets/images/services/service_2d_bbox.jpg",
+      "width": 702,
+      "height": 377,
       "alt": {
         "vi": "Ví dụ 2D Bounding Box",
         "en": "2D Bounding Box example",
@@ -203,6 +253,8 @@
     },
     "service_keypoint": {
       "src": "assets/images/services/service_keypoint.jpg",
+      "width": 680,
+      "height": 453,
       "alt": {
         "vi": "Ví dụ Keypoint",
         "en": "Keypoint example",
@@ -211,6 +263,8 @@
     },
     "service_satellite_1": {
       "src": "assets/images/services/service_satellite_1.jpg",
+      "width": 1400,
+      "height": 1230,
       "alt": {
         "vi": "Ảnh vệ tinh sân bay",
         "en": "Satellite image of an airport",
@@ -219,6 +273,8 @@
     },
     "service_satellite_2": {
       "src": "assets/images/services/service_satellite_2.jpg",
+      "width": 1400,
+      "height": 1227,
       "alt": {
         "vi": "Ảnh vệ tinh được gắn nhãn",
         "en": "Annotated satellite image",
@@ -227,6 +283,8 @@
     },
     "service_collection_lidar": {
       "src": "assets/images/services/service_collection_lidar.jpg",
+      "width": 960,
+      "height": 527,
       "alt": {
         "vi": "Dữ liệu LiDAR",
         "en": "LiDAR data",
@@ -235,6 +293,8 @@
     },
     "service_collection_dashcam": {
       "src": "assets/images/services/service_collection_dashcam.jpg",
+      "width": 960,
+      "height": 565,
       "alt": {
         "vi": "Camera hành trình",
         "en": "Dashcams",
@@ -243,6 +303,8 @@
     },
     "service_quality_control": {
       "src": "assets/images/services/service_quality_control.png",
+      "width": 850,
+      "height": 260,
       "alt": {
         "vi": "Quy trình kiểm soát chất lượng",
         "en": "Quality control process",
@@ -251,6 +313,8 @@
     },
     "team_event_booth": {
       "src": "assets/images/team/team_event_booth.jpg",
+      "width": 1200,
+      "height": 1096,
       "alt": {
         "vi": "Đội ngũ tại gian hàng triển lãm",
         "en": "Team at an exhibition booth",
@@ -259,6 +323,8 @@
     },
     "team_training_meeting": {
       "src": "assets/images/team/team_training_meeting.jpg",
+      "width": 720,
+      "height": 540,
       "alt": {
         "vi": "Buổi trao đổi, đào tạo",
         "en": "Training session",
@@ -267,6 +333,8 @@
     },
     "team_japan_visit": {
       "src": "assets/images/team/team_japan_visit.jpg",
+      "width": 719,
+      "height": 540,
       "alt": {
         "vi": "Nhân sự được cử sang Nhật",
         "en": "Staff dispatched to Japan",
@@ -275,6 +343,8 @@
     },
     "customer_sony": {
       "src": "assets/images/customers/customer_sony.png",
+      "width": 202,
+      "height": 62,
       "alt": {
         "vi": "Sony",
         "en": "Sony",
@@ -283,6 +353,8 @@
     },
     "customer_subaru": {
       "src": "assets/images/customers/customer_subaru.png",
+      "width": 1200,
+      "height": 324,
       "alt": {
         "vi": "Subaru",
         "en": "Subaru",
@@ -291,6 +363,8 @@
     },
     "customer_denso": {
       "src": "assets/images/customers/customer_denso.png",
+      "width": 500,
+      "height": 100,
       "alt": {
         "vi": "Denso",
         "en": "Denso",
@@ -299,6 +373,8 @@
     },
     "customer_honda": {
       "src": "assets/images/customers/customer_honda.png",
+      "width": 298,
+      "height": 107,
       "alt": {
         "vi": "Honda",
         "en": "Honda",
@@ -307,6 +383,8 @@
     },
     "customer_afeela": {
       "src": "assets/images/customers/customer_afeela.png",
+      "width": 225,
+      "height": 224,
       "alt": {
         "vi": "AFEELA (Sony Honda Mobility)",
         "en": "AFEELA (Sony Honda Mobility)",
@@ -315,6 +393,8 @@
     },
     "customer_nikon": {
       "src": "assets/images/customers/customer_nikon.png",
+      "width": 900,
+      "height": 506,
       "alt": {
         "vi": "Nikon",
         "en": "Nikon",
@@ -323,6 +403,8 @@
     },
     "award_top1_01": {
       "src": "assets/images/awards/award_top1_01.png",
+      "width": 168,
+      "height": 156,
       "alt": {
         "vi": "Huy hiệu Top 1 thị trường (Fuji Chimera)",
         "en": "#1 market share badge (Fuji Chimera)",
@@ -331,6 +413,8 @@
     },
     "award_top1_02": {
       "src": "assets/images/awards/award_top1_02.png",
+      "width": 198,
+      "height": 198,
       "alt": {
         "vi": "Huy hiệu Top 1 thị trường (Fuji Chimera)",
         "en": "#1 market share badge (Fuji Chimera)",
@@ -339,6 +423,8 @@
     },
     "award_top1_03": {
       "src": "assets/images/awards/award_top1_03.png",
+      "width": 271,
+      "height": 271,
       "alt": {
         "vi": "Huy hiệu Top 1 thị trường (Fuji Chimera)",
         "en": "#1 market share badge (Fuji Chimera)",
@@ -347,6 +433,8 @@
     },
     "award_top1_04": {
       "src": "assets/images/awards/award_top1_04.png",
+      "width": 450,
+      "height": 402,
       "alt": {
         "vi": "Huy hiệu Top 1 thị trường (Fuji Chimera)",
         "en": "#1 market share badge (Fuji Chimera)",

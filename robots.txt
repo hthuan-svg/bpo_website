@@ -1,0 +1,6 @@
+# Search-engine crawl rules for the BRYCEN VIETNAM BPO website.
+User-agent: *
+Disallow: /admin/
+Disallow: /assets/styleguide.html
+
+Sitemap: https://example.com/sitemap.xml

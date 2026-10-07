@@ -58,7 +58,15 @@ Chạy `validate.bat` (bấm đúp) hoặc `node tools/validate-content.mjs`. N�
 - ✖ lỗi phải sửa (thiếu ngôn ngữ, file ảnh không tồn tại, JSON sai cú pháp)
 - ⚠ nhắc nhở (còn chữ `[CẦN BỔ SUNG]`)
 
-## 7. Câu hỏi thường gặp
+## 7. SEO, chia sẻ liên kết và tên miền
+- Tiêu đề/mô tả SEO theo từng trang được lưu trong `content/vi.json`, `content/en.json` và `content/ja.json`, trong mục `seo.pages`. Khi thêm trang, cập nhật đủ ba ngôn ngữ.
+- Link chuẩn và `hreflang` dùng `?lang=vi`, `?lang=en` và `?lang=ja`. Khi đổi ngôn ngữ trên trang, trình duyệt cũng cập nhật tiêu đề, mô tả, Open Graph, Twitter Card và URL tương ứng.
+- Facebook và Zalo không chạy JavaScript khi đọc bài chia sẻ. Vì vậy thẻ Open Graph viết sẵn trong các file HTML luôn dùng nội dung tiếng Việt mặc định; đây là chủ ý để ảnh và thông tin chia sẻ vẫn hiện ổn định. Trình duyệt cập nhật các thẻ sau khi chạy JavaScript, nhưng crawler không thấy bản dịch đó.
+- Đổi tên miền mẫu `https://example.com` trước khi xuất bản: thay mọi lần xuất hiện trong 10 trang HTML, `404.html`, `sitemap.xml` và dòng Sitemap trong `robots.txt`. Thẻ Open Graph dùng slot `og_share` (hiện có đường dẫn trong HTML để crawler đọc được ngay); nếu sửa đường dẫn slot này trong `content/images.json`, hãy cập nhật cả giá trị `og:image` và `twitter:image` trong 10 trang HTML.
+- Trang dùng font hệ thống có sẵn trên thiết bị để tránh tải font bên ngoài; hiện không có tệp font web riêng cần preload. Nếu sau này thêm font tự lưu trong `assets/fonts/`, hãy preload đúng tệp WOFF2 cần thiết và giữ font dự phòng trong CSS.
+- Khi triển khai, đặt `404.html` làm trang lỗi 404 trong cấu hình máy chủ/hosting. `node tools/serve.mjs` cũng trả trang này kèm HTTP 404; Live Server có thể dùng trang lỗi mặc định riêng.
+
+## 8. Câu hỏi thường gặp
 | Hiện tượng | Nguyên nhân thường gặp | Cách xử lý |
 |---|---|---|
 | Trang trắng / báo "Hãy mở bằng Live Server" | Mở file bằng cách bấm đúp | Dùng Live Server |
@@ -66,8 +74,8 @@ Chạy `validate.bat` (bấm đúp) hoặc `node tools/validate-content.mjs`. N�
 | Sửa xong không đổi | Trình duyệt giữ bản cũ | `Ctrl+F5` |
 | Toàn bộ chữ biến mất | File JSON sai cú pháp (thiếu/thừa `,` `"`) | VS Code gạch đỏ chỗ lỗi; hoặc quay lại bản `git`/bản sao lưu |
 | Ảnh vẫn là ảnh cũ | Sai tên/đuôi file khi ghi đè | Tên phải trùng khít (`.jpg` ≠ `.jpeg` ≠ `.png`) |
-| Chia sẻ Facebook ra tiếng Việt dù đang xem tiếng Nhật | Facebook không chạy JavaScript nên đọc thẻ tĩnh | Bình thường, xem Prompt 14 nếu cần chia theo ngôn ngữ |
+| Chia sẻ Facebook/Zalo ra tiếng Việt dù đang xem tiếng Nhật | Facebook/Zalo không chạy JavaScript nên đọc thẻ Open Graph tĩnh | Bình thường; thẻ tĩnh dùng tiếng Việt để crawler luôn nhận nội dung |
 | Quay lại bản trước | — | `git log` rồi `git checkout <mã> -- content/` hoặc nhờ AI hướng dẫn |
 
-## 8. Thêm/sửa bản dịch tiếng Nhật
+## 9. Thêm/sửa bản dịch tiếng Nhật
 Bản dịch ban đầu do AI tạo. Hãy nhờ đồng nghiệp bên Brycen JP đọc lại, sửa trực tiếp trong `content/ja.json`.

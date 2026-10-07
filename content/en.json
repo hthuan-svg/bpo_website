@@ -3,6 +3,55 @@
     "title": "BPO – Data for AI | BRYCEN VIETNAM",
     "description": "The BPO Division of BRYCEN VIETNAM Co., Ltd. specializes in creating and collecting training data for AI."
   },
+  "seo": {
+    "pages": {
+      "index": {
+        "title": "BRYCEN VIETNAM BPO – Data for AI",
+        "description": "Explore BRYCEN VIETNAM's 2D, 3D, LiDAR, and dashcam AI training data creation and collection services."
+      },
+      "about": {
+        "title": "About BRYCEN VIETNAM BPO",
+        "description": "Learn about the BPO division, its history, and BRYCEN VIETNAM office locations."
+      },
+      "services": {
+        "title": "AI Data Services | BRYCEN VIETNAM BPO",
+        "description": "An overview of BRYCEN VIETNAM BPO's AI training data creation and collection services."
+      },
+      "services-annotation": {
+        "title": "AI Training Data Creation | BRYCEN VIETNAM BPO",
+        "description": "Explore 2D, 3D, and satellite image annotation services with quality control."
+      },
+      "services-collection": {
+        "title": "AI Data Collection | BRYCEN VIETNAM BPO",
+        "description": "Learn about LiDAR and dashcam data collection for AI training."
+      },
+      "team": {
+        "title": "Our Team | BRYCEN VIETNAM BPO",
+        "description": "Learn about the team structure, operating process, and career opportunities at BRYCEN VIETNAM BPO."
+      },
+      "achievements": {
+        "title": "Achievements and Projects | BRYCEN VIETNAM BPO",
+        "description": "Explore the achievements and AI data projects of BRYCEN VIETNAM's BPO division."
+      },
+      "vision": {
+        "title": "Vision and Careers | BRYCEN VIETNAM BPO",
+        "description": "Discover BRYCEN VIETNAM's direction and career opportunities in AI data services."
+      },
+      "news": {
+        "title": "News | BRYCEN VIETNAM BPO",
+        "description": "Read news, event updates, and activities from the BRYCEN VIETNAM BPO division."
+      },
+      "contact": {
+        "title": "Contact | BRYCEN VIETNAM BPO",
+        "description": "Contact BRYCEN VIETNAM BPO to discuss AI training data services."
+      }
+    }
+  },
+  "not_found": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has moved.",
+    "home_link": "Return to home"
+  },
   "ui": {
     "nav": {
       "home": "Home",

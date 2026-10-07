@@ -21,7 +21,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  color: var(--brand-600);
+  color: var(--ink-700);
   font-size: .76em;
   font-weight: 700;
   letter-spacing: .12em;
@@ -83,7 +83,7 @@
 }
 
 .button--primary {
-  background: var(--brand-600);
+  background: var(--ink-700);
   color: var(--bg);
 }
 
@@ -108,7 +108,7 @@
   padding-inline: .25rem;
   border-radius: 0;
   background: transparent;
-  color: var(--brand-600);
+  color: var(--ink-700);
 }
 
 .button--text::after {
@@ -217,7 +217,7 @@
 .timeline__year {
   display: block;
   margin-bottom: var(--space-1);
-  color: var(--brand-600);
+  color: var(--ink-700);
   font-size: 1.15rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
@@ -776,7 +776,7 @@
 
 .site-footer__links a:hover,
 .site-footer__parent-link:hover {
-  color: var(--brand-600);
+  color: var(--ink-700);
   text-decoration: underline;
   text-underline-offset: .2em;
 }

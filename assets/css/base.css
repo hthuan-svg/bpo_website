@@ -1,7 +1,5 @@
 /* Accessible global defaults, typography and responsive page foundations. */
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
-
-/* To self-host, download these font families to assets/fonts/ and replace this import with local @font-face rules. */
+/* System font fallbacks avoid blocking requests and support Vietnamese, English, and Japanese. */
 :root {
   color-scheme: light;
   font-family: "Inter", "Be Vietnam Pro", "Noto Sans JP", system-ui, "Segoe UI", "Hiragino Sans", "Yu Gothic", sans-serif;
@@ -78,7 +76,7 @@ button:disabled,
 }
 
 a {
-  color: var(--brand-600);
+  color: var(--ink-700);
   text-decoration-thickness: .08em;
   text-underline-offset: .2em;
 }
@@ -93,7 +91,7 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 [tabindex]:focus-visible {
-  outline: 3px solid var(--accent-500);
+  outline: 3px solid var(--ink-900);
   outline-offset: 3px;
 }
 

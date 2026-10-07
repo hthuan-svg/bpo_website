@@ -3,6 +3,55 @@
     "title": "BPO – AI向けデータ | BRYCEN VIETNAM",
     "description": "BRYCEN VIETNAM BPO部門は、AI学習データの作成・収集を専門としています。"
   },
+  "seo": {
+    "pages": {
+      "index": {
+        "title": "BRYCEN VIETNAM BPO – AIデータ",
+        "description": "BRYCEN VIETNAMの2D・3D・LiDAR・ドライブレコーダーによるAI学習データ作成・収集サービスをご紹介します。"
+      },
+      "about": {
+        "title": "BRYCEN VIETNAM BPOについて",
+        "description": "BPO部門の概要、沿革、BRYCEN VIETNAMのオフィスをご紹介します。"
+      },
+      "services": {
+        "title": "AIデータサービス | BRYCEN VIETNAM BPO",
+        "description": "BRYCEN VIETNAM BPOのAI学習データ作成・収集サービスの概要をご案内します。"
+      },
+      "services-annotation": {
+        "title": "AI学習データ作成 | BRYCEN VIETNAM BPO",
+        "description": "品質管理を含む2D・3D・衛星画像のアノテーションサービスをご紹介します。"
+      },
+      "services-collection": {
+        "title": "AIデータ収集 | BRYCEN VIETNAM BPO",
+        "description": "AI学習向けLiDARデータおよびドライブレコーダーデータの収集をご紹介します。"
+      },
+      "team": {
+        "title": "チーム | BRYCEN VIETNAM BPO",
+        "description": "BRYCEN VIETNAM BPOの組織体制、運用フロー、キャリア形成についてご紹介します。"
+      },
+      "achievements": {
+        "title": "実績・プロジェクト | BRYCEN VIETNAM BPO",
+        "description": "BRYCEN VIETNAM BPO部門の実績とAIデータプロジェクトをご紹介します。"
+      },
+      "vision": {
+        "title": "ビジョン・採用 | BRYCEN VIETNAM BPO",
+        "description": "BRYCEN VIETNAMの事業方針とAIデータ分野のキャリア機会をご紹介します。"
+      },
+      "news": {
+        "title": "ニュース | BRYCEN VIETNAM BPO",
+        "description": "BRYCEN VIETNAM BPO部門のニュース、イベント、活動をご覧いただけます。"
+      },
+      "contact": {
+        "title": "お問い合わせ | BRYCEN VIETNAM BPO",
+        "description": "AI学習データサービスについて、BRYCEN VIETNAM BPOへお問い合わせください。"
+      }
+    }
+  },
+  "not_found": {
+    "title": "ページが見つかりません",
+    "description": "お探しのページは存在しないか、移動した可能性があります。",
+    "home_link": "トップページへ戻る"
+  },
   "ui": {
     "nav": {
       "home": "ホーム",

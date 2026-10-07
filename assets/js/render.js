@@ -61,6 +61,11 @@ function applyImage(element, slotName, images, language) {
   }
   element.src = slot.src;
   element.alt = slot.alt?.[language] ?? slot.alt?.vi ?? '';
+  if (Number.isInteger(slot.width) && Number.isInteger(slot.height)) {
+    element.width = slot.width;
+    element.height = slot.height;
+  }
+  element.loading = 'lazy';
 }
 
 function applyBackground(element, slotName, images) {

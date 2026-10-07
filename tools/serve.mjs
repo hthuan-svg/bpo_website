@@ -12,6 +12,8 @@ const mimeTypes = new Map([
   ['.js', 'text/javascript; charset=utf-8'],
   ['.mjs', 'text/javascript; charset=utf-8'],
   ['.json', 'application/json; charset=utf-8'],
+  ['.txt', 'text/plain; charset=utf-8'],
+  ['.xml', 'application/xml; charset=utf-8'],
   ['.svg', 'image/svg+xml'],
   ['.webp', 'image/webp'],
   ['.ico', 'image/x-icon'],
@@ -19,6 +21,18 @@ const mimeTypes = new Map([
   ['.jpg', 'image/jpeg'],
   ['.jpeg', 'image/jpeg']
 ]);
+
+function sendFile(request, response, filePath, fileStats, statusCode = 200) {
+  response.writeHead(statusCode, {
+    'Content-Type': mimeTypes.get(extname(filePath).toLowerCase()) ?? 'application/octet-stream',
+    'Content-Length': fileStats.size
+  });
+  if (request.method === 'HEAD') {
+    response.end();
+    return;
+  }
+  createReadStream(filePath).pipe(response);
+}
 
 const server = createServer((request, response) => {
   if (request.method !== 'GET' && request.method !== 'HEAD') {
@@ -46,20 +60,18 @@ const server = createServer((request, response) => {
 
   stat(filePath, (error, fileStats) => {
     if (error || !fileStats.isFile()) {
-      response.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
-      response.end('Not found');
+      const notFoundPath = join(rootDirectory, '404.html');
+      stat(notFoundPath, (notFoundError, notFoundStats) => {
+        if (notFoundError || !notFoundStats.isFile()) {
+          response.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+          response.end('Not found');
+          return;
+        }
+        sendFile(request, response, notFoundPath, notFoundStats, 404);
+      });
       return;
     }
-
-    response.writeHead(200, {
-      'Content-Type': mimeTypes.get(extname(filePath).toLowerCase()) ?? 'application/octet-stream',
-      'Content-Length': fileStats.size
-    });
-    if (request.method === 'HEAD') {
-      response.end();
-      return;
-    }
-    createReadStream(filePath).pipe(response);
+    sendFile(request, response, filePath, fileStats);
   });
 });
 

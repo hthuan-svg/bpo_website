@@ -3,6 +3,55 @@
     "title": "BPO – Dữ liệu cho AI | BRYCEN VIETNAM",
     "description": "Bộ phận BPO của Công ty TNHH BRYCEN VIETNAM chuyên tạo và thu thập dữ liệu học cho AI."
   },
+  "seo": {
+    "pages": {
+      "index": {
+        "title": "BRYCEN VIETNAM BPO – Dữ liệu cho AI",
+        "description": "Khám phá dịch vụ tạo và thu thập dữ liệu học AI 2D, 3D, LiDAR và camera hành trình của BRYCEN VIETNAM."
+      },
+      "about": {
+        "title": "Giới thiệu BRYCEN VIETNAM BPO",
+        "description": "Tìm hiểu bộ phận BPO, lịch sử phát triển và các văn phòng của BRYCEN VIETNAM."
+      },
+      "services": {
+        "title": "Dịch vụ dữ liệu AI | BRYCEN VIETNAM BPO",
+        "description": "Tổng quan dịch vụ tạo dữ liệu và thu thập dữ liệu học cho AI của BRYCEN VIETNAM BPO."
+      },
+      "services-annotation": {
+        "title": "Tạo dữ liệu học cho AI | BRYCEN VIETNAM BPO",
+        "description": "Dịch vụ gán nhãn dữ liệu 2D, 3D và ảnh vệ tinh, kèm quy trình kiểm soát chất lượng."
+      },
+      "services-collection": {
+        "title": "Thu thập dữ liệu AI | BRYCEN VIETNAM BPO",
+        "description": "Tìm hiểu dịch vụ thu thập dữ liệu LiDAR và camera hành trình phục vụ huấn luyện AI."
+      },
+      "team": {
+        "title": "Đội ngũ BPO | BRYCEN VIETNAM",
+        "description": "Tìm hiểu cơ cấu đội ngũ, quy trình vận hành và cơ hội phát triển tại BRYCEN VIETNAM BPO."
+      },
+      "achievements": {
+        "title": "Thành tựu và dự án | BRYCEN VIETNAM BPO",
+        "description": "Khám phá thành tựu và các dự án dữ liệu AI của bộ phận BPO BRYCEN VIETNAM."
+      },
+      "vision": {
+        "title": "Tầm nhìn và tuyển dụng | BRYCEN VIETNAM BPO",
+        "description": "Tìm hiểu định hướng phát triển và cơ hội nghề nghiệp trong lĩnh vực dữ liệu AI tại BRYCEN VIETNAM."
+      },
+      "news": {
+        "title": "Tin tức | BRYCEN VIETNAM BPO",
+        "description": "Cập nhật tin tức, sự kiện và hoạt động của bộ phận BPO thuộc BRYCEN VIETNAM."
+      },
+      "contact": {
+        "title": "Liên hệ | BRYCEN VIETNAM BPO",
+        "description": "Liên hệ bộ phận BPO BRYCEN VIETNAM để trao đổi về dịch vụ dữ liệu cho AI."
+      }
+    }
+  },
+  "not_found": {
+    "title": "Không tìm thấy trang",
+    "description": "Trang bạn đang tìm không tồn tại hoặc đã được chuyển đi.",
+    "home_link": "Về trang chủ"
+  },
   "ui": {
     "nav": {
       "home": "Trang chủ",

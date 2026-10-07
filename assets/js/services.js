@@ -28,6 +28,10 @@ function createImage(context, slotName, className = '') {
   const image = createElement('img', className);
   image.src = slot.src;
   image.alt = slot.alt?.[context.language] ?? slot.alt?.vi ?? '';
+  if (Number.isInteger(slot.width) && Number.isInteger(slot.height)) {
+    image.width = slot.width;
+    image.height = slot.height;
+  }
   image.loading = 'lazy';
   return image;
 }
@@ -160,6 +164,9 @@ function createLightbox(context) {
   closeButton.type = 'submit';
   const image = createElement('img', 'services-lightbox__image');
   image.alt = '';
+  image.width = 1200;
+  image.height = 800;
+  image.loading = 'lazy';
   form.append(closeButton, image);
   dialog.append(title, form);
 
@@ -202,6 +209,8 @@ function createAnnotationItem(context, item, dialog) {
       const lightboxImage = dialog.querySelector('.services-lightbox__image');
       lightboxImage.src = image.src;
       lightboxImage.alt = image.alt;
+      lightboxImage.width = image.width;
+      lightboxImage.height = image.height;
       dialog.showModal();
     });
     images.append(button);

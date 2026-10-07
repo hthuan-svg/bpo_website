@@ -33,7 +33,7 @@
 
 .home-hero__eyebrow {
   margin-bottom: var(--space-3);
-  color: var(--brand-600);
+  color: var(--ink-700);
   font-size: .875rem;
   font-weight: 700;
   letter-spacing: .12em;
@@ -79,7 +79,7 @@
 }
 
 .home-stats__value {
-  color: var(--brand-600);
+  color: var(--ink-700);
   font-size: clamp(2rem, 4vw, 3.25rem);
   font-variant-numeric: tabular-nums;
   line-height: 1.1;
@@ -964,7 +964,7 @@ a.contact-card__value {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
-  color: var(--brand-600);
+  color: var(--ink-700);
   font-weight: 600;
 }
 
@@ -995,7 +995,7 @@ a.contact-card__value {
 
 .content-stat__value {
   display: block;
-  color: var(--brand-600);
+  color: var(--ink-700);
   font-size: clamp(4rem, 13vw, 8.5rem);
   font-variant-numeric: tabular-nums;
   font-weight: 700;
@@ -1334,7 +1334,7 @@ a.contact-card__value {
     border: 1px solid var(--line);
     border-radius: 50%;
     background: var(--bg);
-    color: var(--brand-600);
+    color: var(--ink-700);
     content: "→";
     font-size: 1rem;
     font-weight: 700;

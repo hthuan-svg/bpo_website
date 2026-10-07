@@ -67,6 +67,10 @@ function createImage(item, context, className) {
   image.className = className;
   image.src = slot.src;
   image.alt = localized(slot.alt, context.language) || localized(item.title, context.language);
+  if (Number.isInteger(slot.width) && Number.isInteger(slot.height)) {
+    image.width = slot.width;
+    image.height = slot.height;
+  }
   image.loading = 'lazy';
   return image;
 }
