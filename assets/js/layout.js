@@ -1,4 +1,6 @@
 // Injects the shared, localized site header and footer.
+import { initializeBackToTop } from './backtotop.js';
+
 const pageLinks = [
   { page: 'index', file: 'index.html', key: 'home' },
   { page: 'about', file: 'about.html', key: 'about' },
@@ -303,6 +305,18 @@ function initializeInteractions(header, i18n) {
   updateLanguageButtons(header, i18n.language);
 }
 
+function ensureBackToTopStyles() {
+  if (document.querySelector('link[data-back-to-top-styles="true"]')) {
+    return;
+  }
+
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'assets/css/backtotop.css';
+  link.dataset.backToTopStyles = 'true';
+  document.head.append(link);
+}
+
 export async function initializeLayout(i18n) {
   const currentPage = document.body.dataset.page ?? 'index';
   const headerTarget = document.querySelector('#site-header');
@@ -312,7 +326,9 @@ export async function initializeLayout(i18n) {
     throw new Error('The page must include #site-header and #site-footer containers.');
   }
 
+  ensureBackToTopStyles();
   headerTarget.innerHTML = headerMarkup(currentPage);
   footerTarget.innerHTML = footerMarkup(i18n.siteConfig);
   initializeInteractions(headerTarget, i18n);
+  initializeBackToTop(i18n);
 }
