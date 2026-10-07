@@ -449,7 +449,7 @@ function createAnnotationWorkflow(context) {
   return section;
 }
 
-function createAnnotationQualitySection(context) {
+function createAnnotationQualitySection(context, dialog) {
   const section = createElement('section', 'annotation-quality section-shell');
   section.id = 'quality';
   section.dataset.annotationSection = 'quality';
@@ -460,7 +460,89 @@ function createAnnotationQualitySection(context) {
     createElement('p', 'eyebrow', context.t('services.annotation.tabs.quality')),
     createElement('h2', 'section-title', context.t('services.annotation.quality.title'))
   );
+  const quality = context.t('services.annotation.quality') ?? {};
+  const qualityLead = typeof quality.lead === 'string' ? quality.lead : '';
+  if (qualityLead) {
+    heading.append(createElement('p', 'section-lead', qualityLead));
+  }
   container.append(heading);
+
+  const layers = Array.isArray(quality.layers) ? quality.layers : [];
+  const flow = createElement('ol', 'annotation-quality__flow');
+  layers.forEach((layer, index) => {
+    const item = createElement('li', 'annotation-quality__stage');
+    const badge = createElement('span', 'annotation-quality__code', layer.code ?? '');
+    badge.title = layer.role ?? layer.code ?? '';
+
+    const meta = createElement('div', 'annotation-quality__meta');
+    meta.append(
+      createElement('span', 'annotation-quality__role', layer.role ?? ''),
+      createElement('strong', 'annotation-quality__action', layer.action ?? '')
+    );
+
+    const desc = createElement('p', 'annotation-quality__desc', layer.desc ?? '');
+    item.append(badge, meta, desc);
+    flow.append(item);
+
+    if (index < layers.length - 1) {
+      const connector = createElement('li', 'annotation-quality__connector');
+      connector.setAttribute('aria-hidden', 'true');
+      connector.append(
+        createElement('span', 'annotation-quality__pass', quality.pass_label ?? ''),
+        createElement('span', 'annotation-quality__arrow', '→')
+      );
+      flow.append(connector);
+    }
+  });
+
+  const loop = createElement('div', 'annotation-quality__loop');
+  loop.setAttribute('aria-label', quality.loop_label ?? '');
+  loop.append(createElement('span', 'sr-only', quality.loop_label ?? ''));
+
+  const loopRail = createElement('div', 'annotation-quality__loop-rail');
+  layers.slice(1).forEach((layer) => {
+    const returnItem = createElement('div', 'annotation-quality__return');
+    const label = createElement('div', 'annotation-quality__return-label');
+    label.append(
+      createElement('span', 'annotation-quality__fail', quality.fail_label ?? ''),
+      createElement('span', 'annotation-quality__return-role', layer.code ?? '')
+    );
+    returnItem.append(label, createElement('span', 'annotation-quality__return-arrow', '↩'));
+    loopRail.append(returnItem);
+  });
+
+  const rotation = createElement('div', 'annotation-quality__loop-rotation', '↻');
+  rotation.title = quality.loop_label ?? '';
+  loop.append(loopRail, rotation);
+
+  const principles = createElement('div', 'annotation-quality__principles');
+  const principleItems = Array.isArray(quality.principles) ? quality.principles : [];
+  if (principleItems.length) {
+    const principlesHeader = createElement('h3', 'annotation-quality__principles-title', quality.principles_title ?? '');
+    principles.append(principlesHeader);
+    principleItems.forEach((principle) => {
+      const card = createElement('article', 'annotation-quality__principle');
+      card.append(
+        createElement('h4', 'annotation-quality__principle-title', principle.title ?? ''),
+        createElement('p', 'annotation-quality__principle-text', principle.text ?? '')
+      );
+      principles.append(card);
+    });
+  }
+
+  const referenceWrap = createElement('div', 'annotation-quality__reference');
+  const image = createImage(context, 'service_quality_control', 'annotation-quality__reference-image');
+  if (image) {
+    const button = createElement('button', 'annotation-quality__reference-button');
+    button.type = 'button';
+    button.append(image);
+    if (dialog) {
+      attachLightbox(button, image, dialog);
+    }
+    referenceWrap.append(button);
+  }
+
+  container.append(flow, loop, principles, referenceWrap);
   section.append(container);
   return section;
 }
@@ -561,7 +643,7 @@ function renderAnnotation(context, main) {
     tabs,
     modalitiesWrapper,
     createAnnotationWorkflow(context),
-    createAnnotationQualitySection(context),
+    createAnnotationQualitySection(context, dialog),
     createAnnotationUsecases(context),
     createAnnotationSecurity(context),
     createAnnotationCta(context),
