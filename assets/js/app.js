@@ -1,8 +1,9 @@
-// Starts localization and page rendering; layout injection is added in a later step.
+// Starts localization, shared layout, page rendering, and page behaviors.
 import { initI18n } from './i18n.js';
 import { initializeLayout } from './layout.js';
 import { renderPage } from './render.js';
 import { initReveal } from './reveal.js';
+import { initHomeCounters } from './home.js';
 
 const openPageMessage = 'Hãy mở trang bằng Live Server (không bấm đúp file .html)';
 
@@ -33,9 +34,11 @@ async function start() {
     document.addEventListener('langchange', () => {
       renderPage(i18n);
       initReveal();
+      initHomeCounters();
     });
     renderPage(i18n);
     initReveal();
+    initHomeCounters();
   } catch (error) {
     showStartupError(error);
   }

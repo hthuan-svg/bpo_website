@@ -36,6 +36,8 @@ contact.{lead,labels,note}
 | `data-list="đường.dẫn"` + `<template>` | Lặp qua mảng, nhân bản template | xem dưới |
 | `data-field="tên"` | Trong template: gán chữ từ trường của mục | `<h3 data-field="title">` |
 | `data-img-field="tên"` | Trong template: trường chứa **tên slot** ảnh | `<img data-img-field="image">` |
+| `data-img-field="."` | Trong template danh sách chuỗi slot ảnh: dùng trực tiếp tên slot của mục | `<img data-img-field=".">` |
+| `data-link-field="tên"` | Trong template: trường chứa URL liên kết của mục | `<a data-link-field="link">...</a>` |
 | `data-config="đường.dẫn"` | Giá trị từ `site.config.json` (vd link) | `<a data-config="social.facebook">` |
 | `data-show-if="đường.dẫn"` | Ẩn phần tử nếu giá trị rỗng | ẩn icon Facebook khi chưa có link |
 

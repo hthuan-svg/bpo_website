@@ -130,9 +130,20 @@ function bindList(element, context) {
       field.textContent = value === null || value === undefined ? '' : String(value);
     });
     fragment.querySelectorAll('[data-img-field]').forEach((image) => {
-      const slotName = findValue(item, image.dataset.imgField);
+      const slotName = image.dataset.imgField === '.' && typeof item === 'string'
+        ? item
+        : findValue(item, image.dataset.imgField);
       if (typeof slotName === 'string') {
         applyImage(image, slotName, context.images, context.language);
+      }
+    });
+    fragment.querySelectorAll('[data-link-field]').forEach((link) => {
+      const value = findValue(item, link.dataset.linkField);
+      const href = safeUrl(value);
+      if (link instanceof HTMLAnchorElement && href) {
+        link.setAttribute('href', href);
+      } else if (link instanceof HTMLAnchorElement) {
+        link.removeAttribute('href');
       }
     });
 
