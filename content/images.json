@@ -1,0 +1,357 @@
+{
+  "_readme": "Mỗi 'slot' là một vị trí ảnh trên web. Muốn đổi ảnh: ghi đè file cùng tên, hoặc sửa 'src'. Sửa 'alt' để đổi mô tả ảnh (cho người khiếm thị & SEO).",
+  "slots": {
+    "company_logo": {
+      "src": "assets/images/branding/company_logo.png",
+      "alt": {
+        "vi": "Logo BRYCEN VIETNAM",
+        "en": "BRYCEN VIETNAM logo",
+        "ja": "BRYCEN VIETNAMロゴ"
+      }
+    },
+    "company_logo_mark": {
+      "src": "assets/images/branding/company_logo_mark.png",
+      "alt": {
+        "vi": "Biểu tượng BRYCEN VIETNAM",
+        "en": "BRYCEN VIETNAM emblem",
+        "ja": "BRYCEN VIETNAMエンブレム"
+      }
+    },
+    "browser_logo": {
+      "src": "assets/images/branding/browser_logo.png",
+      "alt": {
+        "vi": "Biểu tượng trình duyệt",
+        "en": "Browser icon",
+        "ja": "ブラウザアイコン"
+      }
+    },
+    "og_share": {
+      "src": "assets/images/branding/og_share.jpg",
+      "alt": {
+        "vi": "Ảnh chia sẻ mạng xã hội",
+        "en": "Social share image",
+        "ja": "SNS共有画像"
+      }
+    },
+    "background_main": {
+      "src": "assets/images/backgrounds/background_main.jpg",
+      "alt": {
+        "vi": "Công nghệ AI",
+        "en": "AI technology",
+        "ja": "AIテクノロジー"
+      }
+    },
+    "background_soft": {
+      "src": "assets/images/backgrounds/background_soft.png",
+      "alt": {
+        "vi": "Nền sóng mềm",
+        "en": "Soft wave background",
+        "ja": "やわらかな波の背景"
+      }
+    },
+    "background_services_3d": {
+      "src": "assets/images/backgrounds/background_services_3d.jpg",
+      "alt": {
+        "vi": "Dữ liệu 3D LiDAR",
+        "en": "LiDAR 3D data",
+        "ja": "LiDAR 3Dデータ"
+      }
+    },
+    "background_services_2d": {
+      "src": "assets/images/backgrounds/background_services_2d.jpg",
+      "alt": {
+        "vi": "Camera hành trình",
+        "en": "Dashcams",
+        "ja": "ドライブレコーダー"
+      }
+    },
+    "office_nguyen_van_cu": {
+      "src": "assets/images/about/office_nguyen_van_cu.jpg",
+      "alt": {
+        "vi": "Văn phòng 25 Nguyễn Văn Cừ",
+        "en": "Office at 25 Nguyen Van Cu",
+        "ja": "25 Nguyen Van Cuオフィス"
+      }
+    },
+    "office_pham_van_dong": {
+      "src": "assets/images/about/office_pham_van_dong.jpg",
+      "alt": {
+        "vi": "Văn phòng 72 Phạm Văn Đồng",
+        "en": "Office at 72 Pham Van Dong",
+        "ja": "72 Pham Van Dongオフィス"
+      }
+    },
+    "office_ly_thuong_kiet": {
+      "src": "assets/images/about/office_ly_thuong_kiet.jpg",
+      "alt": {
+        "vi": "Văn phòng 28 Lý Thường Kiệt",
+        "en": "Office at 28 Ly Thuong Kiet",
+        "ja": "28 Ly Thuong Kietオフィス"
+      }
+    },
+    "timeline_2015": {
+      "src": "assets/images/timeline/timeline_2015.png",
+      "alt": {
+        "vi": "Biểu tượng xe ô tô",
+        "en": "Car icon",
+        "ja": "自動車アイコン"
+      }
+    },
+    "timeline_2016": {
+      "src": "assets/images/timeline/timeline_2016.png",
+      "alt": {
+        "vi": "Biểu tượng thẻ tag",
+        "en": "Tag icon",
+        "ja": "タグアイコン"
+      }
+    },
+    "timeline_2018": {
+      "src": "assets/images/timeline/timeline_2018.png",
+      "alt": {
+        "vi": "Biểu tượng tàu điện",
+        "en": "Train icon",
+        "ja": "電車アイコン"
+      }
+    },
+    "timeline_2019": {
+      "src": "assets/images/timeline/timeline_2019.png",
+      "alt": {
+        "vi": "Biểu tượng nhóm người",
+        "en": "Team icon",
+        "ja": "チームアイコン"
+      }
+    },
+    "timeline_2020": {
+      "src": "assets/images/timeline/timeline_2020.png",
+      "alt": {
+        "vi": "Biểu tượng vệ tinh",
+        "en": "Satellite icon",
+        "ja": "衛星アイコン"
+      }
+    },
+    "timeline_2023": {
+      "src": "assets/images/timeline/timeline_2023.png",
+      "alt": {
+        "vi": "Biểu tượng cảm biến LiDAR",
+        "en": "LiDAR sensor icon",
+        "ja": "LiDARセンサーアイコン"
+      }
+    },
+    "timeline_2025": {
+      "src": "assets/images/timeline/timeline_2025.png",
+      "alt": {
+        "vi": "Biểu tượng xe gắn LiDAR",
+        "en": "Car with LiDAR icon",
+        "ja": "LiDAR搭載車アイコン"
+      }
+    },
+    "service_3d_segment_1": {
+      "src": "assets/images/services/service_3d_segment_1.jpg",
+      "alt": {
+        "vi": "Ví dụ 3D Segment",
+        "en": "3D Segment example",
+        "ja": "3Dセグメンテーション例"
+      }
+    },
+    "service_3d_segment_2": {
+      "src": "assets/images/services/service_3d_segment_2.jpg",
+      "alt": {
+        "vi": "Ví dụ 3D Segment (2)",
+        "en": "3D Segment example (2)",
+        "ja": "3Dセグメンテーション例(2)"
+      }
+    },
+    "service_3d_cuboid_1": {
+      "src": "assets/images/services/service_3d_cuboid_1.jpg",
+      "alt": {
+        "vi": "Ví dụ 3D Cuboid",
+        "en": "3D Cuboid example",
+        "ja": "3Dキューボイド例"
+      }
+    },
+    "service_3d_cuboid_2": {
+      "src": "assets/images/services/service_3d_cuboid_2.jpg",
+      "alt": {
+        "vi": "Ví dụ 3D Cuboid (2)",
+        "en": "3D Cuboid example (2)",
+        "ja": "3Dキューボイド例(2)"
+      }
+    },
+    "service_2d_segment_input": {
+      "src": "assets/images/services/service_2d_segment_input.jpg",
+      "alt": {
+        "vi": "Ảnh gốc trước khi segment",
+        "en": "Original image before segmentation",
+        "ja": "セグメンテーション前の元画像"
+      }
+    },
+    "service_2d_segment_output": {
+      "src": "assets/images/services/service_2d_segment_output.jpg",
+      "alt": {
+        "vi": "Kết quả 2D Segment",
+        "en": "2D Segment result",
+        "ja": "2Dセグメンテーション結果"
+      }
+    },
+    "service_2d_bbox": {
+      "src": "assets/images/services/service_2d_bbox.jpg",
+      "alt": {
+        "vi": "Ví dụ 2D Bounding Box",
+        "en": "2D Bounding Box example",
+        "ja": "2Dバウンディングボックス例"
+      }
+    },
+    "service_keypoint": {
+      "src": "assets/images/services/service_keypoint.jpg",
+      "alt": {
+        "vi": "Ví dụ Keypoint",
+        "en": "Keypoint example",
+        "ja": "キーポイント例"
+      }
+    },
+    "service_satellite_1": {
+      "src": "assets/images/services/service_satellite_1.jpg",
+      "alt": {
+        "vi": "Ảnh vệ tinh sân bay",
+        "en": "Satellite image of an airport",
+        "ja": "空港の衛星画像"
+      }
+    },
+    "service_satellite_2": {
+      "src": "assets/images/services/service_satellite_2.jpg",
+      "alt": {
+        "vi": "Ảnh vệ tinh được gắn nhãn",
+        "en": "Annotated satellite image",
+        "ja": "アノテーション済み衛星画像"
+      }
+    },
+    "service_collection_lidar": {
+      "src": "assets/images/services/service_collection_lidar.jpg",
+      "alt": {
+        "vi": "Dữ liệu LiDAR",
+        "en": "LiDAR data",
+        "ja": "LiDARデータ"
+      }
+    },
+    "service_collection_dashcam": {
+      "src": "assets/images/services/service_collection_dashcam.jpg",
+      "alt": {
+        "vi": "Camera hành trình",
+        "en": "Dashcams",
+        "ja": "ドライブレコーダー"
+      }
+    },
+    "service_quality_control": {
+      "src": "assets/images/services/service_quality_control.png",
+      "alt": {
+        "vi": "Quy trình kiểm soát chất lượng",
+        "en": "Quality control process",
+        "ja": "品質管理プロセス"
+      }
+    },
+    "team_event_booth": {
+      "src": "assets/images/team/team_event_booth.jpg",
+      "alt": {
+        "vi": "Đội ngũ tại gian hàng triển lãm",
+        "en": "Team at an exhibition booth",
+        "ja": "展示会ブースのチーム"
+      }
+    },
+    "team_training_meeting": {
+      "src": "assets/images/team/team_training_meeting.jpg",
+      "alt": {
+        "vi": "Buổi trao đổi, đào tạo",
+        "en": "Training session",
+        "ja": "研修・打ち合わせ"
+      }
+    },
+    "team_japan_visit": {
+      "src": "assets/images/team/team_japan_visit.jpg",
+      "alt": {
+        "vi": "Nhân sự được cử sang Nhật",
+        "en": "Staff dispatched to Japan",
+        "ja": "日本派遣メンバー"
+      }
+    },
+    "customer_sony": {
+      "src": "assets/images/customers/customer_sony.png",
+      "alt": {
+        "vi": "Sony",
+        "en": "Sony",
+        "ja": "Sony"
+      }
+    },
+    "customer_subaru": {
+      "src": "assets/images/customers/customer_subaru.png",
+      "alt": {
+        "vi": "Subaru",
+        "en": "Subaru",
+        "ja": "Subaru"
+      }
+    },
+    "customer_denso": {
+      "src": "assets/images/customers/customer_denso.png",
+      "alt": {
+        "vi": "Denso",
+        "en": "Denso",
+        "ja": "Denso"
+      }
+    },
+    "customer_honda": {
+      "src": "assets/images/customers/customer_honda.png",
+      "alt": {
+        "vi": "Honda",
+        "en": "Honda",
+        "ja": "Honda"
+      }
+    },
+    "customer_afeela": {
+      "src": "assets/images/customers/customer_afeela.png",
+      "alt": {
+        "vi": "AFEELA (Sony Honda Mobility)",
+        "en": "AFEELA (Sony Honda Mobility)",
+        "ja": "AFEELA（Sony Honda Mobility）"
+      }
+    },
+    "customer_nikon": {
+      "src": "assets/images/customers/customer_nikon.png",
+      "alt": {
+        "vi": "Nikon",
+        "en": "Nikon",
+        "ja": "Nikon"
+      }
+    },
+    "award_top1_01": {
+      "src": "assets/images/awards/award_top1_01.png",
+      "alt": {
+        "vi": "Huy hiệu Top 1 thị trường (Fuji Chimera)",
+        "en": "#1 market share badge (Fuji Chimera)",
+        "ja": "国内シェアNo.1バッジ（富士キメラ総研）"
+      }
+    },
+    "award_top1_02": {
+      "src": "assets/images/awards/award_top1_02.png",
+      "alt": {
+        "vi": "Huy hiệu Top 1 thị trường (Fuji Chimera)",
+        "en": "#1 market share badge (Fuji Chimera)",
+        "ja": "国内シェアNo.1バッジ（富士キメラ総研）"
+      }
+    },
+    "award_top1_03": {
+      "src": "assets/images/awards/award_top1_03.png",
+      "alt": {
+        "vi": "Huy hiệu Top 1 thị trường (Fuji Chimera)",
+        "en": "#1 market share badge (Fuji Chimera)",
+        "ja": "国内シェアNo.1バッジ（富士キメラ総研）"
+      }
+    },
+    "award_top1_04": {
+      "src": "assets/images/awards/award_top1_04.png",
+      "alt": {
+        "vi": "Huy hiệu Top 1 thị trường (Fuji Chimera)",
+        "en": "#1 market share badge (Fuji Chimera)",
+        "ja": "国内シェアNo.1バッジ（富士キメラ総研）"
+      }
+    }
+  }
+}

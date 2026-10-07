@@ -1,0 +1,37 @@
+{
+  "_readme": "Cấu hình chung. Để trống ('') = tự động ẩn mục đó trên web.",
+  "siteName": "BRYCEN VIETNAM – BPO",
+  "defaultLang": "vi",
+  "languages": [
+    "vi",
+    "en",
+    "ja"
+  ],
+  "parentCompanySite": "https://www.brycen.co.jp/",
+  "social": {
+    "facebook": "",
+    "youtube": "",
+    "linkedin": "",
+    "instagram": "",
+    "zalo": ""
+  },
+  "facebookPagePlugin": {
+    "enabled": false,
+    "pageUrl": "",
+    "height": 600
+  },
+  "contact": {
+    "email": "",
+    "phone": "",
+    "address": {
+      "vi": "",
+      "en": "",
+      "ja": ""
+    },
+    "mapEmbedUrl": "",
+    "formUrl": ""
+  },
+  "analytics": {
+    "googleAnalyticsId": ""
+  }
+}

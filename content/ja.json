@@ -1,0 +1,404 @@
+{
+  "meta": {
+    "title": "BPO – AI向けデータ | BRYCEN VIETNAM",
+    "description": "BRYCEN VIETNAM BPO部門は、AI学習データの作成・収集を専門としています。"
+  },
+  "ui": {
+    "nav": {
+      "home": "ホーム",
+      "about": "概要",
+      "services": "サービス",
+      "services_annotation": "AI学習データ作成",
+      "services_collection": "AI学習データ収集",
+      "team": "チーム",
+      "achievements": "実績・プロジェクト",
+      "vision": "ビジョン",
+      "news": "ニュース",
+      "contact": "お問い合わせ"
+    },
+    "skip": "メインコンテンツへ",
+    "read_more": "詳しく見る",
+    "back": "戻る",
+    "all": "すべて",
+    "view_all_news": "ニュース一覧へ",
+    "follow_us": "公式SNS",
+    "footer_company": "BRYCEN VIETNAM Co., Ltd.",
+    "footer_dept": "BPO部門（Business Process Outsourcing）",
+    "parent_site": "ブライセン日本サイト",
+    "news_empty": "このカテゴリにはまだニュースがありません。",
+    "language": "言語",
+    "menu": "メニュー",
+    "copyright": "© BRYCEN VIETNAM Co., Ltd. All Rights Reserved."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "BRYCEN VIETNAM · BPO",
+      "title": "信頼できるAIのための高品質データ",
+      "subtitle": "BPO部門は2015年から、550名の体制と235件超のプロジェクト実績でAI学習データの作成・収集を行っています。",
+      "cta_primary": "サービスを見る",
+      "cta_secondary": "お問い合わせ"
+    },
+    "stats": [
+      {
+        "value": "2015",
+        "label": "開始年"
+      },
+      {
+        "value": "550",
+        "label": "スタッフ数"
+      },
+      {
+        "value": "235+",
+        "label": "プロジェクト実績"
+      },
+      {
+        "value": "5",
+        "label": "年連続 国内シェアNo.1*"
+      }
+    ],
+    "stats_note": "※富士キメラ総研調べ（アノテーションサービス市場）",
+    "pillars_title": "2つの主要事業",
+    "pillars": [
+      {
+        "link": "services-annotation.html",
+        "image": "background_services_2d",
+        "title": "AI学習データ作成",
+        "text": "専用ツールによる2D・3D・衛星画像のアノテーション。"
+      },
+      {
+        "link": "services-collection.html",
+        "image": "background_services_3d",
+        "title": "AI学習データ収集",
+        "text": "LiDARスキャナーやドライブレコーダーによる実走行データの収集。"
+      }
+    ],
+    "commitments_title": "私たちの約束",
+    "commitments": [
+      {
+        "title": "高品質なデータ",
+        "text": "多様で代表性があり、適切に管理されたデータが、強力なAIモデルの基盤です。"
+      },
+      {
+        "title": "情報セキュリティ",
+        "text": "情報セキュリティ規程により、お客様の情報を厳格に保護します。"
+      },
+      {
+        "title": "納期遵守・高い満足度",
+        "text": "プロジェクトは納期を守り、品質にご満足いただいています。"
+      }
+    ],
+    "customers_title": "主なお客様",
+    "news_title": "最新ニュース",
+    "cta": {
+      "title": "AIデータについてご相談ください",
+      "text": "ご要望をお聞かせください。最適なご提案をいたします。",
+      "button": "お問い合わせ"
+    }
+  },
+  "about": {
+    "page_title": "概要",
+    "intro": {
+      "title": "会社・部門概要",
+      "paragraphs": [
+        "BPO（Business Process Outsourcing）は、AI（人工知能）の学習データ作成と画像データ処理を専門としています。",
+        "AIの急速な発展に伴い、学習データの需要は非常に大きくなっています。AI向けデータの作成は、AIエコシステムの中核です。",
+        "高品質で多様、代表性があり適切に管理されたデータは、強力で信頼できるAIモデル開発の基盤です。お客様の情報は情報セキュリティ規程により厳格に保護されます。"
+      ]
+    },
+    "history": {
+      "title": "沿革",
+      "lead": "2015年に約15名の小さなプロジェクトとして始まり、現在は3拠点・550名体制で運営しています。",
+      "timeline": [
+        {
+          "year": "2015",
+          "icon": "timeline_2015",
+          "text": "15名規模のプロジェクトでアノテーション業務を開始。"
+        },
+        {
+          "year": "2016",
+          "icon": "timeline_2016",
+          "text": "50名規模に拡大し、タグ付けデータの作業を開始。"
+        },
+        {
+          "year": "2018",
+          "icon": "timeline_2018",
+          "text": "日本の鉄道システム向け認識データを作成。150名規模に拡大。"
+        },
+        {
+          "year": "2019",
+          "icon": "timeline_2019",
+          "text": "初の3Dデータ案件を受注し、セグメンテーションを開始。日本で学び働く人材派遣制度を整備。"
+        },
+        {
+          "year": "2020",
+          "icon": "timeline_2020",
+          "text": "バウンディングボックスと衛星データを開始。200名規模に拡大。"
+        },
+        {
+          "year": "2023",
+          "icon": "timeline_2023",
+          "text": "3D点群（PointCloud）データの作業を開始。"
+        },
+        {
+          "year": "2025",
+          "icon": "timeline_2025",
+          "text": "3Dバウンディングボックス領域を拡充。550名規模に。Pham Van Dong・Ly Thuong Kietに新オフィスを開設。"
+        }
+      ]
+    },
+    "offices": {
+      "title": "オフィス",
+      "items": [
+        {
+          "image": "office_nguyen_van_cu",
+          "name": "オフィス1",
+          "address": "25 Nguyen Van Cu 2〜6階"
+        },
+        {
+          "image": "office_pham_van_dong",
+          "name": "オフィス2",
+          "address": "72 Pham Van Dong 4階"
+        },
+        {
+          "image": "office_ly_thuong_kiet",
+          "name": "オフィス3",
+          "address": "28 Ly Thuong Kiet 11階"
+        }
+      ]
+    }
+  },
+  "services": {
+    "page_title": "サービス",
+    "lead": "AI学習データの作成を専門とし、主な業務は専用ツールによる画像アノテーションです。",
+    "overview_note": "主に3Dと2Dの2種類のデータを扱います。3DデータはLiDARスキャナー、2Dデータは車両周囲に設置したドライブレコーダーから取得します。",
+    "annotation": {
+      "title": "AI学習データ作成",
+      "lead": "画像や点群にアノテーションを行い、AIが現実世界を学習できるようにします。正確・納期遵守・高セキュリティ。",
+      "group_3d": "3Dデータ（点群）",
+      "group_2d": "2Dデータ（ドラレコ・衛星）",
+      "items": [
+        {
+          "id": "seg3d",
+          "group": "3d",
+          "images": [
+            "service_3d_segment_1",
+            "service_3d_segment_2"
+          ],
+          "title": "3Dセグメンテーション",
+          "text": "LiDAR点群の各点を物体クラス（道路・車両・人物など）ごとにラベル付けします。"
+        },
+        {
+          "id": "cuboid3d",
+          "group": "3d",
+          "images": [
+            "service_3d_cuboid_1",
+            "service_3d_cuboid_2"
+          ],
+          "title": "3Dキューボイド（3Dバウンディングボックス）",
+          "text": "物体を囲む3Dボックスを作成し、位置・大きさ・向きを定義します。"
+        },
+        {
+          "id": "seg2d",
+          "group": "2d",
+          "images": [
+            "service_2d_segment_input",
+            "service_2d_segment_output"
+          ],
+          "title": "2Dセグメンテーション",
+          "text": "画像の全ピクセルを物体の種類ごとに分類します。"
+        },
+        {
+          "id": "bbox2d",
+          "group": "2d",
+          "images": [
+            "service_2d_bbox"
+          ],
+          "title": "2Dバウンディングボックス",
+          "text": "画像内の各物体を矩形で囲みます。"
+        },
+        {
+          "id": "keypoint",
+          "group": "2d",
+          "images": [
+            "service_keypoint"
+          ],
+          "title": "キーポイント",
+          "text": "姿勢認識のため、関節などの特徴点をマーキングします。"
+        },
+        {
+          "id": "satellite",
+          "group": "2d",
+          "images": [
+            "service_satellite_1",
+            "service_satellite_2"
+          ],
+          "title": "衛星データ",
+          "text": "衛星画像上の物体（航空機・構造物など）にアノテーションを行います。"
+        }
+      ],
+      "quality": {
+        "title": "品質管理",
+        "text": "すべてのプロジェクトで、中間・最終の各段階で品質検査を行い、お客様へのフィードバック（FB）を共有します。",
+        "image": "service_quality_control"
+      }
+    },
+    "collection": {
+      "title": "AI学習データ収集",
+      "lead": "センサーやカメラから実世界のデータを収集し、AI学習の素材とします。",
+      "items": [
+        {
+          "image": "service_collection_lidar",
+          "title": "LiDARによる3Dデータ",
+          "text": "LiDARスキャナーで取得する3D（点群）データ。"
+        },
+        {
+          "image": "service_collection_dashcam",
+          "title": "ドライブレコーダーによる2Dデータ",
+          "text": "車両周囲に設置したドライブレコーダーで取得する2Dデータ。"
+        }
+      ],
+      "todo": "【要追記】収集プロセス、機材、対象エリア、データセキュリティ規程の詳細。"
+    }
+  },
+  "team": {
+    "page_title": "チーム",
+    "structure": {
+      "title": "体制",
+      "text": "大規模データの需要に応えるため、大人数体制で運営しています。",
+      "stat_value": "550",
+      "stat_label": "スタッフ数",
+      "detail": "正社員37名＋パートタイム523名"
+    },
+    "flow": {
+      "title": "運用フロー",
+      "lanes": [
+        "お客様",
+        "BPO（日本）",
+        "BPO（ベトナム）"
+      ],
+      "phases": [
+        {
+          "name": "初期段階",
+          "steps": [
+            "依頼",
+            "受付",
+            "計測・見積",
+            "発注",
+            "受注",
+            "体制構築"
+          ]
+        },
+        {
+          "name": "中間段階",
+          "steps": [
+            "キックオフ",
+            "作業環境の構築",
+            "トレーニング",
+            "本番作業",
+            "品質検査",
+            "中間納品",
+            "FB送付"
+          ]
+        },
+        {
+          "name": "最終段階",
+          "steps": [
+            "プロジェクト振り返り",
+            "最終納品",
+            "検収"
+          ]
+        }
+      ]
+    },
+    "growth": {
+      "title": "成長の機会",
+      "text": "当社の派遣制度では、ブライセンVNの社員をブライセンJPに派遣し、学びながら働くことでスキルを高め、日本のオフィス環境の考え方や文化を体験します。帰国後はその経験を部門の業務に活かします。",
+      "images": [
+        "team_japan_visit",
+        "team_training_meeting",
+        "team_event_booth"
+      ]
+    }
+  },
+  "achievements": {
+    "page_title": "実績・プロジェクト",
+    "awards": {
+      "title": "実績",
+      "text": "AI学習データ作成の分野で、日本国内5年連続シェアNo.1。6年連続を目指しています。",
+      "source": "出典：富士キメラ総研",
+      "badges": [
+        "award_top1_01",
+        "award_top1_02",
+        "award_top1_03",
+        "award_top1_04"
+      ]
+    },
+    "projects": {
+      "title": "プロジェクト",
+      "text": "長年トップの実績により、日本国内外の多くの著名なお客様と取り組んでいます。これまでに計235件のプロジェクトを完了し、Sony、Subaru、Denso、Sony Honda Mobility、Nikonなどと長期案件を継続しています。",
+      "stat_value": "235",
+      "stat_label": "完了プロジェクト数",
+      "customers": [
+        "customer_sony",
+        "customer_subaru",
+        "customer_denso",
+        "customer_afeela",
+        "customer_nikon"
+      ]
+    }
+  },
+  "vision": {
+    "page_title": "ビジョン",
+    "direction": {
+      "title": "今後の方向性",
+      "text": "アノテーション事業を日本国内にとどまらず、規模・品質の両面でさらに発展させます。今後、日本の本社は米国へ市場を拡大し、新たな機会とお客様を開拓します。",
+      "customers": [
+        "customer_honda",
+        "customer_subaru",
+        "customer_denso",
+        "customer_afeela",
+        "customer_sony"
+      ]
+    },
+    "recruit": {
+      "title": "人材・採用",
+      "text": "新たな挑戦に対応するため、今後採用ニーズが拡大する可能性があります。大学・短大、地域の行政機関と緊密に連携して採用を行い、大規模プロジェクトにも十分な人材を確保しています。",
+      "stats": [
+        {
+          "value": "79",
+          "label": "経済大学に在学中の現スタッフ"
+        },
+        {
+          "value": "187",
+          "label": "累計"
+        }
+      ]
+    }
+  },
+  "news": {
+    "page_title": "ニュース",
+    "lead": "BPO部門の活動・イベント・実績をお知らせします。",
+    "categories": {
+      "announcement": "お知らせ",
+      "event": "イベント",
+      "award": "表彰・受賞",
+      "project": "プロジェクト",
+      "recruit": "採用",
+      "media": "メディア"
+    },
+    "facebook_title": "Facebook"
+  },
+  "contact": {
+    "page_title": "お問い合わせ",
+    "lead": "AI学習データの作成・収集についてお気軽にご相談ください。",
+    "labels": {
+      "address": "住所",
+      "email": "メール",
+      "phone": "電話",
+      "form": "フォームで問い合わせる",
+      "hours": "営業時間"
+    },
+    "hours": "",
+    "note": "【要追記】PowerPointの連絡先スライドが空白でした。content/site.config.json にメール・電話・住所を入力してください。"
+  }
+}

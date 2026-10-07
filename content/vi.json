@@ -1,0 +1,404 @@
+{
+  "meta": {
+    "title": "BPO – Dữ liệu cho AI | BRYCEN VIETNAM",
+    "description": "Bộ phận BPO của Công ty TNHH BRYCEN VIETNAM chuyên tạo và thu thập dữ liệu học cho AI."
+  },
+  "ui": {
+    "nav": {
+      "home": "Trang chủ",
+      "about": "Giới thiệu",
+      "services": "Dịch vụ",
+      "services_annotation": "Tạo dữ liệu học cho AI",
+      "services_collection": "Thu thập dữ liệu học cho AI",
+      "team": "Đội ngũ",
+      "achievements": "Thành tựu & Dự án",
+      "vision": "Tầm nhìn",
+      "news": "Tin tức",
+      "contact": "Liên hệ"
+    },
+    "skip": "Bỏ qua, đến nội dung chính",
+    "read_more": "Xem thêm",
+    "back": "Quay lại",
+    "all": "Tất cả",
+    "view_all_news": "Xem tất cả tin tức",
+    "follow_us": "Theo dõi chúng tôi",
+    "footer_company": "Công ty TNHH BRYCEN VIETNAM",
+    "footer_dept": "Bộ phận BPO (Business Process Outsourcing)",
+    "parent_site": "Trang web Brycen Nhật Bản",
+    "news_empty": "Chưa có tin nào trong mục này.",
+    "language": "Ngôn ngữ",
+    "menu": "Menu",
+    "copyright": "Bản quyền thuộc BRYCEN VIETNAM Co., Ltd."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "BRYCEN VIETNAM · BPO",
+      "title": "Dữ liệu chất lượng cao cho AI đáng tin cậy",
+      "subtitle": "Bộ phận BPO chuyên tạo và thu thập dữ liệu học cho AI – từ năm 2015, với đội ngũ 550 nhân sự và hơn 235 dự án.",
+      "cta_primary": "Khám phá dịch vụ",
+      "cta_secondary": "Liên hệ chúng tôi"
+    },
+    "stats": [
+      {
+        "value": "2015",
+        "label": "Năm khởi điểm"
+      },
+      {
+        "value": "550",
+        "label": "Nhân sự"
+      },
+      {
+        "value": "235+",
+        "label": "Dự án đã thực hiện"
+      },
+      {
+        "value": "5",
+        "label": "Năm liên tiếp Top 1 thị trường Nhật Bản*"
+      }
+    ],
+    "stats_note": "* Theo Fuji Chimera Research Institute, mảng dịch vụ annotation.",
+    "pillars_title": "Hai mảng công việc chính",
+    "pillars": [
+      {
+        "link": "services-annotation.html",
+        "image": "background_services_2d",
+        "title": "Tạo dữ liệu học cho AI",
+        "text": "Chú thích (annotation) dữ liệu 2D, 3D và ảnh vệ tinh bằng công cụ chuyên dụng."
+      },
+      {
+        "link": "services-collection.html",
+        "image": "background_services_3d",
+        "title": "Thu thập dữ liệu học cho AI",
+        "text": "Thu nhận dữ liệu thực tế từ máy quét LiDAR và camera hành trình."
+      }
+    ],
+    "commitments_title": "Cam kết của chúng tôi",
+    "commitments": [
+      {
+        "title": "Dữ liệu chất lượng cao",
+        "text": "Dữ liệu đa dạng, có tính đại diện và được quản lý hợp lý – nền tảng cho mô hình AI mạnh mẽ."
+      },
+      {
+        "title": "Bảo mật thông tin",
+        "text": "Bảo vệ thông tin khách hàng tuyệt đối thông qua các quy định về an ninh thông tin."
+      },
+      {
+        "title": "Đúng hạn, khách hàng hài lòng",
+        "text": "Các dự án đều đạt deadline và khách hàng hài lòng với chất lượng sản phẩm."
+      }
+    ],
+    "customers_title": "Khách hàng tiêu biểu",
+    "news_title": "Tin tức mới nhất",
+    "cta": {
+      "title": "Cùng bàn về dữ liệu AI của bạn",
+      "text": "Hãy cho chúng tôi biết nhu cầu – chúng tôi sẽ đề xuất giải pháp phù hợp.",
+      "button": "Liên hệ"
+    }
+  },
+  "about": {
+    "page_title": "Giới thiệu",
+    "intro": {
+      "title": "Giới thiệu chung",
+      "paragraphs": [
+        "BPO (Business Process Outsourcing) hoạt động chuyên sâu trong lĩnh vực tạo dữ liệu học tập cho AI (Artificial Intelligence – Trí tuệ nhân tạo) và xử lý dữ liệu cho hình ảnh.",
+        "Với sự phát triển mạnh mẽ của AI, nhu cầu về dữ liệu học tập rất lớn. Việc tạo dữ liệu cho AI là một phần cốt lõi trong hệ sinh thái AI.",
+        "Dữ liệu chất lượng cao, đa dạng, có tính đại diện và được quản lý hợp lý là nền tảng để phát triển các mô hình AI mạnh mẽ, đáng tin cậy. Thông tin khách hàng được bảo vệ tuyệt đối thông qua các quy định về an ninh thông tin."
+      ]
+    },
+    "history": {
+      "title": "Lịch sử hình thành",
+      "lead": "Xuất phát điểm là một dự án nhỏ khoảng 15 nhân sự vào năm 2015. Hiện bộ phận vận hành với quy mô 550 nhân sự tại 3 văn phòng.",
+      "timeline": [
+        {
+          "year": "2015",
+          "icon": "timeline_2015",
+          "text": "Khởi điểm làm chú thích (annotation) với dự án quy mô 15 người."
+        },
+        {
+          "year": "2016",
+          "icon": "timeline_2016",
+          "text": "Mở rộng quy mô, làm dữ liệu gắn tag với quy mô 50 người."
+        },
+        {
+          "year": "2018",
+          "icon": "timeline_2018",
+          "text": "Làm dữ liệu nhận diện cho hệ thống tàu điện Nhật Bản. Nâng quy mô lên 150 người."
+        },
+        {
+          "year": "2019",
+          "icon": "timeline_2019",
+          "text": "Tiếp nhận đơn hàng dữ liệu 3D sơ khai, bắt đầu làm dữ liệu segment. Phát triển chính sách đưa người sang Nhật học tập và làm việc."
+        },
+        {
+          "year": "2020",
+          "icon": "timeline_2020",
+          "text": "Bắt đầu làm dữ liệu Bounding Box và dữ liệu vệ tinh. Mở rộng quy mô lên 200 người."
+        },
+        {
+          "year": "2023",
+          "icon": "timeline_2023",
+          "text": "Bắt đầu làm việc với dữ liệu 3D PointCloud."
+        },
+        {
+          "year": "2025",
+          "icon": "timeline_2025",
+          "text": "Phát triển mảng 3D Bounding Box. Nâng quy mô lên 550 người. Mở văn phòng mới tại Phạm Văn Đồng và Lý Thường Kiệt."
+        }
+      ]
+    },
+    "offices": {
+      "title": "Văn phòng",
+      "items": [
+        {
+          "image": "office_nguyen_van_cu",
+          "name": "Văn phòng 1",
+          "address": "Tầng 2–6, 25 Nguyễn Văn Cừ"
+        },
+        {
+          "image": "office_pham_van_dong",
+          "name": "Văn phòng 2",
+          "address": "Tầng 4, 72 Phạm Văn Đồng"
+        },
+        {
+          "image": "office_ly_thuong_kiet",
+          "name": "Văn phòng 3",
+          "address": "Tầng 11, 28 Lý Thường Kiệt"
+        }
+      ]
+    }
+  },
+  "services": {
+    "page_title": "Dịch vụ",
+    "lead": "Bộ phận chuyên tạo dữ liệu học tập cho AI, với công việc chính là chú thích (annotation) trên hình ảnh thông qua các công cụ chuyên dụng.",
+    "overview_note": "Hiện bộ phận đang thực hiện chính hai mảng dữ liệu: 3D và 2D. Dữ liệu 3D thu nhận từ máy quét LiDAR; dữ liệu 2D thu nhận từ camera hành trình lắp quanh xe.",
+    "annotation": {
+      "title": "Tạo dữ liệu học cho AI",
+      "lead": "Chú thích hình ảnh và đám mây điểm để AI học nhận biết thế giới thực – chính xác, đúng hạn, bảo mật.",
+      "group_3d": "Dữ liệu 3D (PointCloud)",
+      "group_2d": "Dữ liệu 2D (DashCam & vệ tinh)",
+      "items": [
+        {
+          "id": "seg3d",
+          "group": "3d",
+          "images": [
+            "service_3d_segment_1",
+            "service_3d_segment_2"
+          ],
+          "title": "3D Segment",
+          "text": "Gán nhãn từng điểm trong đám mây điểm LiDAR theo loại đối tượng (đường, xe, người…)."
+        },
+        {
+          "id": "cuboid3d",
+          "group": "3d",
+          "images": [
+            "service_3d_cuboid_1",
+            "service_3d_cuboid_2"
+          ],
+          "title": "3D Cuboid (3D Bounding Box)",
+          "text": "Vẽ khối hộp 3D bao quanh đối tượng, xác định vị trí, kích thước và hướng."
+        },
+        {
+          "id": "seg2d",
+          "group": "2d",
+          "images": [
+            "service_2d_segment_input",
+            "service_2d_segment_output"
+          ],
+          "title": "2D Segment",
+          "text": "Phân vùng từng điểm ảnh của hình ảnh theo loại đối tượng."
+        },
+        {
+          "id": "bbox2d",
+          "group": "2d",
+          "images": [
+            "service_2d_bbox"
+          ],
+          "title": "2D Bounding Box",
+          "text": "Khoanh khung chữ nhật quanh từng đối tượng trên ảnh."
+        },
+        {
+          "id": "keypoint",
+          "group": "2d",
+          "images": [
+            "service_keypoint"
+          ],
+          "title": "Keypoint",
+          "text": "Đánh dấu các điểm đặc trưng như khớp cơ thể để nhận diện tư thế."
+        },
+        {
+          "id": "satellite",
+          "group": "2d",
+          "images": [
+            "service_satellite_1",
+            "service_satellite_2"
+          ],
+          "title": "Dữ liệu vệ tinh",
+          "text": "Gán nhãn đối tượng trên ảnh vệ tinh (ví dụ: máy bay, công trình)."
+        }
+      ],
+      "quality": {
+        "title": "Kiểm soát chất lượng",
+        "text": "Mỗi dự án đều qua kiểm định chất lượng ở các giai đoạn trung gian và cuối cùng, kèm phản hồi (FB) với khách hàng.",
+        "image": "service_quality_control"
+      }
+    },
+    "collection": {
+      "title": "Thu thập dữ liệu học cho AI",
+      "lead": "Thu nhận dữ liệu thực tế từ cảm biến và camera để làm nguyên liệu cho AI học.",
+      "items": [
+        {
+          "image": "service_collection_lidar",
+          "title": "Dữ liệu 3D từ LiDAR",
+          "text": "Dữ liệu 3D (PointCloud) được thu nhận từ máy quét LiDAR."
+        },
+        {
+          "image": "service_collection_dashcam",
+          "title": "Dữ liệu 2D từ camera hành trình",
+          "text": "Dữ liệu 2D (DashCam) được thu nhận từ các camera hành trình lắp quanh xe."
+        }
+      ],
+      "todo": "[CẦN BỔ SUNG] Mô tả chi tiết quy trình thu thập, thiết bị, phạm vi khu vực và quy định bảo mật dữ liệu."
+    }
+  },
+  "team": {
+    "page_title": "Đội ngũ",
+    "structure": {
+      "title": "Thể chế",
+      "text": "Với nhu cầu về dữ liệu lớn, bộ phận vận hành với số lượng nhân sự lớn.",
+      "stat_value": "550",
+      "stat_label": "Nhân sự",
+      "detail": "37 nhân viên chính thức + 523 nhân sự part-time"
+    },
+    "flow": {
+      "title": "Quy trình vận hành",
+      "lanes": [
+        "Khách hàng",
+        "BPO (JP)",
+        "BPO (VN)"
+      ],
+      "phases": [
+        {
+          "name": "Giai đoạn đầu",
+          "steps": [
+            "Yêu cầu",
+            "Tiếp nhận",
+            "Đo đạc (đánh giá)",
+            "Đặt hàng",
+            "Nhận order",
+            "Xây dựng thể chế"
+          ]
+        },
+        {
+          "name": "Giai đoạn giữa",
+          "steps": [
+            "Kickoff",
+            "Xây dựng môi trường làm việc",
+            "Training",
+            "Làm thực tế",
+            "Kiểm định chất lượng",
+            "Giao hàng trung gian",
+            "Gửi FB"
+          ]
+        },
+        {
+          "name": "Giai đoạn cuối",
+          "steps": [
+            "Nhìn nhận, rút kinh nghiệm dự án",
+            "Giao hàng lần cuối",
+            "Nghiệm thu"
+          ]
+        }
+      ]
+    },
+    "growth": {
+      "title": "Cơ hội phát triển trong công việc",
+      "text": "Công ty có chế độ nhân viên phái cử: đưa nhân sự từ Brycen VN sang Brycen JP để học tập và làm việc, nhằm nâng cao trình độ, trải nghiệm tư duy và lối sống của môi trường công sở Nhật, sau đó áp dụng vào công việc tại bộ phận.",
+      "images": [
+        "team_japan_visit",
+        "team_training_meeting",
+        "team_event_booth"
+      ]
+    }
+  },
+  "achievements": {
+    "page_title": "Thành tựu & Dự án",
+    "awards": {
+      "title": "Thành tựu",
+      "text": "5 năm liên tiếp đứng Top 1 thị trường Nhật Bản trong mảng tạo dữ liệu học AI và đang hướng tới năm thứ 6 liên tiếp.",
+      "source": "Theo Fuji Chimera Research Institute",
+      "badges": [
+        "award_top1_01",
+        "award_top1_02",
+        "award_top1_03",
+        "award_top1_04"
+      ]
+    },
+    "projects": {
+      "title": "Dự án",
+      "text": "Với vị thế top 1 nhiều năm liên tiếp, bộ phận đã và đang thực hiện dự án cho nhiều khách hàng lớn trong và ngoài Nhật Bản. Đến nay đã hoàn thành tổng cộng 235 dự án, đặc biệt có nhiều dự án dài hạn với các khách hàng như Sony, Subaru, Denso, Sony Honda Mobility, Nikon.",
+      "stat_value": "235",
+      "stat_label": "Dự án đã hoàn thành",
+      "customers": [
+        "customer_sony",
+        "customer_subaru",
+        "customer_denso",
+        "customer_afeela",
+        "customer_nikon"
+      ]
+    }
+  },
+  "vision": {
+    "page_title": "Tầm nhìn",
+    "direction": {
+      "title": "Định hướng phát triển",
+      "text": "Phát triển hơn nữa mảng chú thích (annotation), không chỉ tại Nhật Bản mà còn mở rộng cả về quy mô lẫn chất lượng. Sắp tới, công ty tại Nhật sẽ mở rộng thị trường sang Mỹ để tìm kiếm cơ hội và khách hàng mới.",
+      "customers": [
+        "customer_honda",
+        "customer_subaru",
+        "customer_denso",
+        "customer_afeela",
+        "customer_sony"
+      ]
+    },
+    "recruit": {
+      "title": "Nguồn nhân lực & tuyển dụng",
+      "text": "Nhu cầu tuyển dụng có thể mở rộng để đáp ứng các thử thách mới. Công ty hợp tác chặt chẽ với các trường đại học, cao đẳng và cơ quan quản lý cấp phường, xã trong khu vực để tuyển dụng, nhờ đó luôn duy trì nguồn nhân lực cho các dự án quy mô lớn.",
+      "stats": [
+        {
+          "value": "79",
+          "label": "Nhân sự đang là sinh viên Đại học Kinh tế"
+        },
+        {
+          "value": "187",
+          "label": "Tổng số từ trước đến nay"
+        }
+      ]
+    }
+  },
+  "news": {
+    "page_title": "Tin tức",
+    "lead": "Cập nhật hoạt động, sự kiện và thành tựu của bộ phận BPO.",
+    "categories": {
+      "announcement": "Thông báo",
+      "event": "Sự kiện",
+      "award": "Giải thưởng",
+      "project": "Dự án",
+      "recruit": "Tuyển dụng",
+      "media": "Truyền thông"
+    },
+    "facebook_title": "Trên Facebook"
+  },
+  "contact": {
+    "page_title": "Liên hệ",
+    "lead": "Hãy liên hệ để trao đổi về dịch vụ tạo và thu thập dữ liệu học cho AI.",
+    "labels": {
+      "address": "Địa chỉ",
+      "email": "Email",
+      "phone": "Điện thoại",
+      "form": "Gửi yêu cầu qua biểu mẫu",
+      "hours": "Giờ làm việc"
+    },
+    "hours": "",
+    "note": "[CẦN BỔ SUNG] Slide thông tin liên hệ trong file PowerPoint đang để trống. Điền email, điện thoại, địa chỉ trong content/site.config.json."
+  }
+}
