@@ -222,6 +222,118 @@
   padding-top: 0;
 }
 
+.home-news__all {
+  margin-top: var(--space-4);
+}
+
+.news-heading {
+  margin-bottom: var(--space-5);
+}
+
+.news-layout {
+  display: grid;
+  align-items: start;
+  gap: var(--space-5);
+}
+
+.news-content,
+.news-sidebar {
+  min-width: 0;
+}
+
+.news-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+.news-grid--home {
+  margin-top: var(--space-4);
+}
+
+.news-empty {
+  padding-block: var(--space-5);
+  color: var(--ink-500);
+}
+
+.news-show-more {
+  display: flex;
+  margin: var(--space-5) auto 0;
+}
+
+.news-show-more[hidden] {
+  display: none;
+}
+
+.news-detail__image {
+  width: 100%;
+  max-height: 34rem;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.news-detail__body {
+  display: grid;
+  gap: var(--space-4);
+  padding: clamp(var(--space-4), 5vw, var(--space-6));
+}
+
+.news-detail__title {
+  max-width: 26ch;
+}
+
+.news-detail__summary {
+  max-width: 72ch;
+  white-space: pre-line;
+}
+
+.news-detail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+}
+
+.news-detail__actions .button--text {
+  justify-content: flex-start;
+}
+
+.news-detail__body > .button {
+  justify-self: start;
+}
+
+.news-not-found {
+  padding: var(--space-5);
+}
+
+.news-facebook {
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: var(--bg-soft);
+}
+
+.news-facebook__title {
+  margin-bottom: var(--space-3);
+  font-size: 1.25rem;
+}
+
+.news-facebook iframe {
+  width: 100%;
+  border: 0;
+}
+
+.news-facebook__fallback {
+  display: inline-block;
+  margin-top: var(--space-3);
+}
+
 .home-cta-band {
   padding-block: clamp(3rem, 7vw, 5rem);
   background: var(--brand-100);
@@ -400,6 +512,10 @@
 }
 
 @media (min-width: 640px) {
+  .news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .home-stats__list {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -433,6 +549,14 @@
 }
 
 @media (min-width: 960px) {
+  .news-layout--with-facebook {
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 20rem);
+  }
+
+  .news-grid--home {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .about-timeline {
     display: flex;
     gap: 0;

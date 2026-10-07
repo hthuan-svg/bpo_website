@@ -7,6 +7,7 @@ import { initHomeCounters } from './home.js';
 import { renderServices } from './services.js';
 import { renderOrganizationPages } from './organization-pages.js';
 import { renderSocial } from './social.js';
+import { initializeNews, renderNews } from './news.js';
 
 const openPageMessage = 'Hãy mở trang bằng Live Server (không bấm đúp file .html)';
 
@@ -36,6 +37,7 @@ async function start() {
 
     document.addEventListener('langchange', () => {
       renderPage(i18n);
+      renderNews(i18n);
       renderSocial(i18n);
       renderServices(i18n);
       renderOrganizationPages(i18n);
@@ -43,6 +45,7 @@ async function start() {
       initHomeCounters();
     });
     renderPage(i18n);
+    await initializeNews(i18n);
     renderSocial(i18n);
     renderServices(i18n);
     renderOrganizationPages(i18n);

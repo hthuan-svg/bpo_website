@@ -114,14 +114,18 @@ function facebookPluginUrl(pageUrl, height) {
   return `${facebookPluginEndpoint}?${parameters.toString()}`;
 }
 
-function renderFacebookPagePlugin(context) {
-  const section = document.querySelector('[data-facebook-plugin]');
+function renderFacebookPagePlugin(section, context) {
   const frame = section.querySelector('[data-facebook-frame]');
   const fallback = section.querySelector('[data-facebook-link]');
   const plugin = context.siteConfig.facebookPagePlugin ?? {};
   const pageUrl = externalUrl(plugin.pageUrl);
 
   section.hidden = plugin.enabled !== true || !pageUrl;
+  const sidebar = section.closest('[data-news-sidebar]');
+  if (sidebar) {
+    sidebar.hidden = section.hidden;
+    sidebar.parentElement.classList.toggle('news-layout--with-facebook', !section.hidden);
+  }
   if (section.hidden) {
     frame.removeAttribute('src');
     fallback.hidden = true;
@@ -186,9 +190,10 @@ export function buildFacebookShareUrl(url = window.location.href) {
 }
 
 export function renderSocial(context) {
-  if (document.body.dataset.page !== 'contact') {
-    return;
+  document.querySelectorAll('[data-facebook-plugin]').forEach((section) => {
+    renderFacebookPagePlugin(section, context);
+  });
+  if (document.body.dataset.page === 'contact') {
+    renderContact(context);
   }
-  renderContact(context);
-  renderFacebookPagePlugin(context);
 }
