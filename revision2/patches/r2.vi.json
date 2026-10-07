@@ -1,0 +1,780 @@
+{
+  "_readme": "Revision 2 patch. 'set' is deep-merged (arrays replace). 'remove' is applied only with --cleanup.",
+  "set": {
+    "ui": {
+      "back_to_top": "Lên đầu trang",
+      "coming_soon": "Đang cập nhật",
+      "image_placeholder": "Hình ảnh đang được cập nhật",
+      "tabs_label": "Điều hướng chính",
+      "brand": {
+        "dept_short": "BPO",
+        "dept_full": "BUSINESS PROCESS OUTSOURCING",
+        "company": "BRYCEN VIETNAM",
+        "dept_native": "Bộ phận BPO",
+        "company_long": "Công ty TNHH BRYCEN VIETNAM"
+      },
+      "breadcrumb": "Đường dẫn"
+    },
+    "home": {
+      "pillars_title": "Dịch vụ của chúng tôi",
+      "pillars_eyebrow": "DỊCH VỤ",
+      "pillars": [
+        {
+          "link": "services-annotation.html",
+          "image": "background_services_2d",
+          "coming_soon": false,
+          "title": "Tạo dữ liệu học cho AI",
+          "text": "Gán nhãn (annotation) dữ liệu 3D từ LiDAR và dữ liệu 2D từ hình ảnh, qua kiểm tra nhiều lớp."
+        },
+        {
+          "link": "services-collection.html",
+          "image": "background_services_3d",
+          "coming_soon": true,
+          "title": "Thu thập dữ liệu học cho AI",
+          "text": "Nội dung đang được cập nhật."
+        }
+      ]
+    },
+    "services": {
+      "annotation": {
+        "lead": "Chúng tôi biến dữ liệu thô từ LiDAR và camera thành dữ liệu học sẵn sàng cho mô hình AI – được gán nhãn chính xác, kiểm tra qua nhiều lớp và giao đúng hạn.",
+        "tabs": {
+          "modalities": "Loại dữ liệu",
+          "workflow": "Cách chúng tôi làm việc",
+          "quality": "Kiểm soát chất lượng",
+          "usecases": "Ứng dụng"
+        },
+        "highlights": [
+          {
+            "title": "3D & 2D",
+            "text": "Đám mây điểm LiDAR, ảnh camera và ảnh vệ tinh"
+          },
+          {
+            "title": "Kiểm tra 5 lớp",
+            "text": "Từ người làm đến duyệt tổng lần cuối"
+          },
+          {
+            "title": "550 nhân sự · 235+ dự án",
+            "text": "Quy mô lớn, đúng hạn, khách hàng hài lòng"
+          }
+        ],
+        "modalities": [
+          {
+            "id": "3d",
+            "label": "3D (LiDAR)",
+            "tag": "POINT CLOUD",
+            "title": "Dữ liệu 3D từ máy quét LiDAR",
+            "text": "LiDAR tạo ra đám mây điểm mô tả không gian ba chiều quanh phương tiện. Chúng tôi gán nhãn trực tiếp trên đám mây điểm để AI hiểu được hình dạng, vị trí và khoảng cách của vật thể.",
+            "types": [
+              {
+                "id": "seg3d",
+                "name": "SEGMENT",
+                "images": [
+                  "service_3d_segment_1",
+                  "service_3d_segment_2"
+                ],
+                "title": "3D Segment – Gán nhãn từng điểm",
+                "summary": "Mỗi điểm trong đám mây điểm được gán một lớp đối tượng như mặt đường, tòa nhà, cây cối, phương tiện, người đi bộ.",
+                "points": [
+                  "Gán nhãn ngữ nghĩa cho từng điểm",
+                  "Phù hợp dựng bản đồ độ chính xác cao và hiểu cảnh quanh xe",
+                  "Thực hiện bằng công cụ chuyên dụng trên dữ liệu LiDAR"
+                ]
+              },
+              {
+                "id": "bbox3d",
+                "name": "BOUNDING BOX",
+                "images": [
+                  "service_3d_cuboid_1",
+                  "service_3d_cuboid_2"
+                ],
+                "title": "3D Bounding Box (Cuboid) – Khối hộp 3D",
+                "summary": "Mỗi vật thể được bao quanh bởi một khối hộp 3D, cho biết vị trí, kích thước và hướng của vật thể.",
+                "points": [
+                  "Xác định xe, người đi bộ, xe hai bánh… trong không gian 3D",
+                  "Dữ liệu nền tảng cho phát hiện vật thể của xe tự lái và hệ thống hỗ trợ lái",
+                  "Mảng được phát triển mạnh từ năm 2025"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2d",
+            "label": "2D (Image)",
+            "tag": "IMAGE",
+            "title": "Dữ liệu 2D từ hình ảnh",
+            "text": "Ảnh từ các camera hành trình lắp quanh xe và ảnh vệ tinh được gán nhãn để AI nhận diện vật thể, vùng không gian và tư thế.",
+            "types": [
+              {
+                "id": "seg2d",
+                "name": "SEGMENT",
+                "images": [
+                  "service_2d_segment_input",
+                  "service_2d_segment_output"
+                ],
+                "captions": [
+                  "Ảnh gốc",
+                  "Kết quả gán nhãn"
+                ],
+                "title": "2D Segment – Gán nhãn từng điểm ảnh",
+                "summary": "Mỗi điểm ảnh được gán một lớp đối tượng (đường, làn, xe, người, bầu trời…), giúp AI hiểu toàn bộ khung cảnh.",
+                "points": [
+                  "Thể hiện hình dạng chính xác của vật thể và vùng",
+                  "Dùng cho nhận diện làn đường, vùng có thể di chuyển, cảnh đường phố",
+                  "Đối chiếu trực quan giữa ảnh gốc và kết quả"
+                ]
+              },
+              {
+                "id": "bbox2d",
+                "name": "BOUNDING BOX",
+                "images": [
+                  "service_2d_bbox"
+                ],
+                "title": "2D Bounding Box – Khung chữ nhật",
+                "summary": "Khoanh khung chữ nhật quanh từng vật thể (xe, người, biển báo…) để AI học phát hiện vật thể.",
+                "points": [
+                  "Nhanh và hiệu quả cho khối lượng dữ liệu lớn",
+                  "Nền tảng cho phát hiện vật thể trên ảnh camera hành trình",
+                  "Nhãn nhất quán nhờ hướng dẫn chuẩn và kiểm tra nhiều lớp"
+                ]
+              },
+              {
+                "id": "keypoint",
+                "name": "KEYPOINT",
+                "images": [
+                  "service_keypoint"
+                ],
+                "title": "Keypoint – Điểm đặc trưng",
+                "summary": "Đánh dấu các điểm đặc trưng như khớp cơ thể để AI ước lượng tư thế và chuyển động.",
+                "points": [
+                  "Dùng cho nhận diện tư thế và phân tích chuyển động",
+                  "Mỗi điểm được đánh dấu theo quy tắc thống nhất",
+                  "Ví dụ minh họa: tư thế của vận động viên"
+                ]
+              },
+              {
+                "id": "satellite",
+                "name": "SATELLITE",
+                "images": [
+                  "service_satellite_1",
+                  "service_satellite_2"
+                ],
+                "title": "Dữ liệu vệ tinh",
+                "summary": "Gán nhãn vật thể trên ảnh chụp từ vệ tinh (ví dụ máy bay, công trình) để AI nhận diện từ trên cao.",
+                "points": [
+                  "Bắt đầu thực hiện từ năm 2020",
+                  "Ví dụ: nhận diện máy bay tại sân bay",
+                  "Phục vụ giám sát, lập bản đồ và quy hoạch"
+                ]
+              }
+            ]
+          }
+        ],
+        "workflow": {
+          "title": "Cách chúng tôi làm việc",
+          "lead": "Mỗi dự án đi qua 4 chặng rõ ràng, phối hợp chặt chẽ giữa khách hàng, BPO Nhật Bản và BPO Việt Nam.",
+          "steps": [
+            {
+              "title": "Tiếp nhận & đo đạc",
+              "text": "Nhận yêu cầu, đo đạc thử khối lượng và độ khó, thống nhất đơn hàng với khách hàng."
+            },
+            {
+              "title": "Thể chế & đào tạo",
+              "text": "Lập đội ngũ, chuẩn bị môi trường làm việc, kickoff và đào tạo theo hướng dẫn của dự án."
+            },
+            {
+              "title": "Thực hiện & kiểm tra",
+              "text": "Gán nhãn và kiểm tra qua nhiều lớp; giao hàng trung gian để nhận phản hồi (FB) từ khách hàng."
+            },
+            {
+              "title": "Giao hàng & rút kinh nghiệm",
+              "text": "Giao hàng lần cuối, nghiệm thu và tổng kết kinh nghiệm cho dự án sau."
+            }
+          ]
+        },
+        "quality": {
+          "lead": "Dữ liệu chỉ đến tay khách hàng sau khi đã đi qua 5 lớp làm và duyệt. Nếu một lớp phát hiện lỗi, dữ liệu được trả lại để sửa rồi xoay vòng qua các lớp cho đến khi đạt yêu cầu.",
+          "layers": [
+            {
+              "code": "VNA",
+              "role": "Annotator",
+              "action": "Làm (gán nhãn)",
+              "desc": "Thực hiện gán nhãn theo hướng dẫn của dự án."
+            },
+            {
+              "code": "VNC",
+              "role": "Checker",
+              "action": "Review đợt 1",
+              "desc": "Kiểm tra chất lượng lớp 1, phát hiện và yêu cầu sửa lỗi."
+            },
+            {
+              "code": "VNSC",
+              "role": "Super Checker",
+              "action": "Review đợt 2",
+              "desc": "Kiểm tra chất lượng lớp 2, rà soát lại kết quả đợt 1."
+            },
+            {
+              "code": "SubPL",
+              "role": "Sub Project Leader",
+              "action": "Duyệt tổng lần 1",
+              "desc": "Rà soát tổng thể chất lượng và độ nhất quán của lô dữ liệu."
+            },
+            {
+              "code": "PL",
+              "role": "Project Leader",
+              "action": "Duyệt tổng lần cuối",
+              "desc": "Phê duyệt cuối cùng trước khi giao cho khách hàng."
+            }
+          ],
+          "delivery_label": "Giao hàng cho khách hàng",
+          "pass_label": "Đạt",
+          "fail_label": "Chưa đạt → trả lại sửa",
+          "loop_label": "Xoay vòng qua các lớp cho đến khi đạt",
+          "principles_title": "Nguyên tắc kiểm soát chất lượng",
+          "principles": [
+            {
+              "title": "Nhiều lớp độc lập",
+              "text": "Người làm và người kiểm tra là các vai trò riêng biệt."
+            },
+            {
+              "title": "Sửa lỗi theo vòng lặp",
+              "text": "Lỗi được trả lại đúng lớp để sửa và kiểm tra lại."
+            },
+            {
+              "title": "Chuẩn hóa và đào tạo",
+              "text": "Hướng dẫn thống nhất và đào tạo trước khi làm thực tế."
+            },
+            {
+              "title": "Phản hồi từ khách hàng",
+              "text": "Giao hàng trung gian để nhận phản hồi sớm."
+            }
+          ]
+        },
+        "usecases": {
+          "title": "Dữ liệu sau khi gán nhãn dùng để làm gì?",
+          "items": [
+            {
+              "title": "Xe tự lái & hỗ trợ lái",
+              "text": "Giúp xe nhận biết xe khác, người đi bộ, làn đường và vùng có thể di chuyển."
+            },
+            {
+              "title": "Bản đồ & viễn thám",
+              "text": "Ảnh vệ tinh và đám mây điểm phục vụ lập bản đồ và theo dõi công trình."
+            },
+            {
+              "title": "Robot & thành phố thông minh",
+              "text": "Nhận biết vật thể và không gian cho robot và camera giao thông."
+            },
+            {
+              "title": "Phân tích chuyển động",
+              "text": "Điểm đặc trưng cơ thể giúp ước lượng tư thế và chuyển động."
+            }
+          ]
+        },
+        "security": {
+          "title": "Bảo mật thông tin",
+          "text": "Thông tin của khách hàng được bảo vệ nghiêm ngặt thông qua các quy định về an ninh thông tin của công ty."
+        },
+        "cta": {
+          "title": "Bạn cần dữ liệu học cho AI?",
+          "text": "Hãy cho chúng tôi biết loại dữ liệu và yêu cầu của bạn.",
+          "button": "Liên hệ"
+        }
+      },
+      "collection": {
+        "status": "Đang cập nhật",
+        "lead": "Nội dung đang được cập nhật.",
+        "message": "Chúng tôi đang hoàn thiện thông tin về dịch vụ thu thập dữ liệu học cho AI. Vui lòng quay lại sau hoặc liên hệ để được tư vấn trực tiếp.",
+        "gallery": [
+          {
+            "image": "collection_image_01",
+            "caption": ""
+          },
+          {
+            "image": "collection_image_02",
+            "caption": ""
+          },
+          {
+            "image": "collection_image_03",
+            "caption": ""
+          }
+        ]
+      }
+    },
+    "team": {
+      "tabs": {
+        "org": "Cơ cấu bộ phận",
+        "process": "Quy trình vận hành",
+        "people": "Nhân lực được đào tạo",
+        "recruit": "Nguồn nhân lực & tuyển dụng"
+      },
+      "org": {
+        "title": "Cơ cấu bộ phận",
+        "lead": "Với nhu cầu về dữ liệu lớn, bộ phận vận hành với số lượng nhân sự lớn, tổ chức theo nhiều cấp quản lý và kiểm tra chất lượng.",
+        "headcount": {
+          "value": "550",
+          "label": "Nhân sự",
+          "detail": "37 nhân viên chính thức + 523 nhân sự part-time"
+        },
+        "levels": [
+          {
+            "id": "overall",
+            "tone": "red",
+            "label": "Cấp quản lý tổng thể",
+            "nodes": [
+              {
+                "role": "Manager"
+              }
+            ]
+          },
+          {
+            "id": "support",
+            "tone": "orange",
+            "label": "Cấp quản lý/hỗ trợ các dự án",
+            "nodes": [
+              {
+                "role": "Sub TeamLead"
+              },
+              {
+                "role": "PMO"
+              }
+            ]
+          },
+          {
+            "id": "pm",
+            "tone": "yellow",
+            "label": "Cấp quản lý dự án",
+            "nodes": [
+              {
+                "role": "Project Leader",
+                "code": "PL"
+              },
+              {
+                "role": "Project Leader",
+                "code": "PL"
+              },
+              {
+                "role": "Project Leader",
+                "code": "PL"
+              }
+            ]
+          },
+          {
+            "id": "pm_support",
+            "tone": "green",
+            "label": "Cấp hỗ trợ quản lý dự án",
+            "nodes": [
+              {
+                "role": "Sub Project Leader",
+                "code": "SubPL"
+              }
+            ]
+          },
+          {
+            "id": "qc2",
+            "tone": "blue",
+            "label": "Cấp kiểm tra chất lượng lớp 2",
+            "nodes": [
+              {
+                "role": "Super Checker",
+                "code": "VNSC"
+              },
+              {
+                "role": "Super Checker",
+                "code": "VNSC"
+              }
+            ]
+          },
+          {
+            "id": "qc1",
+            "tone": "slate",
+            "label": "Cấp kiểm tra chất lượng lớp 1",
+            "nodes": [
+              {
+                "role": "Checker",
+                "code": "VNC"
+              },
+              {
+                "role": "Checker",
+                "code": "VNC"
+              },
+              {
+                "role": "Checker",
+                "code": "VNC"
+              },
+              {
+                "role": "Checker",
+                "code": "VNC"
+              }
+            ]
+          },
+          {
+            "id": "annotation",
+            "tone": "purple",
+            "label": "Cấp chú thích",
+            "nodes": [
+              {
+                "role": "Annotator",
+                "code": "VNA"
+              },
+              {
+                "role": "Annotator",
+                "code": "VNA"
+              },
+              {
+                "role": "Annotator",
+                "code": "VNA"
+              },
+              {
+                "role": "Annotator",
+                "code": "VNA"
+              },
+              {
+                "role": "Annotator",
+                "code": "VNA"
+              },
+              {
+                "role": "Annotator",
+                "code": "VNA"
+              },
+              {
+                "role": "Annotator",
+                "code": "VNA"
+              },
+              {
+                "role": "Annotator",
+                "code": "VNA"
+              }
+            ]
+          }
+        ],
+        "links_note": "Connections (see docs/reference/slide17_org_chart.png): Manager -> Sub TeamLead and PMO; PMO -> 3 Project Leaders; Sub Project Leader sits below the Project Leader row; Sub Project Leader -> 2 Super Checkers; each Super Checker -> 2 Checkers; each Checker -> 2 Annotators."
+      },
+      "process": {
+        "title": "Quy trình vận hành",
+        "lead": "Luồng công việc giữa Khách hàng, BPO (JP) và BPO (VN) qua ba giai đoạn: đầu, giữa và cuối.",
+        "lanes": [
+          "Khách hàng",
+          "BPO (JP)",
+          "BPO (VN)"
+        ],
+        "phases": [
+          "Giai đoạn đầu",
+          "Giai đoạn giữa",
+          "Giai đoạn cuối"
+        ],
+        "nodes": [
+          {
+            "id": "e1",
+            "lane": 0,
+            "phase": 0,
+            "text": "Yêu cầu"
+          },
+          {
+            "id": "e2",
+            "lane": 1,
+            "phase": 0,
+            "text": "Tiếp nhận"
+          },
+          {
+            "id": "e3",
+            "lane": 2,
+            "phase": 0,
+            "text": "Tiếp nhận"
+          },
+          {
+            "id": "e4",
+            "lane": 2,
+            "phase": 0,
+            "text": "Đo đạc"
+          },
+          {
+            "id": "e5",
+            "lane": 1,
+            "phase": 0,
+            "text": "Đo đạc"
+          },
+          {
+            "id": "e6",
+            "lane": 0,
+            "phase": 0,
+            "text": "Đặt hàng"
+          },
+          {
+            "id": "e7",
+            "lane": 1,
+            "phase": 0,
+            "text": "Nhận order"
+          },
+          {
+            "id": "e8",
+            "lane": 2,
+            "phase": 0,
+            "text": "Nhận order"
+          },
+          {
+            "id": "e9",
+            "lane": 2,
+            "phase": 0,
+            "text": "Xây dựng thể chế"
+          },
+          {
+            "id": "m1",
+            "lane": 2,
+            "phase": 1,
+            "text": "Kickoff"
+          },
+          {
+            "id": "m2",
+            "lane": 2,
+            "phase": 1,
+            "text": "Xây dựng môi trường làm việc"
+          },
+          {
+            "id": "m3",
+            "lane": 2,
+            "phase": 1,
+            "text": "Training"
+          },
+          {
+            "id": "m4",
+            "lane": 2,
+            "phase": 1,
+            "text": "Làm thực tế"
+          },
+          {
+            "id": "m5",
+            "lane": 1,
+            "phase": 1,
+            "text": "Kiểm định chất lượng"
+          },
+          {
+            "id": "m6",
+            "lane": 1,
+            "phase": 1,
+            "text": "Giao hàng trung gian"
+          },
+          {
+            "id": "m7",
+            "lane": 0,
+            "phase": 1,
+            "text": "Kiểm định chất lượng"
+          },
+          {
+            "id": "m8",
+            "lane": 0,
+            "phase": 1,
+            "text": "Gửi FB"
+          },
+          {
+            "id": "m9",
+            "lane": 1,
+            "phase": 1,
+            "text": "Gửi FB"
+          },
+          {
+            "id": "f1",
+            "lane": 2,
+            "phase": 2,
+            "text": "Nhìn nhận, rút kinh nghiệm dự án"
+          },
+          {
+            "id": "f2",
+            "lane": 1,
+            "phase": 2,
+            "text": "Giao hàng lần cuối"
+          },
+          {
+            "id": "f3",
+            "lane": 0,
+            "phase": 2,
+            "text": "Nghiệm thu"
+          }
+        ],
+        "edges": [
+          [
+            "e1",
+            "e2"
+          ],
+          [
+            "e2",
+            "e3"
+          ],
+          [
+            "e3",
+            "e4"
+          ],
+          [
+            "e4",
+            "e5"
+          ],
+          [
+            "e5",
+            "e6"
+          ],
+          [
+            "e6",
+            "e7"
+          ],
+          [
+            "e7",
+            "e8"
+          ],
+          [
+            "e8",
+            "e9"
+          ],
+          [
+            "e9",
+            "m1"
+          ],
+          [
+            "m1",
+            "m2"
+          ],
+          [
+            "m2",
+            "m3"
+          ],
+          [
+            "m3",
+            "m4"
+          ],
+          [
+            "m4",
+            "m5"
+          ],
+          [
+            "m5",
+            "m6"
+          ],
+          [
+            "m6",
+            "m7"
+          ],
+          [
+            "m7",
+            "m8"
+          ],
+          [
+            "m8",
+            "m9"
+          ],
+          [
+            "m9",
+            "m4"
+          ],
+          [
+            "m4",
+            "f1"
+          ],
+          [
+            "f1",
+            "f2"
+          ],
+          [
+            "f2",
+            "f3"
+          ]
+        ],
+        "edge_note": "Edge m9->m4 is the feedback loop back to production. Layout reference: docs/reference/slide18_operating_flow.png"
+      },
+      "people": {
+        "title": "Nhân lực được đào tạo trong nước và tại Nhật Bản",
+        "lead": "Đội ngũ được đào tạo bài bản ngay tại Việt Nam và thông qua chính sách của công ty đưa nhân sự sang Nhật Bản học tập và làm việc, nhằm nâng cao năng lực, bảo đảm chất lượng công việc và sản phẩm.",
+        "steps": [
+          {
+            "title": "Đào tạo trong nước",
+            "text": "Nhân sự được đào tạo theo hướng dẫn của từng dự án trước khi làm thực tế."
+          },
+          {
+            "title": "Học tập & làm việc tại Nhật Bản",
+            "text": "Nhân sự được cử sang Brycen Nhật Bản để học tập, làm việc và trải nghiệm tư duy, phong cách làm việc của môi trường công sở Nhật."
+          },
+          {
+            "title": "Áp dụng tại bộ phận",
+            "text": "Kinh nghiệm được mang về áp dụng, nâng cao chất lượng công việc và sản phẩm giao cho khách hàng."
+          }
+        ],
+        "images": [
+          "team_japan_visit",
+          "team_training_meeting",
+          "team_event_booth"
+        ]
+      },
+      "recruit": {
+        "title": "Nguồn nhân lực & tuyển dụng",
+        "text": "Nhu cầu tuyển dụng có thể mở rộng để đáp ứng các thử thách mới. Công ty hợp tác chặt chẽ với các trường đại học, cao đẳng và cơ quan quản lý cấp phường, xã trong khu vực để tuyển dụng, nhờ đó luôn duy trì nguồn nhân lực cho các dự án quy mô lớn.",
+        "stats": [
+          {
+            "value": "79",
+            "label": "Nhân sự đang là sinh viên Đại học Kinh tế"
+          },
+          {
+            "value": "187",
+            "label": "Tổng số từ trước đến nay"
+          }
+        ]
+      }
+    },
+    "vision": {
+      "roadmap": {
+        "title": "Lộ trình phát triển",
+        "lead": "Phát triển hơn nữa mảng chú thích (annotation) về cả quy mô lẫn chất lượng, không chỉ trong nước Nhật mà trên phạm vi toàn cầu.",
+        "stages": [
+          {
+            "id": "sea",
+            "phase": "Hiện tại",
+            "featured": false,
+            "image": "vision_southeast_asia",
+            "title": "Đông Nam Á",
+            "text": "Phát triển hoạt động tại khu vực Đông Nam Á, hiện tại gồm Việt Nam, Myanmar và Cambodia.",
+            "countries": [
+              {
+                "name": "Việt Nam",
+                "status": "current"
+              },
+              {
+                "name": "Myanmar",
+                "status": "current"
+              },
+              {
+                "name": "Cambodia",
+                "status": "current"
+              }
+            ]
+          },
+          {
+            "id": "usa",
+            "phase": "Sắp tới",
+            "featured": true,
+            "image": "vision_usa_map",
+            "title": "Hoa Kỳ",
+            "text": "Sắp tới, công ty tại Nhật Bản sẽ mở rộng thị trường sang Mỹ để tìm kiếm những cơ hội và khách hàng mới."
+          },
+          {
+            "id": "eu",
+            "phase": "Tương lai xa hơn",
+            "featured": false,
+            "image": "vision_eu",
+            "title": "Châu Âu (EU)",
+            "text": "Xa hơn nữa, hướng tới thị trường châu Âu để mở rộng phạm vi phục vụ khách hàng."
+          }
+        ]
+      }
+    }
+  },
+  "remove": [
+    "home.hero.eyebrow",
+    "services.annotation.items",
+    "services.annotation.group_3d",
+    "services.annotation.group_2d",
+    "services.collection.items",
+    "services.collection.todo",
+    "team.structure",
+    "team.flow",
+    "team.growth",
+    "vision.recruit",
+    "vision.direction.customers"
+  ]
+}

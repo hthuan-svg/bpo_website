@@ -1,0 +1,59 @@
+{
+  "set": {
+    "slots": {
+      "vision_usa_map": {
+        "src": "assets/images/backgrounds/vision_usa_map.jpg",
+        "alt": {
+          "vi": "Bản đồ nước Mỹ và các khách hàng mục tiêu",
+          "en": "Map of the United States with target customers",
+          "ja": "米国地図と対象のお客様"
+        }
+      },
+      "vision_eu": {
+        "src": "assets/images/placeholders/vision_eu.jpg",
+        "alt": {
+          "vi": "Hình ảnh châu Âu (EU)",
+          "en": "Image of Europe (EU)",
+          "ja": "欧州（EU）のイメージ"
+        },
+        "placeholder": true
+      },
+      "vision_southeast_asia": {
+        "src": "assets/images/placeholders/vision_southeast_asia.jpg",
+        "alt": {
+          "vi": "Hình ảnh Đông Nam Á",
+          "en": "Image of Southeast Asia",
+          "ja": "東南アジアのイメージ"
+        },
+        "placeholder": true
+      },
+      "collection_image_01": {
+        "src": "assets/images/placeholders/collection_image_01.jpg",
+        "alt": {
+          "vi": "Hình minh họa thu thập dữ liệu 1",
+          "en": "Data collection illustration 1",
+          "ja": "データ収集のイメージ1"
+        },
+        "placeholder": true
+      },
+      "collection_image_02": {
+        "src": "assets/images/placeholders/collection_image_02.jpg",
+        "alt": {
+          "vi": "Hình minh họa thu thập dữ liệu 2",
+          "en": "Data collection illustration 2",
+          "ja": "データ収集のイメージ2"
+        },
+        "placeholder": true
+      },
+      "collection_image_03": {
+        "src": "assets/images/placeholders/collection_image_03.jpg",
+        "alt": {
+          "vi": "Hình minh họa thu thập dữ liệu 3",
+          "en": "Data collection illustration 3",
+          "ja": "データ収集のイメージ3"
+        },
+        "placeholder": true
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "set": {
+    "layout": {
+      "annotationRows": "image-left",
+      "_annotationRowsOptions": "image-left | zigzag"
+    },
+    "backToTop": {
+      "enabled": true,
+      "showAfterPx": 400
+    }
+  }
+}
