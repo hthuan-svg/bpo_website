@@ -10,6 +10,17 @@ function createElement(tagName, className, text) {
   return element;
 }
 
+function createList(items) {
+  const list = document.createElement('ul');
+  list.className = 'annotation-row__list';
+  (Array.isArray(items) ? items : []).forEach((item) => {
+    const li = document.createElement('li');
+    li.textContent = String(item ?? '');
+    list.append(li);
+  });
+  return list;
+}
+
 function getSlot(context, slotName) {
   const slot = context.images.slots?.[slotName];
   if (!slot) {
@@ -219,57 +230,330 @@ function createAnnotationItem(context, item, dialog) {
   return article;
 }
 
-function createAnnotationGroup(context, group, titleKey, items, dialog) {
-  const section = createElement('section', 'service-group section-shell');
-  section.setAttribute('aria-label', context.t(titleKey));
+function attachLightbox(button, image, dialog) {
+  button.type = 'button';
+  button.addEventListener('click', () => {
+    const lightboxImage = dialog.querySelector('.services-lightbox__image');
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+    lightboxImage.width = image.width;
+    lightboxImage.height = image.height;
+    dialog.showModal();
+  });
+}
+
+function createAnnotationRow(context, modality, type, index, dialog) {
+  const layout = context.siteConfig?.layout?.annotationRows === 'zigzag' && index % 2 === 1
+    ? 'zigzag'
+    : 'image-left';
+  const row = createElement('article', 'annotation-row');
+  row.dataset.reveal = '';
+  if (layout === 'zigzag') {
+    row.classList.add('annotation-row--reverse');
+  }
+
+  const media = createElement('div', 'annotation-row__media');
+  const gallery = createElement('div', 'annotation-row__gallery');
+  const buttons = [];
+
+  (Array.isArray(type.images) ? type.images : []).forEach((slotName) => {
+    const image = createImage(context, slotName, 'annotation-row__image');
+    if (!image) {
+      return;
+    }
+
+    const button = createElement('button', 'annotation-row__image-button');
+    attachLightbox(button, image, dialog);
+    button.append(image);
+    gallery.append(button);
+    buttons.push(button);
+  });
+
+  if (buttons.length) {
+    media.append(gallery);
+    const captions = Array.isArray(type.captions) ? type.captions : [];
+    captions.forEach((caption, captionIndex) => {
+      if (captionIndex >= buttons.length) {
+        return;
+      }
+      const chip = createElement('span', 'annotation-row__caption', caption);
+      media.append(chip);
+    });
+  }
+
+  const copy = createElement('div', 'annotation-row__copy');
+  copy.append(
+    createElement('span', 'annotation-row__index', String(index + 1).padStart(2, '0')),
+    createElement('span', 'annotation-row__kicker', modality.label),
+    createElement('p', 'annotation-row__name', type.name ?? ''),
+    createElement('h3', 'annotation-row__title', type.title ?? ''),
+    createElement('p', 'annotation-row__summary', type.summary ?? ''),
+    createList(type.points ?? [])
+  );
+
+  row.append(media, copy);
+  return row;
+}
+
+function createAnnotationTabs(context, tabsContent) {
+  const nav = createElement('nav', 'annotation-tabs');
+  nav.setAttribute('aria-label', context.t('ui.tabs_label'));
+  nav.dataset.annotationTabs = 'true';
+
+  const tabIds = ['modalities', 'workflow', 'quality', 'usecases'];
+  tabIds.forEach((id) => {
+    const label = tabsContent?.[id];
+    if (!label) {
+      return;
+    }
+
+    const link = createElement('a', 'annotation-tab');
+    link.href = `#${id}`;
+    link.dataset.annotationTab = id;
+    link.textContent = label;
+    link.setAttribute('aria-current', 'false');
+    nav.append(link);
+  });
+
+  return nav;
+}
+
+function activateAnnotationTab(targetId) {
+  const tabs = document.querySelectorAll('.annotation-tab');
+  tabs.forEach((tab) => {
+    const isActive = tab.dataset.annotationTab === targetId;
+    tab.classList.toggle('is-active', isActive);
+    tab.setAttribute('aria-current', isActive ? 'page' : 'false');
+  });
+}
+
+function bindAnnotationTabs() {
+  const tabs = document.querySelectorAll('.annotation-tab');
+  const sections = document.querySelectorAll('[data-annotation-section]');
+  if (!tabs.length || !sections.length) {
+    return;
+  }
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (!section) {
+      return;
+    }
+    const header = document.querySelector('.site-header');
+    const offset = (header?.offsetHeight ?? 72) + 16;
+    const top = section.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  };
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', (event) => {
+      event.preventDefault();
+      const targetId = tab.dataset.annotationTab;
+      if (!targetId) {
+        return;
+      }
+      activateAnnotationTab(targetId);
+      scrollToSection(targetId);
+    });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    const visible = [...entries]
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    if (!visible.length) {
+      return;
+    }
+    activateAnnotationTab(visible[0].target.id);
+  }, {
+    rootMargin: '-25% 0px -55% 0px',
+    threshold: [0.15, 0.3, 0.6]
+  });
+
+  sections.forEach((section) => observer.observe(section));
+}
+
+function createAnnotationModality(context, modality, dialog, index) {
+  const section = createElement('section', 'annotation-modality section-shell');
+  if (index === 1) {
+    section.classList.add('annotation-modality--soft');
+  }
+
   const container = createElement('div', 'page-container');
-  container.append(createElement('h2', 'section-title service-group__title', context.t(titleKey)));
-  const grid = createElement('div', 'service-items');
-  items
-    .filter((item) => item.group === group)
-    .forEach((item) => grid.append(createAnnotationItem(context, item, dialog)));
+  const header = createElement('header', 'annotation-modality__header');
+  header.append(
+    createElement('span', 'annotation-modality__label', modality.label ?? ''),
+    createElement('span', 'annotation-modality__tag', modality.tag ?? ''),
+    createElement('h2', 'section-title annotation-modality__title', modality.title ?? '')
+  );
+  if (modality.text) {
+    header.append(createElement('p', 'annotation-modality__lead', modality.text));
+  }
+  container.append(header);
+
+  const rows = createElement('div', 'annotation-rows');
+  (Array.isArray(modality.types) ? modality.types : []).forEach((type, typeIndex) => {
+    rows.append(createAnnotationRow(context, modality, type, typeIndex, dialog));
+  });
+  container.append(rows);
+  section.append(container);
+  return section;
+}
+
+function createAnnotationWorkflow(context) {
+  const section = createElement('section', 'annotation-workflow section-shell');
+  section.id = 'workflow';
+  section.dataset.annotationSection = 'workflow';
+
+  const container = createElement('div', 'page-container');
+  const heading = createElement('header', 'annotation-section-heading');
+  heading.append(
+    createElement('p', 'eyebrow', context.t('services.annotation.tabs.workflow')),
+    createElement('h2', 'section-title', context.t('services.annotation.workflow.title'))
+  );
+  if (context.t('services.annotation.workflow.lead')) {
+    heading.append(createElement('p', 'section-lead', context.t('services.annotation.workflow.lead')));
+  }
+  container.append(heading);
+
+  const steps = createElement('ol', 'annotation-workflow__steps');
+  const workflow = context.t('services.annotation.workflow');
+  (Array.isArray(workflow?.steps) ? workflow.steps : []).forEach((step, index) => {
+    const item = createElement('li', 'annotation-workflow__step');
+    const label = createElement('span', 'annotation-workflow__number', String(index + 1).padStart(2, '0'));
+    const copy = createElement('div', 'annotation-workflow__copy');
+    copy.append(
+      createElement('h3', 'annotation-workflow__title', step.title ?? ''),
+      createElement('p', 'annotation-workflow__text', step.text ?? '')
+    );
+    item.append(label, copy);
+    steps.append(item);
+  });
+  container.append(steps);
+  section.append(container);
+  return section;
+}
+
+function createAnnotationQualitySection(context) {
+  const section = createElement('section', 'annotation-quality section-shell');
+  section.id = 'quality';
+  section.dataset.annotationSection = 'quality';
+
+  const container = createElement('div', 'page-container');
+  const heading = createElement('header', 'annotation-section-heading');
+  heading.append(
+    createElement('p', 'eyebrow', context.t('services.annotation.tabs.quality')),
+    createElement('h2', 'section-title', context.t('services.annotation.quality.title'))
+  );
+  container.append(heading);
+  section.append(container);
+  return section;
+}
+
+function createAnnotationUsecases(context) {
+  const section = createElement('section', 'annotation-usecases section-shell');
+  section.id = 'usecases';
+  section.dataset.annotationSection = 'usecases';
+
+  const container = createElement('div', 'page-container');
+  const heading = createElement('header', 'annotation-section-heading');
+  heading.append(
+    createElement('p', 'eyebrow', context.t('services.annotation.tabs.usecases')),
+    createElement('h2', 'section-title', context.t('services.annotation.usecases.title'))
+  );
+  container.append(heading);
+
+  const grid = createElement('div', 'annotation-usecases__grid');
+  const usecases = context.t('services.annotation.usecases');
+  (Array.isArray(usecases?.items) ? usecases.items : []).forEach((item) => {
+    const card = createElement('article', 'annotation-usecase');
+    card.append(
+      createElement('span', 'annotation-usecase__index', '↗'),
+      createElement('h3', 'annotation-usecase__title', item.title ?? ''),
+      createElement('p', 'annotation-usecase__text', item.text ?? '')
+    );
+    grid.append(card);
+  });
   container.append(grid);
+  section.append(container);
+  return section;
+}
+
+function createAnnotationSecurity(context) {
+  const section = createElement('section', 'annotation-security');
+  const container = createElement('div', 'page-container');
+  const strip = createElement('div', 'annotation-security__strip');
+  strip.append(
+    createElement('span', 'annotation-security__label', context.t('services.annotation.security.title')),
+    createElement('p', 'annotation-security__text', context.t('services.annotation.security.text'))
+  );
+  container.append(strip);
+  section.append(container);
+  return section;
+}
+
+function createAnnotationCta(context) {
+  const section = createElement('section', 'annotation-cta');
+  const container = createElement('div', 'page-container');
+  const band = createElement('div', 'annotation-cta__band');
+  const copy = createElement('div', 'annotation-cta__copy');
+  copy.append(
+    createElement('p', 'eyebrow', context.t('ui.nav.contact')),
+    createElement('h2', 'annotation-cta__title', context.t('services.annotation.cta.title')),
+    createElement('p', 'annotation-cta__text', context.t('services.annotation.cta.text'))
+  );
+  const link = createElement('a', 'button button--primary', context.t('services.annotation.cta.button'));
+  link.href = 'contact.html';
+  band.append(copy, link);
+  container.append(band);
   section.append(container);
   return section;
 }
 
 function renderAnnotation(context, main) {
   const content = context.t('services.annotation');
-  const intro = createElement('section', 'service-intro section-shell');
-  const introContainer = createElement('div', 'page-container');
-  introContainer.append(createSectionHeading(
+  const dialog = createLightbox(context);
+
+  const hero = createElement('section', 'annotation-hero section-shell');
+  const heroContainer = createElement('div', 'page-container');
+  heroContainer.append(createSectionHeading(
     context,
     'services.annotation.title',
     'services.annotation.lead'
   ));
-  intro.append(introContainer);
-  main.append(intro);
+  const highlights = createElement('ul', 'annotation-highlights');
+  (Array.isArray(content?.highlights) ? content.highlights : []).forEach((item) => {
+    const highlight = createElement('li', 'annotation-highlight');
+    highlight.append(
+      createElement('strong', 'annotation-highlight__title', item.title ?? ''),
+      createElement('span', 'annotation-highlight__text', item.text ?? '')
+    );
+    highlights.append(highlight);
+  });
+  heroContainer.append(highlights);
+  hero.append(heroContainer);
 
-  const dialog = createLightbox(context);
-  const items = Array.isArray(content?.items) ? content.items : [];
+  const tabs = createAnnotationTabs(context, content?.tabs ?? {});
+  const modalitiesWrapper = createElement('div', 'annotation-modalities');
+  modalitiesWrapper.id = 'modalities';
+  modalitiesWrapper.dataset.annotationSection = 'modalities';
+  (Array.isArray(content?.modalities) ? content.modalities : []).forEach((modality, index) => {
+    modalitiesWrapper.append(createAnnotationModality(context, modality, dialog, index));
+  });
+
   main.append(
-    createAnnotationGroup(context, '3d', 'services.annotation.group_3d', items, dialog),
-    createAnnotationGroup(context, '2d', 'services.annotation.group_2d', items, dialog)
+    hero,
+    tabs,
+    modalitiesWrapper,
+    createAnnotationWorkflow(context),
+    createAnnotationQualitySection(context),
+    createAnnotationUsecases(context),
+    createAnnotationSecurity(context),
+    createAnnotationCta(context),
+    dialog
   );
 
-  const quality = content?.quality ?? {};
-  const qualitySection = createElement('section', 'service-quality section-shell');
-  const qualityContainer = createElement('div', 'page-container service-quality__layout');
-  const qualityCopy = createElement('div', 'service-quality__copy');
-  qualityCopy.dataset.reveal = '';
-  qualityCopy.append(
-    createElement('h2', 'section-title', quality.title ?? ''),
-    createElement('p', 'section-lead', quality.text ?? '')
-  );
-  const qualityImage = createImage(context, quality.image, 'service-quality__image');
-  if (qualityImage) {
-    qualityImage.dataset.reveal = '';
-    qualityContainer.append(qualityCopy, qualityImage);
-  } else {
-    qualityContainer.append(qualityCopy);
-  }
-  qualitySection.append(qualityContainer);
-  main.append(qualitySection, createContactCta(context), dialog);
+  bindAnnotationTabs();
 }
 
 function createCollectionItem(context, item) {
