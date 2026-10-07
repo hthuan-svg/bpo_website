@@ -419,9 +419,11 @@
       "email": "Email",
       "phone": "Phone",
       "form": "Send a request via form",
-      "hours": "Business hours"
+      "hours": "Business hours",
+      "map": "Map"
     },
     "hours": "",
+    "facebook_link": "Open our Facebook page",
     "note": "[TO ADD] The contact slide in the PowerPoint is empty. Fill email, phone and address in content/site.config.json."
   }
 }

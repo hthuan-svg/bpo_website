@@ -419,9 +419,11 @@
       "email": "Email",
       "phone": "Điện thoại",
       "form": "Gửi yêu cầu qua biểu mẫu",
-      "hours": "Giờ làm việc"
+      "hours": "Giờ làm việc",
+      "map": "Bản đồ"
     },
     "hours": "",
+    "facebook_link": "Mở trang Facebook của chúng tôi",
     "note": "[CẦN BỔ SUNG] Slide thông tin liên hệ trong file PowerPoint đang để trống. Điền email, điện thoại, địa chỉ trong content/site.config.json."
   }
 }

@@ -1,10 +1,10 @@
-<!-- Contact page shell. -->
+<!-- Contact page for the BRYCEN VIETNAM BPO division. -->
 <!doctype html>
 <html lang="vi">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title data-i18n="contact.page_title"></title>
   <meta name="description" content="">
   <link rel="icon" href="assets/images/branding/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/branding/browser_logo_32.png">
@@ -16,7 +16,51 @@
 </head>
 <body data-page="contact">
   <div id="site-header"></div>
-  <main id="main"></main>
+  <main id="main" class="contact-page">
+    <section class="contact-section section">
+      <div class="container">
+        <header class="section-heading contact-heading" data-reveal>
+          <h1 class="section-title" data-i18n="contact.page_title"></h1>
+          <p class="section-lead" data-i18n="contact.lead"></p>
+        </header>
+
+        <div class="contact-details">
+          <article class="contact-card card" data-contact-item="address" hidden>
+            <h2 class="contact-card__title" data-i18n="contact.labels.address"></h2>
+            <p class="contact-card__value" data-contact-value="address"></p>
+          </article>
+          <article class="contact-card card" data-contact-item="email" hidden>
+            <h2 class="contact-card__title" data-i18n="contact.labels.email"></h2>
+            <a class="contact-card__value" data-contact-link="email" target="_blank" rel="noopener noreferrer"></a>
+          </article>
+          <article class="contact-card card" data-contact-item="phone" hidden>
+            <h2 class="contact-card__title" data-i18n="contact.labels.phone"></h2>
+            <a class="contact-card__value" data-contact-link="phone" target="_blank" rel="noopener noreferrer"></a>
+          </article>
+        </div>
+
+        <p class="contact-warning" data-contact-note data-i18n="contact.note" role="status" hidden></p>
+
+        <div class="contact-actions" data-contact-actions hidden>
+          <a class="button button--primary" data-contact-form data-i18n="contact.labels.form" target="_blank" rel="noopener noreferrer" hidden></a>
+        </div>
+
+        <section class="contact-social" aria-label="" data-social-block hidden>
+          <h2 class="contact-card__title" data-i18n="ui.follow_us"></h2>
+          <ul class="site-social" data-contact-socials></ul>
+        </section>
+
+        <section class="contact-map" data-contact-map-section hidden>
+          <iframe data-contact-map loading="lazy" referrerpolicy="no-referrer-when-downgrade" title=""></iframe>
+        </section>
+
+        <section class="contact-facebook" data-facebook-plugin hidden>
+          <iframe data-facebook-frame loading="lazy" title=""></iframe>
+          <a class="contact-facebook__fallback" data-facebook-link data-i18n="contact.facebook_link" target="_blank" rel="noopener noreferrer" hidden></a>
+        </section>
+      </div>
+    </section>
+  </main>
   <div id="site-footer"></div>
   <script type="module" src="assets/js/app.js"></script>
 </body>

@@ -419,9 +419,11 @@
       "email": "メール",
       "phone": "電話",
       "form": "フォームで問い合わせる",
-      "hours": "営業時間"
+      "hours": "営業時間",
+      "map": "地図"
     },
     "hours": "",
+    "facebook_link": "Facebookページを開く",
     "note": "【要追記】PowerPointの連絡先スライドが空白でした。content/site.config.json にメール・電話・住所を入力してください。"
   }
 }
