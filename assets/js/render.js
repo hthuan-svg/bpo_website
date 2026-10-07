@@ -126,7 +126,9 @@ function bindList(element, context) {
   items.forEach((item) => {
     const fragment = template.content.cloneNode(true);
     fragment.querySelectorAll('[data-field]').forEach((field) => {
-      const value = findValue(item, field.dataset.field);
+      const value = field.dataset.field === '.' && typeof item === 'string'
+        ? item
+        : findValue(item, field.dataset.field);
       field.textContent = value === null || value === undefined ? '' : String(value);
     });
     fragment.querySelectorAll('[data-img-field]').forEach((image) => {
@@ -142,6 +144,17 @@ function bindList(element, context) {
       const href = safeUrl(value);
       if (link instanceof HTMLAnchorElement && href) {
         link.setAttribute('href', href);
+      } else if (link instanceof HTMLAnchorElement) {
+        link.removeAttribute('href');
+      }
+    });
+    fragment.querySelectorAll('[data-map-field]').forEach((link) => {
+      const address = findValue(item, link.dataset.mapField);
+      if (link instanceof HTMLAnchorElement && typeof address === 'string' && address.trim()) {
+        const mapUrl = new URL('https://www.google.com/maps/search/');
+        mapUrl.searchParams.set('api', '1');
+        mapUrl.searchParams.set('query', address);
+        link.href = mapUrl.href;
       } else if (link instanceof HTMLAnchorElement) {
         link.removeAttribute('href');
       }

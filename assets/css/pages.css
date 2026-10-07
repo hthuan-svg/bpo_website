@@ -1,4 +1,4 @@
-/* Page-specific styles for the home page. */
+/* Page-specific styles for home and about pages. */
 .page-container {
   width: min(var(--container), calc(100% - 2 * var(--space-4)));
   margin-inline: auto;
@@ -238,6 +238,167 @@
   margin-bottom: var(--space-2);
 }
 
+.about-intro {
+  padding-top: clamp(3rem, 7vw, var(--space-7));
+}
+
+.about-intro__heading {
+  margin-bottom: var(--space-4);
+}
+
+.about-intro__layout {
+  display: grid;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.about-intro__copy {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.about-intro__figure {
+  overflow: hidden;
+  border-radius: var(--radius-l);
+  background: var(--bg-soft);
+  box-shadow: var(--shadow-m);
+}
+
+.about-intro__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.about-history {
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+
+.about-timeline {
+  position: relative;
+  display: grid;
+  gap: var(--space-4);
+  padding: 0 0 0 var(--space-5);
+  list-style: none;
+}
+
+.about-timeline::before {
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  left: .8rem;
+  width: 2px;
+  background: var(--line);
+  content: "";
+}
+
+.about-timeline__item {
+  position: relative;
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.about-timeline__item::before {
+  position: absolute;
+  top: 2.1rem;
+  left: calc(-1 * var(--space-5) + .52rem);
+  z-index: 1;
+  width: .65rem;
+  height: .65rem;
+  border: 2px solid var(--bg-soft);
+  border-radius: 50%;
+  background: var(--brand-600);
+  content: "";
+}
+
+.about-timeline__milestone {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.about-timeline__icon-wrap {
+  display: grid;
+  width: 4.5rem;
+  height: 4.5rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+.about-timeline__icon {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.about-timeline__year {
+  color: var(--ink-900);
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.about-timeline__text {
+  max-width: 42ch;
+  color: var(--ink-500);
+  font-size: .95rem;
+}
+
+.about-timeline__item:last-child {
+  padding: var(--space-3);
+  border: 1px solid var(--brand-500);
+  border-radius: var(--radius-m);
+  background: var(--bg);
+  box-shadow: var(--shadow-s);
+}
+
+.about-timeline__item:last-child::before {
+  left: calc(-1 * var(--space-5) + .52rem - var(--space-3));
+  width: .9rem;
+  height: .9rem;
+  border-color: var(--brand-600);
+  background: var(--brand-500);
+}
+
+.about-timeline__item:last-child .about-timeline__year {
+  color: var(--brand-600);
+  font-size: 1.5rem;
+}
+
+.about-offices__grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.about-office__image {
+  aspect-ratio: 16 / 10;
+}
+
+.about-office__body {
+  display: grid;
+  align-content: start;
+  gap: var(--space-2);
+}
+
+.about-office__name {
+  font-size: 1.25rem;
+}
+
+.about-office__address {
+  color: var(--ink-500);
+}
+
+.about-office__map {
+  justify-self: start;
+  margin-top: var(--space-1);
+}
+
 @media (min-width: 640px) {
   .home-stats__list {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -255,9 +416,71 @@
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
+  .about-intro__layout {
+    grid-template-columns: minmax(0, 1.2fr) minmax(16rem, .8fr);
+    gap: clamp(var(--space-5), 8vw, var(--space-7));
+  }
+
+  .about-offices__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .home-cta-band__inner {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: 960px) {
+  .about-timeline {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    padding: 0 0 var(--space-3);
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-color: var(--brand-500) var(--line);
+  }
+
+  .about-timeline::before {
+    top: 2.1rem;
+    right: 2rem;
+    bottom: auto;
+    left: 2rem;
+    width: auto;
+    height: 2px;
+  }
+
+  .about-timeline__item {
+    flex: 0 0 clamp(13rem, 18vw, 16rem);
+    gap: var(--space-3);
+    padding: 0 var(--space-3);
+    scroll-snap-align: start;
+  }
+
+  .about-timeline__item::before {
+    top: 1.84rem;
+    left: 2.18rem;
+  }
+
+  .about-timeline__milestone {
+    display: grid;
+    justify-items: start;
+    gap: var(--space-2);
+    min-height: 7rem;
+  }
+
+  .about-timeline__item:last-child {
+    padding: var(--space-3);
+  }
+
+  .about-timeline__item:last-child::before {
+    top: 1.75rem;
+    left: calc(2.18rem + var(--space-3));
+  }
+
+  .about-offices__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

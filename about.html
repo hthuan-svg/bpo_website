@@ -1,10 +1,10 @@
-<!-- About page shell. -->
+<!-- About page for the BRYCEN VIETNAM BPO division. -->
 <!doctype html>
 <html lang="vi">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title data-i18n="about.page_title"></title>
   <meta name="description" content="">
   <link rel="icon" href="assets/images/branding/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/branding/browser_logo_32.png">
@@ -16,7 +16,70 @@
 </head>
 <body data-page="about">
   <div id="site-header"></div>
-  <main id="main"></main>
+  <main id="main" class="about-page">
+    <section class="about-intro section">
+      <div class="container">
+        <header class="section-heading about-intro__heading" data-reveal>
+          <p class="eyebrow" data-i18n="about.page_title"></p>
+          <h1 class="section-title" data-i18n="about.intro.title"></h1>
+        </header>
+        <div class="about-intro__layout">
+          <div class="about-intro__copy" data-list="about.intro.paragraphs">
+            <template>
+              <p data-field="."></p>
+            </template>
+          </div>
+          <figure class="about-intro__figure" data-reveal>
+            <img class="about-intro__image" data-img="office_nguyen_van_cu" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-history section" aria-labelledby="about-history-title">
+      <div class="container">
+        <header class="section-heading" data-reveal>
+          <p class="eyebrow" data-i18n="about.page_title"></p>
+          <h2 class="section-title" id="about-history-title" data-i18n="about.history.title"></h2>
+          <p class="section-lead" data-i18n="about.history.lead"></p>
+        </header>
+        <ol class="about-timeline" data-list="about.history.timeline" tabindex="0" data-i18n-attr="aria-label:about.history.title">
+          <template>
+            <li class="about-timeline__item">
+              <div class="about-timeline__milestone">
+                <span class="about-timeline__icon-wrap">
+                  <img class="about-timeline__icon" data-img-field="icon" loading="lazy">
+                </span>
+                <span class="about-timeline__year" data-field="year"></span>
+              </div>
+              <p class="about-timeline__text" data-field="text"></p>
+            </li>
+          </template>
+        </ol>
+      </div>
+    </section>
+
+    <section class="about-offices section" aria-labelledby="about-offices-title">
+      <div class="container">
+        <header class="section-heading" data-reveal>
+          <p class="eyebrow" data-i18n="about.page_title"></p>
+          <h2 class="section-title" id="about-offices-title" data-i18n="about.offices.title"></h2>
+        </header>
+        <div class="about-offices__grid" data-list="about.offices.items">
+          <template>
+            <article class="about-office card" data-reveal>
+              <img class="card__image about-office__image" data-img-field="image" loading="lazy">
+              <div class="card__body about-office__body">
+                <h3 class="about-office__name" data-field="name"></h3>
+                <p class="about-office__address" data-field="address"></p>
+                <a class="button button--text about-office__map" data-map-field="address" target="_blank" rel="noopener noreferrer" data-i18n="ui.view_map"></a>
+              </div>
+            </article>
+          </template>
+        </div>
+      </div>
+    </section>
+  </main>
   <div id="site-footer"></div>
   <script type="module" src="assets/js/app.js"></script>
 </body>
