@@ -124,9 +124,7 @@ export async function initI18n() {
     setMetaContent('meta[name="twitter:title"]', title);
     setMetaContent('meta[name="twitter:description"]', description);
 
-    const canonicalUrl = pageUrl(language, new URL(
-      document.querySelector('meta[property="og:url"]')?.content ?? window.location.origin
-    ).origin);
+    const canonicalUrl = pageUrl(language, window.location.origin);
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
       canonical.href = canonicalUrl;
