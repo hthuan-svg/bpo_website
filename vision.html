@@ -1,10 +1,10 @@
-<!-- Vision page shell. -->
+<!-- Vision and recruitment page for the BRYCEN VIETNAM BPO division. -->
 <!doctype html>
 <html lang="vi">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title data-i18n="vision.page_title"></title>
   <meta name="description" content="">
   <link rel="icon" href="assets/images/branding/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/branding/browser_logo_32.png">
@@ -16,7 +16,41 @@
 </head>
 <body data-page="vision">
   <div id="site-header"></div>
-  <main id="main"></main>
+  <main id="main" class="content-page vision-page">
+    <section class="section-shell vision-direction">
+      <div class="page-container">
+        <header class="section-heading" data-reveal>
+          <p class="eyebrow" data-i18n="vision.page_title"></p>
+          <h1 class="section-title" data-i18n="vision.direction.title"></h1>
+          <p class="section-lead" data-i18n="vision.direction.text"></p>
+        </header>
+        <ul class="content-logo-wall vision-direction__logos" data-list="vision.direction.customers">
+          <template>
+            <li><img class="content-logo-wall__image" data-img-field="." loading="lazy"></li>
+          </template>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section-shell vision-recruit">
+      <div class="page-container">
+        <header class="section-heading" data-reveal>
+          <p class="eyebrow" data-i18n="vision.page_title"></p>
+          <h2 class="section-title" data-i18n="vision.recruit.title"></h2>
+          <p class="section-lead" data-i18n="vision.recruit.text"></p>
+        </header>
+        <ul class="vision-recruit__stats" data-list="vision.recruit.stats">
+          <template>
+            <li class="vision-recruit__stat">
+              <strong class="content-stat__value" data-field="value"></strong>
+              <span class="content-stat__label" data-field="label"></span>
+            </li>
+          </template>
+        </ul>
+        <a class="button button--primary vision-recruit__contact" href="contact.html" data-i18n="ui.nav.contact"></a>
+      </div>
+    </section>
+  </main>
   <div id="site-footer"></div>
   <script type="module" src="assets/js/app.js"></script>
 </body>

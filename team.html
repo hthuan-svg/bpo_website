@@ -1,10 +1,10 @@
-<!-- Team page shell. -->
+<!-- Team page for the BRYCEN VIETNAM BPO division. -->
 <!doctype html>
 <html lang="vi">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title data-i18n="team.page_title"></title>
   <meta name="description" content="">
   <link rel="icon" href="assets/images/branding/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/branding/browser_logo_32.png">
@@ -16,7 +16,54 @@
 </head>
 <body data-page="team">
   <div id="site-header"></div>
-  <main id="main"></main>
+  <main id="main" class="content-page team-page">
+    <section class="section-shell team-structure">
+      <div class="page-container team-structure__layout">
+        <header class="section-heading" data-reveal>
+          <p class="eyebrow" data-i18n="team.page_title"></p>
+          <h1 class="section-title" data-i18n="team.structure.title"></h1>
+          <p class="section-lead" data-i18n="team.structure.text"></p>
+        </header>
+        <div class="team-structure__stat" data-reveal>
+          <strong class="content-stat__value" data-i18n="team.structure.stat_value"></strong>
+          <span class="content-stat__label" data-i18n="team.structure.stat_label"></span>
+          <p class="team-structure__detail" data-i18n="team.structure.detail"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell team-flow" aria-labelledby="team-flow-title">
+      <div class="page-container">
+        <header class="section-heading" data-reveal>
+          <p class="eyebrow" data-i18n="team.page_title"></p>
+          <h2 class="section-title" id="team-flow-title" data-i18n="team.flow.title"></h2>
+        </header>
+        <div class="team-flow__diagram" data-reveal>
+          <ul class="team-flow__lane-labels" data-list="team.flow.lanes">
+            <template>
+              <li class="team-flow__lane" data-field="."></li>
+            </template>
+          </ul>
+          <div class="team-flow__phase-grid" id="team-flow-phases"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell team-growth">
+      <div class="page-container">
+        <header class="section-heading" data-reveal>
+          <p class="eyebrow" data-i18n="team.page_title"></p>
+          <h2 class="section-title" data-i18n="team.growth.title"></h2>
+          <p class="section-lead" data-i18n="team.growth.text"></p>
+        </header>
+        <ul class="team-growth__images" data-list="team.growth.images">
+          <template>
+            <li><img class="team-growth__image" data-img-field="." loading="lazy"></li>
+          </template>
+        </ul>
+      </div>
+    </section>
+  </main>
   <div id="site-footer"></div>
   <script type="module" src="assets/js/app.js"></script>
 </body>

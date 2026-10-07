@@ -1,10 +1,10 @@
-<!-- Achievements and projects page shell. -->
+<!-- Achievements and projects page for the BRYCEN VIETNAM BPO division. -->
 <!doctype html>
 <html lang="vi">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title data-i18n="achievements.page_title"></title>
   <meta name="description" content="">
   <link rel="icon" href="assets/images/branding/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/branding/browser_logo_32.png">
@@ -16,7 +16,49 @@
 </head>
 <body data-page="achievements">
   <div id="site-header"></div>
-  <main id="main"></main>
+  <main id="main" class="content-page achievements-page">
+    <section class="section-shell achievements-awards">
+      <div class="page-container">
+        <header class="section-heading" data-reveal>
+          <p class="eyebrow" data-i18n="achievements.page_title"></p>
+          <h1 class="section-title" data-i18n="achievements.awards.title"></h1>
+        </header>
+        <div class="achievements-awards__layout" data-reveal>
+          <div class="achievements-awards__stat">
+            <strong class="content-stat__value" id="awards-year-count"></strong>
+            <p class="content-stat__label" data-i18n="achievements.awards.text"></p>
+          </div>
+          <ul class="achievements-awards__badges" data-list="achievements.awards.badges">
+            <template>
+              <li><img class="achievements-awards__badge" data-img-field="." loading="lazy"></li>
+            </template>
+          </ul>
+        </div>
+        <p class="achievements-awards__source" data-i18n="achievements.awards.source"></p>
+      </div>
+    </section>
+
+    <section class="section-shell achievements-projects">
+      <div class="page-container">
+        <header class="section-heading" data-reveal>
+          <p class="eyebrow" data-i18n="achievements.page_title"></p>
+          <h2 class="section-title" data-i18n="achievements.projects.title"></h2>
+        </header>
+        <div class="achievements-projects__layout" data-reveal>
+          <div class="achievements-projects__stat">
+            <strong class="content-stat__value" data-i18n="achievements.projects.stat_value"></strong>
+            <span class="content-stat__label" data-i18n="achievements.projects.stat_label"></span>
+          </div>
+          <p class="section-lead achievements-projects__text" data-i18n="achievements.projects.text"></p>
+        </div>
+        <ul class="content-logo-wall" data-list="achievements.projects.customers">
+          <template>
+            <li><img class="content-logo-wall__image" data-img-field="." loading="lazy"></li>
+          </template>
+        </ul>
+      </div>
+    </section>
+  </main>
   <div id="site-footer"></div>
   <script type="module" src="assets/js/app.js"></script>
 </body>
