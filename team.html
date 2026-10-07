@@ -42,48 +42,96 @@
 <body data-page="team">
   <div id="site-header"></div>
   <main id="main" class="content-page team-page">
-    <section class="section-shell team-structure">
-      <div class="page-container team-structure__layout">
-        <header class="section-heading" data-reveal>
-          <p class="eyebrow" data-i18n="team.page_title"></p>
-          <h1 class="section-title" data-i18n="team.structure.title"></h1>
-          <p class="section-lead" data-i18n="team.structure.text"></p>
-        </header>
-        <div class="team-structure__stat" data-reveal>
-          <strong class="content-stat__value" data-i18n="team.structure.stat_value"></strong>
-          <span class="content-stat__label" data-i18n="team.structure.stat_label"></span>
-          <p class="team-structure__detail" data-i18n="team.structure.detail"></p>
+    <div class="page-container">
+      <nav class="team-tabs" aria-label="Team sections">
+        <div class="team-tabs__list" role="tablist" aria-label="Team sections">
+          <button class="team-tabs__tab is-active" type="button" role="tab" aria-selected="true" aria-current="page" data-target="#org">
+            <span data-i18n="team.tabs.org"></span>
+          </button>
+          <button class="team-tabs__tab" type="button" role="tab" aria-selected="false" data-target="#process">
+            <span data-i18n="team.tabs.process"></span>
+          </button>
+          <button class="team-tabs__tab" type="button" role="tab" aria-selected="false" data-target="#people">
+            <span data-i18n="team.tabs.people"></span>
+          </button>
+          <button class="team-tabs__tab" type="button" role="tab" aria-selected="false" data-target="#recruit">
+            <span data-i18n="team.tabs.recruit"></span>
+          </button>
         </div>
-      </div>
-    </section>
+      </nav>
+    </div>
 
-    <section class="section-shell team-flow" aria-labelledby="team-flow-title">
+    <section id="org" class="section-shell team-org" aria-labelledby="team-org-title">
       <div class="page-container">
         <header class="section-heading" data-reveal>
           <p class="eyebrow" data-i18n="team.page_title"></p>
-          <h2 class="section-title" id="team-flow-title" data-i18n="team.flow.title"></h2>
+          <h1 class="section-title" id="team-org-title" data-i18n="team.org.title"></h1>
+          <p class="section-lead" data-i18n="team.org.lead"></p>
         </header>
-        <div class="team-flow__diagram" data-reveal>
-          <ul class="team-flow__lane-labels" data-list="team.flow.lanes">
-            <template>
-              <li class="team-flow__lane" data-field="."></li>
-            </template>
-          </ul>
-          <div class="team-flow__phase-grid" id="team-flow-phases"></div>
+        <div class="team-org__overview" data-reveal>
+          <div class="team-org__stat">
+            <strong class="content-stat__value" data-i18n="team.org.headcount.value"></strong>
+            <span class="content-stat__label" data-i18n="team.org.headcount.label"></span>
+            <p class="team-org__detail" data-i18n="team.org.headcount.detail"></p>
+          </div>
         </div>
+        <div id="team-org-chart" class="team-org__chart" aria-live="polite"></div>
       </div>
     </section>
 
-    <section class="section-shell team-growth">
+    <section id="process" class="section-shell team-process" aria-labelledby="team-process-title">
       <div class="page-container">
         <header class="section-heading" data-reveal>
           <p class="eyebrow" data-i18n="team.page_title"></p>
-          <h2 class="section-title" data-i18n="team.growth.title"></h2>
-          <p class="section-lead" data-i18n="team.growth.text"></p>
+          <h2 class="section-title" id="team-process-title" data-i18n="team.process.title"></h2>
+          <p class="section-lead" data-i18n="team.process.lead"></p>
         </header>
-        <ul class="team-growth__images" data-list="team.growth.images">
+        <div id="team-process-chart" class="team-process__chart" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="people" class="section-shell team-people" aria-labelledby="team-people-title">
+      <div class="page-container">
+        <header class="section-heading" data-reveal>
+          <p class="eyebrow" data-i18n="team.page_title"></p>
+          <h2 class="section-title" id="team-people-title" data-i18n="team.people.title"></h2>
+          <p class="section-lead" data-i18n="team.people.lead"></p>
+        </header>
+        <div class="team-people__timeline" data-list="team.people.steps" data-reveal>
           <template>
-            <li><img class="team-growth__image" data-img-field="." loading="lazy"></li>
+            <article class="team-people__step">
+              <div class="team-people__step-marker" aria-hidden="true"></div>
+              <div class="team-people__step-content">
+                <h3 class="team-people__step-title" data-field="title"></h3>
+                <p class="team-people__step-text" data-field="text"></p>
+              </div>
+            </article>
+          </template>
+        </div>
+        <ul class="team-people__images" data-list="team.people.images" data-reveal>
+          <template>
+            <li><img class="team-people__image" data-img-field="." loading="lazy"></li>
+          </template>
+        </ul>
+      </div>
+    </section>
+
+    <section id="recruit" class="section-shell team-recruit" aria-labelledby="team-recruit-title">
+      <div class="page-container team-recruit__layout">
+        <div class="team-recruit__content" data-reveal>
+          <header class="section-heading">
+            <p class="eyebrow" data-i18n="team.page_title"></p>
+            <h2 class="section-title" id="team-recruit-title" data-i18n="team.recruit.title"></h2>
+          </header>
+          <p class="section-lead" data-i18n="team.recruit.text"></p>
+          <a class="button button--primary team-recruit__cta" href="contact.html" data-i18n="home.cta.button"></a>
+        </div>
+        <ul class="team-recruit__stats" data-list="team.recruit.stats" data-reveal>
+          <template>
+            <li class="team-recruit__stat">
+              <strong class="content-stat__value" data-field="value"></strong>
+              <span class="content-stat__label" data-field="label"></span>
+            </li>
           </template>
         </ul>
       </div>
