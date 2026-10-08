@@ -41,10 +41,6 @@
         "title": "News | BRYCEN VIETNAM BPO",
         "description": "Read news, event updates, and activities from the BRYCEN VIETNAM BPO division."
       },
-      "subaru": {
-        "title": "Subaru | BRYCEN VIETNAM BPO",
-        "description": "Learn about Subaru, its core values, and the safety and performance technologies behind Subaru vehicles."
-      },
       "contact": {
         "title": "Contact | BRYCEN VIETNAM BPO",
         "description": "Contact BRYCEN VIETNAM BPO to discuss AI training data services."
@@ -67,8 +63,7 @@
       "achievements": "Achievements & Projects",
       "vision": "Vision",
       "news": "News",
-      "contact": "Contact",
-      "subaru": "Subaru"
+      "contact": "Contact"
     },
     "skip": "Skip to main content",
     "read_more": "Read more",
@@ -117,31 +112,27 @@
   },
   "home": {
     "hero": {
-      "title": "5 years in a row as top 1 in the Japanese market.",
-      "subtitle": "The BPO division creates and collects AI training data for 2D, 3D, LiDAR and dashcam projects with reliable quality control.",
+      "title": "High-quality data for trustworthy AI",
+      "subtitle": "The BPO Division creates and collects training data for AI — since 2015, with 550 people and 235+ projects.",
       "cta_primary": "Explore services",
       "cta_secondary": "Contact us"
     },
     "stats": [
       {
         "value": "2015",
-        "label": "Starting year",
-        "image": "timeline_2015"
+        "label": "Year founded"
       },
       {
-        "value": "TBD",
-        "label": "Staff",
-        "image": "timeline_2019"
+        "value": "550",
+        "label": "Team members"
       },
       {
         "value": "235+",
-        "label": "Projects completed",
-        "image": "background_services_3d"
+        "label": "Projects delivered"
       },
       {
         "value": "5",
-        "label": "Years in a row as top 1 in the Japanese market*",
-        "image": "background_main"
+        "label": "Consecutive years #1 in Japan*"
       }
     ],
     "stats_note": "* Source: Fuji Chimera Research Institute, annotation services market.",
@@ -177,7 +168,7 @@
         "text": "Projects are delivered on schedule, and clients are satisfied with the quality."
       }
     ],
-    "customers_title": "Strategic Partners",
+    "customers_title": "Featured customers",
     "news_title": "Latest news",
     "cta": {
       "title": "Let's talk about your AI data",

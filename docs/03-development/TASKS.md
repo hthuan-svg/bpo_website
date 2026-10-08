@@ -9,35 +9,35 @@
 - [ ] Record risks before coding
 
 ## Phase 1 – Global
-- [x] Dark default
-- [x] Light/Dark toggle
-- [x] Persist theme where appropriate
-- [x] Black/Green design tokens
-- [x] Global contact/address area
-- [x] Back-to-top
-- [x] Responsive navigation
-- [x] Accessibility regression check
+- [ ] Dark default
+- [ ] Light/Dark toggle
+- [ ] Persist theme where appropriate
+- [ ] Black/Green design tokens
+- [ ] Global contact/address area
+- [ ] Back-to-top
+- [ ] Responsive navigation
+- [ ] Accessibility regression check
 
 ## Phase 2 – Home
-- [x] Hero top-1 statement
-- [x] Four stats
-- [x] Image slots for stats
-- [x] Services horizontal image section
-- [x] Commitment background
-- [x] Strategic partner rename
-- [x] Subaru link
+- [ ] Hero top-1 statement
+- [ ] Four stats
+- [ ] Image slots for stats
+- [ ] Services horizontal image section
+- [ ] Commitment background
+- [ ] Strategic partner rename
+- [ ] Subaru link
 
 ## Phase 3 – Subaru
-- [x] Create page
-- [x] Intro
-- [x] Core values/technology
-- [x] Boxer
-- [x] S-AWD
-- [x] EyeSight
-- [x] SGP
-- [x] Image slots
-- [x] BRYCEN EyeSight-related product statement
-- [x] Navigation link
+- [ ] Create page
+- [ ] Intro
+- [ ] Core values/technology
+- [ ] Boxer
+- [ ] S-AWD
+- [ ] EyeSight
+- [ ] SGP
+- [ ] Image slots
+- [ ] BRYCEN EyeSight-related product statement
+- [ ] Navigation link
 
 ## Phase 4 – About
 - [ ] Timeline years above images

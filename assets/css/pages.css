@@ -166,22 +166,6 @@
 .home-stats__item {
   display: grid;
   align-content: start;
-  gap: var(--space-2);
-  padding: var(--space-3);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-m);
-  background: var(--bg);
-}
-
-.home-stats__image {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: calc(var(--radius-m) - 2px);
-}
-
-.home-stats__content {
-  display: grid;
   gap: var(--space-1);
 }
 
@@ -203,50 +187,6 @@
   color: var(--ink-500);
   font-size: .75rem;
   overflow-wrap: anywhere;
-}
-
-.home-services-strip {
-  padding-block: var(--space-4) var(--space-2);
-  background: var(--bg-soft);
-}
-
-.home-services-strip__frame {
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-m);
-  background: var(--bg);
-}
-
-.home-services-strip__rail {
-  display: flex;
-  width: max-content;
-  gap: var(--space-3);
-  padding: var(--space-3);
-  animation: home-services-slide 24s linear infinite;
-}
-
-.home-services-strip__rail img {
-  width: min(22rem, 70vw);
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: var(--radius-s);
-  flex-shrink: 0;
-  background: var(--bg-soft);
-}
-
-@keyframes home-services-slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .home-services-strip__rail {
-    animation: none;
-  }
 }
 
 .home-section__title {
@@ -1879,119 +1819,13 @@ a.contact-card__value {
 
   .services-overview__cards,
   .service-items,
-  .collection-items,
-  .subaru-tech-grid {
+  .collection-items {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .service-quality__layout {
     grid-template-columns: minmax(0, 1fr) minmax(18rem, .9fr);
   }
-}
-
-.subaru-hero {
-  position: relative;
-  min-height: min(44rem, 80svh);
-  display: grid;
-  place-items: center;
-  background-position: center;
-  background-size: cover;
-  background-color: var(--bg-soft);
-}
-
-.subaru-hero::before {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(10, 13, 17, 0.88), rgba(10, 13, 17, 0.5));
-  content: "";
-}
-
-.subaru-hero .page-container {
-  position: relative;
-  z-index: 1;
-}
-
-.subaru-hero .section-heading {
-  max-width: 42rem;
-  color: var(--white);
-}
-
-.subaru-intro {
-  max-width: 60rem;
-}
-
-.subaru-intro p {
-  color: var(--ink-700);
-  line-height: 1.8;
-}
-
-.subaru-section-title {
-  margin-bottom: var(--space-3);
-}
-
-.subaru-tech-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: var(--space-4);
-}
-
-.subaru-tech-card {
-  position: relative;
-  min-height: 22rem;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-m);
-  background-position: center;
-  background-size: cover;
-  isolation: isolate;
-}
-
-.subaru-tech-card::before {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(7, 10, 14, 0.16) 0%, rgba(7, 10, 14, 0.78) 100%);
-  content: "";
-  z-index: 0;
-}
-
-.subaru-tech-card__content {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: var(--space-2);
-  align-content: end;
-  min-height: 22rem;
-  padding: clamp(1.25rem, 3vw, 2rem);
-  color: var(--white);
-}
-
-.subaru-tech-card__content h3 {
-  font-size: clamp(1.5rem, 3vw, 2.15rem);
-}
-
-.subaru-tech-card__content p {
-  max-width: 34rem;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.7;
-}
-
-.subaru-relationship__card {
-  max-width: 60rem;
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-m);
-  background: var(--bg-soft);
-}
-
-.subaru-relationship__card h2 {
-  margin-bottom: var(--space-3);
-}
-
-.subaru-relationship__card p {
-  margin: 0;
-  color: var(--ink-700);
-  line-height: 1.8;
 }
 
 .content-page .section-heading {

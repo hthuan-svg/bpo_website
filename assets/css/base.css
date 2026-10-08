@@ -1,7 +1,7 @@
 /* Accessible global defaults, typography and responsive page foundations. */
 /* System font fallbacks avoid blocking requests and support Vietnamese, English, and Japanese. */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   font-family: "Inter", "Be Vietnam Pro", "Noto Sans JP", system-ui, "Segoe UI", "Hiragino Sans", "Yu Gothic", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -11,10 +11,6 @@
   line-height: 1.7;
   color: var(--ink-900);
   background: var(--bg);
-}
-
-:root[data-theme="light"] {
-  color-scheme: light;
 }
 
 *,

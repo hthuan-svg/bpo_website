@@ -11,8 +11,7 @@ const pageLinks = [
   { page: 'achievements', file: 'achievements.html', key: 'achievements' },
   { page: 'vision', file: 'vision.html', key: 'vision' },
   { page: 'news', file: 'news.html', key: 'news' },
-  { page: 'contact', file: 'contact.html', key: 'contact' },
-  { page: 'subaru', file: 'subaru.html', key: 'subaru' }
+  { page: 'contact', file: 'contact.html', key: 'contact' }
 ];
 
 const socialNetworks = ['facebook', 'youtube', 'linkedin', 'instagram', 'zalo'];
@@ -67,16 +66,6 @@ function languageMarkup() {
     </div>`;
 }
 
-function themeToggleMarkup() {
-  return `
-    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme" aria-pressed="false">
-      <span class="theme-toggle__icon" aria-hidden="true">
-        <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.2M12 19.8V22M4.93 4.93l1.56 1.56M17.51 17.51l1.56 1.56M2 12h2.2M19.8 12H22M4.93 19.07l1.56-1.56M17.51 6.49l1.56-1.56"></path></svg>
-        <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"></path></svg>
-      </span>
-    </button>`;
-}
-
 function headerMarkup(currentPage) {
   return `
     <a class="skip-link" href="#main" data-i18n="ui.skip"></a>
@@ -94,7 +83,6 @@ function headerMarkup(currentPage) {
           ${navigationMarkup(currentPage)}
         </nav>
         <div class="site-header__actions">
-          ${themeToggleMarkup()}
           ${languageMarkup()}
           <button class="site-menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation" data-i18n-attr="aria-label:ui.menu">
             <svg class="site-menu-button__open-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -207,43 +195,10 @@ function updateUrlLanguage(language) {
   window.history.replaceState(window.history.state, '', url);
 }
 
-function getStoredTheme() {
-  try {
-    return localStorage.getItem('brycen-theme') || 'dark';
-  } catch {
-    return 'dark';
-  }
-}
-
-function applyTheme(themeName) {
-  const theme = themeName === 'light' ? 'light' : 'dark';
-  document.documentElement.dataset.theme = theme;
-  try {
-    localStorage.setItem('brycen-theme', theme);
-  } catch {
-    // Storage can be unavailable; a dark fallback remains valid.
-  }
-  const toggle = document.querySelector('[data-theme-toggle]');
-  if (toggle) {
-    toggle.setAttribute('aria-pressed', String(theme === 'light'));
-    toggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
-  }
-}
-
 function initializeInteractions(header, i18n) {
   const menuButton = header.querySelector('.site-menu-button');
   const nav = header.querySelector('.site-nav');
   const dropdownToggle = header.querySelector('.site-nav__toggle');
-  const themeToggle = header.querySelector('[data-theme-toggle]');
-
-  applyTheme(getStoredTheme());
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const nextTheme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
-      applyTheme(nextTheme);
-    });
-  }
 
   const updateNavigationMode = () => {
     const isMobile = window.matchMedia('(max-width: 1099px)').matches;
@@ -346,15 +301,6 @@ function initializeInteractions(header, i18n) {
   document.addEventListener('langchange', (event) => {
     updateLanguageButtons(header, event.detail?.language ?? i18n.language);
   });
-
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-  const syncThemeWithSystem = () => {
-    if (!localStorage.getItem('brycen-theme')) {
-      applyTheme(prefersDark.matches ? 'dark' : 'light');
-    }
-  };
-  prefersDark.addEventListener?.('change', syncThemeWithSystem);
-  syncThemeWithSystem();
 
   const updateScrollState = () => {
     header.querySelector('.site-header')?.classList.toggle('is-scrolled', window.scrollY > 12);

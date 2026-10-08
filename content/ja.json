@@ -41,10 +41,6 @@
         "title": "ニュース | BRYCEN VIETNAM BPO",
         "description": "BRYCEN VIETNAM BPO部門のニュース、イベント、活動をご覧いただけます。"
       },
-      "subaru": {
-        "title": "Subaru | BRYCEN VIETNAM BPO",
-        "description": "Subaruの価値観と、安全性・性能を支える技術をご紹介します。"
-      },
       "contact": {
         "title": "お問い合わせ | BRYCEN VIETNAM BPO",
         "description": "AI学習データサービスについて、BRYCEN VIETNAM BPOへお問い合わせください。"
@@ -67,8 +63,7 @@
       "achievements": "実績・プロジェクト",
       "vision": "ビジョン",
       "news": "ニュース",
-      "contact": "お問い合わせ",
-      "subaru": "Subaru"
+      "contact": "お問い合わせ"
     },
     "skip": "メインコンテンツへ",
     "read_more": "詳しく見る",
@@ -117,31 +112,27 @@
   },
   "home": {
     "hero": {
-      "title": "日本市場で5年連続No.1。",
-      "subtitle": "BPO部門は2D・3D・LiDAR・ドライブレコーダーのAI学習データの作成・収集を行い、安定した品質管理でご支援します。",
+      "title": "信頼できるAIのための高品質データ",
+      "subtitle": "BPO部門は2015年から、550名の体制と235件超のプロジェクト実績でAI学習データの作成・収集を行っています。",
       "cta_primary": "サービスを見る",
       "cta_secondary": "お問い合わせ"
     },
     "stats": [
       {
         "value": "2015",
-        "label": "開始年",
-        "image": "timeline_2015"
+        "label": "開始年"
       },
       {
-        "value": "TBD",
-        "label": "スタッフ数",
-        "image": "timeline_2019"
+        "value": "550",
+        "label": "スタッフ数"
       },
       {
         "value": "235+",
-        "label": "プロジェクト実績",
-        "image": "background_services_3d"
+        "label": "プロジェクト実績"
       },
       {
         "value": "5",
-        "label": "年連続 日本市場No.1*",
-        "image": "background_main"
+        "label": "年連続 国内シェアNo.1*"
       }
     ],
     "stats_note": "※富士キメラ総研調べ（アノテーションサービス市場）",
@@ -177,7 +168,7 @@
         "text": "プロジェクトは納期を守り、品質にご満足いただいています。"
       }
     ],
-    "customers_title": "戦略的パートナー",
+    "customers_title": "主なお客様",
     "news_title": "最新ニュース",
     "cta": {
       "title": "AIデータについてご相談ください",

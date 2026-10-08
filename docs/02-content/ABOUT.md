@@ -35,6 +35,7 @@ Do not invent additional countries or claims.
 Remove Phạm Văn Đồng from office content.
 
 Update Google Maps links using the official/current destination.
+(`Tầng 2~6, 25 Nguyễn Văn Cừ, Thuận Hóa, Huế, Vietnam` the actual Map link is "25 Nguyễn Văn Cừ, Thuận Hóa, Huế, Vietnam" )
 Do not fabricate coordinates.
 
 ## Contact details

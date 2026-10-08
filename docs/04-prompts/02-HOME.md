@@ -14,7 +14,7 @@ Requirements:
   Năm khởi điểm / Nhân sự / Dự án đã thực hiện / Năm liên tiếp Top 1 thị trường Nhật Bản*
 - add image slot to each stat
 - horizontal/running image section for services/products
-- background image slot for commitment
+- image slot for commitment
 - rename Khách hàng tiêu biểu → Đối Tác chiến lược
 - focus on SUBARU
 - link to `subaru.html`
