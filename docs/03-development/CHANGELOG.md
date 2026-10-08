@@ -61,3 +61,29 @@
 ### Open issues
 - Unresolved source data remains intentionally kept as a placeholder or ambiguous value where the project explicitly forbids guessing (for example employee counts and other unsupported metrics).
 - No fake contact form success state is claimed, and delivery remains unconfigured until an approved mail endpoint is supplied.
+
+## 2026-10-08 – Subaru partner page
+
+### Changed
+- Created the dedicated Subaru strategic partner page with intro copy, technology highlights, and a BRYCEN EyeSight cooperation statement based only on approved source facts.
+- Added the page to the shared navigation and kept the partner CTA route consistent with the Home page.
+- Added image-slot-backed background sections for the Subaru hero and each technology card to preserve the project’s no-hardcoded-image pattern.
+
+### Files
+- subaru.html
+- assets/js/layout.js
+- assets/css/pages.css
+- content/vi.json
+- content/en.json
+- content/ja.json
+- content/images.json
+- docs/03-development/TASKS.md
+- docs/03-development/CHANGELOG.md
+
+### Validation
+- Confirmed the Subaru route resolves through the local static server.
+- Ran locale content checks after the edits; the only warnings are intentional placeholder-marker and placeholder-image notices already present in the project.
+
+### Open issues
+- No unsupported Subaru product claims, dates, KPIs, or technical specs were added beyond the approved relationship statement and general technology descriptors.
+- Any future product-level wording should be reviewed against approved Subaru materials before publishing.

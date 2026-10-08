@@ -41,6 +41,10 @@
         "title": "ニュース | BRYCEN VIETNAM BPO",
         "description": "BRYCEN VIETNAM BPO部門のニュース、イベント、活動をご覧いただけます。"
       },
+      "subaru": {
+        "title": "Subaru | BRYCEN VIETNAM BPO",
+        "description": "Subaruの価値観と、安全性・性能を支える技術をご紹介します。"
+      },
       "contact": {
         "title": "お問い合わせ | BRYCEN VIETNAM BPO",
         "description": "AI学習データサービスについて、BRYCEN VIETNAM BPOへお問い合わせください。"
@@ -63,7 +67,8 @@
       "achievements": "実績・プロジェクト",
       "vision": "ビジョン",
       "news": "ニュース",
-      "contact": "お問い合わせ"
+      "contact": "お問い合わせ",
+      "subaru": "Subaru"
     },
     "skip": "メインコンテンツへ",
     "read_more": "詳しく見る",

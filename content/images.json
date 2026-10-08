@@ -521,6 +521,51 @@
         "ja": "Subaru – 戦略パートナー"
       }
     },
+    "subaru_hero_bg": {
+      "src": "assets/images/backgrounds/background_main.jpg",
+      "alt": {
+        "vi": "Nền giới thiệu Subaru",
+        "en": "Subaru introduction background",
+        "ja": "Subaru紹介の背景"
+      },
+      "placeholder": true
+    },
+    "subaru_boxer_bg": {
+      "src": "assets/images/backgrounds/background_services_3d.jpg",
+      "alt": {
+        "vi": "Hình ảnh động cơ Boxer",
+        "en": "Boxer engine visual",
+        "ja": "ボクサーエンジンのイメージ"
+      },
+      "placeholder": true
+    },
+    "subaru_sawd_bg": {
+      "src": "assets/images/backgrounds/background_services_2d.jpg",
+      "alt": {
+        "vi": "Hình ảnh hệ thống S-AWD",
+        "en": "S-AWD system visual",
+        "ja": "S-AWDシステムのイメージ"
+      },
+      "placeholder": true
+    },
+    "subaru_eyesight_bg": {
+      "src": "assets/images/backgrounds/background_soft.png",
+      "alt": {
+        "vi": "Hình ảnh EyeSight",
+        "en": "EyeSight visual",
+        "ja": "EyeSightのイメージ"
+      },
+      "placeholder": true
+    },
+    "subaru_sgp_bg": {
+      "src": "assets/images/backgrounds/background_main.jpg",
+      "alt": {
+        "vi": "Hình ảnh SGP",
+        "en": "SGP visual",
+        "ja": "SGPのイメージ"
+      },
+      "placeholder": true
+    },
     "collection_image_01": {
       "src": "assets/images/placeholders/collection_image_01.jpg",
       "alt": {

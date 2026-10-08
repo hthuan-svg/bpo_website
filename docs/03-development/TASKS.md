@@ -28,16 +28,16 @@
 - [x] Subaru link
 
 ## Phase 3 – Subaru
-- [ ] Create page
-- [ ] Intro
-- [ ] Core values/technology
-- [ ] Boxer
-- [ ] S-AWD
-- [ ] EyeSight
-- [ ] SGP
-- [ ] Image slots
-- [ ] BRYCEN EyeSight-related product statement
-- [ ] Navigation link
+- [x] Create page
+- [x] Intro
+- [x] Core values/technology
+- [x] Boxer
+- [x] S-AWD
+- [x] EyeSight
+- [x] SGP
+- [x] Image slots
+- [x] BRYCEN EyeSight-related product statement
+- [x] Navigation link
 
 ## Phase 4 – About
 - [ ] Timeline years above images

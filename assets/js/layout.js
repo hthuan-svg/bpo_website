@@ -11,7 +11,8 @@ const pageLinks = [
   { page: 'achievements', file: 'achievements.html', key: 'achievements' },
   { page: 'vision', file: 'vision.html', key: 'vision' },
   { page: 'news', file: 'news.html', key: 'news' },
-  { page: 'contact', file: 'contact.html', key: 'contact' }
+  { page: 'contact', file: 'contact.html', key: 'contact' },
+  { page: 'subaru', file: 'subaru.html', key: 'subaru' }
 ];
 
 const socialNetworks = ['facebook', 'youtube', 'linkedin', 'instagram', 'zalo'];

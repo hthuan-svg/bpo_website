@@ -41,6 +41,10 @@
         "title": "Tin tức | BRYCEN VIETNAM BPO",
         "description": "Cập nhật tin tức, sự kiện và hoạt động của bộ phận BPO thuộc BRYCEN VIETNAM."
       },
+      "subaru": {
+        "title": "Subaru | BRYCEN VIETNAM BPO",
+        "description": "Tìm hiểu Subaru, các giá trị cốt lõi và công nghệ an toàn, hiệu suất và độ bền của xe Subaru."
+      },
       "contact": {
         "title": "Liên hệ | BRYCEN VIETNAM BPO",
         "description": "Liên hệ bộ phận BPO BRYCEN VIETNAM để trao đổi về dịch vụ dữ liệu cho AI."
@@ -63,7 +67,8 @@
       "achievements": "Thành tựu & Dự án",
       "vision": "Tầm nhìn",
       "news": "Tin tức",
-      "contact": "Liên hệ"
+      "contact": "Liên hệ",
+      "subaru": "Subaru"
     },
     "skip": "Bỏ qua, đến nội dung chính",
     "read_more": "Xem thêm",
