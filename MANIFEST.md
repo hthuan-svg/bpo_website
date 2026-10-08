@@ -1,0 +1,43 @@
+# v3 Manifest
+
+Generated documentation files:
+
+- `AGENTS.md`
+- `CLAUDE.md`
+- `README.md`
+- `docs/00-project/AGENT_QUICK_REFERENCE.md`
+- `docs/00-project/ARCHITECTURE.md`
+- `docs/00-project/CONVENTIONS.md`
+- `docs/00-project/PROJECT_CONTEXT.md`
+- `docs/01-design/COMPONENTS.md`
+- `docs/01-design/DESIGN_SYSTEM.md`
+- `docs/01-design/IMAGES.md`
+- `docs/02-content/ABOUT.md`
+- `docs/02-content/ACHIEVEMENTS.md`
+- `docs/02-content/CAREERS.md`
+- `docs/02-content/CONTACT.md`
+- `docs/02-content/HOME.md`
+- `docs/02-content/SERVICES.md`
+- `docs/02-content/SUBARU.md`
+- `docs/02-content/TEAM.md`
+- `docs/02-content/VISION.md`
+- `docs/03-development/CHANGELOG.md`
+- `docs/03-development/DATA-VERIFICATION.md`
+- `docs/03-development/IMPLEMENTATION.md`
+- `docs/03-development/LEGACY-MIGRATION.md`
+- `docs/03-development/QA_CHECKLIST.md`
+- `docs/03-development/TASKS.md`
+- `docs/04-prompts/00-AUDIT.md`
+- `docs/04-prompts/01-GLOBAL-THEME.md`
+- `docs/04-prompts/02-HOME.md`
+- `docs/04-prompts/03-SUBARU.md`
+- `docs/04-prompts/04-ABOUT.md`
+- `docs/04-prompts/05-TEAM.md`
+- `docs/04-prompts/06-ACHIEVEMENTS.md`
+- `docs/04-prompts/07-VISION.md`
+- `docs/04-prompts/08-CAREERS.md`
+- `docs/04-prompts/09-CONTACT.md`
+- `docs/04-prompts/10-SERVICES-AI-DATA.md`
+- `docs/04-prompts/99-FINAL-QA.md`
+- `docs/04-prompts/README.md`
+- `docs/README.md`
