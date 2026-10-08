@@ -112,27 +112,31 @@
   },
   "home": {
     "hero": {
-      "title": "Dữ liệu chất lượng cao cho AI đáng tin cậy",
-      "subtitle": "Bộ phận BPO chuyên tạo và thu thập dữ liệu học cho AI – từ năm 2015, với đội ngũ 550 nhân sự và hơn 235 dự án.",
+      "title": "5 năm liên tiếp top 1 thị trường tại Nhật Bản.",
+      "subtitle": "Bộ phận BPO chuyên tạo và thu thập dữ liệu học cho AI, phục vụ các yêu cầu từ dữ liệu 2D, 3D đến LiDAR và camera hành trình.",
       "cta_primary": "Khám phá dịch vụ",
       "cta_secondary": "Liên hệ chúng tôi"
     },
     "stats": [
       {
         "value": "2015",
-        "label": "Năm khởi điểm"
+        "label": "Năm khởi điểm",
+        "image": "timeline_2015"
       },
       {
-        "value": "550",
-        "label": "Nhân sự"
+        "value": "TBD",
+        "label": "Nhân sự",
+        "image": "timeline_2019"
       },
       {
         "value": "235+",
-        "label": "Dự án đã thực hiện"
+        "label": "Dự án đã thực hiện",
+        "image": "background_services_3d"
       },
       {
         "value": "5",
-        "label": "Năm liên tiếp Top 1 thị trường Nhật Bản*"
+        "label": "Năm liên tiếp Top 1 thị trường Nhật Bản*",
+        "image": "background_main"
       }
     ],
     "stats_note": "* Theo Fuji Chimera Research Institute, mảng dịch vụ annotation.",
@@ -168,7 +172,7 @@
         "text": "Các dự án đều đạt deadline và khách hàng hài lòng với chất lượng sản phẩm."
       }
     ],
-    "customers_title": "Khách hàng tiêu biểu",
+    "customers_title": "Đối Tác chiến lược",
     "news_title": "Tin tức mới nhất",
     "cta": {
       "title": "Cùng bàn về dữ liệu AI của bạn",

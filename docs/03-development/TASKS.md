@@ -19,13 +19,13 @@
 - [x] Accessibility regression check
 
 ## Phase 2 – Home
-- [ ] Hero top-1 statement
-- [ ] Four stats
-- [ ] Image slots for stats
-- [ ] Services horizontal image section
-- [ ] Commitment background
-- [ ] Strategic partner rename
-- [ ] Subaru link
+- [x] Hero top-1 statement
+- [x] Four stats
+- [x] Image slots for stats
+- [x] Services horizontal image section
+- [x] Commitment background
+- [x] Strategic partner rename
+- [x] Subaru link
 
 ## Phase 3 – Subaru
 - [ ] Create page

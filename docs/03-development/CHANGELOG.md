@@ -34,3 +34,30 @@
 ### Open issues
 - Placeholder content warnings remain intentionally in place, as they are source-data markers rather than implementation bugs.
 - Contact form email delivery remains unconfigured, so no fake success state is claimed.
+
+## 2026-10-08 – Home page completion
+
+### Changed
+- Added the required Home hero statement in all locale files without inventing unsupported business metrics.
+- Completed the four-stat card structure with image slots and a service-image running strip for the home page.
+- Kept the strategic partner language aligned to the project requirement: “Đối Tác chiến lược” / “Strategic Partners” / “戦略的パートナー”.
+- Linked the Subaru partner CTA to the dedicated Subaru page route while keeping the site data-driven and non-fabricated.
+- Added the shared home-page strip animation styling to support the running services imagery in a responsive layout.
+
+### Files
+- index.html
+- content/vi.json
+- content/en.json
+- content/ja.json
+- content/images.json
+- assets/css/pages.css
+- docs/03-development/TASKS.md
+- docs/03-development/CHANGELOG.md
+
+### Validation
+- Ran the project content validator successfully; warnings remain only for intentional placeholder markers and placeholder image slots.
+- Confirmed the Home page is served locally through the static site server.
+
+### Open issues
+- Unresolved source data remains intentionally kept as a placeholder or ambiguous value where the project explicitly forbids guessing (for example employee counts and other unsupported metrics).
+- No fake contact form success state is claimed, and delivery remains unconfigured until an approved mail endpoint is supplied.

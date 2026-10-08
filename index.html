@@ -60,12 +60,30 @@
       </div>
     </section>
 
+    <section class="home-services-strip" aria-label="Featured service imagery">
+      <div class="home-services-strip__frame page-container">
+        <div class="home-services-strip__rail">
+          <img data-img="home_services_strip_01" alt="" loading="lazy">
+          <img data-img="home_services_strip_02" alt="" loading="lazy">
+          <img data-img="home_services_strip_03" alt="" loading="lazy">
+          <img data-img="home_services_strip_04" alt="" loading="lazy">
+          <img data-img="home_services_strip_01" alt="" loading="lazy">
+          <img data-img="home_services_strip_02" alt="" loading="lazy">
+          <img data-img="home_services_strip_03" alt="" loading="lazy">
+          <img data-img="home_services_strip_04" alt="" loading="lazy">
+        </div>
+      </div>
+    </section>
+
     <section class="home-stats section-shell">
       <ul class="home-stats__list page-container" data-list="home.stats">
         <template>
           <li class="home-stats__item">
-            <strong class="home-stats__value" data-field="value" data-count-up></strong>
-            <span class="home-stats__label" data-field="label"></span>
+            <img class="home-stats__image" data-img-field="image" loading="lazy" alt="">
+            <div class="home-stats__content">
+              <strong class="home-stats__value" data-field="value" data-count-up></strong>
+              <span class="home-stats__label" data-field="label"></span>
+            </div>
           </li>
         </template>
       </ul>
@@ -74,7 +92,7 @@
 
     <section class="home-section section-shell page-container" data-reveal>
       <h2 class="home-section__title" data-i18n="home.pillars_title"></h2>
-      <div class="home-pillars" data-list="home.pillars">
+      <div class="home-pillars home-pillars--strip" data-list="home.pillars">
         <template>
           <a class="home-pillar-card" data-link-field="link">
             <img class="home-pillar-card__image" data-img-field="image" loading="lazy">
@@ -89,8 +107,8 @@
       </div>
     </section>
 
-    <section class="home-commitments section-shell">
-      <div class="page-container" data-reveal>
+    <section class="home-commitments section-shell" data-bg="home_commitment_bg">
+      <div class="page-container home-commitments__inner" data-reveal>
         <h2 class="home-section__title" data-i18n="home.commitments_title"></h2>
         <div class="home-commitments__grid" data-list="home.commitments">
           <template>
@@ -109,11 +127,9 @@
 
     <section class="home-customers section-shell page-container" data-reveal>
       <h2 class="home-section__title" data-i18n="home.customers_title"></h2>
-      <ul class="home-customers__list" data-list="achievements.projects.customers">
-        <template>
-          <li><img class="home-customers__logo" data-img-field="." loading="lazy"></li>
-        </template>
-      </ul>
+      <a class="home-subaru-partner" href="subaru.html" aria-label="SUBARU">
+        <img data-img="home_subaru_partner" alt="Subaru" loading="lazy">
+      </a>
     </section>
 
     <section class="home-news section-shell page-container" data-reveal>

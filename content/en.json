@@ -112,27 +112,31 @@
   },
   "home": {
     "hero": {
-      "title": "High-quality data for trustworthy AI",
-      "subtitle": "The BPO Division creates and collects training data for AI — since 2015, with 550 people and 235+ projects.",
+      "title": "5 years in a row as top 1 in the Japanese market.",
+      "subtitle": "The BPO division creates and collects AI training data for 2D, 3D, LiDAR and dashcam projects with reliable quality control.",
       "cta_primary": "Explore services",
       "cta_secondary": "Contact us"
     },
     "stats": [
       {
         "value": "2015",
-        "label": "Year founded"
+        "label": "Starting year",
+        "image": "timeline_2015"
       },
       {
-        "value": "550",
-        "label": "Team members"
+        "value": "TBD",
+        "label": "Staff",
+        "image": "timeline_2019"
       },
       {
         "value": "235+",
-        "label": "Projects delivered"
+        "label": "Projects completed",
+        "image": "background_services_3d"
       },
       {
         "value": "5",
-        "label": "Consecutive years #1 in Japan*"
+        "label": "Years in a row as top 1 in the Japanese market*",
+        "image": "background_main"
       }
     ],
     "stats_note": "* Source: Fuji Chimera Research Institute, annotation services market.",
@@ -168,7 +172,7 @@
         "text": "Projects are delivered on schedule, and clients are satisfied with the quality."
       }
     ],
-    "customers_title": "Featured customers",
+    "customers_title": "Strategic Partners",
     "news_title": "Latest news",
     "cta": {
       "title": "Let's talk about your AI data",
