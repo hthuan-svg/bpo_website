@@ -9,14 +9,14 @@
 - [ ] Record risks before coding
 
 ## Phase 1 – Global
-- [ ] Dark default
-- [ ] Light/Dark toggle
-- [ ] Persist theme where appropriate
-- [ ] Black/Green design tokens
-- [ ] Global contact/address area
-- [ ] Back-to-top
-- [ ] Responsive navigation
-- [ ] Accessibility regression check
+- [x] Dark default
+- [x] Light/Dark toggle
+- [x] Persist theme where appropriate
+- [x] Black/Green design tokens
+- [x] Global contact/address area
+- [x] Back-to-top
+- [x] Responsive navigation
+- [x] Accessibility regression check
 
 ## Phase 2 – Home
 - [ ] Hero top-1 statement
