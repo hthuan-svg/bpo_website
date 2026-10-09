@@ -16,6 +16,10 @@ const openPageMessage = 'Hãy mở trang bằng Live Server (không bấm đúp 
 
 function showStartupError(error) {
   console.error('The site could not load its content.', error);
+  if (window.location.protocol !== 'file:') {
+    return;
+  }
+
   const main = document.querySelector('#main') ?? document.body;
   main.replaceChildren(document.createTextNode(openPageMessage));
 }
