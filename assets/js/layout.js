@@ -11,6 +11,7 @@ const pageLinks = [
   { page: 'achievements', file: 'achievements.html', key: 'achievements' },
   { page: 'vision', file: 'vision.html', key: 'vision' },
   { page: 'news', file: 'news.html', key: 'news' },
+  { page: 'recruits', file: 'recruits.html', key: 'recruits' },
   { page: 'contact', file: 'contact.html', key: 'contact' }
 ];
 
@@ -52,6 +53,7 @@ function navigationMarkup(currentPage) {
       <li>${navigationLink(pageLinks[7], currentPage)}</li>
       <li>${navigationLink(pageLinks[8], currentPage)}</li>
       <li>${navigationLink(pageLinks[9], currentPage)}</li>
+      <li>${navigationLink(pageLinks[10], currentPage)}</li>
     </ul>`;
 }
 
@@ -68,11 +70,10 @@ function languageMarkup() {
 
 function headerMarkup(currentPage) {
   return `
-    <a class="skip-link" href="#main" data-i18n="ui.skip"></a>
     <header class="site-header">
       <div class="site-header__inner">
         <a class="site-header__brand" href="index.html" data-i18n-attr="aria-label:ui.nav.home">
-          <img class="site-header__logo" data-img="company_logo_mark">
+          <img class="site-header__logo" data-img="company_logo_on_dark">
           <span class="site-header__brand-mark" data-i18n="ui.brand.dept_short"></span>
           <span class="site-header__brand-copy">
             <span class="site-header__brand-dept" data-i18n="ui.brand.dept_full"></span>
@@ -108,7 +109,7 @@ function socialIconMarkup(network) {
   return icons[network];
 }
 
-function footerMarkup(siteConfig) {
+function footerMarkup(siteConfig, content) {
   const quickLinks = pageLinks
     .map((link) => `<li><a href="${link.file}" data-i18n="ui.nav.${link.key}"></a></li>`)
     .join('');
@@ -122,20 +123,51 @@ function footerMarkup(siteConfig) {
       </a>
     </li>`).join('');
 
+  const footerContactItems = [];
+  const currentLanguage = document.documentElement.lang || siteConfig.defaultLang || 'vi';
+  const officeMainAddress = (
+    (siteConfig.contact?.address?.[currentLanguage] ?? siteConfig.contact?.address?.vi ?? '').trim()
+    || content?.about?.offices?.items?.find((office) => office.type === 'main')?.address?.trim()
+    || ''
+  );
+  const officeBranchAddress = (
+    content?.about?.offices?.items?.find((office) => office.type === 'branch')?.address?.trim()
+    || ''
+  );
+  const email = (siteConfig.contact?.email ?? '').trim();
+  const phone = (siteConfig.contact?.phone ?? '').trim();
+
+  if (officeMainAddress) {
+    footerContactItems.push(`<div class="site-footer__contact-item"><strong data-i18n="ui.footer.office_main"></strong><span>${officeMainAddress}</span></div>`);
+  }
+  if (officeBranchAddress && officeBranchAddress !== officeMainAddress) {
+    footerContactItems.push(`<div class="site-footer__contact-item"><strong data-i18n="ui.footer.office_branch"></strong><span>${officeBranchAddress}</span></div>`);
+  }
+  if (email) {
+    footerContactItems.push(`<div class="site-footer__contact-item"><strong data-i18n="ui.footer.email"></strong><a href="mailto:${email}">${email}</a></div>`);
+  }
+  if (phone) {
+    footerContactItems.push(`<div class="site-footer__contact-item"><strong data-i18n="ui.footer.phone"></strong><a href="tel:${phone}">${phone}</a></div>`);
+  }
+
   return `
     <footer class="site-footer">
       <div class="site-footer__inner container">
         <div class="site-footer__identity">
           <a class="site-footer__brand" href="index.html" data-i18n-attr="aria-label:ui.nav.home">
-            <img class="site-footer__logo" data-img="company_logo">
+            <img class="site-footer__logo" data-img="company_logo_on_dark">
           </a>
           <p class="site-footer__company" data-i18n="ui.footer_company"></p>
           <p class="site-footer__division" data-i18n="ui.footer_dept"></p>
-            ${configuredSocialNetworks.length ? `<div class="site-footer__social">
+          ${configuredSocialNetworks.length ? `<div class="site-footer__social">
             <p class="site-footer__label" data-i18n="ui.follow_us"></p>
             <ul class="site-social">${socials}</ul>
-            </div>` : ''}
+          </div>` : ''}
         </div>
+        ${footerContactItems.length ? `<div class="site-footer__contact">
+          <h2 class="site-footer__heading" data-i18n="ui.footer.address_title"></h2>
+          <div class="site-footer__contact-list">${footerContactItems.join('')}</div>
+        </div>` : ''}
         <nav class="site-footer__links" data-i18n-attr="aria-label:ui.quick_links">
           <h2 class="site-footer__heading" data-i18n="ui.quick_links"></h2>
           <ul>${quickLinks}</ul>
@@ -153,7 +185,7 @@ function setMenuOpen(header, open) {
   const nav = header.querySelector('.site-nav');
   const siteHeader = header.querySelector('.site-header');
   button.setAttribute('aria-expanded', String(open));
-  nav.inert = !open && window.matchMedia('(max-width: 1099px)').matches;
+  nav.inert = !open && window.matchMedia('(max-width: 1279px)').matches;
   siteHeader.classList.toggle('is-menu-open', open);
 }
 
@@ -201,7 +233,7 @@ function initializeInteractions(header, i18n) {
   const dropdownToggle = header.querySelector('.site-nav__toggle');
 
   const updateNavigationMode = () => {
-    const isMobile = window.matchMedia('(max-width: 1099px)').matches;
+    const isMobile = window.matchMedia('(max-width: 1279px)').matches;
     nav.inert = isMobile && menuButton.getAttribute('aria-expanded') !== 'true';
     if (!isMobile) {
       setMenuOpen(header, false);
@@ -250,7 +282,7 @@ function initializeInteractions(header, i18n) {
   nav.addEventListener('click', (event) => {
     if (
       event.target.closest('a')
-      && window.matchMedia('(max-width: 1099px)').matches
+      && window.matchMedia('(max-width: 1279px)').matches
     ) {
       setMenuOpen(header, false);
     }
@@ -333,7 +365,7 @@ export async function initializeLayout(i18n) {
 
   ensureBackToTopStyles();
   headerTarget.innerHTML = headerMarkup(currentPage);
-  footerTarget.innerHTML = footerMarkup(i18n.siteConfig);
+  footerTarget.innerHTML = footerMarkup(i18n.siteConfig, i18n.content);
   initializeInteractions(headerTarget, i18n);
   initializeBackToTop(i18n);
 }

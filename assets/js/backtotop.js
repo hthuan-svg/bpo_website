@@ -85,7 +85,7 @@ export function initializeBackToTop(i18n) {
 
   button.onclick = (event) => {
     event.preventDefault();
-    const focusTarget = document.querySelector('.skip-link, main, [role="main"], #main');
+    const focusTarget = document.querySelector('main, [role="main"], #main');
     const scrollBehavior = reduceMotion ? 'auto' : 'smooth';
     window.scrollTo({ top: 0, behavior: scrollBehavior });
     if (focusTarget) {
