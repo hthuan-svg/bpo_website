@@ -314,6 +314,7 @@ function createAnnotationRow(context, modality, type, index, dialog) {
     : 'image-left';
   const row = createElement('article', 'annotation-row');
   row.dataset.reveal = '';
+  row.dataset.typeId = type?.id ?? '';
   if (layout === 'zigzag') {
     row.classList.add('annotation-row--reverse');
   }
@@ -365,42 +366,44 @@ function createAnnotationRow(context, modality, type, index, dialog) {
   return row;
 }
 
-function createAnnotationTabs(context, tabsContent) {
-  const nav = createElement('nav', 'annotation-tabs');
-  nav.setAttribute('aria-label', context.t('ui.tabs_label'));
-  nav.dataset.annotationTabs = 'true';
+function createAnnotationSideNav(context, content) {
+  const nav = createElement('nav', 'annotation-side-nav');
+  nav.setAttribute('aria-label', context.t('ui.on_this_page'));
+  const title = createElement('p', 'annotation-side-nav__title', context.t('ui.on_this_page'));
+  const list = createElement('ul', 'annotation-side-nav__list');
+  const order = Array.isArray(content?.order) && content.order.length ? content.order : ['usecases', 'modalities', 'workflow', 'quality', 'security'];
 
-  const tabIds = ['modalities', 'workflow', 'quality', 'usecases'];
-  tabIds.forEach((id) => {
-    const label = tabsContent?.[id];
+  order.forEach((id) => {
+    const label = context.t(`services.annotation.tabs.${id}`);
     if (!label) {
       return;
     }
 
-    const link = createElement('a', 'annotation-tab');
+    const item = createElement('li', 'annotation-side-nav__item');
+    const link = createElement('a', 'annotation-side-nav__link', label);
     link.href = `#${id}`;
-    link.dataset.annotationTab = id;
-    link.textContent = label;
-    link.setAttribute('aria-current', 'false');
-    nav.append(link);
+    link.dataset.annotationNav = id;
+    item.append(link);
+    list.append(item);
   });
 
+  nav.append(title, list);
   return nav;
 }
 
-function activateAnnotationTab(targetId) {
-  const tabs = document.querySelectorAll('.annotation-tab');
-  tabs.forEach((tab) => {
-    const isActive = tab.dataset.annotationTab === targetId;
-    tab.classList.toggle('is-active', isActive);
-    tab.setAttribute('aria-current', isActive ? 'page' : 'false');
+function activateAnnotationSideNav(targetId) {
+  const links = document.querySelectorAll('.annotation-side-nav__link');
+  links.forEach((link) => {
+    const isActive = link.dataset.annotationNav === targetId;
+    link.classList.toggle('is-active', isActive);
+    link.setAttribute('aria-current', isActive ? 'true' : 'false');
   });
 }
 
-function bindAnnotationTabs() {
-  const tabs = document.querySelectorAll('.annotation-tab');
+function bindAnnotationSideNav() {
+  const links = document.querySelectorAll('.annotation-side-nav__link');
   const sections = document.querySelectorAll('[data-annotation-section]');
-  if (!tabs.length || !sections.length) {
+  if (!links.length || !sections.length) {
     return;
   }
 
@@ -415,14 +418,14 @@ function bindAnnotationTabs() {
     window.scrollTo({ top, behavior: 'smooth' });
   };
 
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', (event) => {
+  links.forEach((link) => {
+    link.addEventListener('click', (event) => {
       event.preventDefault();
-      const targetId = tab.dataset.annotationTab;
+      const targetId = link.dataset.annotationNav;
       if (!targetId) {
         return;
       }
-      activateAnnotationTab(targetId);
+      activateAnnotationSideNav(targetId);
       scrollToSection(targetId);
     });
   });
@@ -434,7 +437,7 @@ function bindAnnotationTabs() {
     if (!visible.length) {
       return;
     }
-    activateAnnotationTab(visible[0].target.id);
+    activateAnnotationSideNav(visible[0].target.id);
   }, {
     rootMargin: '-25% 0px -55% 0px',
     threshold: [0.15, 0.3, 0.6]
@@ -522,56 +525,8 @@ function createAnnotationQualitySection(context, dialog) {
   }
   container.append(heading);
 
-  const layers = Array.isArray(quality.layers) ? quality.layers : [];
-  const flow = createElement('ol', 'annotation-quality__flow');
-  layers.forEach((layer, index) => {
-    const item = createElement('li', 'annotation-quality__stage');
-    const badge = createElement('span', 'annotation-quality__code', layer.code ?? '');
-    badge.title = layer.role ?? layer.code ?? '';
-
-    const meta = createElement('div', 'annotation-quality__meta');
-    meta.append(
-      createElement('span', 'annotation-quality__role', layer.role ?? ''),
-      createElement('strong', 'annotation-quality__action', layer.action ?? '')
-    );
-
-    const desc = createElement('p', 'annotation-quality__desc', layer.desc ?? '');
-    item.append(badge, meta, desc);
-    flow.append(item);
-
-    if (index < layers.length - 1) {
-      const connector = createElement('li', 'annotation-quality__connector');
-      connector.setAttribute('aria-hidden', 'true');
-      connector.append(
-        createElement('span', 'annotation-quality__pass', quality.pass_label ?? ''),
-        createElement('span', 'annotation-quality__arrow', '→')
-      );
-      flow.append(connector);
-    }
-  });
-
-  const loop = createElement('div', 'annotation-quality__loop');
-  loop.setAttribute('aria-label', quality.loop_label ?? '');
-  loop.append(createElement('span', 'sr-only', quality.loop_label ?? ''));
-
-  const loopRail = createElement('div', 'annotation-quality__loop-rail');
-  layers.slice(1).forEach((layer) => {
-    const returnItem = createElement('div', 'annotation-quality__return');
-    const label = createElement('div', 'annotation-quality__return-label');
-    label.append(
-      createElement('span', 'annotation-quality__fail', quality.fail_label ?? ''),
-      createElement('span', 'annotation-quality__return-role', layer.code ?? '')
-    );
-    returnItem.append(label, createElement('span', 'annotation-quality__return-arrow', '↩'));
-    loopRail.append(returnItem);
-  });
-
-  const rotation = createElement('div', 'annotation-quality__loop-rotation', '↻');
-  rotation.title = quality.loop_label ?? '';
-  loop.append(loopRail, rotation);
-
-  const principles = createElement('div', 'annotation-quality__principles');
   const principleItems = Array.isArray(quality.principles) ? quality.principles : [];
+  const principles = createElement('div', 'annotation-quality__principles');
   if (principleItems.length) {
     const principlesHeader = createElement('h3', 'annotation-quality__principles-title', quality.principles_title ?? '');
     principles.append(principlesHeader);
@@ -585,19 +540,35 @@ function createAnnotationQualitySection(context, dialog) {
     });
   }
 
+  const flowImage = createImage(context, quality.flow_image, 'annotation-quality__flow-image');
+  const flowWrap = createElement('div', 'annotation-quality__flow-image-wrap');
+  if (flowImage) {
+    const flowButton = createElement('button', 'annotation-quality__flow-button');
+    flowButton.type = 'button';
+    flowButton.append(flowImage);
+    if (dialog) {
+      attachLightbox(flowButton, flowImage, dialog);
+    }
+    if (typeof quality.flow_caption === 'string' && quality.flow_caption.trim()) {
+      flowWrap.append(flowButton, createElement('p', 'annotation-quality__flow-caption', quality.flow_caption));
+    } else {
+      flowWrap.append(flowButton);
+    }
+  }
+
+  const principlesImage = createImage(context, quality.principles_image, 'annotation-quality__reference-image');
   const referenceWrap = createElement('div', 'annotation-quality__reference');
-  const image = createImage(context, 'services_quality_principles', 'annotation-quality__reference-image');
-  if (image) {
+  if (principlesImage) {
     const button = createElement('button', 'annotation-quality__reference-button');
     button.type = 'button';
-    button.append(image);
+    button.append(principlesImage);
     if (dialog) {
-      attachLightbox(button, image, dialog);
+      attachLightbox(button, principlesImage, dialog);
     }
     referenceWrap.append(button);
   }
 
-  container.append(flow, loop, principles, referenceWrap);
+  container.append(principles, flowWrap, referenceWrap);
   section.append(container);
   return section;
 }
@@ -631,15 +602,50 @@ function createAnnotationUsecases(context) {
   return section;
 }
 
-function createAnnotationSecurity(context) {
-  const section = createElement('section', 'annotation-security');
+function createAnnotationSecurity(context, dialog) {
+  const section = createElement('section', 'annotation-security section-shell');
+  section.id = 'security';
+  section.dataset.annotationSection = 'security';
+
   const container = createElement('div', 'page-container');
-  const strip = createElement('div', 'annotation-security__strip');
-  strip.append(
-    createElement('span', 'annotation-security__label', context.t('services.annotation.security.title')),
-    createElement('p', 'annotation-security__text', context.t('services.annotation.security.text'))
+  const heading = createElement('header', 'annotation-section-heading');
+  heading.append(
+    createElement('p', 'eyebrow', context.t('services.annotation.tabs.security')),
+    createElement('h2', 'section-title', context.t('services.annotation.security.title'))
   );
-  container.append(strip);
+  container.append(heading);
+
+  const securityText = createElement('p', 'annotation-security__text', context.t('services.annotation.security.text'));
+  const securityImage = createImage(context, context.t('services.annotation.security.image'), 'annotation-security__image');
+  const imageWrap = createElement('div', 'annotation-security__image-wrap');
+  if (securityImage) {
+    const button = createElement('button', 'annotation-security__image-button');
+    button.type = 'button';
+    button.append(securityImage);
+    if (dialog) {
+      attachLightbox(button, securityImage, dialog);
+    }
+    imageWrap.append(button);
+  }
+
+  const certs = createElement('div', 'certifications-grid');
+  const certificationItems = Array.isArray(context.t('certifications.items')) ? context.t('certifications.items') : [];
+  certificationItems.forEach((item) => {
+    const card = createElement('article', 'home-certification');
+    const image = createImage(context, item.image, 'home-certification__image');
+    const body = createElement('div', 'home-certification__body');
+    body.append(
+      createElement('span', 'home-certification__code', item.code ?? ''),
+      createElement('strong', 'home-certification__name', item.name ?? '')
+    );
+    if (image) {
+      card.append(image);
+    }
+    card.append(body);
+    certs.append(card);
+  });
+
+  container.append(securityText, imageWrap, certs);
   section.append(container);
   return section;
 }
@@ -660,6 +666,43 @@ function createAnnotationCta(context) {
   container.append(band);
   section.append(container);
   return section;
+}
+
+function createAnnotationMarquee(context, type) {
+  const strip = createElement('div', 'annotation-marquee');
+  strip.dataset.marquee = 'services';
+  const track = createElement('div', 'marquee__track');
+  const list = createElement('ul', 'marquee__list');
+
+  const slots = Array.isArray(type?.images) ? type.images : [];
+  if (!slots.length) {
+    return strip;
+  }
+
+  const items = [];  
+  slots.forEach((slotName) => {
+    const item = createElement('li', 'marquee__item');
+    const frame = createElement('figure', 'marquee__figure');
+    const image = createImage(context, slotName, 'marquee__image');
+    if (image) {
+      frame.append(image);
+    }
+    item.append(frame);
+    list.append(item);
+    items.push(item);
+  });
+
+  if (items.length) {
+    const clone = list.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.append(list, clone);
+  } else {
+    track.append(list);
+  }
+
+  const label = createElement('p', 'annotation-marquee__label', context.t('ui.gallery'));
+  strip.append(label, track);
+  return strip;
 }
 
 function renderAnnotation(context, main) {
@@ -685,27 +728,46 @@ function renderAnnotation(context, main) {
   heroContainer.append(highlights);
   hero.append(heroContainer);
 
-  const tabs = createAnnotationTabs(context, content?.tabs ?? {});
+  const sideNav = createAnnotationSideNav(context, content);
+  const layout = createElement('div', 'annotation-page-layout page-container');
+  const stack = createElement('div', 'annotation-main-stack');
+
+  const usecases = createAnnotationUsecases(context);
   const modalitiesWrapper = createElement('div', 'annotation-modalities');
   modalitiesWrapper.id = 'modalities';
   modalitiesWrapper.dataset.annotationSection = 'modalities';
   (Array.isArray(content?.modalities) ? content.modalities : []).forEach((modality, index) => {
-    modalitiesWrapper.append(createAnnotationModality(context, modality, dialog, index));
+    const section = createAnnotationModality(context, modality, dialog, index);
+    section.id = modality.id || `modality-${index}`;
+    section.dataset.annotationSection = modality.id || `modality-${index}`;
+    const rows = section.querySelector('.annotation-rows');
+    if (rows) {
+      rows.querySelectorAll('.annotation-row').forEach((row) => {
+        const rowType = row.dataset.typeId;
+        const typeInfo = modality.types?.find((item) => item.id === rowType) || null;
+        if (!typeInfo) {
+          return;
+        }
+        row.append(createAnnotationMarquee(context, typeInfo));
+      });
+    }
+    modalitiesWrapper.append(section);
   });
 
-  main.append(
-    hero,
-    tabs,
+  stack.append(
+    usecases,
     modalitiesWrapper,
     createAnnotationWorkflow(context),
     createAnnotationQualitySection(context, dialog),
-    createAnnotationUsecases(context),
-    createAnnotationSecurity(context),
-    createAnnotationCta(context),
-    dialog
+    createAnnotationSecurity(context, dialog),
+    createAnnotationCta(context)
   );
+  layout.append(sideNav, stack);
 
-  bindAnnotationTabs();
+  main.append(hero, layout, dialog);
+
+  bindAnnotationSideNav();
+  initializeMarquee(main);
 }
 
 function createCollectionItem(context, item) {
