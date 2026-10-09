@@ -2738,6 +2738,77 @@ a.contact-card__value {
   background: var(--bg-soft);
 }
 
+/* Contact page form, privacy details, and company information panel. */
+.contact-page [hidden] { display: none !important; }
+.contact-banner {
+  min-height: clamp(10rem, 24vw, 19rem);
+  background-color: var(--charcoal-800);
+  background-position: center;
+  background-size: cover;
+}
+.contact-banner img { width: 100%; height: clamp(10rem, 24vw, 19rem); object-fit: cover; }
+.contact-section { padding-block: var(--space-5) var(--space-7); }
+.contact-response { margin-top: var(--space-3); color: var(--green-400); font-weight: 700; }
+.contact-layout { display: grid; gap: var(--space-4); align-items: start; }
+.contact-main { min-width: 0; }
+.contact-form, .contact-privacy, .contact-company { padding: clamp(1.25rem, 3vw, 2rem); }
+.contact-form { display: grid; gap: var(--space-4); }
+.contact-card__title { margin: 0; color: var(--text-on-dark); font-size: 1.35rem; }
+.contact-fields { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-3); }
+.contact-field { display: grid; grid-template-columns: 1fr auto; gap: 0 var(--space-2); color: var(--text-on-dark); font-weight: 600; }
+.contact-field input, .contact-field select, .contact-field textarea {
+  grid-column: 1 / -1; width: 100%; min-height: 3rem; margin-top: var(--space-1); padding: .65rem .8rem;
+  border: 1px solid var(--line-dark); border-radius: var(--radius-s); background: var(--black-950); color: var(--text-on-dark);
+}
+.contact-field textarea { resize: vertical; }
+.contact-required, .contact-optional { color: var(--gray-400); font-size: .78rem; font-weight: 500; }
+.contact-required { color: var(--green-300); }
+.contact-field--wide { grid-column: 1 / -1; }
+.contact-honeypot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.contact-error, .contact-consent-error { color: var(--green-300); }
+.contact-review { display: grid; gap: var(--space-3); }
+.contact-review h3 { margin: 0; font-size: 1.2rem; }
+.contact-review dl, .contact-privacy__list { margin: 0; }
+.contact-review dt, .contact-privacy__list dt { color: var(--green-300); font-weight: 700; }
+.contact-review dd, .contact-privacy__list dd { margin: 0; white-space: pre-wrap; }
+.contact-review__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.contact-result { padding: var(--space-3); border-left: 3px solid var(--green-500); background: var(--charcoal-700); }
+.contact-privacy { margin-top: var(--space-4); }
+.contact-privacy h2, .contact-company h2 { margin-top: 0; font-size: 1.35rem; }
+.contact-privacy__list {
+  display: grid;
+  max-height: 22rem;
+  grid-template-columns: minmax(0, 1fr);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: var(--space-2);
+  scrollbar-color: var(--gray-400) var(--charcoal-700);
+}
+.contact-privacy__item { display: grid; gap: var(--space-1); padding-block: var(--space-3); border-bottom: 1px solid var(--line-dark); }
+.contact-privacy__item:first-child { padding-top: 0; }
+.contact-consent { display: flex; align-items: flex-start; gap: var(--space-2); margin-top: var(--space-4); font-weight: 700; }
+.contact-consent input { width: 1.2rem; height: 1.2rem; flex: 0 0 auto; accent-color: var(--green-500); }
+.contact-company { display: grid; gap: var(--space-3); }
+.contact-company__logo { width: min(100%, 15rem); padding: var(--space-2); border-radius: var(--radius-s); background: var(--white); }
+.contact-company__name { margin: -.5rem 0 0; color: var(--gray-300); }
+.contact-office + .contact-office { margin-top: var(--space-3); }
+.contact-office h3, .contact-callout h3 { margin: 0 0 var(--space-1); color: var(--green-300); font-size: 1rem; }
+.contact-office p { margin: 0; }
+.contact-company__line { overflow-wrap: anywhere; }
+.contact-callout { padding: var(--space-3); border: 1px solid var(--line-dark); border-radius: var(--radius-m); background: var(--black-950); }
+.contact-callout a { font-size: 1.25rem; font-weight: 700; }
+.contact-company__map { justify-self: start; }
+.contact-company__social { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.contact-social-link { padding: .35rem .65rem; border: 1px solid var(--line-dark); border-radius: 999px; }
+@media (min-width: 640px) {
+  .contact-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact-privacy__item { grid-template-columns: minmax(10rem, .35fr) minmax(0, 1fr); gap: var(--space-3); }
+}
+@media (min-width: 960px) {
+  .contact-layout { grid-template-columns: minmax(0, 1.65fr) minmax(18rem, .8fr); gap: var(--space-5); }
+  .contact-company { position: sticky; top: 6rem; }
+}
+
 .achievements-awards__layout {
   align-items: center;
 }

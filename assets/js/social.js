@@ -193,7 +193,12 @@ export function renderSocial(context) {
   document.querySelectorAll('[data-facebook-plugin]').forEach((section) => {
     renderFacebookPagePlugin(section, context);
   });
-  if (document.body.dataset.page === 'contact') {
+  // The redesigned contact page renders its config-driven panel in contact.js.
+  // Keep the older renderer available only for pages that still include its markup.
+  if (
+    document.body.dataset.page === 'contact'
+    && document.querySelector('[data-contact-map-section]')
+  ) {
     renderContact(context);
   }
 }
