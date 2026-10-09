@@ -2953,7 +2953,12 @@ a.contact-card__value {
 }
 
 .team-people__showcase {
+  width: 100%;
   margin-top: var(--space-5);
+}
+
+.team-people__showcase .marquee__item {
+  width: clamp(13rem, 25vw, 22rem);
 }
 
 .team-people__country {
