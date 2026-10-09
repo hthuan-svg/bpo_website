@@ -112,10 +112,12 @@
     },
     "breadcrumb": "Đường dẫn",
     "footer": {
-      "address_title": "Địa chỉ liên hệ",
-      "links_title": "Liên kết nhanh",
-      "office_main": "Văn phòng chính",
-      "office_branch": "Chi nhánh"
+      "address_title": "ĐỊA CHỈ LIÊN HỆ",
+      "links_title": "LIÊN KẾT NHANH",
+      "office_main": "Văn phòng chính: ",
+      "office_branch": "Chi nhánh: ",
+      "email": "Email: ",
+      "phone": "Điện thoại: "
     },
     "status": {
       "open": "Đang mở",
@@ -1114,7 +1116,7 @@
         "team_people_event"
       ],
       "country_image": "team_japan_country",
-      "country_caption": "Nhật Bản"
+      "country_caption": "BRYCEN GROUP"
     },
     "recruit": {
       "title": "Nguồn nhân lực & tuyển dụng",

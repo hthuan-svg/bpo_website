@@ -113,9 +113,11 @@
     "breadcrumb": "パンくずリスト",
     "footer": {
       "address_title": "連絡先",
-      "links_title": "クイックリンク",
-      "office_main": "メインオフィス",
-      "office_branch": "支店"
+      "links_title": "クイックリンク: ",
+      "office_main": "メインオフィス: ",
+      "office_branch": "支店: ",
+      "email": "メール: ",
+      "phone": "電話: "
     },
     "status": {
       "open": "募集中",
@@ -1114,7 +1116,7 @@
         "team_people_event"
       ],
       "country_image": "team_japan_country",
-      "country_caption": "日本"
+      "country_caption": "BRYCEN GROUP"
     },
     "recruit": {
       "title": "人材・採用",

@@ -112,10 +112,12 @@
     },
     "breadcrumb": "Breadcrumb",
     "footer": {
-      "address_title": "Contact",
-      "links_title": "Quick links",
-      "office_main": "Head office",
-      "office_branch": "Branch"
+      "address_title": "CONTACT: ",
+      "links_title": "QUICK LINKS: ",
+      "office_main": "Head office: ",
+      "office_branch": "Branch: ",
+      "email": "Email: ",
+      "phone": "Phone: "
     },
     "status": {
       "open": "Open",
@@ -1114,7 +1116,7 @@
         "team_people_event"
       ],
       "country_image": "team_japan_country",
-      "country_caption": "Japan"
+      "country_caption": "BRYCEN GROUP"
     },
     "recruit": {
       "title": "People & recruitment",
