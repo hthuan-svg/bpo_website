@@ -71,11 +71,9 @@
         <ol class="about-timeline" data-list="about.history.timeline" tabindex="0" data-i18n-attr="aria-label:about.history.title">
           <template>
             <li class="about-timeline__item">
-              <div class="about-timeline__milestone">
-                <span class="about-timeline__icon-wrap">
-                  <img class="about-timeline__icon" data-img-field="icon" loading="lazy">
-                </span>
-                <span class="about-timeline__year" data-field="year"></span>
+              <div class="about-timeline__year" data-field="year"></div>
+              <div class="about-timeline__icon-wrap">
+                <img class="about-timeline__icon" data-img-field="icon" loading="lazy">
               </div>
               <p class="about-timeline__text" data-field="text"></p>
             </li>
@@ -98,6 +96,31 @@
                 <h3 class="about-office__name" data-field="name"></h3>
                 <p class="about-office__address" data-field="address"></p>
                 <a class="button button--text about-office__map" data-map-field="address" target="_blank" rel="noopener noreferrer" data-i18n="ui.view_map"></a>
+              </div>
+            </article>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-global section" aria-labelledby="about-global-title">
+      <div class="container">
+        <header class="section-heading" data-reveal>
+          <p class="eyebrow" data-i18n="about.page_title"></p>
+          <h2 class="section-title" id="about-global-title" data-i18n="about.global.title"></h2>
+        </header>
+        <div class="about-global__banner" data-bg="about_global_banner" data-reveal>
+          <div class="about-global__banner-copy">
+            <p class="about-global__lead" data-i18n="about.global.lead"></p>
+          </div>
+        </div>
+        <div class="about-global__countries" data-list="about.global.countries">
+          <template>
+            <article class="about-global__country card" data-reveal>
+              <img class="card__image about-global__image" data-img-field="image" loading="lazy">
+              <div class="card__body about-global__body">
+                <h3 class="about-global__name" data-field="name"></h3>
+                <p class="about-global__text" data-field="text"></p>
               </div>
             </article>
           </template>

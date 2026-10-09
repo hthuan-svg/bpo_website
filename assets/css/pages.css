@@ -726,6 +726,7 @@
   display: grid;
   gap: var(--space-2);
   min-width: 0;
+  padding: 0 0 0 var(--space-2);
 }
 
 .about-timeline__item::before {
@@ -741,11 +742,11 @@
   content: "";
 }
 
-.about-timeline__milestone {
-  display: flex;
-  min-width: 0;
-  align-items: center;
-  gap: var(--space-3);
+.about-timeline__year {
+  color: var(--ink-900);
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
 .about-timeline__icon-wrap {
@@ -766,40 +767,12 @@
   mix-blend-mode: multiply;
 }
 
-.about-timeline__year {
-  color: var(--ink-900);
-  font-size: 1.25rem;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-}
-
 .about-timeline__text {
   min-width: 0;
   max-width: 42ch;
   color: var(--ink-500);
   font-size: .95rem;
   overflow-wrap: anywhere;
-}
-
-.about-timeline__item:last-child {
-  padding: var(--space-3);
-  border: 1px solid var(--brand-500);
-  border-radius: var(--radius-m);
-  background: var(--bg);
-  box-shadow: var(--shadow-s);
-}
-
-.about-timeline__item:last-child::before {
-  left: calc(-1 * var(--space-5) + .52rem - var(--space-3));
-  width: .9rem;
-  height: .9rem;
-  border-color: var(--brand-600);
-  background: var(--brand-500);
-}
-
-.about-timeline__item:last-child .about-timeline__year {
-  color: var(--brand-600);
-  font-size: 1.5rem;
 }
 
 .about-offices__grid {
@@ -828,6 +801,70 @@
 .about-office__map {
   justify-self: start;
   margin-top: var(--space-1);
+}
+
+.about-global {
+  background: var(--bg-soft);
+}
+
+.about-global__banner {
+  position: relative;
+  min-height: 17rem;
+  display: flex;
+  align-items: end;
+  padding: var(--space-5);
+  border-radius: var(--radius-l);
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--shadow-s);
+  overflow: hidden;
+}
+
+.about-global__banner::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(5, 7, 8, .74), rgba(5, 7, 8, .2));
+  content: "";
+}
+
+.about-global__banner-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 44rem;
+}
+
+.about-global__lead {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+  line-height: 1.6;
+}
+
+.about-global__countries {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.about-global__country {
+  overflow: hidden;
+}
+
+.about-global__image {
+  aspect-ratio: 4 / 3;
+}
+
+.about-global__body {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.about-global__name {
+  font-size: 1.2rem;
+}
+
+.about-global__text {
+  color: var(--ink-500);
 }
 
 @media (min-width: 640px) {
@@ -877,8 +914,9 @@
   }
 
   .about-timeline {
-    display: flex;
-    gap: 0;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(11rem, 1fr));
+    gap: var(--space-3);
     overflow-x: auto;
     padding: 0 0 var(--space-3);
     scroll-behavior: smooth;
@@ -887,44 +925,44 @@
   }
 
   .about-timeline::before {
-    top: 2.1rem;
-    right: 2rem;
-    bottom: auto;
+    top: auto;
+    bottom: calc(100% - 3.1rem);
     left: 2rem;
+    right: 2rem;
     width: auto;
     height: 2px;
   }
 
   .about-timeline__item {
-    flex: 0 0 clamp(13rem, 18vw, 16rem);
+    display: grid;
     gap: var(--space-3);
-    padding: 0 var(--space-3);
+    padding: 0 var(--space-2);
     scroll-snap-align: start;
+    text-align: left;
+    justify-items: start;
+    align-items: start;
   }
 
   .about-timeline__item::before {
-    top: 1.84rem;
-    left: 2.18rem;
+    top: calc(100% - 1.4rem);
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  .about-timeline__milestone {
-    display: grid;
-    justify-items: start;
-    gap: var(--space-2);
-    min-height: 7rem;
+  .about-timeline__year,
+  .about-timeline__icon-wrap,
+  .about-timeline__text {
+    justify-self: start;
   }
 
-  .about-timeline__item:last-child {
-    padding: var(--space-3);
+  .about-timeline__text {
+    max-width: 19ch;
+    margin: 0;
   }
 
-  .about-timeline__item:last-child::before {
-    top: 1.75rem;
-    left: calc(2.18rem + var(--space-3));
-  }
-
-  .about-offices__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .about-offices__grid,
+  .about-global__countries {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
