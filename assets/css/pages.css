@@ -630,6 +630,13 @@
   display: flex;
   width: max-content;
   animation: marquee-slide var(--marquee-duration, 24s) linear infinite;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.marquee__track:active {
+  cursor: grabbing;
 }
 
 .marquee__track:focus-visible {
@@ -666,6 +673,7 @@
   aspect-ratio: 16 / 9;
   object-fit: cover;
   cursor: zoom-in;
+  -webkit-user-drag: none;
 }
 
 .marquee__item {
