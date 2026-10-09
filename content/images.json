@@ -846,7 +846,7 @@
         "en": "Working together with customers",
         "ja": "お客様との協働"
       },
-      "placeholder": true
+      "placeholder": false
     },
     "team_process_image": {
       "src": "assets/images/team/team_process_image.jpg",
@@ -855,7 +855,7 @@
         "en": "Working process with customers",
         "ja": "お客様との業務プロセス"
       },
-      "placeholder": true
+      "placeholder": false
     },
     "team_japan_country": {
       "src": "assets/images/team/team_japan_country.jpg",
@@ -864,7 +864,7 @@
         "en": "Japan",
         "ja": "日本"
       },
-      "placeholder": true
+      "placeholder": false
     },
     "achievements_projects_01": {
       "src": "assets/images/achievements/achievements_projects_01.jpg",

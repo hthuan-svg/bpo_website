@@ -59,6 +59,7 @@
     </div>
 
     <section id="org" class="section-shell team-org" aria-labelledby="team-org-title">
+      <div class="team-org__figure" data-bg="team_org_image" aria-hidden="true"></div>
       <div class="page-container">
         <header class="section-heading" data-reveal>
           <p class="eyebrow" data-i18n="team.page_title"></p>
@@ -71,11 +72,7 @@
               <span class="content-stat__label" data-i18n="team.org.headcount.label"></span>
             </div>
             <p class="team-org__lead" data-i18n="team.org.lead"></p>
-            <p class="team-org__detail" data-i18n="team.org.headcount.detail"></p>
           </div>
-          <figure class="team-org__figure">
-            <img class="team-org__image" data-img="team_org_image" loading="lazy" alt="">
-          </figure>
         </div>
       </div>
     </section>
@@ -88,7 +85,7 @@
           <p class="section-lead" data-i18n="team.process.lead"></p>
         </header>
         <div class="team-process__layout" data-reveal>
-          <ol id="team-process-list" class="team-process__list" aria-live="polite"></ol>
+          <ol id="team-process-list" class="team-process__list" tabindex="0" aria-live="polite"></ol>
           <figure class="team-process__figure">
             <img class="team-process__image" data-img="team_process_image" loading="lazy" alt="">
           </figure>
