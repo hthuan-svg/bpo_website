@@ -42,8 +42,8 @@
 <body data-page="index">
   <div id="site-header"></div>
   <main id="main" class="home-page">
-    <section class="home-hero" data-bg="home_hero_image">
-      <div class="home-hero__content page-container" data-reveal>
+    <section class="home-hero" data-reveal>
+      <div class="home-hero__content page-container">
         <div class="home-hero__brand-lockup">
           <span class="home-hero__brand-mark" data-i18n="ui.brand.dept_short"></span>
           <span class="home-hero__brand-copy">
@@ -58,12 +58,18 @@
           <a class="button button--secondary" href="contact.html" data-i18n="home.hero.cta_secondary"></a>
         </div>
       </div>
+      <div class="home-hero__visual page-container">
+        <div class="home-hero__image-frame">
+          <img data-img="home_hero_image" alt="" loading="eager">
+        </div>
+      </div>
     </section>
 
     <section class="home-stats section-shell">
       <ul class="home-stats__list page-container" data-list="home.stats">
         <template>
           <li class="home-stats__item">
+            <img class="home-stats__image" data-img-field="image" loading="lazy" alt="">
             <strong class="home-stats__value" data-field="value" data-count-up></strong>
             <span class="home-stats__label" data-field="label"></span>
           </li>
@@ -87,6 +93,25 @@
           </a>
         </template>
       </div>
+      <div class="home-showcase" data-marquee>
+        <div class="home-showcase__header">
+          <p class="home-showcase__eyebrow" data-i18n="home.showcase.eyebrow"></p>
+          <h3 class="home-showcase__title" data-i18n="home.showcase.title"></h3>
+          <p class="home-showcase__lead" data-i18n="home.showcase.lead"></p>
+        </div>
+        <div class="marquee__track">
+          <ul class="marquee__list" data-list="home.showcase.items">
+            <template>
+              <li class="marquee__item">
+                <figure class="marquee__figure">
+                  <img class="marquee__image" data-img-field="image" loading="lazy" alt="">
+                  <figcaption class="marquee__caption" data-field="caption"></figcaption>
+                </figure>
+              </li>
+            </template>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="home-commitments section-shell">
@@ -107,13 +132,37 @@
       </div>
     </section>
 
-    <section class="home-customers section-shell page-container" data-reveal>
-      <h2 class="home-section__title" data-i18n="home.customers_title"></h2>
-      <ul class="home-customers__list" data-list="achievements.projects.customers">
+    <section class="home-certifications section-shell page-container" data-reveal>
+      <div class="home-certifications__header">
+        <p class="home-certifications__eyebrow" data-i18n="home.certifications_title"></p>
+      </div>
+      <div class="home-certifications__grid" data-list="certifications.items">
         <template>
-          <li><img class="home-customers__logo" data-img-field="." loading="lazy"></li>
+          <article class="home-certification">
+            <img class="home-certification__image" data-img-field="image" loading="lazy" alt="">
+            <div class="home-certification__body">
+              <span class="home-certification__code" data-field="code"></span>
+              <strong class="home-certification__name" data-field="name"></strong>
+            </div>
+          </article>
         </template>
-      </ul>
+      </div>
+    </section>
+
+    <section class="home-partners section-shell page-container" data-reveal>
+      <p class="home-partners__eyebrow" data-i18n="home.partners.eyebrow"></p>
+      <h2 class="home-section__title" data-i18n="home.partners.title"></h2>
+      <div class="home-partners__panel">
+        <a class="home-partners__brand-wrap" href="subaru.html" aria-label="SUBARU">
+          <img class="home-partners__logo" data-img="subaru_logo" alt="SUBARU" loading="lazy">
+        </a>
+        <div class="home-partners__body">
+          <p class="home-partners__lead" data-i18n="home.partners.lead"></p>
+          <h3 class="home-partners__name" data-i18n="home.partners.main.name"></h3>
+          <p class="home-partners__text" data-i18n="home.partners.main.text"></p>
+          <a class="button button--text home-partners__link" href="subaru.html" data-i18n="ui.partner_main"></a>
+        </div>
+      </div>
     </section>
 
     <section class="home-news section-shell page-container" data-reveal>

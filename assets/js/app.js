@@ -8,6 +8,7 @@ import { renderServices } from './services.js';
 import { renderOrganizationPages } from './organization-pages.js';
 import { renderSocial } from './social.js';
 import { initializeNews, renderNews } from './news.js';
+import { initializeMarquee } from './marquee.js';
 
 const openPageMessage = 'Hãy mở trang bằng Live Server (không bấm đúp file .html)';
 
@@ -41,6 +42,7 @@ async function start() {
       renderSocial(i18n);
       renderServices(i18n);
       renderOrganizationPages(i18n);
+      initializeMarquee();
       initReveal();
       initHomeCounters();
     });
@@ -49,6 +51,7 @@ async function start() {
     renderSocial(i18n);
     renderServices(i18n);
     renderOrganizationPages(i18n);
+    initializeMarquee();
     initReveal();
     initHomeCounters();
   } catch (error) {
