@@ -34,7 +34,7 @@
         "description": "Tìm hiểu cơ cấu đội ngũ, quy trình vận hành và cơ hội phát triển tại BRYCEN VIETNAM BPO."
       },
       "achievements": {
-        "title": "Thành tựu và dự án | BRYCEN VIETNAM BPO",
+        "title": "Thành tựu | BRYCEN VIETNAM BPO",
         "description": "Khám phá thành tựu và các dự án dữ liệu AI của bộ phận BPO BRYCEN VIETNAM."
       },
       "vision": {
@@ -65,7 +65,7 @@
       "services_collection": "Thu thập dữ liệu học cho AI",
       "services_data_engineering": "Data Engineering",
       "team": "Đội ngũ",
-      "achievements": "Thành tựu & Dự án",
+      "achievements": "Thành tựu",
       "vision": "Tầm nhìn",
       "news": "Tin tức",
       "contact": "Liên hệ",
@@ -1153,7 +1153,7 @@
     }
   },
   "achievements": {
-    "page_title": "Thành tựu & Dự án",
+    "page_title": "Thành tựu",
     "awards": {
       "title": "Thành tựu",
       "text": "5 năm liên tiếp đứng Top 1 thị trường Nhật Bản trong mảng tạo dữ liệu học AI và đang hướng tới năm thứ 6 liên tiếp.",

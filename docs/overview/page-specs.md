@@ -52,7 +52,7 @@ Intentionally empty "coming soon" page matching the Collection page: status chip
 3. `#people` "People trained in Vietnam and Japan": lead, 3 steps timeline, 3 photos (`people.images`), and a large **Japan country image** slot `people.country_image` with caption.
 Recruitment moved to the **Recruitment** page; remove every link to `team.html#recruit`.
 
-## Achievements & Projects (`achievements.html`)
+## Achievements (`achievements.html`)
 1. **Achievements**: huge "#1" + `awards.headline_text` ("No.1 in Japan") + ONE image slot `awards.image` + the 5-years text and source (rest unchanged). No row of four badges.
 2. **Projects**: big "235" + `projects.text` + 3 illustrative image slots (`projects.images`) — **no customer logos** (SUBARU in the text links to `subaru.html`). **Customer satisfaction** block (`projects.satisfaction`: image + title + text): customers always rate highly and keep coming back.
 

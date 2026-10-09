@@ -34,7 +34,7 @@
         "description": "Learn about the team structure, operating process, and career opportunities at BRYCEN VIETNAM BPO."
       },
       "achievements": {
-        "title": "Achievements and Projects | BRYCEN VIETNAM BPO",
+        "title": "Achievements | BRYCEN VIETNAM BPO",
         "description": "Explore the achievements and AI data projects of BRYCEN VIETNAM's BPO division."
       },
       "vision": {
@@ -65,7 +65,7 @@
       "services_collection": "AI Training Data Collection",
       "services_data_engineering": "Data Engineering",
       "team": "Team",
-      "achievements": "Achievements & Projects",
+      "achievements": "Achievements",
       "vision": "Vision",
       "news": "News",
       "contact": "Contact",
@@ -1153,7 +1153,7 @@
     }
   },
   "achievements": {
-    "page_title": "Achievements & Projects",
+    "page_title": "Achievements",
     "awards": {
       "title": "Achievements",
       "text": "#1 in the Japanese market for AI training-data creation for 5 consecutive years — and aiming for a 6th.",

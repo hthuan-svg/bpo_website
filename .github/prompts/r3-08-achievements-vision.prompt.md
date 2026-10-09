@@ -2,7 +2,7 @@
 description: "Requests 9 and 10."
 agent: agent
 ---
-# Achievements & Projects, Vision
+# Achievements, Vision
 
 Follow AGENTS.md. Specs: docs/overview/page-specs.md (the area you touch), docs/overview/design-system.md, docs/content/content-model.md, docs/images/image-slots.md.
 This is an UPDATE of an existing, working site: read the current implementation of what you will touch first, then modify it IN PLACE. Keep conventions (data-* binding, CSS tokens, components). Do not rewrite working parts that are not part of this step.

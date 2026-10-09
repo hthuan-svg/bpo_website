@@ -34,7 +34,7 @@
         "description": "BRYCEN VIETNAM BPOの組織体制、運用フロー、キャリア形成についてご紹介します。"
       },
       "achievements": {
-        "title": "実績・プロジェクト | BRYCEN VIETNAM BPO",
+        "title": "実績 | BRYCEN VIETNAM BPO",
         "description": "BRYCEN VIETNAM BPO部門の実績とAIデータプロジェクトをご紹介します。"
       },
       "vision": {
@@ -65,7 +65,7 @@
       "services_collection": "AI学習データ収集",
       "services_data_engineering": "データエンジニアリング",
       "team": "チーム",
-      "achievements": "実績・プロジェクト",
+      "achievements": "実績",
       "vision": "ビジョン",
       "news": "ニュース",
       "contact": "お問い合わせ",
@@ -1153,7 +1153,7 @@
     }
   },
   "achievements": {
-    "page_title": "実績・プロジェクト",
+    "page_title": "実績",
     "awards": {
       "title": "実績",
       "text": "AI学習データ作成の分野で、日本国内5年連続シェアNo.1。6年連続を目指しています。",
