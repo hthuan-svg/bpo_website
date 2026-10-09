@@ -1,0 +1,80 @@
+<!-- Recruitment listings and localized job details for the BPO division. -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="recruits.page_title"></title>
+  <meta name="description" content="">
+  <link rel="canonical" href="https://example.com/recruits.html?lang=vi">
+  <link rel="alternate" hreflang="vi" href="https://example.com/recruits.html?lang=vi">
+  <link rel="alternate" hreflang="en" href="https://example.com/recruits.html?lang=en">
+  <link rel="alternate" hreflang="ja" href="https://example.com/recruits.html?lang=ja">
+  <link rel="alternate" hreflang="x-default" href="https://example.com/recruits.html?lang=vi">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BRYCEN VIETNAM – BPO">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="https://example.com/recruits.html?lang=vi">
+  <meta property="og:image" content="https://example.com/assets/images/common/og_share.jpg" data-image-slot="og_share">
+  <meta property="og:image:alt" content="">
+  <meta property="og:locale" content="vi_VN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="https://example.com/assets/images/common/og_share.jpg" data-image-slot="og_share">
+  <meta name="twitter:image:alt" content="">
+  <meta name="theme-color" content="#0B0F0C">
+  <link rel="icon" href="assets/images/common/favicon.ico">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="recruits">
+  <div id="site-header"></div>
+  <main id="main" class="content-page recruits-page">
+    <section class="recruits-hero section-shell">
+      <img class="recruits-hero__image" data-img="recruits_banner" loading="eager">
+      <div class="page-container recruits-hero__content">
+        <p class="eyebrow" data-i18n="recruits.page_title"></p>
+        <h1 class="section-title" data-i18n="recruits.page_title"></h1>
+        <p class="section-lead" data-i18n="recruits.lead"></p>
+      </div>
+    </section>
+
+    <section class="section-shell recruits-intro" aria-labelledby="recruits-intro-title">
+      <div class="page-container recruits-intro__layout">
+        <div class="recruits-intro__copy">
+          <h2 id="recruits-intro-title" class="section-title" data-i18n="recruits.intro.title"></h2>
+          <p class="section-lead" data-i18n="recruits.intro.text"></p>
+          <ul class="recruits-intro__stats" data-list="recruits.intro.stats">
+            <template>
+              <li class="recruits-intro__stat">
+                <strong class="content-stat__value" data-field="value"></strong>
+                <span class="content-stat__label" data-field="label"></span>
+              </li>
+            </template>
+          </ul>
+        </div>
+        <img class="recruits-intro__image" data-content-image="recruits.intro.image" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section-shell recruits-listing" aria-labelledby="recruits-list-title">
+      <div class="page-container">
+        <h2 id="recruits-list-title" class="section-title recruits-listing__title" data-i18n="recruits.labels.position"></h2>
+        <div id="recruits-filters" class="recruits-filters" role="group" data-i18n-attr="aria-label:recruits.page_title">
+          <button class="recruits-filters__button is-active" type="button" data-filter="all" aria-pressed="true" data-i18n="recruits.filters.all"></button>
+          <button class="recruits-filters__button" type="button" data-filter="open" aria-pressed="false" data-i18n="recruits.filters.open"></button>
+          <button class="recruits-filters__button" type="button" data-filter="closed" aria-pressed="false" data-i18n="recruits.filters.closed"></button>
+        </div>
+        <div id="recruits-list" class="recruits-list" aria-live="polite"></div>
+        <p id="recruits-empty" class="recruits-empty" data-i18n="recruits.empty" hidden></p>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

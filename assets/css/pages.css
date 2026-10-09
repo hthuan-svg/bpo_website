@@ -1,4 +1,329 @@
 /* Page-specific styles for home, about, service, and contact pages. */
+
+.recruits-hero {
+  position: relative;
+  display: grid;
+  min-height: clamp(20rem, 42vw, 36rem);
+  align-items: end;
+  overflow: hidden;
+  background-color: var(--bg-dark-2);
+  background-position: center;
+  background-size: cover;
+  color: var(--text-on-dark);
+}
+
+.recruits-hero__image {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recruits-hero::before {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--black-950) 94%, transparent), color-mix(in srgb, var(--black-950) 30%, transparent));
+  content: "";
+}
+
+.recruits-hero__content {
+  position: relative;
+  z-index: 2;
+  padding-block: var(--space-6);
+}
+
+.recruits-hero .section-title {
+  margin-bottom: var(--space-2);
+}
+
+.recruits-hero .section-lead {
+  max-width: 48rem;
+  color: var(--text-on-dark);
+}
+
+.recruits-intro__layout {
+  display: grid;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.recruits-intro__copy > .section-lead {
+  margin-top: var(--space-3);
+}
+
+.recruits-intro__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--radius-l);
+}
+
+.recruits-intro__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-5) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recruits-intro__stat {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-m);
+  background: var(--surface-dark);
+}
+
+.recruits-intro__stat .content-stat__value {
+  color: var(--green-500);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.recruits-intro__stat .content-stat__label {
+  color: var(--muted-on-dark);
+  font-size: .9rem;
+}
+
+.recruits-listing {
+  background: var(--bg-light-2);
+}
+
+.recruits-listing__title {
+  margin-bottom: var(--space-4);
+}
+
+.recruits-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.recruits-filters__button {
+  min-height: 44px;
+  padding: .55rem 1.1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--text-on-light);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.recruits-filters__button.is-active {
+  border-color: var(--green-700);
+  background: var(--green-900);
+  color: var(--white);
+}
+
+.recruits-list {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.recruits-card {
+  display: grid;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-m);
+  background: var(--white);
+  box-shadow: var(--shadow-light);
+}
+
+.recruits-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.recruits-card__content {
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.recruits-card__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.recruits-card__date {
+  color: var(--muted-on-light);
+  font-size: .875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.status-badge {
+  display: inline-flex;
+  min-height: 1.75rem;
+  align-items: center;
+  padding: .2rem .7rem;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.status-badge--open {
+  background: var(--green-500);
+  color: var(--black-900);
+}
+
+.status-badge--closed {
+  background: var(--gray-200);
+  color: var(--gray-600);
+}
+
+.recruits-card__title {
+  margin: 0;
+  font-size: clamp(1.25rem, 1rem + .7vw, 1.75rem);
+}
+
+.recruits-card__title a {
+  color: var(--text-on-light);
+  text-decoration: none;
+}
+
+.recruits-card__title a:hover {
+  color: var(--green-700);
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.recruits-card__summary {
+  margin: 0;
+  color: var(--muted-on-light);
+}
+
+.recruits-card__meta,
+.recruits-detail__meta {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.recruits-card__meta-row {
+  display: grid;
+  grid-template-columns: minmax(7rem, .45fr) minmax(0, 1fr);
+  gap: var(--space-2);
+  font-size: .9rem;
+}
+
+.recruits-card__meta-row dt {
+  color: var(--muted-on-light);
+}
+
+.recruits-card__meta-row dd {
+  margin: 0;
+  color: var(--text-on-light);
+  font-weight: 600;
+}
+
+.recruits-empty,
+.recruits-not-found {
+  padding: var(--space-5);
+  border: 1px dashed var(--gray-300);
+  border-radius: var(--radius-m);
+  background: var(--white);
+  color: var(--muted-on-light);
+  text-align: center;
+}
+
+.recruits-detail {
+  max-width: 54rem;
+  margin-inline: auto;
+  padding: clamp(var(--space-4), 6vw, var(--space-6));
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-l);
+  background: var(--white);
+  box-shadow: var(--shadow-light);
+}
+
+.recruits-back {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin-bottom: var(--space-4);
+  color: var(--green-700);
+  font-weight: 700;
+}
+
+.recruits-detail__heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+.recruits-detail__heading .section-title {
+  flex-basis: 100%;
+  margin: var(--space-2) 0 0;
+}
+
+.recruits-detail__heading .recruits-card__summary {
+  flex-basis: 100%;
+}
+
+.recruits-detail__meta {
+  margin-block: var(--space-4);
+  padding: var(--space-4) 0;
+  border-block: 1px solid var(--gray-200);
+}
+
+.recruits-detail__body {
+  margin-top: var(--space-5);
+}
+
+.recruits-detail__subheading {
+  margin-bottom: var(--space-3);
+}
+
+.recruits-detail__body p {
+  color: var(--muted-on-light);
+}
+
+.recruits-detail__closed {
+  padding: var(--space-3);
+  border-radius: var(--radius-s);
+  background: var(--gray-100);
+  color: var(--gray-600);
+  font-weight: 700;
+}
+
+.recruits-apply {
+  width: fit-content;
+  margin-top: var(--space-4);
+  text-decoration: none;
+}
+
+@media (min-width: 700px) {
+  .recruits-intro__layout {
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, .9fr);
+  }
+
+  .recruits-card {
+    grid-template-columns: minmax(13rem, .35fr) minmax(0, 1fr);
+  }
+
+  .recruits-card__image {
+    height: 100%;
+    min-height: 15rem;
+    aspect-ratio: auto;
+  }
+}
 .page-container {
   width: min(var(--container), calc(100% - 2 * var(--space-4)));
   margin-inline: auto;

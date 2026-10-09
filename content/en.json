@@ -1520,6 +1520,7 @@
     },
     "empty": "There are no job posts yet.",
     "apply_subject": "Application:",
+    "not_found": "This job post could not be found.",
     "back": "Back to the list"
   }
 }

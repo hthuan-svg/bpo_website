@@ -1520,6 +1520,7 @@
     },
     "empty": "Hiện chưa có tin tuyển dụng nào.",
     "apply_subject": "Ứng tuyển:",
+    "not_found": "Không tìm thấy tin tuyển dụng này.",
     "back": "Quay lại danh sách"
   }
 }
