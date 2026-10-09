@@ -15,7 +15,7 @@ Chạy theo thứ tự. Mỗi bước: chat mới → kiểm tra Definition of d
 | [x] | `/r3-04-subaru` | Trang SUBARU | 6 |
 | [x] | `/r3-05-about` | Giới thiệu: timeline, 2 văn phòng, đa quốc gia | 7 |
 | [x] | `/r3-06-services` | Dịch vụ: side-nav, ứng dụng lên trước, dải ảnh, chất lượng, bảo mật + ISO | 12 |
-| [ ] | `/r3-07-team` | Đội ngũ | 8 |
+| [x] | `/r3-07-team` | Đội ngũ | 8 |
 | [ ] | `/r3-08-achievements-vision` | Thành tựu & Dự án, Tầm nhìn (growth timeline) | 9, 10 |
 | [ ] | `/r3-09-recruits` | Trang Tuyển dụng | 4 |
 | [ ] | `/r3-10-contact` | Trang Liên hệ (biểu mẫu + chính sách) | 11 |

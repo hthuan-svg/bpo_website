@@ -54,9 +54,6 @@
           <button class="team-tabs__tab" type="button" role="tab" aria-selected="false" data-target="#people">
             <span data-i18n="team.tabs.people"></span>
           </button>
-          <button class="team-tabs__tab" type="button" role="tab" aria-selected="false" data-target="#recruit">
-            <span data-i18n="team.tabs.recruit"></span>
-          </button>
         </div>
       </nav>
     </div>
@@ -66,16 +63,20 @@
         <header class="section-heading" data-reveal>
           <p class="eyebrow" data-i18n="team.page_title"></p>
           <h1 class="section-title" id="team-org-title" data-i18n="team.org.title"></h1>
-          <p class="section-lead" data-i18n="team.org.lead"></p>
         </header>
-        <div class="team-org__overview" data-reveal>
-          <div class="team-org__stat">
-            <strong class="content-stat__value" data-i18n="team.org.headcount.value"></strong>
-            <span class="content-stat__label" data-i18n="team.org.headcount.label"></span>
+        <div class="team-org__layout" data-reveal>
+          <div class="team-org__content">
+            <div class="team-org__stat">
+              <strong class="content-stat__value" data-i18n="team.org.headcount.value"></strong>
+              <span class="content-stat__label" data-i18n="team.org.headcount.label"></span>
+            </div>
+            <p class="team-org__lead" data-i18n="team.org.lead"></p>
             <p class="team-org__detail" data-i18n="team.org.headcount.detail"></p>
           </div>
+          <figure class="team-org__figure">
+            <img class="team-org__image" data-img="team_org_image" loading="lazy" alt="">
+          </figure>
         </div>
-        <div id="team-org-chart" class="team-org__chart" aria-live="polite"></div>
       </div>
     </section>
 
@@ -86,7 +87,12 @@
           <h2 class="section-title" id="team-process-title" data-i18n="team.process.title"></h2>
           <p class="section-lead" data-i18n="team.process.lead"></p>
         </header>
-        <div id="team-process-chart" class="team-process__chart" aria-live="polite"></div>
+        <div class="team-process__layout" data-reveal>
+          <ol id="team-process-list" class="team-process__list" aria-live="polite"></ol>
+          <figure class="team-process__figure">
+            <img class="team-process__image" data-img="team_process_image" loading="lazy" alt="">
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -108,32 +114,15 @@
             </article>
           </template>
         </div>
-        <ul class="team-people__images" data-list="team.people.images" data-reveal>
-          <template>
-            <li><img class="team-people__image" data-img-field="." loading="lazy"></li>
-          </template>
+        <ul class="team-people__images" data-reveal>
+          <li><img class="team-people__image is-featured" data-img="team_people_japan" loading="lazy" alt=""></li>
+          <li><img class="team-people__image" data-img="team_people_training" loading="lazy" alt=""></li>
+          <li><img class="team-people__image" data-img="team_people_event" loading="lazy" alt=""></li>
         </ul>
-      </div>
-    </section>
-
-    <section id="recruit" class="section-shell team-recruit" aria-labelledby="team-recruit-title">
-      <div class="page-container team-recruit__layout">
-        <div class="team-recruit__content" data-reveal>
-          <header class="section-heading">
-            <p class="eyebrow" data-i18n="team.page_title"></p>
-            <h2 class="section-title" id="team-recruit-title" data-i18n="team.recruit.title"></h2>
-          </header>
-          <p class="section-lead" data-i18n="team.recruit.text"></p>
-          <a class="button button--primary team-recruit__cta" href="contact.html" data-i18n="home.cta.button"></a>
-        </div>
-        <ul class="team-recruit__stats" data-list="team.recruit.stats" data-reveal>
-          <template>
-            <li class="team-recruit__stat">
-              <strong class="content-stat__value" data-field="value"></strong>
-              <span class="content-stat__label" data-field="label"></span>
-            </li>
-          </template>
-        </ul>
+        <figure class="team-people__country" data-reveal>
+          <img class="team-people__country-image" data-img="team_japan_country" loading="lazy" alt="">
+          <figcaption data-i18n="team.people.country_caption"></figcaption>
+        </figure>
       </div>
     </section>
   </main>
