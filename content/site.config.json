@@ -53,7 +53,7 @@
   },
   "marquee": {
     "home": {
-      "secondsPerLoop": 45
+      "secondsPerLoop": 24
     },
     "services": {
       "secondsPerLoop": 35

@@ -1,4 +1,4 @@
-// Builds the shared marquee used for home/services showcases and keeps it keyboard and motion accessible.
+// Builds the home showcase from registered image slots and supports the animated image strip.
 
 function setUpMarqueeLightbox() {
   let dialog = document.querySelector('.marquee-lightbox');
@@ -49,30 +49,56 @@ function attachMarqueeLightbox(image, dialog) {
 }
 
 export function initializeMarquee(root = document) {
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const dialog = setUpMarqueeLightbox();
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const containers = root.querySelectorAll('[data-marquee]');
 
   containers.forEach((container) => {
-    if (container.dataset.marqueeReady === 'true') {
-      return;
-    }
-
     const track = container.querySelector('.marquee__track');
     const list = container.querySelector('.marquee__list');
     if (!track || !list) {
       return;
     }
 
-    const items = Array.from(list.children).filter((node) => !(node instanceof HTMLTemplateElement));
-    if (!reducedMotion.matches && items.length) {
-      const clone = list.cloneNode(true);
-      clone.setAttribute('aria-hidden', 'true');
-      track.appendChild(clone);
+    if (container.classList.contains('home-showcase')) {
+      track.querySelector(':scope > .marquee__list[aria-hidden="true"]')?.remove();
+      const loopSeconds = window.siteI18n?.siteConfig?.marquee?.home?.secondsPerLoop;
+      if (Number.isFinite(loopSeconds) && loopSeconds > 0) {
+        container.style.setProperty('--marquee-duration', `${loopSeconds}s`);
+      }
+      const slots = window.siteI18n?.images?.slots ?? {};
+      const showcaseSlots = Object.entries(slots)
+        .filter(([name]) => /^home_showcase_\d+$/.test(name))
+        .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }));
+
+      list.replaceChildren();
+      showcaseSlots.forEach(([name, slot]) => {
+        const item = document.createElement('li');
+        item.className = 'marquee__item';
+        const figure = document.createElement('figure');
+        figure.className = 'marquee__figure';
+        const image = document.createElement('img');
+        image.className = 'marquee__image';
+        image.src = slot.src;
+        image.alt = slot.alt?.[window.siteI18n.language] ?? slot.alt?.vi ?? '';
+        image.loading = 'lazy';
+        if (Number.isInteger(slot.width)) image.width = slot.width;
+        if (Number.isInteger(slot.height)) image.height = slot.height;
+        if (slot.placeholder) image.classList.add('is-placeholder');
+        figure.append(image);
+        item.append(figure);
+        list.append(item);
+      });
+
+      if (!reducedMotion.matches && showcaseSlots.length) {
+        const clone = list.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        clone.querySelectorAll('[tabindex]').forEach((element) => element.setAttribute('tabindex', '-1'));
+        track.append(clone);
+      }
     }
 
-    container.dataset.marqueeReady = 'true';
-    const images = container.querySelectorAll('.marquee__item img');
+    const images = list.querySelectorAll('.marquee__item img');
     images.forEach((image) => attachMarqueeLightbox(image, dialog));
   });
 }

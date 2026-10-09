@@ -42,7 +42,7 @@
 <body data-page="index">
   <div id="site-header"></div>
   <main id="main" class="home-page">
-    <section class="home-hero" data-reveal>
+    <section class="home-hero" data-bg="home_hero_image" data-reveal>
       <div class="home-hero__content page-container">
         <div class="home-hero__brand-lockup">
           <span class="home-hero__brand-mark" data-i18n="ui.brand.dept_short"></span>
@@ -56,11 +56,6 @@
         <div class="home-hero__actions">
           <a class="button button--primary" href="services.html" data-i18n="home.hero.cta_primary"></a>
           <a class="button button--secondary" href="contact.html" data-i18n="home.hero.cta_secondary"></a>
-        </div>
-      </div>
-      <div class="home-hero__visual page-container">
-        <div class="home-hero__image-frame">
-          <img data-img="home_hero_image" alt="" loading="eager">
         </div>
       </div>
     </section>
@@ -99,13 +94,12 @@
           <h3 class="home-showcase__title" data-i18n="home.showcase.title"></h3>
           <p class="home-showcase__lead" data-i18n="home.showcase.lead"></p>
         </div>
-        <div class="marquee__track">
+        <div class="marquee__track" tabindex="0" data-i18n-attr="aria-label:home.showcase.title">
           <ul class="marquee__list" data-list="home.showcase.items">
             <template>
               <li class="marquee__item">
                 <figure class="marquee__figure">
                   <img class="marquee__image" data-img-field="image" loading="lazy" alt="">
-                  <figcaption class="marquee__caption" data-field="caption"></figcaption>
                 </figure>
               </li>
             </template>
