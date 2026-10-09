@@ -1273,8 +1273,26 @@
 }
 
 .about-history {
+  position: relative;
+  isolation: isolate;
   overflow: hidden;
-  background: var(--bg-soft);
+  background-color: var(--bg-soft);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-history::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: var(--bg-light-2);
+  opacity: .88;
+  content: "";
+}
+
+.about-history .section-title {
+  color: var(--green-900);
 }
 
 .about-timeline {
@@ -1282,43 +1300,47 @@
   display: grid;
   min-width: 0;
   grid-template-columns: minmax(0, 1fr);
-  gap: var(--space-4);
-  padding: 0 0 0 var(--space-5);
+  gap: var(--space-4) 0;
+  padding: 0;
   list-style: none;
 }
 
 .about-timeline::before {
   position: absolute;
-  top: 2rem;
-  bottom: 2rem;
-  left: .8rem;
-  width: 2px;
-  background: var(--line);
+  top: 1.75rem;
+  bottom: 1.75rem;
+  left: calc(5rem + var(--space-3) + 1.75rem);
+  width: 4px;
+  background: var(--green-700);
   content: "";
 }
 
 .about-timeline__item {
   position: relative;
   display: grid;
-  gap: var(--space-2);
+  grid-template-columns: 5rem 3.5rem minmax(0, 1fr);
+  align-items: start;
+  gap: 0 var(--space-3);
   min-width: 0;
-  padding: 0 0 0 var(--space-2);
 }
 
-.about-timeline__item::before {
+.about-timeline__item:not(:last-child)::after {
   position: absolute;
-  top: 2.1rem;
-  left: calc(-1 * var(--space-5) + .52rem);
-  z-index: 1;
-  width: .65rem;
-  height: .65rem;
-  border: 2px solid var(--bg-soft);
-  border-radius: 50%;
-  background: var(--brand-600);
+  top: calc(100% + 8px);
+  left: calc(5rem + var(--space-3) + 1.75rem - 5px);
+  width: 0;
+  height: 0;
+  border-top: 10px solid var(--green-700);
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
   content: "";
 }
 
 .about-timeline__year {
+  grid-column: 1;
+  grid-row: 1;
+  padding-top: 1.25rem;
+  text-align: right;
   color: var(--ink-900);
   font-size: 1.25rem;
   font-weight: 700;
@@ -1326,26 +1348,32 @@
 }
 
 .about-timeline__icon-wrap {
+  grid-column: 2;
+  grid-row: 1;
   display: grid;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   flex: 0 0 auto;
   place-items: center;
-  border: 1px solid var(--line);
+  border: 1px solid var(--green-700);
   border-radius: 50%;
   background: var(--bg);
 }
 
 .about-timeline__icon {
-  width: 3rem;
-  height: 3rem;
+  width: 2.4rem;
+  height: 2.4rem;
   object-fit: contain;
   mix-blend-mode: multiply;
 }
 
 .about-timeline__text {
+  grid-column: 3;
+  grid-row: 1;
   min-width: 0;
   max-width: 60ch;
+  margin: 0;
+  padding-top: .7rem;
   color: var(--ink-500);
   font-size: .95rem;
   overflow-wrap: anywhere;
@@ -1383,35 +1411,18 @@
   background: var(--bg-soft);
 }
 
-.about-global__banner {
-  position: relative;
-  min-height: 17rem;
-  display: flex;
-  align-items: end;
-  padding: var(--space-5);
-  border-radius: var(--radius-l);
-  background-position: center;
-  background-size: cover;
-  box-shadow: var(--shadow-s);
-  overflow: hidden;
+.about-global .section-title {
+  color: var(--green-900);
 }
 
-.about-global__banner::after {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(5, 7, 8, .74), rgba(5, 7, 8, .2));
-  content: "";
-}
-
-.about-global__banner-copy {
-  position: relative;
-  z-index: 1;
-  max-width: 44rem;
+.about-global .section-heading {
+  margin-bottom: var(--space-3);
 }
 
 .about-global__lead {
-  margin: 0;
-  color: #fff;
+  max-width: 52rem;
+  margin: 0 0 var(--space-5);
+  color: var(--ink-500);
   font-size: clamp(1.05rem, 2vw, 1.4rem);
   line-height: 1.6;
 }
@@ -1491,54 +1502,34 @@
 
   .about-timeline {
     display: grid;
-    grid-template-columns: repeat(7, minmax(11rem, 1fr));
-    gap: var(--space-3);
-    overflow-x: auto;
-    padding: 0 0 var(--space-3);
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    scrollbar-color: var(--brand-500) var(--line);
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-4) 0;
+    overflow: visible;
   }
 
   .about-timeline::before {
-    top: auto;
-    bottom: calc(100% - 3.1rem);
-    left: 2rem;
-    right: 2rem;
-    width: auto;
-    height: 2px;
+    top: 1.75rem;
+    bottom: 1.75rem;
+    left: calc(5rem + var(--space-3) + 1.75rem);
+    width: 4px;
+    height: auto;
   }
 
   .about-timeline__item {
-    display: grid;
-    gap: var(--space-3);
-    padding: 0 var(--space-2);
-    scroll-snap-align: start;
-    text-align: left;
-    justify-items: start;
-    align-items: start;
-  }
-
-  .about-timeline__item::before {
-    top: calc(100% - 1.4rem);
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .about-timeline__year,
-  .about-timeline__icon-wrap,
-  .about-timeline__text {
-    justify-self: start;
-  }
-
-  .about-timeline__text {
-    max-width: 19ch;
-    margin: 0;
+    grid-template-columns: 5rem 3.5rem minmax(0, 1fr);
+    gap: 0 var(--space-3);
+    padding: 0;
   }
 
   .about-offices__grid,
   .about-global__countries {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .about-global__countries {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

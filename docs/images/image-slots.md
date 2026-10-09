@@ -35,11 +35,12 @@
 | `home_stat_staff` | `home/home_stat_staff.jpg` | Chỉ số: Nhân sự | 800×500 | **Ảnh giữ chỗ** |
 | `home_stat_top1` | `home/home_stat_top1.jpg` | Chỉ số: Top 1 Nhật Bản | 800×500 | **Ảnh giữ chỗ** |
 
-## `about/`  (13 ảnh)
+## `about/`  (14 ảnh)
 
 | Slot | File | Dùng ở đâu | Kích thước | Ghi chú |
 |---|---|---|---|---|
-| `about_global_banner` | `about/about_global_banner.jpg` | Hợp tác đa quốc gia – banner | 1600×760 | **Ảnh giữ chỗ** |
+| `about_global_banner` | `about/about_global_banner.jpg` | Banner hợp tác đa quốc gia (hiện không dùng) | 1600×760 | **Ảnh giữ chỗ** |
+| `about_history_background` | `about/about_history_background.jpg` | Nền mờ toàn bộ phần lịch sử | — | **Ảnh giữ chỗ** |
 | `about_global_cambodia` | `about/about_global_cambodia.jpg` | Hợp tác đa quốc gia – Cambodia | 1200×800 | **Ảnh giữ chỗ** |
 | `about_global_myanmar` | `about/about_global_myanmar.jpg` | Hợp tác đa quốc gia – Myanmar | 1200×800 | **Ảnh giữ chỗ** |
 | `about_global_vietnam` | `about/about_global_vietnam.jpg` | Hợp tác đa quốc gia – Việt Nam | 1200×800 | **Ảnh giữ chỗ** |

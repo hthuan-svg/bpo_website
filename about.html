@@ -61,7 +61,7 @@
       </div>
     </section>
 
-    <section class="about-history section" aria-labelledby="about-history-title">
+    <section class="about-history section" data-bg="about_history_background" aria-labelledby="about-history-title">
       <div class="container">
         <header class="section-heading" data-reveal>
           <p class="eyebrow" data-i18n="about.page_title"></p>
@@ -95,7 +95,7 @@
               <div class="card__body about-office__body">
                 <h3 class="about-office__name" data-field="name"></h3>
                 <p class="about-office__address" data-field="address"></p>
-                <a class="button button--text about-office__map" data-map-field="address" target="_blank" rel="noopener noreferrer" data-i18n="ui.view_map"></a>
+                <a class="button button--text about-office__map" data-map-field="map_query" target="_blank" rel="noopener noreferrer" data-i18n="ui.view_map"></a>
               </div>
             </article>
           </template>
@@ -109,11 +109,7 @@
           <p class="eyebrow" data-i18n="about.page_title"></p>
           <h2 class="section-title" id="about-global-title" data-i18n="about.global.title"></h2>
         </header>
-        <div class="about-global__banner" data-bg="about_global_banner" data-reveal>
-          <div class="about-global__banner-copy">
-            <p class="about-global__lead" data-i18n="about.global.lead"></p>
-          </div>
-        </div>
+        <p class="about-global__lead" data-i18n="about.global.lead" data-reveal></p>
         <div class="about-global__countries" data-list="about.global.countries">
           <template>
             <article class="about-global__country card" data-reveal>

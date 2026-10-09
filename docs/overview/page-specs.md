@@ -24,7 +24,7 @@ Breadcrumb Home › Partners › SUBARU. Sections: (1) Hero: `subaru_hero` with 
 1. Intro (`about.intro`).
 2. **History timeline**: `about.history.lead` + timeline in **three horizontal rows**: row 1 = **years** evenly spaced across the width (above the pictures), row 2 = **icons** (`icon` slot, in light circles), row 3 = **text** (same position as before). Horizontal scroll with connecting line on desktop; vertical list on mobile. 2025 has no office-opening text.
 3. **Offices** (`about.offices.items[]`, 2 cards): **Head office** `Floors 2–6, 25 Nguyễn Văn Cừ, Thuận Hóa, Huế, Vietnam` and **Branch** `28 Lý Thường Kiệt, Thuận Hóa, Huế, Vietnam`. "View map" opens `https://www.google.com/maps/search/?api=1&query=<encodeURIComponent(map_query)>` in a new tab. (Phạm Văn Đồng office removed.)
-4. **Multinational collaboration** (`about.global`): banner `about_global_banner`, lead, 3 country cards (Vietnam, Cambodia, Myanmar) each with its image slot.
+4. **Multinational collaboration** (`about.global`): dark-green heading, lead in normal section flow, and 3 country cards (Vietnam, Cambodia, Myanmar) in one row on wide screens, each with its image slot. No banner image.
 
 ## Services overview (`services.html`)
 Lead + overview note, two cards (images `services_overview_3d/2d`; Collection has "Coming soon"), breadcrumb and 2-tab switch (Creation | Collection), small SVG diagrams LiDAR→3D and Dashcam→2D.

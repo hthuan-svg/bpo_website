@@ -542,6 +542,15 @@
       },
       "placeholder": true
     },
+    "about_history_background": {
+      "src": "assets/images/about/about_history_background.jpg",
+      "alt": {
+        "vi": "Ảnh nền lịch sử BRYCEN VIETNAM",
+        "en": "BRYCEN VIETNAM history background",
+        "ja": "BRYCEN VIETNAMの歴史の背景画像"
+      },
+      "placeholder": true
+    },
     "about_global_vietnam": {
       "src": "assets/images/about/about_global_vietnam.jpg",
       "alt": {

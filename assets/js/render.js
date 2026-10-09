@@ -88,7 +88,7 @@ function resolveContextValue(path, context, item = null) {
   return context.t(path);
 }
 
-function applyBackground(element, slotName, images) {
+function applyBackground(element, slotName, images, placeholderLabel = '') {
   const slot = images.slots?.[slotName];
   if (!slot) {
     console.warn(`Missing image slot "${slotName}".`);
@@ -97,6 +97,10 @@ function applyBackground(element, slotName, images) {
   const src = safeUrl(slot.src);
   if (src) {
     element.style.backgroundImage = `url("${src.replace(/["\\\n\r]/g, '\\$&')}")`;
+  }
+  if (slot.placeholder) {
+    element.classList.add('is-placeholder');
+    if (placeholderLabel) element.dataset.placeholderLabel = placeholderLabel;
   }
 }
 
@@ -301,7 +305,7 @@ export function renderPage(context, root = document) {
   });
 
   root.querySelectorAll('[data-bg]').forEach((element) => {
-    applyBackground(element, element.dataset.bg, context.images);
+    applyBackground(element, element.dataset.bg, context.images, context.t('ui.image_placeholder'));
   });
 
   root.querySelectorAll('[data-config]').forEach((element) => {
