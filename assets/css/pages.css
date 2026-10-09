@@ -473,6 +473,195 @@
   overflow-wrap: anywhere;
 }
 
+.subaru-page {
+  background: var(--bg-dark);
+  color: var(--text-on-dark);
+}
+
+.subaru-hero {
+  background: var(--bg-dark);
+}
+
+.subaru-hero__panel {
+  display: grid;
+  gap: var(--space-5);
+  padding: clamp(var(--space-4), 5vw, var(--space-6));
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-l);
+  background: linear-gradient(135deg, rgba(16, 20, 18, .96), rgba(18, 24, 21, .9));
+  box-shadow: var(--shadow-dark);
+}
+
+.subaru-hero__media {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: var(--radius-m);
+}
+
+.subaru-hero__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.subaru-hero__content {
+  display: grid;
+  gap: var(--space-3);
+  align-content: center;
+}
+
+.subaru-hero__subtitle {
+  max-width: 42rem;
+  color: var(--muted-on-dark);
+}
+
+.subaru-hero__logo {
+  width: min(100%, 240px);
+  height: auto;
+  margin-top: var(--space-2);
+}
+
+.subaru-intro {
+  background: var(--bg-dark-2);
+}
+
+.subaru-intro__grid,
+.subaru-tech__list {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.subaru-intro__block,
+.subaru-tech__item {
+  display: grid;
+  gap: var(--space-4);
+  padding: clamp(var(--space-4), 5vw, var(--space-5));
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-l);
+  background: var(--surface-dark);
+}
+
+.subaru-intro__image,
+.subaru-tech__image img,
+.subaru-tech__partnership-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+}
+
+.subaru-intro__body,
+.subaru-tech__body {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.subaru-intro__body h3,
+.subaru-tech__title {
+  margin: 0;
+  font-size: clamp(1.3rem, 1.1rem + .7vw, 2rem);
+  color: var(--text-on-dark);
+}
+
+.subaru-intro__body p,
+.subaru-tech__text,
+.subaru-tech__partnership,
+.subaru-cta__panel p,
+.subaru-cta__panel h2 {
+  margin: 0;
+  color: var(--muted-on-dark);
+  overflow-wrap: anywhere;
+}
+
+.subaru-intro__source {
+  font-size: .8rem;
+  color: var(--green-300);
+}
+
+.subaru-tech__item {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.subaru-tech__item.is-highlighted {
+  border-color: rgba(123, 190, 53, .7);
+  background: linear-gradient(180deg, rgba(18, 26, 22, .96), rgba(14, 18, 14, .95));
+  box-shadow: 0 0 0 1px rgba(123, 190, 53, .35);
+}
+
+.subaru-tech__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.subaru-tech__badge {
+  display: inline-flex;
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  background: rgba(123, 190, 53, .14);
+  border: 1px solid rgba(123, 190, 53, .5);
+  color: var(--green-300);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.subaru-tech__partnership {
+  color: var(--text-on-dark);
+  font-weight: 600;
+}
+
+.subaru-tech__partnership-image {
+  margin-top: var(--space-1);
+}
+
+.subaru-cta__panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: clamp(var(--space-4), 5vw, var(--space-6));
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-l);
+  background: linear-gradient(135deg, rgba(17, 23, 19, .96), rgba(10, 14, 11, .92));
+}
+
+.subaru-cta__panel h2 {
+  color: var(--text-on-dark);
+  font-size: clamp(1.8rem, 1.4rem + 1.2vw, 2.7rem);
+}
+
+.subaru-inline-link {
+  color: var(--green-400);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+@media (min-width: 700px) {
+  .subaru-hero__panel,
+  .subaru-intro__block,
+  .subaru-tech__item {
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    align-items: center;
+  }
+
+  .subaru-tech__item.is-highlighted {
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  }
+
+  .subaru-cta__panel {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
 .about-intro {
   padding-top: clamp(3rem, 7vw, var(--space-7));
 }

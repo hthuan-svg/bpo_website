@@ -232,6 +232,25 @@ export function renderPage(context, root = document) {
     element.textContent = value === null || value === undefined ? '' : String(value);
   });
 
+  root.querySelectorAll('[data-link-subaru="true"]').forEach((element) => {
+    if (!(element instanceof HTMLElement)) {
+      return;
+    }
+    const text = element.textContent ?? '';
+    const match = text.match(/SUBARU/i);
+    if (!match) {
+      return;
+    }
+    const href = 'subaru.html';
+    const before = text.slice(0, match.index);
+    const after = text.slice(match.index + match[0].length);
+    const wrapper = document.createElement('span');
+    wrapper.innerHTML = `${before}<a href="${href}" class="subaru-inline-link">${match[0]}</a>${after}`;
+    if (element.childNodes.length === 0) {
+      element.replaceChildren(...wrapper.childNodes);
+    }
+  });
+
   root.querySelectorAll('[data-i18n-html]').forEach((element) => {
     const value = context.t(element.dataset.i18nHtml);
     element.replaceChildren(
