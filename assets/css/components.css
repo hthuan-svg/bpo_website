@@ -750,7 +750,7 @@
 
 .site-footer__contact-item,
 .site-footer__contact-item a {
-  color: var(--muted-on-light);
+  color: var(--charcoal-600);
 }
 
 .site-footer__contact-item {
@@ -834,7 +834,7 @@
   display: inline-flex;
   min-height: 40px;
   align-items: center;
-  color: var(--muted-on-light);
+  color: var(--charcoal-600);
   font-size: .9rem;
   text-decoration: none;
 }
@@ -853,7 +853,7 @@
 }
 
 .site-footer__copyright {
-  color: var(--muted-on-light);
+  color: var(--charcoal-600);
   font-size: .78rem;
 }
 
