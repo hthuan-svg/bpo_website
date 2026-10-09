@@ -12,7 +12,7 @@ Trang web giới thiệu bộ phận **BPO (Business Process Outsourcing)** củ
 |---|---|---|
 | Trang chủ | `index.html` | Hero tách đôi, chỉ số + ảnh, dịch vụ + dải ảnh sản phẩm, cam kết + ISO, đối tác SUBARU |
 | Giới thiệu | `about.html` | Lịch sử, 2 văn phòng (Huế), hợp tác đa quốc gia |
-| Dịch vụ | `services.html` → `services-annotation.html`, `services-collection.html` | Tạo dữ liệu (chính) · Thu thập dữ liệu (đang cập nhật) |
+| Dịch vụ | `services.html` → `services-annotation.html`, `services-collection.html`, `services-data-engineering.html` | Tạo dữ liệu · Thu thập dữ liệu · Data Engineering (đang cập nhật) |
 | Đội ngũ | `team.html` | Cơ cấu, quy trình vận hành, nhân lực đào tạo tại Nhật |
 | Thành tựu & Dự án | `achievements.html` | #1 Nhật Bản, 235 dự án, độ hài lòng |
 | Tầm nhìn | `vision.html` | Growth timeline: Nhật Bản + Đông Nam Á → Mỹ → EU |

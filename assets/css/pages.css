@@ -1582,16 +1582,35 @@
   color: #fff;
 }
 
+.services-overview-card--no-image {
+  background: linear-gradient(135deg, var(--green-900), var(--charcoal-800));
+}
+
 .services-overview-card__copy {
   display: grid;
+  align-self: flex-start;
   gap: var(--space-2);
   max-width: 38rem;
 }
 
+.services-overview-card__status {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 2rem;
+  align-items: center;
+  padding: .35rem .8rem;
+  border-radius: var(--radius-s);
+  background: var(--green-700);
+  color: var(--white);
+  font-size: .8rem;
+  font-weight: 700;
+}
+
 .services-overview-card__title {
-  font-size: clamp(1.5rem, 1.15rem + 1.6vw, 2.25rem);
+  font-size: clamp(1.15rem, .85rem + 1.1vw, 1.75rem);
   font-weight: 600;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .services-overview-card__lead {
@@ -1607,35 +1626,6 @@
 
 .services-overview-card:hover .services-overview-card__arrow {
   transform: translate(3px, -3px);
-}
-
-.services-diagram {
-  display: grid;
-  gap: var(--space-3);
-  margin-top: var(--space-5);
-  padding: clamp(var(--space-3), 4vw, var(--space-5));
-  border: 1px solid var(--line);
-  border-radius: var(--radius-m);
-  background: var(--bg-soft);
-}
-
-.services-diagram__row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 3.5rem minmax(0, 1fr);
-  align-items: center;
-  gap: var(--space-2);
-}
-
-.services-diagram__label {
-  color: var(--ink-700);
-  font-size: clamp(.95rem, .85rem + .45vw, 1.2rem);
-  font-weight: 600;
-  text-align: center;
-}
-
-.services-diagram__arrow {
-  width: 100%;
-  color: var(--brand-600);
 }
 
 .service-group:nth-of-type(even),
@@ -2472,7 +2462,6 @@ a.contact-card__value {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .services-overview__cards,
   .service-items,
   .collection-items {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2480,6 +2469,12 @@ a.contact-card__value {
 
   .service-quality__layout {
     grid-template-columns: minmax(0, 1fr) minmax(18rem, .9fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .services-overview__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

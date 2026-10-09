@@ -17,7 +17,7 @@ certifications{title,lead,items[{code,name,image}]}
 home{hero,stats[{value,label,image}],stats_note,pillars_*,pillars[],showcase{items[{image,caption}]},commitments[],certifications_title,partners{main{name,logo,link,text}},news_title,cta}
 subaru{hero,intro{history,global},tech{items[{id,image,name,text,highlight?,partnership*}]},cta}
 about{intro,history{lead,timeline[{year,icon,text}]},offices{items[{type,image,name,address,map_query}]},global{image,lead,countries[]}}
-services{page_title,lead,overview_note,annotation{lead,tabs,order[],highlights[],usecases,modalities[{id,label,tag,title,text,types[{id,name,images[],captions?,title,summary,points[]}]}],strips{typeId:[slots]},workflow,quality{lead,principles[],flow_image,principles_image,flow_caption,layers[]*},security{title,text,image},cta},collection{status,lead,message,gallery[]}}
+services{page_title,lead,overview_note,status{open},annotation{lead,tabs,order[],highlights[],usecases,modalities[{id,label,tag,title,text,types[{id,name,images[],captions?,title,summary,points[]}]}],strips{typeId:[slots]},workflow,quality{lead,principles[],flow_image,principles_image,flow_caption,layers[]*},security{title,text,image},cta},collection{status,lead,message,gallery[]},data_engineering{status,lead,message,gallery[]}}
 team{tabs,org{lead,headcount,image},process{lead,actors,steps[{actor,text}],image},people{lead,steps[],images[],country_image,country_caption}}
 achievements{awards{headline,headline_text,image,text,source},projects{text,stat_value,stat_label,images[],satisfaction{image,title,text}}}
 vision{direction{text,image},growth{lead,stages[{id,phase,level,title,text,image|regions[]}]}}

@@ -415,6 +415,33 @@
       },
       "placeholder": true
     },
+    "services_data_engineering_01": {
+      "src": "assets/images/services/services_data_engineering_01.jpg",
+      "alt": {
+        "vi": "Hình minh họa Data Engineering 1",
+        "en": "Data Engineering illustration 1",
+        "ja": "データエンジニアリングのイメージ1"
+      },
+      "placeholder": true
+    },
+    "services_data_engineering_02": {
+      "src": "assets/images/services/services_data_engineering_02.jpg",
+      "alt": {
+        "vi": "Hình minh họa Data Engineering 2",
+        "en": "Data Engineering illustration 2",
+        "ja": "データエンジニアリングのイメージ2"
+      },
+      "placeholder": true
+    },
+    "services_data_engineering_03": {
+      "src": "assets/images/services/services_data_engineering_03.jpg",
+      "alt": {
+        "vi": "Hình minh họa Data Engineering 3",
+        "en": "Data Engineering illustration 3",
+        "ja": "データエンジニアリングのイメージ3"
+      },
+      "placeholder": true
+    },
     "home_stat_founded": {
       "src": "assets/images/home/home_stat_founded.jpg",
       "alt": {

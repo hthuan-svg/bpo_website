@@ -7,6 +7,7 @@ const pageLinks = [
   { page: 'services', file: 'services.html', key: 'services' },
   { page: 'services-annotation', file: 'services-annotation.html', key: 'services_annotation' },
   { page: 'services-collection', file: 'services-collection.html', key: 'services_collection' },
+  { page: 'services-data-engineering', file: 'services-data-engineering.html', key: 'services_data_engineering' },
   { page: 'team', file: 'team.html', key: 'team' },
   { page: 'achievements', file: 'achievements.html', key: 'achievements' },
   { page: 'vision', file: 'vision.html', key: 'vision' },
@@ -27,9 +28,11 @@ function navigationMarkup(currentPage) {
   const servicesOpen = currentPage.startsWith('services');
   const servicesCurrent = currentPage === 'services' ? ' aria-current="page"' : '';
   const servicesActive = servicesOpen ? ' is-current' : '';
-  const dropdownExpanded = currentPage === 'services-annotation' || currentPage === 'services-collection';
+  const dropdownExpanded = currentPage === 'services-annotation'
+    || currentPage === 'services-collection'
+    || currentPage === 'services-data-engineering';
   const servicesChildren = pageLinks
-    .filter((link) => link.page === 'services-annotation' || link.page === 'services-collection')
+    .filter((link) => link.page.startsWith('services-'))
     .map((link) => {
       return `<li>${navigationLink(link, currentPage).replace('site-nav__link', 'site-nav__link site-nav__sublink')}</li>`;
     })
@@ -48,12 +51,12 @@ function navigationMarkup(currentPage) {
         </div>
         <ul class="site-nav__submenu" id="services-submenu"${dropdownExpanded ? '' : ' hidden'}>${servicesChildren}</ul>
       </li>
-      <li>${navigationLink(pageLinks[5], currentPage)}</li>
       <li>${navigationLink(pageLinks[6], currentPage)}</li>
       <li>${navigationLink(pageLinks[7], currentPage)}</li>
       <li>${navigationLink(pageLinks[8], currentPage)}</li>
       <li>${navigationLink(pageLinks[9], currentPage)}</li>
       <li>${navigationLink(pageLinks[10], currentPage)}</li>
+      <li>${navigationLink(pageLinks[11], currentPage)}</li>
     </ul>`;
 }
 

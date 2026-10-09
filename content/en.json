@@ -25,6 +25,10 @@
         "title": "AI Data Collection | BRYCEN VIETNAM BPO",
         "description": "Learn about LiDAR and dashcam data collection for AI training."
       },
+      "services-data-engineering": {
+        "title": "Data Engineering | BRYCEN VIETNAM BPO",
+        "description": "Learn about the Data Engineering service from BRYCEN VIETNAM BPO."
+      },
       "team": {
         "title": "Our Team | BRYCEN VIETNAM BPO",
         "description": "Learn about the team structure, operating process, and career opportunities at BRYCEN VIETNAM BPO."
@@ -59,6 +63,7 @@
       "services": "Services",
       "services_annotation": "AI Training Data Creation",
       "services_collection": "AI Training Data Collection",
+      "services_data_engineering": "Data Engineering",
       "team": "Team",
       "achievements": "Achievements & Projects",
       "vision": "Vision",
@@ -342,6 +347,9 @@
     "page_title": "Services",
     "lead": "We specialize in creating training data for AI. Our main work is image annotation using dedicated tools.",
     "overview_note": "We mainly handle two kinds of data: 3D and 2D. 3D data comes from LiDAR scanners; 2D data comes from dashcams mounted around the vehicle.",
+    "status": {
+      "open": "Open"
+    },
     "diagram": {
       "lidar_source": "LiDAR scanner",
       "target_3d": "3D data",
@@ -670,6 +678,17 @@
           "image": "services_collection_03",
           "caption": ""
         }
+      ]
+    },
+    "data_engineering": {
+      "title": "Data Engineering",
+      "lead": "Information about this service is coming soon.",
+      "status": "Coming soon",
+      "message": "We are preparing information about our Data Engineering service. Please check back soon or contact us for a direct consultation.",
+      "gallery": [
+        { "image": "services_data_engineering_01", "caption": "" },
+        { "image": "services_data_engineering_02", "caption": "" },
+        { "image": "services_data_engineering_03", "caption": "" }
       ]
     }
   },

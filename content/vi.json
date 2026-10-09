@@ -25,6 +25,10 @@
         "title": "Thu thập dữ liệu AI | BRYCEN VIETNAM BPO",
         "description": "Tìm hiểu dịch vụ thu thập dữ liệu LiDAR và camera hành trình phục vụ huấn luyện AI."
       },
+      "services-data-engineering": {
+        "title": "Data Engineering | BRYCEN VIETNAM BPO",
+        "description": "Tìm hiểu dịch vụ Data Engineering của BRYCEN VIETNAM BPO."
+      },
       "team": {
         "title": "Đội ngũ BPO | BRYCEN VIETNAM",
         "description": "Tìm hiểu cơ cấu đội ngũ, quy trình vận hành và cơ hội phát triển tại BRYCEN VIETNAM BPO."
@@ -59,6 +63,7 @@
       "services": "Dịch vụ",
       "services_annotation": "Tạo dữ liệu học cho AI",
       "services_collection": "Thu thập dữ liệu học cho AI",
+      "services_data_engineering": "Data Engineering",
       "team": "Đội ngũ",
       "achievements": "Thành tựu & Dự án",
       "vision": "Tầm nhìn",
@@ -342,6 +347,9 @@
     "page_title": "Dịch vụ",
     "lead": "Bộ phận chuyên tạo dữ liệu học tập cho AI, với công việc chính là chú thích (annotation) trên hình ảnh thông qua các công cụ chuyên dụng.",
     "overview_note": "Hiện bộ phận đang thực hiện chính hai mảng dữ liệu: 3D và 2D. Dữ liệu 3D thu nhận từ máy quét LiDAR; dữ liệu 2D thu nhận từ camera hành trình lắp quanh xe.",
+    "status": {
+      "open": "Đang mở"
+    },
     "diagram": {
       "lidar_source": "Máy quét LiDAR",
       "target_3d": "Dữ liệu 3D",
@@ -670,6 +678,17 @@
           "image": "services_collection_03",
           "caption": ""
         }
+      ]
+    },
+    "data_engineering": {
+      "title": "Data Engineering",
+      "lead": "Nội dung dịch vụ đang được cập nhật.",
+      "status": "Sắp ra mắt",
+      "message": "Chúng tôi đang chuẩn bị thông tin về dịch vụ Data Engineering. Vui lòng quay lại sau hoặc liên hệ để được tư vấn trực tiếp.",
+      "gallery": [
+        { "image": "services_data_engineering_01", "caption": "" },
+        { "image": "services_data_engineering_02", "caption": "" },
+        { "image": "services_data_engineering_03", "caption": "" }
       ]
     }
   },

@@ -25,6 +25,10 @@
         "title": "AIデータ収集 | BRYCEN VIETNAM BPO",
         "description": "AI学習向けLiDARデータおよびドライブレコーダーデータの収集をご紹介します。"
       },
+      "services-data-engineering": {
+        "title": "データエンジニアリング | BRYCEN VIETNAM BPO",
+        "description": "BRYCEN VIETNAM BPOのデータエンジニアリングサービスをご紹介します。"
+      },
       "team": {
         "title": "チーム | BRYCEN VIETNAM BPO",
         "description": "BRYCEN VIETNAM BPOの組織体制、運用フロー、キャリア形成についてご紹介します。"
@@ -59,6 +63,7 @@
       "services": "サービス",
       "services_annotation": "AI学習データ作成",
       "services_collection": "AI学習データ収集",
+      "services_data_engineering": "データエンジニアリング",
       "team": "チーム",
       "achievements": "実績・プロジェクト",
       "vision": "ビジョン",
@@ -342,6 +347,9 @@
     "page_title": "サービス",
     "lead": "AI学習データの作成を専門とし、主な業務は専用ツールによる画像アノテーションです。",
     "overview_note": "主に3Dと2Dの2種類のデータを扱います。3DデータはLiDARスキャナー、2Dデータは車両周囲に設置したドライブレコーダーから取得します。",
+    "status": {
+      "open": "受付中"
+    },
     "diagram": {
       "lidar_source": "LiDARスキャナー",
       "target_3d": "3Dデータ",
@@ -670,6 +678,17 @@
           "image": "services_collection_03",
           "caption": ""
         }
+      ]
+    },
+    "data_engineering": {
+      "title": "データエンジニアリング",
+      "lead": "サービスの詳細は近日公開予定です。",
+      "status": "近日公開",
+      "message": "データエンジニアリングサービスの情報を準備中です。公開まで今しばらくお待ちいただくか、直接お問い合わせください。",
+      "gallery": [
+        { "image": "services_data_engineering_01", "caption": "" },
+        { "image": "services_data_engineering_02", "caption": "" },
+        { "image": "services_data_engineering_03", "caption": "" }
       ]
     }
   },

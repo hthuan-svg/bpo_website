@@ -3,7 +3,7 @@
 Content keys are in `content/{vi,en,ja}.json`; image slots in `content/images.json` (`docs/images/image-slots.md`). Global rules are in `AGENTS.md`; colours in `design-system.md`.
 
 ## Global
-- **Header** (black, sticky): left = `company_logo_on_dark` + divider + bold "BPO" badge + small "BUSINESS PROCESS OUTSOURCING" (`ui.brand.*`, hidden <700px except "BPO"). Right = main-menu **tabs** immediately left of the language switcher `VI · EN · 日本語`. With 9 tabs, switch to the hamburger panel below ~1280px; the language switcher always stays visible. Services tab has a dropdown (Creation, Collection). Active tab: green indicator + `aria-current="page"`. **No skip link.**
+- **Header** (black, sticky): left = `company_logo_on_dark` + divider + bold "BPO" badge + small "BUSINESS PROCESS OUTSOURCING" (`ui.brand.*`, hidden <700px except "BPO"). Right = main-menu **tabs** immediately left of the language switcher `VI · EN · 日本語`. With 9 tabs, switch to the hamburger panel below ~1280px; the language switcher always stays visible. Services tab has a dropdown (Creation, Collection, Data Engineering). Active tab: green indicator + `aria-current="page"`. **No skip link.**
 - **Footer** (black): column 1 logo (`company_logo_on_dark`) + `ui.brand.dept_full` + company name; column 2 **contact address** (`ui.footer.address_title`): head-office and branch addresses from `site.config.json → contact.address[lang]` (and `about.offices` names if address is empty), email (`mailto:`), phone (`tel:`) — each hidden when empty; column 3 quick links (the menu pages); column 4 social icons (hidden when empty) + "Brycen Japan website" link; bottom line copyright.
 - **Back-to-top** button (global, `backtotop.js`, `site.config.json → backToTop`). **Lightbox** for any `[data-lightbox]` image (Esc closes, keyboard accessible). **Placeholder** styling for slots with `placeholder:true`. **Breadcrumb** on sub-pages. **Marquee** component (below).
 - **Marquee strip** (reusable): horizontal, auto-scrolling image strip; items duplicated for a seamless loop; pause on hover/focus; click opens the lightbox; speed = `site.config.json → marquee.<area>.secondsPerLoop`; under `prefers-reduced-motion` it is a static horizontally scrollable row with scroll-snap. Images keep 16:9 frames; placeholders keep the dashed frame.
@@ -27,10 +27,10 @@ Breadcrumb Home › Partners › SUBARU. Sections: (1) Hero: `subaru_hero` with 
 4. **Multinational collaboration** (`about.global`): dark-green heading, lead in normal section flow, and 3 country cards (Vietnam, Cambodia, Myanmar) in one row on wide screens, each with its image slot. No banner image.
 
 ## Services overview (`services.html`)
-Lead + overview note, two cards (images `services_overview_3d/2d`; Collection has "Coming soon"), breadcrumb and 2-tab switch (Creation | Collection), small SVG diagrams LiDAR→3D and Dashcam→2D.
+Lead + overview note, three cards (images `services_overview_3d/2d`; Data Engineering has "Coming soon"), breadcrumb and service switch (Creation | Collection | Data Engineering), Contact call-to-action below the cards.
 
 ## Services › AI Training Data Creation (`services-annotation.html`)
-Breadcrumb Home › Services › Creation + 2-tab switch. Hero (title, lead, 3 highlights).
+Breadcrumb Home › Services › Creation + service switch (Creation | Collection | Data Engineering). Hero (title, lead, 3 highlights).
 **Left vertical side-nav** (desktop ≥1024px): sticky, follows the screen while scrolling, scroll-spy highlight, title `ui.on_this_page`; entries in the order of `services.annotation.order` = **Use cases → Data types → How we work → Quality control → Information security** (labels `services.annotation.tabs.*`). On mobile it becomes a sticky horizontal chip bar.
 Sections in that same order:
 1. `#usecases` "What is labeled data used for?" (`usecases`, 4 cards) — placed **before** the work areas.
@@ -42,6 +42,9 @@ CTA band at the end.
 
 ## Services › AI Training Data Collection (`services-collection.html`)
 Intentionally empty "coming soon" page: status chip, lead, message, 3 placeholder gallery frames (`services.collection.gallery`), CTA. Do not add technical content.
+
+## Services › Data Engineering (`services-data-engineering.html`)
+Intentionally empty "coming soon" page matching the Collection page: status chip, lead, message, 3 placeholder gallery frames (`services.data_engineering.gallery`), CTA. Do not add technical content.
 
 ## Team (`team.html`) — in-page tabs: Organization · Operating flow · Trained people
 1. `#org` "Organization structure": headcount number + `org.lead` + ONE large image slot `team_org_image` (owner will add a photo of working with customers conveying trust). **No org-chart drawing.**

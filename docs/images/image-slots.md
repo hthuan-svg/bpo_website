@@ -54,7 +54,7 @@
 | `about_timeline_2023` | `about/about_timeline_2023.png` | Lịch sử – biểu tượng năm 2023 | 190×190 |  |
 | `about_timeline_2025` | `about/about_timeline_2025.png` | Lịch sử – biểu tượng năm 2025 | 175×175 |  |
 
-## `services/`  (44 ảnh)
+## `services/`  (47 ảnh)
 
 | Slot | File | Dùng ở đâu | Kích thước | Ghi chú |
 |---|---|---|---|---|
@@ -95,6 +95,9 @@
 | `services_collection_01` | `services/services_collection_01.jpg` | Thu thập dữ liệu – ô ảnh 1 | 1200×800 | **Ảnh giữ chỗ** |
 | `services_collection_02` | `services/services_collection_02.jpg` | Thu thập dữ liệu – ô ảnh 2 | 1200×800 | **Ảnh giữ chỗ** |
 | `services_collection_03` | `services/services_collection_03.jpg` | Thu thập dữ liệu – ô ảnh 3 | 1200×800 | **Ảnh giữ chỗ** |
+| `services_data_engineering_01` | `services/services_data_engineering_01.jpg` | Data Engineering – ô ảnh 1 | 1200×800 | **Ảnh giữ chỗ** |
+| `services_data_engineering_02` | `services/services_data_engineering_02.jpg` | Data Engineering – ô ảnh 2 | 1200×800 | **Ảnh giữ chỗ** |
+| `services_data_engineering_03` | `services/services_data_engineering_03.jpg` | Data Engineering – ô ảnh 3 | 1200×800 | **Ảnh giữ chỗ** |
 | `services_collection_sample_dashcam` | `services/services_collection_sample_dashcam.jpg` | Ảnh mẫu dashcam (chưa dùng) | 960×565 |  |
 | `services_collection_sample_lidar` | `services/services_collection_sample_lidar.jpg` | Ảnh mẫu LiDAR (chưa dùng) | 960×527 |  |
 | `services_overview_2d` | `services/services_overview_2d.jpg` | Thẻ dịch vụ 2D | 960×565 |  |
