@@ -1226,32 +1226,15 @@
     },
     "growth": {
       "title": "Lộ trình phát triển",
-      "lead": "Từ nền tảng tại Nhật Bản và Đông Nam Á, tiếp tục mở rộng sang Hoa Kỳ và xa hơn là châu Âu.",
+      "lead": "Từ Nhật Bản và Việt Nam, chúng tôi hướng tới những thị trường mới.",
       "stages": [
         {
           "id": "now",
           "phase": "Hiện tại",
           "level": 1,
-          "title": "Nhật Bản & Đông Nam Á",
-          "regions": [
-            {
-              "id": "jp",
-              "image": "vision_roadmap_japan",
-              "title": "Nhật Bản",
-              "text": "Thị trường hiện tại, nơi chúng tôi giữ vị trí số 1 về dịch vụ annotation."
-            },
-            {
-              "id": "sea",
-              "image": "vision_roadmap_sea",
-              "title": "Đông Nam Á",
-              "text": "Phát triển hoạt động tại khu vực, hiện tại gồm Việt Nam, Myanmar và Cambodia.",
-              "countries": [
-                "Việt Nam",
-                "Myanmar",
-                "Cambodia"
-              ]
-            }
-          ]
+          "title": "Nhật Bản & Việt Nam",
+          "image": "vision_roadmap_sea",
+          "text": "Chúng tôi bắt đầu với quy mô nhỏ và tiếp tục phát triển tại Nhật Bản và Việt Nam."
         },
         {
           "id": "next",

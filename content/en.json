@@ -1226,32 +1226,15 @@
     },
     "growth": {
       "title": "Growth timeline",
-      "lead": "From our base in Japan and Southeast Asia, we expand next to the United States and further to Europe.",
+      "lead": "From Japan and Viet Nam, our next steps lead to new markets.",
       "stages": [
         {
           "id": "now",
           "phase": "Now",
           "level": 1,
-          "title": "Japan & Southeast Asia",
-          "regions": [
-            {
-              "id": "jp",
-              "image": "vision_roadmap_japan",
-              "title": "Japan",
-              "text": "Our current market, where we hold the No.1 position in annotation services."
-            },
-            {
-              "id": "sea",
-              "image": "vision_roadmap_sea",
-              "title": "Southeast Asia",
-              "text": "Developing operations across the region — currently Vietnam, Myanmar and Cambodia.",
-              "countries": [
-                "Vietnam",
-                "Myanmar",
-                "Cambodia"
-              ]
-            }
-          ]
+          "title": "Japan & Viet Nam",
+          "image": "vision_roadmap_sea",
+          "text": "We started small and continue to grow in Japan and Viet Nam."
         },
         {
           "id": "next",

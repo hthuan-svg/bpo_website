@@ -123,10 +123,11 @@
 | `achievements_projects_03` | `achievements/achievements_projects_03.jpg` | Dự án – ảnh minh họa 03 | 1200×800 | **Ảnh giữ chỗ** |
 | `achievements_satisfaction` | `achievements/achievements_satisfaction.jpg` | Độ hài lòng của khách | 1200×800 | **Ảnh giữ chỗ** |
 
-## `vision/`  (5 ảnh)
+## `vision/`  (6 ảnh)
 
 | Slot | File | Dùng ở đâu | Kích thước | Ghi chú |
 |---|---|---|---|---|
+| `growth_timeline_image` | `vision/growth_timeline_image.jpg` | Growth timeline – ảnh nền | 2195×2294 |  |
 | `vision_direction_image` | `vision/vision_direction_image.jpg` | Định hướng phát triển – ảnh | 1600×760 | **Ảnh giữ chỗ** |
 | `vision_roadmap_eu` | `vision/vision_roadmap_eu.jpg` | Growth timeline – EU | 1600×760 | **Ảnh giữ chỗ** |
 | `vision_roadmap_japan` | `vision/vision_roadmap_japan.jpg` | Growth timeline – Nhật Bản | 1600×760 | **Ảnh giữ chỗ** |

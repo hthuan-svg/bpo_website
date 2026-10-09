@@ -55,7 +55,7 @@ Recruitment moved to the **Recruitment** page; remove every link to `team.html#r
 
 ## Vision (`vision.html`)
 1. **Direction** (`vision.direction`): text + image slot `vision.direction.image`.
-2. **Growth timeline** (`vision.growth`): a rising stepped/curved timeline, left→right, nodes growing with `level`: **Now** (Japan + Southeast Asia, two sub-cards with images; SEA shows country chips Vietnam · Myanmar · Cambodia) → **Next step: United States** (featured, largest card, clean map image `vision_roadmap_usa`) → **Further ahead: Europe (EU)** (image `vision_roadmap_eu`, placeholder). Vertical timeline on mobile. Nothing else (no recruitment here).
+2. **Growth timeline** (`vision.growth`): black section with background image slot `growth_timeline_image`, white heading and three equal-size image cards arranged as pronounced rising steps, left→right; **Now** (Japan + Viet Nam) sits lowest, followed by **Next step: United States** (featured, clean map image `vision_roadmap_usa`) and **Further ahead: Europe (EU)** (image `vision_roadmap_eu`, placeholder). Step headings are dark green on light cards. Vertical timeline on mobile. Nothing else (no recruitment here).
 
 ## News (`news.html`)
 Unchanged behaviour; images now use `news_*` slots (`news_default` for items without an image). Dark theme styling.

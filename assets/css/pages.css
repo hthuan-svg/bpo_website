@@ -2906,13 +2906,44 @@ a.contact-card__value {
 }
 
 .vision-growth {
+  position: relative;
+  isolation: isolate;
   overflow: hidden;
-  background: var(--bg-soft);
+  background: var(--black-950);
+  background-position: center;
+  background-size: cover;
+}
+
+.vision-growth::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: var(--black-950);
+  content: "";
+  opacity: .68;
+}
+
+.vision-growth > .page-container {
+  position: relative;
+  z-index: 1;
 }
 
 .vision-growth__timeline {
+  position: relative;
   display: grid;
+  grid-auto-rows: 1fr;
   gap: var(--space-4);
+  padding-left: var(--space-4);
+}
+
+.vision-growth__timeline::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: .5rem;
+  width: 2px;
+  background: var(--green-400);
+  content: "";
 }
 
 .vision-growth__stage {
@@ -2921,8 +2952,9 @@ a.contact-card__value {
   align-content: start;
   gap: var(--space-3);
   min-width: 0;
+  min-height: 25rem;
   padding: var(--space-3);
-  border: 1px solid var(--line);
+  border: 1px solid var(--gray-200);
   border-radius: var(--radius-m);
   background: var(--bg);
   box-shadow: var(--shadow-s);
@@ -2947,57 +2979,31 @@ a.contact-card__value {
   text-transform: uppercase;
 }
 
-.vision-growth__title,
-.vision-growth__region-title {
+.vision-growth__title {
   margin: 0;
+  color: var(--green-700);
   font-size: clamp(1.25rem, 1.05rem + .7vw, 1.8rem);
 }
 
-.vision-growth__regions {
-  display: grid;
-  gap: var(--space-3);
+.vision-growth__heading .section-title {
+  color: var(--white);
 }
 
-.vision-growth__region {
-  display: grid;
-  align-content: start;
-  gap: var(--space-2);
-  min-width: 0;
-  padding: var(--space-2);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-s);
-  background: var(--bg-soft);
+.vision-growth__heading .section-lead {
+  color: var(--gray-300);
 }
 
 .vision-growth__image {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: var(--radius-s);
 }
 
 .vision-growth__text {
   margin: 0;
-  color: var(--ink-500);
-}
-
-.vision-growth__countries {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.vision-growth__country {
-  padding: .3rem .65rem;
-  border: 1px solid var(--green-700);
-  border-radius: 999px;
-  color: var(--green-700);
-  font-size: .8rem;
-  font-weight: 600;
+  color: var(--gray-600);
 }
 
 .vision-growth__image-button {
@@ -3016,10 +3022,6 @@ a.contact-card__value {
 .vision-growth__image-button:focus-visible {
   outline: 3px solid var(--green-700);
   outline-offset: 3px;
-}
-
-.vision-growth__image-button .vision-growth__image {
-  aspect-ratio: 4 / 3;
 }
 
 .vision-lightbox {
@@ -3193,39 +3195,30 @@ a.contact-card__value {
 
 @media (min-width: 960px) {
   .vision-growth__timeline {
-    position: relative;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: start;
     gap: var(--space-4);
-    padding-top: 10rem;
+    padding: 6rem 0 12rem;
   }
 
   .vision-growth__timeline::before {
-    position: absolute;
-    top: 4rem;
-    right: 4%;
-    left: 4%;
-    height: 7rem;
-    border-top: 3px solid var(--green-500);
-    border-right: 3px solid var(--green-500);
-    border-radius: 0 var(--radius-l) 0 0;
-    content: "";
-    transform: skewY(-12deg);
-    transform-origin: right top;
+    display: none;
   }
 
   .vision-growth__stage {
     z-index: 1;
-    min-height: 20rem;
-    transform: translateY(calc((3 - var(--stage-level)) * 2.5rem));
+    transform: translateY(var(--stage-offset));
   }
 
-  .vision-growth__stage.is-featured {
-    min-height: 25rem;
-    transform: translateY(calc((3 - var(--stage-level)) * 2.5rem - 2rem));
+  .vision-growth__stage[data-level="1"] {
+    --stage-offset: 12rem;
   }
 
-  .vision-growth__regions {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .vision-growth__stage[data-level="2"] {
+    --stage-offset: 6rem;
   }
+
+  .vision-growth__stage[data-level="3"] {
+    --stage-offset: 0rem;
+  }
+
 }

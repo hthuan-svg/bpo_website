@@ -53,7 +53,7 @@
       </div>
     </section>
 
-    <section class="section-shell vision-growth" aria-labelledby="vision-growth-title">
+    <section class="section-shell vision-growth" data-bg="growth_timeline_image" aria-labelledby="vision-growth-title">
       <div class="page-container">
         <header class="section-heading vision-growth__heading" data-reveal>
           <p class="eyebrow" data-i18n="vision.page_title"></p>
@@ -91,7 +91,7 @@
       return element;
     }
 
-    function buildImage(slotName, context, className = 'vision-growth__image') {
+    function buildImage(slotName, context) {
       const slot = context.images?.slots?.[slotName];
       if (!slot) {
         return null;
@@ -109,7 +109,7 @@
         image.height = slot.height;
       }
       image.loading = 'lazy';
-      image.className = className;
+      image.className = 'vision-growth__image';
       return image;
     }
 
@@ -127,7 +127,7 @@
 
       stages.forEach((stage, index) => {
         const article = createElement('article', 'vision-growth__stage');
-        article.style.setProperty('--stage-level', String(stage.level ?? index + 1));
+        article.dataset.level = String(stage.level ?? index + 1);
         if (stage.featured) {
           article.classList.add('is-featured');
         }
@@ -137,24 +137,7 @@
           createElement('h3', 'vision-growth__title', stage.title ?? '')
         );
 
-        if (Array.isArray(stage.regions)) {
-          const regions = createElement('div', 'vision-growth__regions');
-          stage.regions.forEach((region) => {
-            const card = createElement('article', 'vision-growth__region');
-            const image = buildImage(region.image, context, 'vision-growth__image');
-            const title = createElement('h4', 'vision-growth__region-title', region.title ?? '');
-            const text = createElement('p', 'vision-growth__text', region.text ?? '');
-            if (image) card.append(image);
-            card.append(title, text);
-            if (Array.isArray(region.countries) && region.countries.length) {
-              const countries = createElement('ul', 'vision-growth__countries');
-              region.countries.forEach((country) => countries.append(createElement('li', 'vision-growth__country', country)));
-              card.append(countries);
-            }
-            regions.append(card);
-          });
-          article.append(heading, regions);
-        } else {
+        if (stage.id === 'next') {
           const text = createElement('p', 'vision-growth__text', stage.text ?? '');
           const media = createElement('button', 'vision-growth__image-button');
           media.type = 'button';
@@ -162,8 +145,13 @@
           media.dataset.slot = stage.image ?? '';
           const image = buildImage(stage.image, context);
           if (image) media.append(image);
-          if (stage.id === 'next') media.dataset.lightboxTrigger = 'usa';
+          media.dataset.lightboxTrigger = 'usa';
           article.append(heading, text, media);
+        } else {
+          const text = createElement('p', 'vision-growth__text', stage.text ?? '');
+          const image = buildImage(stage.image, context);
+          article.append(heading, text);
+          if (image) article.append(image);
         }
         timelineList.append(article);
       });

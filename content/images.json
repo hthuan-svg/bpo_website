@@ -351,6 +351,17 @@
         "ja": "国内シェアNo.1バッジ（富士キメラ総研）"
       }
     },
+    "growth_timeline_image": {
+      "src": "assets/images/vision/growth_timeline_image.jpg",
+      "width": 2195,
+      "height": 2294,
+      "alt": {
+        "vi": "Ảnh nền lộ trình phát triển",
+        "en": "Growth timeline background image",
+        "ja": "成長タイムラインの背景画像"
+      },
+      "placeholder": false
+    },
     "vision_roadmap_usa": {
       "src": "assets/images/vision/vision_roadmap_usa.jpg",
       "alt": {
