@@ -1,4 +1,4 @@
-<!-- Renders the vision page roadmap and growth story for the BPO division. -->
+<!-- Shows the vision direction and localized growth timeline for the BPO division. -->
 <!doctype html>
 <html lang="vi">
 <head>
@@ -43,23 +43,24 @@
   <div id="site-header"></div>
   <main id="main" class="content-page vision-page">
     <section class="section-shell vision-direction">
-      <div class="page-container">
+      <div class="page-container vision-direction__layout">
         <header class="section-heading" data-reveal>
           <p class="eyebrow" data-i18n="vision.page_title"></p>
           <h1 class="section-title" data-i18n="vision.direction.title"></h1>
           <p class="section-lead" data-i18n="vision.direction.text"></p>
         </header>
+        <img class="vision-direction__image" data-content-image="vision.direction.image" loading="lazy">
       </div>
     </section>
 
-    <section class="section-shell vision-roadmap" aria-labelledby="vision-roadmap-title">
+    <section class="section-shell vision-growth" aria-labelledby="vision-growth-title">
       <div class="page-container">
-        <header class="section-heading vision-roadmap__heading" data-reveal>
+        <header class="section-heading vision-growth__heading" data-reveal>
           <p class="eyebrow" data-i18n="vision.page_title"></p>
-          <h2 id="vision-roadmap-title" class="section-title" data-i18n="vision.roadmap.title"></h2>
-          <p class="section-lead" data-i18n="vision.roadmap.lead"></p>
+          <h2 id="vision-growth-title" class="section-title" data-i18n="vision.growth.title"></h2>
+          <p class="section-lead" data-i18n="vision.growth.lead"></p>
         </header>
-        <div id="vision-roadmap-list" class="vision-roadmap__timeline" aria-live="polite"></div>
+        <div id="vision-growth-list" class="vision-growth__timeline" aria-live="polite"></div>
       </div>
     </section>
   </main>
@@ -67,14 +68,15 @@
 
   <dialog class="vision-lightbox" aria-labelledby="vision-lightbox-title">
     <form class="vision-lightbox__form" method="dialog">
-      <button class="vision-lightbox__close" type="submit" aria-label="Close">×</button>
+      <h2 id="vision-lightbox-title" class="sr-only" data-i18n="vision.growth.title"></h2>
+      <button class="vision-lightbox__close" type="submit" data-i18n-attr="aria-label:ui.close_image"><span aria-hidden="true">×</span></button>
       <img id="vision-lightbox-image" class="vision-lightbox__image" src="" alt="" loading="eager" width="1200" height="800">
     </form>
   </dialog>
 
   <script type="module" src="assets/js/app.js"></script>
   <script type="module">
-    const roadmapList = document.querySelector('#vision-roadmap-list');
+    const timelineList = document.querySelector('#vision-growth-list');
     const lightbox = document.querySelector('.vision-lightbox');
     const lightboxImage = document.querySelector('#vision-lightbox-image');
 
@@ -89,7 +91,7 @@
       return element;
     }
 
-    function buildImage(slotName, context) {
+    function buildImage(slotName, context, className = 'vision-growth__image') {
       const slot = context.images?.slots?.[slotName];
       if (!slot) {
         return null;
@@ -107,124 +109,99 @@
         image.height = slot.height;
       }
       image.loading = 'lazy';
-      image.className = 'vision-roadmap__image';
+      image.className = className;
       return image;
     }
 
-    function renderVisionRoadmap() {
+    function renderVisionGrowth() {
       const context = window.siteI18n;
-      if (!context || !roadmapList) {
+      if (!context || !timelineList) {
         return;
       }
 
-      const stages = Array.isArray(context.t('vision.roadmap.stages'))
-        ? context.t('vision.roadmap.stages')
+      const stages = Array.isArray(context.t('vision.growth.stages'))
+        ? context.t('vision.growth.stages')
         : [];
 
-      roadmapList.replaceChildren();
+      timelineList.replaceChildren();
 
-      stages.forEach((stage) => {
-        const article = createElement('article', 'vision-roadmap__stage');
+      stages.forEach((stage, index) => {
+        const article = createElement('article', 'vision-growth__stage');
+        article.style.setProperty('--stage-level', String(stage.level ?? index + 1));
         if (stage.featured) {
           article.classList.add('is-featured');
         }
-        if (stage.id) {
-          article.dataset.stageId = stage.id;
-        }
-        if (stage.phase) {
-          article.dataset.phase = String(stage.phase);
-        }
+        const heading = createElement('div', 'vision-growth__stage-heading');
+        heading.append(
+          createElement('p', 'vision-growth__phase', stage.phase ?? ''),
+          createElement('h3', 'vision-growth__title', stage.title ?? '')
+        );
 
-        const copy = createElement('div', 'vision-roadmap__copy');
-        const badge = createElement('span', 'vision-roadmap__badge', stage.phase ?? '');
-        const title = createElement('h3', 'vision-roadmap__title', stage.title ?? '');
-        const text = createElement('p', 'vision-roadmap__text', stage.text ?? '');
-
-        copy.append(badge, title, text);
-
-        if (Array.isArray(stage.countries) && stage.countries.length) {
-          const countries = createElement('ul', 'vision-roadmap__countries');
-          stage.countries.forEach((country) => {
-            const item = createElement('li', 'vision-roadmap__country', country.name ?? '');
-            if (country.status === 'current') {
-              item.classList.add('is-current');
+        if (Array.isArray(stage.regions)) {
+          const regions = createElement('div', 'vision-growth__regions');
+          stage.regions.forEach((region) => {
+            const card = createElement('article', 'vision-growth__region');
+            const image = buildImage(region.image, context, 'vision-growth__image');
+            const title = createElement('h4', 'vision-growth__region-title', region.title ?? '');
+            const text = createElement('p', 'vision-growth__text', region.text ?? '');
+            if (image) card.append(image);
+            card.append(title, text);
+            if (Array.isArray(region.countries) && region.countries.length) {
+              const countries = createElement('ul', 'vision-growth__countries');
+              region.countries.forEach((country) => countries.append(createElement('li', 'vision-growth__country', country)));
+              card.append(countries);
             }
-            countries.append(item);
+            regions.append(card);
           });
-          copy.append(countries);
+          article.append(heading, regions);
+        } else {
+          const text = createElement('p', 'vision-growth__text', stage.text ?? '');
+          const media = createElement('button', 'vision-growth__image-button');
+          media.type = 'button';
+          media.setAttribute('aria-label', stage.title ?? '');
+          media.dataset.slot = stage.image ?? '';
+          const image = buildImage(stage.image, context);
+          if (image) media.append(image);
+          if (stage.id === 'next') media.dataset.lightboxTrigger = 'usa';
+          article.append(heading, text, media);
         }
-
-        const media = createElement('div', 'vision-roadmap__media');
-        const imageButton = createElement('button', 'vision-roadmap__image-button');
-        imageButton.type = 'button';
-        imageButton.setAttribute('aria-label', stage.title ?? '');
-        const image = buildImage(stage.image, context);
-        if (image) {
-          imageButton.append(image);
-        }
-
-        if (stage.id === 'usa' && lightbox) {
-          imageButton.setAttribute('data-lightbox-trigger', 'usa');
-          const zoomLabel = createElement('span', 'vision-roadmap__zoom', '↗');
-          zoomLabel.setAttribute('aria-hidden', 'true');
-          imageButton.append(zoomLabel);
-        }
-
-        media.append(imageButton);
-        article.append(copy, media);
-        roadmapList.append(article);
+        timelineList.append(article);
       });
 
-      const triggers = roadmapList.querySelectorAll('[data-lightbox-trigger="usa"]');
-      triggers.forEach((trigger) => {
-        trigger.addEventListener('click', () => {
-          if (!lightbox || !lightboxImage) {
-            return;
-          }
-
-          const stage = Array.isArray(context.t('vision.roadmap.stages'))
-            ? context.t('vision.roadmap.stages').find((item) => item.id === 'usa')
-            : null;
-          if (!stage) {
-            return;
-          }
-
-          const slot = context.images?.slots?.[stage.image];
-          if (!slot) {
-            return;
-          }
-
-          lightboxImage.src = slot.src;
-          lightboxImage.alt = slot.alt?.[context.language] ?? slot.alt?.vi ?? '';
-          lightboxImage.width = Number.isInteger(slot.width) ? slot.width : 1200;
-          lightboxImage.height = Number.isInteger(slot.height) ? slot.height : 800;
-          if (slot.placeholder) {
-            lightboxImage.classList.add('is-placeholder');
-            lightboxImage.dataset.placeholderLabel = context.t('ui.image_placeholder');
-          } else {
-            lightboxImage.classList.remove('is-placeholder');
-            delete lightboxImage.dataset.placeholderLabel;
-          }
-
-          if (typeof lightbox.showModal === 'function') {
-            lightbox.showModal();
-          } else {
-            lightbox.setAttribute('open', 'open');
-          }
-        });
-      });
     }
 
-    function ensureVisionRoadmap() {
+    function openUsaImage(event) {
+      const trigger = event.target.closest('[data-lightbox-trigger="usa"]');
+      const context = window.siteI18n;
+      if (!trigger || !context || !lightbox || !lightboxImage) return;
+      const slot = context.images?.slots?.[trigger.dataset.slot];
+      if (!slot) return;
+      lightboxImage.src = slot.src;
+      lightboxImage.alt = slot.alt?.[context.language] ?? slot.alt?.vi ?? '';
+      lightboxImage.width = Number.isInteger(slot.width) ? slot.width : 1200;
+      lightboxImage.height = Number.isInteger(slot.height) ? slot.height : 800;
+      if (slot.placeholder) {
+        lightboxImage.classList.add('is-placeholder');
+        lightboxImage.dataset.placeholderLabel = context.t('ui.image_placeholder');
+      } else {
+        lightboxImage.classList.remove('is-placeholder');
+        delete lightboxImage.dataset.placeholderLabel;
+      }
+      if (typeof lightbox.showModal === 'function') lightbox.showModal();
+      else lightbox.setAttribute('open', 'open');
+    }
+
+    function ensureVisionGrowth() {
       if (window.siteI18n) {
-        renderVisionRoadmap();
+        renderVisionGrowth();
         return;
       }
-      requestAnimationFrame(ensureVisionRoadmap);
+      requestAnimationFrame(ensureVisionGrowth);
     }
 
-    document.addEventListener('langchange', renderVisionRoadmap);
-    ensureVisionRoadmap();
+    timelineList?.addEventListener('click', openUsaImage);
+    document.addEventListener('langchange', renderVisionGrowth);
+    ensureVisionGrowth();
   </script>
 </body>
 </html>

@@ -50,14 +50,11 @@
         </header>
         <div class="achievements-awards__layout" data-reveal>
           <div class="achievements-awards__stat">
-            <strong class="content-stat__value" id="awards-year-count"></strong>
+            <strong class="content-stat__value achievements-awards__headline" data-i18n="achievements.awards.headline"></strong>
+            <span class="content-stat__label" data-i18n="achievements.awards.headline_text"></span>
             <p class="content-stat__label" data-i18n="achievements.awards.text"></p>
           </div>
-          <ul class="achievements-awards__badges" data-list="achievements.awards.badges">
-            <template>
-              <li><img class="achievements-awards__badge" data-img-field="." loading="lazy"></li>
-            </template>
-          </ul>
+          <img class="achievements-awards__image" data-content-image="achievements.awards.image" loading="lazy">
         </div>
         <p class="achievements-awards__source" data-i18n="achievements.awards.source"></p>
       </div>
@@ -76,11 +73,14 @@
           </div>
           <p class="section-lead achievements-projects__text" data-i18n="achievements.projects.text" data-link-subaru="true"></p>
         </div>
-        <ul class="content-logo-wall" data-list="achievements.projects.customers">
-          <template>
-            <li><img class="content-logo-wall__image" data-img-field="." loading="lazy"></li>
-          </template>
-        </ul>
+        <ul class="achievements-projects__gallery" data-image-list="achievements.projects.images" data-i18n-attr="aria-label:achievements.projects.title"></ul>
+        <article class="achievements-satisfaction" data-reveal>
+          <img class="achievements-satisfaction__image" data-content-image="achievements.satisfaction.image" loading="lazy">
+          <div class="achievements-satisfaction__copy">
+            <h3 class="achievements-satisfaction__title" data-i18n="achievements.satisfaction.title"></h3>
+            <p class="achievements-satisfaction__text" data-i18n="achievements.satisfaction.text"></p>
+          </div>
+        </article>
       </div>
     </section>
   </main>

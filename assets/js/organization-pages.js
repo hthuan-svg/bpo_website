@@ -133,22 +133,10 @@ function renderTeamPeople(context) {
   }
 }
 
-function renderAwardCount(context) {
-  const count = document.querySelector('#awards-year-count');
-  if (!count) {
-    return;
-  }
-
-  const text = context.t('achievements.awards.text');
-  const match = typeof text === 'string' ? text.match(/\d+/u) : null;
-  count.textContent = match?.[0] ?? '';
-}
-
 export function renderOrganizationPages(context) {
   bindTeamTabs();
   renderTeamOrg(context);
   renderTeamProcess(context);
   renderTeamPeople(context);
-  renderAwardCount(context);
   updateTeamTabs();
 }

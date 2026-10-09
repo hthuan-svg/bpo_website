@@ -244,11 +244,11 @@ export function renderPage(context, root = document) {
     const href = 'subaru.html';
     const before = text.slice(0, match.index);
     const after = text.slice(match.index + match[0].length);
-    const wrapper = document.createElement('span');
-    wrapper.innerHTML = `${before}<a href="${href}" class="subaru-inline-link">${match[0]}</a>${after}`;
-    if (element.childNodes.length === 0) {
-      element.replaceChildren(...wrapper.childNodes);
-    }
+    const link = document.createElement('a');
+    link.href = href;
+    link.className = 'subaru-inline-link';
+    link.textContent = match[0];
+    element.replaceChildren(document.createTextNode(before), link, document.createTextNode(after));
   });
 
   root.querySelectorAll('[data-i18n-html]').forEach((element) => {
@@ -276,6 +276,28 @@ export function renderPage(context, root = document) {
 
   root.querySelectorAll('[data-img]').forEach((element) => {
     applyImage(element, element.dataset.img, context.images, context.language, context.t('ui.image_placeholder'));
+  });
+
+  root.querySelectorAll('[data-content-image]').forEach((element) => {
+    const slotName = context.t(element.dataset.contentImage);
+    if (typeof slotName === 'string') {
+      applyImage(element, slotName, context.images, context.language, context.t('ui.image_placeholder'));
+    }
+  });
+
+  root.querySelectorAll('[data-image-list]').forEach((list) => {
+    const slotNames = context.t(list.dataset.imageList);
+    list.replaceChildren();
+    if (!Array.isArray(slotNames)) return;
+    slotNames.forEach((slotName) => {
+      if (typeof slotName !== 'string') return;
+      const item = document.createElement('li');
+      const image = document.createElement('img');
+      image.className = 'achievements-projects__image';
+      applyImage(image, slotName, context.images, context.language, context.t('ui.image_placeholder'));
+      item.append(image);
+      list.append(item);
+    });
   });
 
   root.querySelectorAll('[data-bg]').forEach((element) => {
