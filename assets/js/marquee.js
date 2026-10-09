@@ -1,4 +1,4 @@
-// Builds the home showcase from registered image slots and supports the animated image strip.
+// Initializes image showcases with animation, drag, reduced-motion scrolling, and a lightbox.
 
 function setUpMarqueeLightbox() {
   let dialog = document.querySelector('.marquee-lightbox');
@@ -153,6 +153,20 @@ export function initializeMarquee(root = document) {
       });
 
       if (!reducedMotion.matches && showcaseSlots.length) {
+        const clone = list.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        clone.querySelectorAll('[tabindex]').forEach((element) => element.setAttribute('tabindex', '-1'));
+        track.append(clone);
+      }
+      enableMouseDrag(track, list);
+    } else if (container.classList.contains('team-people__showcase')) {
+      track.querySelector(':scope > .marquee__list[aria-hidden="true"]')?.remove();
+      const loopSeconds = window.siteI18n?.siteConfig?.marquee?.team?.secondsPerLoop;
+      if (Number.isFinite(loopSeconds) && loopSeconds > 0) {
+        container.style.setProperty('--marquee-duration', `${loopSeconds}s`);
+      }
+
+      if (!reducedMotion.matches && list.children.length) {
         const clone = list.cloneNode(true);
         clone.setAttribute('aria-hidden', 'true');
         clone.querySelectorAll('[tabindex]').forEach((element) => element.setAttribute('tabindex', '-1'));

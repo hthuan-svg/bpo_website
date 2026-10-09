@@ -57,6 +57,9 @@
     },
     "services": {
       "secondsPerLoop": 35
+    },
+    "team": {
+      "secondsPerLoop": 32
     }
   },
   "theme": {

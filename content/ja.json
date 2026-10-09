@@ -1135,7 +1135,10 @@
         "team_people_event"
       ],
       "country_image": "team_japan_country",
-      "country_caption": "BRYCEN GROUP"
+      "country_caption": "BRYCEN GROUP",
+      "gallery": {
+        "label": "研修写真ギャラリー"
+      }
     },
     "recruit": {
       "title": "人材・採用",

@@ -115,12 +115,6 @@ function renderTeamProcess(context) {
 }
 
 function renderTeamPeople(context) {
-  const images = document.querySelectorAll('.team-people__image');
-  images.forEach((image, index) => {
-    if (index === 0) {
-      image.classList.add('is-featured');
-    }
-  });
   const timeline = document.querySelector('.team-people__timeline');
   if (timeline) {
     const steps = Array.isArray(context.t('team.people.steps')) ? context.t('team.people.steps') : [];

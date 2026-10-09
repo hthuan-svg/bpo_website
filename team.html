@@ -111,11 +111,19 @@
             </article>
           </template>
         </div>
-        <ul class="team-people__images" data-reveal>
-          <li><img class="team-people__image is-featured" data-img="team_people_japan" loading="lazy" alt=""></li>
-          <li><img class="team-people__image" data-img="team_people_training" loading="lazy" alt=""></li>
-          <li><img class="team-people__image" data-img="team_people_event" loading="lazy" alt=""></li>
-        </ul>
+        <div class="team-people__showcase" data-marquee data-reveal>
+          <div class="marquee__track" tabindex="0" data-i18n-attr="aria-label:team.people.gallery.label">
+            <ul class="marquee__list" data-list="team.people.images">
+              <template>
+                <li class="marquee__item">
+                  <figure class="marquee__figure">
+                    <img class="marquee__image" data-img-field="." loading="lazy" alt="">
+                  </figure>
+                </li>
+              </template>
+            </ul>
+          </div>
+        </div>
         <figure class="team-people__country" data-reveal>
           <img class="team-people__country-image" data-img="team_japan_country" loading="lazy" alt="">
           <figcaption data-i18n="team.people.country_caption"></figcaption>
