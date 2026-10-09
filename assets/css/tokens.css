@@ -1,24 +1,59 @@
-/* Shared design tokens for the BRYCEN VIETNAM BPO website. */
 :root {
-  /* Brand colors are sampled from the logo; keep text dark on brand-500. */
-  --brand-500: #7BBE35;
-  --brand-600: #5E9A24;
-  --brand-100: #EAF5DC;
-  --brand-50: #F5FAEE;
-  --accent-500: #1FA7A0;
+  /* blacks & charcoals (dark surfaces) */
+  --black-950: #070A08;
+  --black-900: #0B0F0C;
+  --charcoal-800: #121814;
+  --charcoal-700: #1A211C;
+  --charcoal-600: #232C25;
+  --line-dark: #2B342D;
 
-  --ink-900: #0E1A12;
-  --ink-700: #2B3A30;
-  --ink-500: #5A6B5F;
-  --line: #E3EBDD;
-  --bg: #FFFFFF;
-  --bg-soft: #F7FAF4;
+  /* greens */
+  --green-500: #7BBE35;
+  --green-400: #96D24F;
+  --green-300: #B5E57F;
+  --green-700: #4A7C1B;
+  --green-900: #1C3310;
 
+  /* whites & greys */
+  --white: #FFFFFF;
+  --gray-100: #F1F3F2;
+  --gray-200: #E3E7E4;
+  --gray-300: #C5CCC7;
+  --gray-400: #98A39B;
+  --gray-600: #5B665E;
+
+  /* semantic */
+  --bg-dark: var(--black-900);
+  --bg-dark-2: var(--charcoal-800);
+  --surface-dark: var(--charcoal-700);
+  --bg-light: var(--white);
+  --bg-light-2: var(--gray-100);
+  --text-on-dark: #F1F3F2;
+  --muted-on-dark: var(--gray-400);
+  --text-on-light: var(--black-900);
+  --muted-on-light: var(--gray-600);
+  --accent: var(--green-500);
+  --focus: 0 0 0 3px rgba(123, 190, 53, .55);
   --radius-s: 8px;
   --radius-m: 16px;
   --radius-l: 28px;
-  --shadow-s: 0 1px 2px rgba(14, 26, 18, .06), 0 4px 12px rgba(14, 26, 18, .05);
-  --shadow-m: 0 8px 30px rgba(14, 26, 18, .10);
+  --shadow-dark: 0 10px 40px rgba(0, 0, 0, .45);
+  --shadow-light: 0 8px 30px rgba(11, 15, 12, .10);
+
+  /* legacy aliases for the existing site structure */
+  --brand-500: var(--green-500);
+  --brand-600: var(--green-700);
+  --brand-100: rgba(123, 190, 53, .12);
+  --brand-50: rgba(123, 190, 53, .08);
+  --accent-500: var(--green-400);
+  --ink-900: var(--text-on-light);
+  --ink-700: var(--muted-on-light);
+  --ink-500: var(--gray-600);
+  --line: var(--line-dark);
+  --bg: var(--bg-light);
+  --bg-soft: var(--bg-light-2);
+  --shadow-s: var(--shadow-light);
+  --shadow-m: var(--shadow-light);
 
   --space-1: 4px;
   --space-2: 8px;

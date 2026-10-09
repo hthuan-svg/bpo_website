@@ -9,7 +9,7 @@ Chạy theo thứ tự. Mỗi bước: chat mới → kiểm tra Definition of d
 | ✓ | Lệnh | Nội dung | Yêu cầu |
 |---|---|---|---|
 | [x] | `/r3-00-prepare` | Dọn docs, chuyển ảnh theo trang, gộp nội dung mới, sửa tham chiếu | 2 |
-| [ ] | `/r3-01-theme` | Theme đen–xanh toàn site | 1 |
+| [x] | `/r3-01-theme` | Theme đen–xanh toàn site | 1 |
 | [ ] | `/r3-02-header-footer` | Footer có địa chỉ, bỏ "skip", tab Tuyển dụng | 3 |
 | [ ] | `/r3-03-home` | Trang chủ: hero tách đôi, ảnh chỉ số, dải ảnh sản phẩm, ISO, Đối tác SUBARU | 5 |
 | [ ] | `/r3-04-subaru` | Trang SUBARU | 6 |

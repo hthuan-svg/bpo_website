@@ -1,7 +1,7 @@
 /* Accessible global defaults, typography and responsive page foundations. */
 /* System font fallbacks avoid blocking requests and support Vietnamese, English, and Japanese. */
 :root {
-  color-scheme: light;
+  color-scheme: dark;
   font-family: "Inter", "Be Vietnam Pro", "Noto Sans JP", system-ui, "Segoe UI", "Hiragino Sans", "Yu Gothic", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -9,8 +9,8 @@
   -moz-osx-font-smoothing: grayscale;
   font-size: 100%;
   line-height: 1.7;
-  color: var(--ink-900);
-  background: var(--bg);
+  color: var(--text-on-dark);
+  background: var(--bg-dark);
 }
 
 *,
@@ -24,6 +24,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
   -webkit-text-size-adjust: 100%;
+  background: var(--bg-dark);
 }
 
 body {
@@ -33,6 +34,8 @@ body {
   font-size: clamp(1rem, .96rem + .16vw, 1.125rem);
   line-height: 1.7;
   overflow-wrap: break-word;
+  background: var(--bg-dark);
+  color: var(--text-on-dark);
 }
 
 html[lang="ja"] body,
@@ -76,13 +79,13 @@ button:disabled,
 }
 
 a {
-  color: var(--ink-700);
+  color: var(--green-400);
   text-decoration-thickness: .08em;
   text-underline-offset: .2em;
 }
 
 a:hover {
-  color: var(--ink-900);
+  color: var(--green-300);
 }
 
 a:focus-visible,
@@ -91,7 +94,7 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 [tabindex]:focus-visible {
-  outline: 3px solid var(--ink-900);
+  outline: var(--focus);
   outline-offset: 3px;
 }
 
@@ -109,7 +112,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--ink-900);
+  color: var(--text-on-dark);
   font-weight: 600;
   line-height: 1.2;
   text-wrap: balance;
@@ -130,7 +133,7 @@ h3 {
 }
 
 p {
-  color: var(--ink-700);
+  color: var(--muted-on-dark);
 }
 
 ul,
@@ -143,12 +146,12 @@ hr {
   height: 1px;
   margin: var(--space-5) 0;
   border: 0;
-  background: var(--line);
+  background: var(--line-dark);
 }
 
 ::selection {
-  color: var(--ink-900);
-  background: var(--brand-100);
+  color: var(--black-950);
+  background: rgba(181, 229, 127, .85);
 }
 
 @media (prefers-reduced-motion: reduce) {
