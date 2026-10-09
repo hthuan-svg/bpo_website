@@ -29,7 +29,13 @@
       "ja": "25 Nguyen Van Cu, Hue, Vietnam"
     },
     "mapEmbedUrl": "",
-    "formUrl": ""
+    "formUrl": "",
+    "form": {
+      "endpoint": "",
+      "recipientEmail": "",
+      "subjectPrefix": "[BPO Website]"
+    },
+    "privacyPolicyUrl": ""
   },
   "analytics": {
     "googleAnalyticsId": ""
@@ -41,5 +47,19 @@
   "backToTop": {
     "enabled": true,
     "showAfterPx": 400
+  },
+  "recruits": {
+    "autoCloseByDeadline": true
+  },
+  "marquee": {
+    "home": {
+      "secondsPerLoop": 45
+    },
+    "services": {
+      "secondsPerLoop": 35
+    }
+  },
+  "theme": {
+    "mode": "dark-green"
   }
 }

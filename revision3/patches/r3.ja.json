@@ -1,0 +1,636 @@
+{
+  "_readme": "Revision 3 patch. 'set' deep-merged (arrays replace). 'remove' only with --cleanup.",
+  "set": {
+    "ui": {
+      "nav": {
+        "recruits": "採用情報",
+        "subaru": "SUBARU"
+      },
+      "footer": {
+        "address_title": "連絡先",
+        "links_title": "クイックリンク",
+        "office_main": "メインオフィス",
+        "office_branch": "支店"
+      },
+      "status": {
+        "open": "募集中",
+        "closed": "募集終了"
+      },
+      "partner_main": "メインパートナー",
+      "view_detail": "詳細を見る",
+      "on_this_page": "このページ内",
+      "gallery": "ギャラリー"
+    },
+    "certifications": {
+      "title": "認証",
+      "lead": "品質マネジメントおよび情報セキュリティに関する国際認証。",
+      "items": [
+        {
+          "code": "ISO 9001:2015",
+          "name": "品質マネジメントシステム",
+          "image": "common_iso_9001"
+        },
+        {
+          "code": "ISO/IEC 27001:2013",
+          "name": "情報セキュリティマネジメントシステム",
+          "image": "common_iso_27001"
+        }
+      ]
+    },
+    "home": {
+      "stats": [
+        {
+          "value": "2015",
+          "label": "開始年",
+          "image": "home_stat_founded"
+        },
+        {
+          "value": "550",
+          "label": "スタッフ数",
+          "image": "home_stat_staff"
+        },
+        {
+          "value": "235+",
+          "label": "プロジェクト実績",
+          "image": "home_stat_projects"
+        },
+        {
+          "value": "5",
+          "label": "年連続 国内シェアNo.1*",
+          "image": "home_stat_top1"
+        }
+      ],
+      "pillars": [
+        {
+          "link": "services-annotation.html",
+          "image": "home_service_creation",
+          "coming_soon": false,
+          "title": "AI学習データ作成",
+          "text": "LiDARの3Dデータと2D画像データへのアノテーション。多層の品質検査付き。"
+        },
+        {
+          "link": "services-collection.html",
+          "image": "home_service_collection",
+          "coming_soon": true,
+          "title": "AI学習データ収集",
+          "text": "コンテンツは準備中です。"
+        }
+      ],
+      "showcase": {
+        "eyebrow": "SHOWCASE",
+        "title": "私たちの成果物",
+        "lead": "当部門が手がけるAI学習データの一例です。",
+        "items": [
+          {
+            "image": "home_showcase_01",
+            "caption": "3Dセグメンテーション"
+          },
+          {
+            "image": "home_showcase_02",
+            "caption": "3Dバウンディングボックス"
+          },
+          {
+            "image": "home_showcase_03",
+            "caption": "2Dセグメンテーション"
+          },
+          {
+            "image": "home_showcase_04",
+            "caption": "2Dバウンディングボックス"
+          },
+          {
+            "image": "home_showcase_05",
+            "caption": "衛星画像"
+          },
+          {
+            "image": "home_showcase_06",
+            "caption": "キーポイント"
+          }
+        ]
+      },
+      "certifications_title": "私たちの認証",
+      "partners": {
+        "eyebrow": "PARTNER",
+        "title": "パートナー",
+        "lead": "私たちのメインパートナー",
+        "main": {
+          "name": "SUBARU",
+          "logo": "subaru_logo",
+          "link": "subaru.html",
+          "text": "SUBARUと、BPO BRYCEN VIETNAMが協業したEyeSight技術についてご紹介します。"
+        }
+      }
+    },
+    "subaru": {
+      "page_title": "SUBARU",
+      "hero": {
+        "eyebrow": "メインパートナー",
+        "title": "SUBARU",
+        "subtitle": "AI学習データ分野におけるBPO BRYCEN VIETNAMのメインパートナー。",
+        "image": "subaru_hero"
+      },
+      "intro": {
+        "title": "スバルについて",
+        "history": {
+          "title": "沿革",
+          "image": "subaru_intro_history",
+          "text": "スバルのルーツは、1917年に中島知久平が設立した飛行機研究所で、のちに中島飛行機となりました。幾度かの再編を経て1953年に富士重工業が設立され、1958年のスバル360から自動車の生産を開始。2017年にSUBARUへ社名を変更しました。「スバル」はおうし座のプレアデス星団（六連星）の和名で、六つの会社の結集を象徴しています。"
+        },
+        "global": {
+          "title": "グローバルな位置づけ",
+          "image": "subaru_intro_global",
+          "text": "スバルは、世界中のお客様に支持される日本の自動車・航空宇宙ブランドです。AWDの累計生産台数は2021年に2,000万台、アイサイト搭載車の世界累計販売台数は2022年に500万台に達しました。",
+          "source": "出典：SUBARU 発表（2023年）。"
+        }
+      },
+      "tech": {
+        "title": "コアバリューとテクノロジー",
+        "lead": "スバルを特徴づける4つの技術。",
+        "items": [
+          {
+            "id": "boxer",
+            "image": "subaru_tech_boxer",
+            "name": "水平対向エンジン",
+            "text": "シリンダーを水平に配置する設計で重心が低くなり、コーナリング時の安定性が高まります。"
+          },
+          {
+            "id": "sawd",
+            "image": "subaru_tech_sawd",
+            "name": "S-AWD",
+            "text": "シンメトリカルな常時四輪駆動により、あらゆる路面でグリップを最適化します。"
+          },
+          {
+            "id": "eyesight",
+            "image": "subaru_tech_eyesight",
+            "highlight": true,
+            "name": "アイサイト技術",
+            "text": "高度な先進運転支援システム。先進的な予防安全機能を備えています。",
+            "partnership_badge": "BRYCEN VN × SUBARU",
+            "partnership": "アイサイトでは、BPO BRYCEN VIETNAMがSUBARUと協業し、製品づくりに参画しました。",
+            "partnership_image": "subaru_eyesight_partnership"
+          },
+          {
+            "id": "sgp",
+            "image": "subaru_tech_sgp",
+            "name": "SGPプラットフォーム",
+            "text": "スバルグローバルプラットフォームにより、剛性が高まり振動が低減されます。"
+          }
+        ]
+      },
+      "cta": {
+        "title": "AIデータを共に",
+        "button": "お問い合わせ"
+      }
+    },
+    "about": {
+      "history": {
+        "lead": "2015年に約15名の小さなプロジェクトとして始まり、現在は2拠点・550名体制で運営しています。",
+        "timeline": [
+          {
+            "year": "2015",
+            "icon": "about_timeline_2015",
+            "text": "15名規模のプロジェクトでアノテーション業務を開始。"
+          },
+          {
+            "year": "2016",
+            "icon": "about_timeline_2016",
+            "text": "50名規模に拡大し、タグ付けデータの作業を開始。"
+          },
+          {
+            "year": "2018",
+            "icon": "about_timeline_2018",
+            "text": "日本の鉄道システム向け認識データを作成。150名規模に拡大。"
+          },
+          {
+            "year": "2019",
+            "icon": "about_timeline_2019",
+            "text": "初の3Dデータ案件を受注し、セグメンテーションを開始。日本で学び働く人材派遣制度を整備。"
+          },
+          {
+            "year": "2020",
+            "icon": "about_timeline_2020",
+            "text": "バウンディングボックスと衛星データを開始。200名規模に拡大。"
+          },
+          {
+            "year": "2023",
+            "icon": "about_timeline_2023",
+            "text": "3D点群（PointCloud）データの作業を開始。"
+          },
+          {
+            "year": "2025",
+            "icon": "about_timeline_2025",
+            "text": "3Dバウンディングボックス領域を拡充。550名規模に。"
+          }
+        ]
+      },
+      "offices": {
+        "title": "オフィス",
+        "items": [
+          {
+            "type": "main",
+            "image": "about_office_main",
+            "name": "メインオフィス",
+            "address": "2〜6階, 25 Nguyen Van Cu, Thuan Hoa, Hue, Vietnam",
+            "map_query": "25 Nguyễn Văn Cừ, Thuận Hóa, Huế, Vietnam"
+          },
+          {
+            "type": "branch",
+            "image": "about_office_branch",
+            "name": "支店",
+            "address": "28 Ly Thuong Kiet, Thuan Hoa, Hue, Vietnam",
+            "map_query": "28 Lý Thường Kiệt, Thuận Hóa, Huế, Vietnam"
+          }
+        ]
+      },
+      "global": {
+        "title": "多国間の協業",
+        "image": "about_global_banner",
+        "lead": "当部門はベトナム、カンボジア、ミャンマーのチームと協力し、AIデータのプロジェクトを共同で推進しています。",
+        "countries": [
+          {
+            "id": "vn",
+            "image": "about_global_vietnam",
+            "name": "ベトナム",
+            "text": "550名体制でBPO部門が稼働する拠点。"
+          },
+          {
+            "id": "kh",
+            "image": "about_global_cambodia",
+            "name": "カンボジア",
+            "text": "カンボジアのチームがAIデータのプロジェクトに参加しています。"
+          },
+          {
+            "id": "mm",
+            "image": "about_global_myanmar",
+            "name": "ミャンマー",
+            "text": "ミャンマーのチームがAIデータのプロジェクトに参加しています。"
+          }
+        ]
+      }
+    },
+    "services": {
+      "annotation": {
+        "side_nav_title": "このページ内",
+        "order": [
+          "usecases",
+          "modalities",
+          "workflow",
+          "quality",
+          "security"
+        ],
+        "tabs": {
+          "security": "情報セキュリティ"
+        },
+        "strips": {
+          "seg3d": [
+            "services_3d_segment_strip_01",
+            "services_3d_segment_strip_02",
+            "services_3d_segment_strip_03",
+            "services_3d_segment_strip_04"
+          ],
+          "bbox3d": [
+            "services_3d_bbox_strip_01",
+            "services_3d_bbox_strip_02",
+            "services_3d_bbox_strip_03",
+            "services_3d_bbox_strip_04"
+          ],
+          "seg2d": [
+            "services_2d_segment_strip_01",
+            "services_2d_segment_strip_02",
+            "services_2d_segment_strip_03",
+            "services_2d_segment_strip_04"
+          ],
+          "bbox2d": [
+            "services_2d_bbox_strip_01",
+            "services_2d_bbox_strip_02",
+            "services_2d_bbox_strip_03",
+            "services_2d_bbox_strip_04"
+          ],
+          "keypoint": [
+            "services_2d_keypoint_strip_01",
+            "services_2d_keypoint_strip_02",
+            "services_2d_keypoint_strip_03",
+            "services_2d_keypoint_strip_04"
+          ],
+          "satellite": [
+            "services_2d_satellite_strip_01",
+            "services_2d_satellite_strip_02",
+            "services_2d_satellite_strip_03",
+            "services_2d_satellite_strip_04"
+          ]
+        },
+        "quality": {
+          "flow_image": "services_quality_flow",
+          "principles_image": "services_quality_principles",
+          "flow_caption": "",
+          "flow_title": "品質管理プロセス"
+        },
+        "security": {
+          "image": "services_security_image"
+        }
+      }
+    },
+    "team": {
+      "org": {
+        "image": "team_org_image",
+        "lead": "大規模データの需要に応える大人数体制で、お客様の安心と信頼を最優先にしています。"
+      },
+      "process": {
+        "title": "運用フロー",
+        "image": "team_process_image",
+        "lead": "お客様の依頼から検収まで、BPO BRYCEN VIETNAMとお客様がどのように進めるかをご紹介します。",
+        "actors": {
+          "customer": "お客様",
+          "bpo": "BPO BRYCEN VN",
+          "both": "共同"
+        },
+        "steps": [
+          {
+            "actor": "customer",
+            "text": "お客様が依頼を送付します。"
+          },
+          {
+            "actor": "bpo",
+            "text": "BPO BRYCEN VNが依頼を受け、作業量・難易度を試行計測します。"
+          },
+          {
+            "actor": "both",
+            "text": "お客様が発注し、BPO BRYCEN VNが受注します。"
+          },
+          {
+            "actor": "bpo",
+            "text": "体制・作業環境の構築、キックオフ、教育を行います。"
+          },
+          {
+            "actor": "bpo",
+            "text": "作業を実施し、多層で品質検査を行います。"
+          },
+          {
+            "actor": "both",
+            "text": "中間納品。お客様が検査してフィードバック（FB）を送り、BPOが調整します。"
+          },
+          {
+            "actor": "both",
+            "text": "最終納品。お客様が検収します。"
+          },
+          {
+            "actor": "bpo",
+            "text": "プロジェクトの振り返りを行います。"
+          }
+        ]
+      },
+      "people": {
+        "country_image": "team_japan_country",
+        "country_caption": "日本",
+        "images": [
+          "team_people_japan",
+          "team_people_training",
+          "team_people_event"
+        ]
+      }
+    },
+    "achievements": {
+      "awards": {
+        "headline": "#1",
+        "headline_text": "日本国内No.1",
+        "image": "achievements_award_image",
+        "text": "AI学習データ作成の分野で、日本国内5年連続シェアNo.1。6年連続を目指しています。"
+      },
+      "projects": {
+        "images": [
+          "achievements_projects_01",
+          "achievements_projects_02",
+          "achievements_projects_03"
+        ],
+        "text": "長年トップの実績により、日本国内外の大手のお客様向けに計235件のプロジェクトを完了しました。メインパートナーであるSUBARUとは長期案件も多数あります。"
+      },
+      "satisfaction": {
+        "image": "achievements_satisfaction",
+        "title": "お客様満足度",
+        "text": "お客様から常に高い評価をいただき、繰り返しご依頼いただいています。"
+      }
+    },
+    "vision": {
+      "direction": {
+        "image": "vision_direction_image"
+      },
+      "growth": {
+        "title": "成長タイムライン",
+        "lead": "日本・東南アジアを基盤に、次は米国、さらに将来は欧州へと拡大します。",
+        "stages": [
+          {
+            "id": "now",
+            "phase": "現在",
+            "level": 1,
+            "title": "日本・東南アジア",
+            "regions": [
+              {
+                "id": "jp",
+                "image": "vision_roadmap_japan",
+                "title": "日本",
+                "text": "現在の市場。アノテーションサービスで国内No.1の地位を保っています。"
+              },
+              {
+                "id": "sea",
+                "image": "vision_roadmap_sea",
+                "title": "東南アジア",
+                "text": "この地域で事業を展開しており、現在はベトナム、ミャンマー、カンボジアで活動しています。",
+                "countries": [
+                  "ベトナム",
+                  "ミャンマー",
+                  "カンボジア"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "next",
+            "phase": "次のステップ",
+            "level": 2,
+            "featured": true,
+            "image": "vision_roadmap_usa",
+            "title": "アメリカ",
+            "text": "今後、日本の本社が米国へ市場を拡大し、新たな機会とお客様を開拓します。"
+          },
+          {
+            "id": "future",
+            "phase": "さらに先の未来",
+            "level": 3,
+            "image": "vision_roadmap_eu",
+            "title": "欧州（EU）",
+            "text": "さらに将来的には、欧州市場へも視野を広げ、サービス提供の範囲を拡大していきます。"
+          }
+        ]
+      }
+    },
+    "recruits": {
+      "page_title": "採用情報",
+      "banner": "recruits_banner",
+      "default_image": "recruits_default",
+      "lead": "AIのための高品質データを一緒につくりませんか。BPO部門の採用情報を日付順に、募集中・募集終了のステータス付きでご覧いただけます。",
+      "intro": {
+        "title": "人材・採用",
+        "image": "recruits_intro",
+        "text": "新たな挑戦に対応するため、今後採用ニーズが拡大する可能性があります。大学・短大、地域の行政機関と緊密に連携して採用を行い、大規模プロジェクトにも十分な人材を確保しています。",
+        "stats": [
+          {
+            "value": "79",
+            "label": "経済大学に在学中の現スタッフ"
+          },
+          {
+            "value": "187",
+            "label": "累計"
+          }
+        ]
+      },
+      "filters": {
+        "all": "すべて",
+        "open": "募集中",
+        "closed": "募集終了"
+      },
+      "labels": {
+        "posted": "掲載日",
+        "deadline": "応募締切",
+        "position": "職種",
+        "location": "勤務地",
+        "type": "雇用形態",
+        "apply": "応募する",
+        "how_to_apply": "応募方法",
+        "closed_note": "この募集は終了しました。",
+        "no_deadline": "採用決定まで",
+        "details": "仕事内容"
+      },
+      "empty": "現在、掲載中の採用情報はありません。",
+      "apply_subject": "応募：",
+      "back": "一覧に戻る"
+    },
+    "contact": {
+      "lead": "AI学習データの作成・収集について、ご質問・ご相談・お見積もりなどお気軽にお問い合わせください。",
+      "banner": "contact_banner",
+      "response_note": "2営業日以内にご連絡いたします。",
+      "form": {
+        "title": "お問い合わせフォーム",
+        "fields": {
+          "name": "お名前",
+          "company": "会社名",
+          "department": "部署名",
+          "position": "役職",
+          "email": "メールアドレス",
+          "phone": "電話番号",
+          "type": "お問い合わせ種別",
+          "message": "お問い合わせの内容"
+        },
+        "required": "必須",
+        "optional": "任意",
+        "select_placeholder": "選択してください",
+        "type_options": [
+          {
+            "value": "quote",
+            "label": "見積依頼"
+          },
+          {
+            "value": "meeting",
+            "label": "打ち合わせでのサービス紹介依頼"
+          },
+          {
+            "value": "docs",
+            "label": "資料請求"
+          },
+          {
+            "value": "other",
+            "label": "その他"
+          }
+        ],
+        "consent_label": "上記の個人情報の取り扱いに同意する",
+        "confirm_button": "入力内容を確認する",
+        "edit_button": "修正する",
+        "send_button": "送信する",
+        "review_title": "入力内容のご確認",
+        "sending": "送信中…",
+        "success": "送信が完了しました。担当者より順次ご連絡いたします。",
+        "error": "送信できませんでした。再度お試しいただくか、メール・お電話でご連絡ください。",
+        "fallback_mailto": "メールソフトで送信する",
+        "validation": {
+          "required": "必須項目です",
+          "email": "メールアドレスの形式が正しくありません",
+          "consent": "個人情報の取り扱いへの同意が必要です"
+        }
+      },
+      "company_panel": {
+        "title": "会社情報",
+        "call_title": "お電話でのお問い合わせ"
+      },
+      "privacy": {
+        "title": "個人情報の取り扱いについて",
+        "intro": "フォーム送信前に、以下の内容をご確認ください。",
+        "policy_link_label": "個人情報保護方針を見る",
+        "items": [
+          {
+            "title": "事業者の名称",
+            "body": "BRYCEN VIETNAM Co., Ltd.（BPO部門）"
+          },
+          {
+            "title": "個人情報管理責任者",
+            "body": "【要追記】責任者の氏名・役職"
+          },
+          {
+            "title": "利用目的",
+            "body": "本フォームでご提供いただく個人情報は、お問い合わせへの回答にのみ利用します。"
+          },
+          {
+            "title": "第三者への提供",
+            "body": "ご本人の同意がある場合または法令に基づく場合を除き、取得した個人情報を第三者に提供することはありません。"
+          },
+          {
+            "title": "委託",
+            "body": "上記の利用目的の範囲内で、個人情報の取扱いを委託することがあります。委託先は当社の基準に基づいて選定し、監督するとともに、秘密保持契約を締結して安全性を確保します。"
+          },
+          {
+            "title": "ご本人の権利と問い合わせ窓口",
+            "body": "ご本人からの求めにより、当社が保有する個人情報について、利用目的の通知、開示、訂正・追加・削除、利用停止・消去、第三者提供の停止を受け付けます。本項末尾の窓口までご連絡ください。"
+          },
+          {
+            "title": "入力にあたっての注意",
+            "body": "任意項目が未入力の場合、最適なご回答ができないことがあります。"
+          },
+          {
+            "title": "容易に認識できない方法での取得",
+            "body": "当サイトでは統計目的でアクセスログを取得することがありますが、個人情報の取得・利用は行いません。Cookieやウェブビーコン等を用いて、ご本人が容易に認識できない方法で個人情報を取得することもありません。"
+          },
+          {
+            "title": "個人情報保護方針",
+            "body": "当サイトの個人情報保護方針をご覧ください。",
+            "link": "policy"
+          },
+          {
+            "title": "苦情・相談受付窓口",
+            "body": "BRYCEN VIETNAM Co., Ltd. BPO部門",
+            "dynamic": "contact"
+          }
+        ]
+      }
+    }
+  },
+  "remove": [
+    "ui.skip",
+    "home.customers_title",
+    "achievements.awards.badges",
+    "achievements.projects.customers",
+    "vision.roadmap",
+    "team.tabs.recruit",
+    "team.org.levels",
+    "team.org.links_note",
+    "team.process.lanes",
+    "team.process.phases",
+    "team.process.nodes",
+    "team.process.edges",
+    "team.process.edge_note",
+    "team.recruit",
+    "services.annotation.quality.image",
+    "services.annotation.quality.delivery_label",
+    "services.annotation.quality.pass_label",
+    "services.annotation.quality.fail_label",
+    "services.annotation.quality.loop_label",
+    "contact.note",
+    "contact.labels.form"
+  ]
+}

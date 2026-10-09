@@ -90,7 +90,7 @@ export async function initI18n() {
     loadJson('content/images.json')
   ]);
   if (document.body.dataset.page === 'index') {
-    preloadImageSlot(images, 'background_main');
+    preloadImageSlot(images, 'home_hero_image');
   }
   let language = chooseLanguage(siteConfig);
   let content = await loadJson(`content/${language}.json`);

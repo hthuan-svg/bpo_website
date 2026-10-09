@@ -1,0 +1,216 @@
+{
+  "_readme": "Bản đồ di chuyển ảnh Revision 3. moves: đổi tên slot + chuyển file vào thư mục theo trang (tiền tố trước dấu '_'). retire: bỏ khỏi website, chuyển file vào assets/images/_unused/. extra_files: file phụ (favicon...). news_image_map: đổi ảnh của tin trong news.json. Nếu file đích đã tồn tại (do gói cung cấp) thì giữ file đích và đưa file cũ vào _unused/.",
+  "folders": [
+    "home",
+    "about",
+    "services",
+    "team",
+    "achievements",
+    "vision",
+    "news",
+    "contact",
+    "subaru",
+    "recruits",
+    "common"
+  ],
+  "moves": [
+    {
+      "from": "company_logo",
+      "to": "company_logo",
+      "folder": "common"
+    },
+    {
+      "from": "company_logo_mark",
+      "to": "company_logo_mark",
+      "folder": "common"
+    },
+    {
+      "from": "browser_logo",
+      "to": "browser_logo",
+      "folder": "common"
+    },
+    {
+      "from": "og_share",
+      "to": "og_share",
+      "folder": "common"
+    },
+    {
+      "from": "background_soft",
+      "to": "background_soft",
+      "folder": "common"
+    },
+    {
+      "from": "background_main",
+      "to": "home_hero_image"
+    },
+    {
+      "from": "background_services_3d",
+      "to": "services_overview_3d"
+    },
+    {
+      "from": "background_services_2d",
+      "to": "services_overview_2d"
+    },
+    {
+      "from": "office_nguyen_van_cu",
+      "to": "about_office_main"
+    },
+    {
+      "from": "office_ly_thuong_kiet",
+      "to": "about_office_branch"
+    },
+    {
+      "from": "timeline_2015",
+      "to": "about_timeline_2015"
+    },
+    {
+      "from": "timeline_2016",
+      "to": "about_timeline_2016"
+    },
+    {
+      "from": "timeline_2018",
+      "to": "about_timeline_2018"
+    },
+    {
+      "from": "timeline_2019",
+      "to": "about_timeline_2019"
+    },
+    {
+      "from": "timeline_2020",
+      "to": "about_timeline_2020"
+    },
+    {
+      "from": "timeline_2023",
+      "to": "about_timeline_2023"
+    },
+    {
+      "from": "timeline_2025",
+      "to": "about_timeline_2025"
+    },
+    {
+      "from": "service_3d_segment_1",
+      "to": "services_3d_segment_01"
+    },
+    {
+      "from": "service_3d_segment_2",
+      "to": "services_3d_segment_02"
+    },
+    {
+      "from": "service_3d_cuboid_1",
+      "to": "services_3d_bbox_01"
+    },
+    {
+      "from": "service_3d_cuboid_2",
+      "to": "services_3d_bbox_02"
+    },
+    {
+      "from": "service_2d_segment_input",
+      "to": "services_2d_segment_01"
+    },
+    {
+      "from": "service_2d_segment_output",
+      "to": "services_2d_segment_02"
+    },
+    {
+      "from": "service_2d_bbox",
+      "to": "services_2d_bbox_01"
+    },
+    {
+      "from": "service_keypoint",
+      "to": "services_2d_keypoint_01"
+    },
+    {
+      "from": "service_satellite_1",
+      "to": "services_2d_satellite_01"
+    },
+    {
+      "from": "service_satellite_2",
+      "to": "services_2d_satellite_02"
+    },
+    {
+      "from": "service_collection_lidar",
+      "to": "services_collection_sample_lidar"
+    },
+    {
+      "from": "service_collection_dashcam",
+      "to": "services_collection_sample_dashcam"
+    },
+    {
+      "from": "service_quality_control",
+      "to": "services_quality_principles"
+    },
+    {
+      "from": "collection_image_01",
+      "to": "services_collection_01"
+    },
+    {
+      "from": "collection_image_02",
+      "to": "services_collection_02"
+    },
+    {
+      "from": "collection_image_03",
+      "to": "services_collection_03"
+    },
+    {
+      "from": "team_event_booth",
+      "to": "team_people_event"
+    },
+    {
+      "from": "team_training_meeting",
+      "to": "team_people_training"
+    },
+    {
+      "from": "team_japan_visit",
+      "to": "team_people_japan"
+    },
+    {
+      "from": "customer_subaru",
+      "to": "subaru_logo"
+    },
+    {
+      "from": "award_top1_04",
+      "to": "achievements_award_image"
+    },
+    {
+      "from": "vision_usa_map",
+      "to": "vision_roadmap_usa"
+    },
+    {
+      "from": "vision_eu",
+      "to": "vision_roadmap_eu"
+    },
+    {
+      "from": "vision_southeast_asia",
+      "to": "vision_roadmap_sea"
+    }
+  ],
+  "retire": [
+    "office_pham_van_dong",
+    "customer_sony",
+    "customer_denso",
+    "customer_honda",
+    "customer_afeela",
+    "customer_nikon",
+    "award_top1_01",
+    "award_top1_02",
+    "award_top1_03"
+  ],
+  "extra_files": [
+    {
+      "from": "assets/images/branding/browser_logo_32.png",
+      "to": "assets/images/common/browser_logo_32.png"
+    },
+    {
+      "from": "assets/images/branding/browser_logo_180.png",
+      "to": "assets/images/common/browser_logo_180.png"
+    },
+    {
+      "from": "assets/images/branding/favicon.ico",
+      "to": "assets/images/common/favicon.ico"
+    }
+  ],
+  "news_image_map": {
+    "award_top1_04": "news_2026_01_top1",
+    "background_services_3d": "news_2026_09_us_dataset"
+  }
+}

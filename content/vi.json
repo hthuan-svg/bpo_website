@@ -63,7 +63,9 @@
       "achievements": "Thành tựu & Dự án",
       "vision": "Tầm nhìn",
       "news": "Tin tức",
-      "contact": "Liên hệ"
+      "contact": "Liên hệ",
+      "recruits": "Tuyển dụng",
+      "subaru": "SUBARU"
     },
     "skip": "Bỏ qua, đến nội dung chính",
     "read_more": "Xem thêm",
@@ -108,7 +110,21 @@
       "dept_native": "Bộ phận BPO",
       "company_long": "Công ty TNHH BRYCEN VIETNAM"
     },
-    "breadcrumb": "Đường dẫn"
+    "breadcrumb": "Đường dẫn",
+    "footer": {
+      "address_title": "Địa chỉ liên hệ",
+      "links_title": "Liên kết nhanh",
+      "office_main": "Văn phòng chính",
+      "office_branch": "Chi nhánh"
+    },
+    "status": {
+      "open": "Đang mở",
+      "closed": "Đã đóng"
+    },
+    "partner_main": "Đối tác chính",
+    "view_detail": "Xem chi tiết",
+    "on_this_page": "Trên trang này",
+    "gallery": "Hình ảnh minh họa"
   },
   "home": {
     "hero": {
@@ -120,19 +136,23 @@
     "stats": [
       {
         "value": "2015",
-        "label": "Năm khởi điểm"
+        "label": "Năm khởi điểm",
+        "image": "home_stat_founded"
       },
       {
         "value": "550",
-        "label": "Nhân sự"
+        "label": "Nhân sự",
+        "image": "home_stat_staff"
       },
       {
         "value": "235+",
-        "label": "Dự án đã thực hiện"
+        "label": "Dự án đã thực hiện",
+        "image": "home_stat_projects"
       },
       {
         "value": "5",
-        "label": "Năm liên tiếp Top 1 thị trường Nhật Bản*"
+        "label": "Năm liên tiếp Top 1 thị trường Nhật Bản*",
+        "image": "home_stat_top1"
       }
     ],
     "stats_note": "* Theo Fuji Chimera Research Institute, mảng dịch vụ annotation.",
@@ -140,14 +160,14 @@
     "pillars": [
       {
         "link": "services-annotation.html",
-        "image": "background_services_2d",
+        "image": "home_service_creation",
         "coming_soon": false,
         "title": "Tạo dữ liệu học cho AI",
         "text": "Gán nhãn (annotation) dữ liệu 3D từ LiDAR và dữ liệu 2D từ hình ảnh, qua kiểm tra nhiều lớp."
       },
       {
         "link": "services-collection.html",
-        "image": "background_services_3d",
+        "image": "home_service_collection",
         "coming_soon": true,
         "title": "Thu thập dữ liệu học cho AI",
         "text": "Nội dung đang được cập nhật."
@@ -175,7 +195,50 @@
       "text": "Hãy cho chúng tôi biết nhu cầu – chúng tôi sẽ đề xuất giải pháp phù hợp.",
       "button": "Liên hệ"
     },
-    "pillars_eyebrow": "DỊCH VỤ"
+    "pillars_eyebrow": "DỊCH VỤ",
+    "showcase": {
+      "eyebrow": "SẢN PHẨM",
+      "title": "Hình ảnh sản phẩm của chúng tôi",
+      "lead": "Một số ví dụ dữ liệu học cho AI do bộ phận thực hiện.",
+      "items": [
+        {
+          "image": "home_showcase_01",
+          "caption": "3D Segment"
+        },
+        {
+          "image": "home_showcase_02",
+          "caption": "3D Bounding Box"
+        },
+        {
+          "image": "home_showcase_03",
+          "caption": "2D Segment"
+        },
+        {
+          "image": "home_showcase_04",
+          "caption": "2D Bounding Box"
+        },
+        {
+          "image": "home_showcase_05",
+          "caption": "Satellite"
+        },
+        {
+          "image": "home_showcase_06",
+          "caption": "Keypoint"
+        }
+      ]
+    },
+    "certifications_title": "Chứng nhận của chúng tôi",
+    "partners": {
+      "eyebrow": "ĐỐI TÁC",
+      "title": "Đối tác",
+      "lead": "Đối tác chính của chúng tôi",
+      "main": {
+        "name": "SUBARU",
+        "logo": "subaru_logo",
+        "link": "subaru.html",
+        "text": "Tìm hiểu về SUBARU và công nghệ EyeSight mà BPO BRYCEN VIETNAM đã hợp tác xây dựng."
+      }
+    }
   },
   "about": {
     "page_title": "Giới thiệu",
@@ -189,42 +252,42 @@
     },
     "history": {
       "title": "Lịch sử hình thành",
-      "lead": "Xuất phát điểm là một dự án nhỏ khoảng 15 nhân sự vào năm 2015. Hiện bộ phận vận hành với quy mô 550 nhân sự tại 3 văn phòng.",
+      "lead": "Xuất phát điểm là một dự án nhỏ khoảng 15 nhân sự vào năm 2015. Hiện bộ phận vận hành với quy mô 550 nhân sự tại 2 văn phòng.",
       "timeline": [
         {
           "year": "2015",
-          "icon": "timeline_2015",
+          "icon": "about_timeline_2015",
           "text": "Khởi điểm làm chú thích (annotation) với dự án quy mô 15 người."
         },
         {
           "year": "2016",
-          "icon": "timeline_2016",
+          "icon": "about_timeline_2016",
           "text": "Mở rộng quy mô, làm dữ liệu gắn tag với quy mô 50 người."
         },
         {
           "year": "2018",
-          "icon": "timeline_2018",
+          "icon": "about_timeline_2018",
           "text": "Làm dữ liệu nhận diện cho hệ thống tàu điện Nhật Bản. Nâng quy mô lên 150 người."
         },
         {
           "year": "2019",
-          "icon": "timeline_2019",
+          "icon": "about_timeline_2019",
           "text": "Tiếp nhận đơn hàng dữ liệu 3D sơ khai, bắt đầu làm dữ liệu segment. Phát triển chính sách đưa người sang Nhật học tập và làm việc."
         },
         {
           "year": "2020",
-          "icon": "timeline_2020",
+          "icon": "about_timeline_2020",
           "text": "Bắt đầu làm dữ liệu Bounding Box và dữ liệu vệ tinh. Mở rộng quy mô lên 200 người."
         },
         {
           "year": "2023",
-          "icon": "timeline_2023",
+          "icon": "about_timeline_2023",
           "text": "Bắt đầu làm việc với dữ liệu 3D PointCloud."
         },
         {
           "year": "2025",
-          "icon": "timeline_2025",
-          "text": "Phát triển mảng 3D Bounding Box. Nâng quy mô lên 550 người. Mở văn phòng mới tại Phạm Văn Đồng và Lý Thường Kiệt."
+          "icon": "about_timeline_2025",
+          "text": "Phát triển mảng 3D Bounding Box. Nâng quy mô lên 550 người."
         }
       ]
     },
@@ -232,19 +295,43 @@
       "title": "Văn phòng",
       "items": [
         {
-          "image": "office_nguyen_van_cu",
-          "name": "Văn phòng 1",
-          "address": "Tầng 2–6, 25 Nguyễn Văn Cừ"
+          "type": "main",
+          "image": "about_office_main",
+          "name": "Văn phòng chính",
+          "address": "Tầng 2~6, 25 Nguyễn Văn Cừ, Thuận Hóa, Huế, Vietnam",
+          "map_query": "25 Nguyễn Văn Cừ, Thuận Hóa, Huế, Vietnam"
         },
         {
-          "image": "office_pham_van_dong",
-          "name": "Văn phòng 2",
-          "address": "Tầng 4, 72 Phạm Văn Đồng"
+          "type": "branch",
+          "image": "about_office_branch",
+          "name": "Chi nhánh",
+          "address": "28 Lý Thường Kiệt, Thuận Hóa, Huế, Vietnam",
+          "map_query": "28 Lý Thường Kiệt, Thuận Hóa, Huế, Vietnam"
+        }
+      ]
+    },
+    "global": {
+      "title": "Hợp tác đa quốc gia",
+      "image": "about_global_banner",
+      "lead": "Bộ phận hợp tác công việc cùng các đội ngũ tại Việt Nam, Cambodia và Myanmar để cùng thực hiện các dự án dữ liệu cho AI.",
+      "countries": [
+        {
+          "id": "vn",
+          "image": "about_global_vietnam",
+          "name": "Việt Nam",
+          "text": "Nơi bộ phận BPO vận hành với đội ngũ 550 nhân sự."
         },
         {
-          "image": "office_ly_thuong_kiet",
-          "name": "Văn phòng 3",
-          "address": "Tầng 11, 28 Lý Thường Kiệt"
+          "id": "kh",
+          "image": "about_global_cambodia",
+          "name": "Cambodia",
+          "text": "Đội ngũ tại Cambodia cùng tham gia các dự án dữ liệu cho AI."
+        },
+        {
+          "id": "mm",
+          "image": "about_global_myanmar",
+          "name": "Myanmar",
+          "text": "Đội ngũ tại Myanmar cùng tham gia các dự án dữ liệu cho AI."
         }
       ]
     }
@@ -268,7 +355,7 @@
       "quality": {
         "title": "Kiểm soát chất lượng",
         "text": "Mỗi dự án đều qua kiểm định chất lượng ở các giai đoạn trung gian và cuối cùng, kèm phản hồi (FB) với khách hàng.",
-        "image": "service_quality_control",
+        "image": "services_quality_principles",
         "lead": "Dữ liệu chỉ đến tay khách hàng sau khi đã đi qua 5 lớp làm và duyệt. Nếu một lớp phát hiện lỗi, dữ liệu được trả lại để sửa rồi xoay vòng qua các lớp cho đến khi đạt yêu cầu.",
         "layers": [
           {
@@ -324,13 +411,18 @@
             "title": "Phản hồi từ khách hàng",
             "text": "Giao hàng trung gian để nhận phản hồi sớm."
           }
-        ]
+        ],
+        "flow_image": "services_quality_flow",
+        "principles_image": "services_quality_principles",
+        "flow_caption": "",
+        "flow_title": "Quy trình kiểm soát chất lượng"
       },
       "tabs": {
         "modalities": "Loại dữ liệu",
         "workflow": "Cách chúng tôi làm việc",
         "quality": "Kiểm soát chất lượng",
-        "usecases": "Ứng dụng"
+        "usecases": "Ứng dụng",
+        "security": "Bảo mật thông tin"
       },
       "highlights": [
         {
@@ -358,8 +450,8 @@
               "id": "seg3d",
               "name": "SEGMENT",
               "images": [
-                "service_3d_segment_1",
-                "service_3d_segment_2"
+                "services_3d_segment_01",
+                "services_3d_segment_02"
               ],
               "title": "3D Segment – Gán nhãn từng điểm",
               "summary": "Mỗi điểm trong đám mây điểm được gán một lớp đối tượng như mặt đường, tòa nhà, cây cối, phương tiện, người đi bộ.",
@@ -373,8 +465,8 @@
               "id": "bbox3d",
               "name": "BOUNDING BOX",
               "images": [
-                "service_3d_cuboid_1",
-                "service_3d_cuboid_2"
+                "services_3d_bbox_01",
+                "services_3d_bbox_02"
               ],
               "title": "3D Bounding Box (Cuboid) – Khối hộp 3D",
               "summary": "Mỗi vật thể được bao quanh bởi một khối hộp 3D, cho biết vị trí, kích thước và hướng của vật thể.",
@@ -397,8 +489,8 @@
               "id": "seg2d",
               "name": "SEGMENT",
               "images": [
-                "service_2d_segment_input",
-                "service_2d_segment_output"
+                "services_2d_segment_01",
+                "services_2d_segment_02"
               ],
               "captions": [
                 "Ảnh gốc",
@@ -416,7 +508,7 @@
               "id": "bbox2d",
               "name": "BOUNDING BOX",
               "images": [
-                "service_2d_bbox"
+                "services_2d_bbox_01"
               ],
               "title": "2D Bounding Box – Khung chữ nhật",
               "summary": "Khoanh khung chữ nhật quanh từng vật thể (xe, người, biển báo…) để AI học phát hiện vật thể.",
@@ -430,7 +522,7 @@
               "id": "keypoint",
               "name": "KEYPOINT",
               "images": [
-                "service_keypoint"
+                "services_2d_keypoint_01"
               ],
               "title": "Keypoint – Điểm đặc trưng",
               "summary": "Đánh dấu các điểm đặc trưng như khớp cơ thể để AI ước lượng tư thế và chuyển động.",
@@ -444,8 +536,8 @@
               "id": "satellite",
               "name": "SATELLITE",
               "images": [
-                "service_satellite_1",
-                "service_satellite_2"
+                "services_2d_satellite_01",
+                "services_2d_satellite_02"
               ],
               "title": "Dữ liệu vệ tinh",
               "summary": "Gán nhãn vật thể trên ảnh chụp từ vệ tinh (ví dụ máy bay, công trình) để AI nhận diện từ trên cao.",
@@ -503,12 +595,59 @@
       },
       "security": {
         "title": "Bảo mật thông tin",
-        "text": "Thông tin của khách hàng được bảo vệ nghiêm ngặt thông qua các quy định về an ninh thông tin của công ty."
+        "text": "Thông tin của khách hàng được bảo vệ nghiêm ngặt thông qua các quy định về an ninh thông tin của công ty.",
+        "image": "services_security_image"
       },
       "cta": {
         "title": "Bạn cần dữ liệu học cho AI?",
         "text": "Hãy cho chúng tôi biết loại dữ liệu và yêu cầu của bạn.",
         "button": "Liên hệ"
+      },
+      "side_nav_title": "Trên trang này",
+      "order": [
+        "usecases",
+        "modalities",
+        "workflow",
+        "quality",
+        "security"
+      ],
+      "strips": {
+        "seg3d": [
+          "services_3d_segment_strip_01",
+          "services_3d_segment_strip_02",
+          "services_3d_segment_strip_03",
+          "services_3d_segment_strip_04"
+        ],
+        "bbox3d": [
+          "services_3d_bbox_strip_01",
+          "services_3d_bbox_strip_02",
+          "services_3d_bbox_strip_03",
+          "services_3d_bbox_strip_04"
+        ],
+        "seg2d": [
+          "services_2d_segment_strip_01",
+          "services_2d_segment_strip_02",
+          "services_2d_segment_strip_03",
+          "services_2d_segment_strip_04"
+        ],
+        "bbox2d": [
+          "services_2d_bbox_strip_01",
+          "services_2d_bbox_strip_02",
+          "services_2d_bbox_strip_03",
+          "services_2d_bbox_strip_04"
+        ],
+        "keypoint": [
+          "services_2d_keypoint_strip_01",
+          "services_2d_keypoint_strip_02",
+          "services_2d_keypoint_strip_03",
+          "services_2d_keypoint_strip_04"
+        ],
+        "satellite": [
+          "services_2d_satellite_strip_01",
+          "services_2d_satellite_strip_02",
+          "services_2d_satellite_strip_03",
+          "services_2d_satellite_strip_04"
+        ]
       }
     },
     "collection": {
@@ -518,15 +657,15 @@
       "message": "Chúng tôi đang hoàn thiện thông tin về dịch vụ thu thập dữ liệu học cho AI. Vui lòng quay lại sau hoặc liên hệ để được tư vấn trực tiếp.",
       "gallery": [
         {
-          "image": "collection_image_01",
+          "image": "services_collection_01",
           "caption": ""
         },
         {
-          "image": "collection_image_02",
+          "image": "services_collection_02",
           "caption": ""
         },
         {
-          "image": "collection_image_03",
+          "image": "services_collection_03",
           "caption": ""
         }
       ]
@@ -542,7 +681,7 @@
     },
     "org": {
       "title": "Cơ cấu bộ phận",
-      "lead": "Với nhu cầu về dữ liệu lớn, bộ phận vận hành với số lượng nhân sự lớn, tổ chức theo nhiều cấp quản lý và kiểm tra chất lượng.",
+      "lead": "Với nhu cầu về dữ liệu lớn, bộ phận vận hành với số lượng nhân sự lớn và luôn đặt sự yên tâm, uy tín của khách hàng lên hàng đầu.",
       "headcount": {
         "value": "550",
         "label": "Nhân sự",
@@ -680,11 +819,12 @@
           ]
         }
       ],
-      "links_note": "Connections (see docs/reference/slide17_org_chart.png): Manager -> Sub TeamLead and PMO; PMO -> 3 Project Leaders; Sub Project Leader sits below the Project Leader row; Sub Project Leader -> 2 Super Checkers; each Super Checker -> 2 Checkers; each Checker -> 2 Annotators."
+      "links_note": "Connections (see docs/reference/slide17_org_chart.png): Manager -> Sub TeamLead and PMO; PMO -> 3 Project Leaders; Sub Project Leader sits below the Project Leader row; Sub Project Leader -> 2 Super Checkers; each Super Checker -> 2 Checkers; each Checker -> 2 Annotators.",
+      "image": "team_org_image"
     },
     "process": {
       "title": "Quy trình vận hành",
-      "lead": "Luồng công việc giữa Khách hàng, BPO (JP) và BPO (VN) qua ba giai đoạn: đầu, giữa và cuối.",
+      "lead": "Quy trình làm việc giữa BPO BRYCEN VIETNAM và khách hàng, từ khi nhận yêu cầu đến khi nghiệm thu.",
       "lanes": [
         "Khách hàng",
         "BPO (JP)",
@@ -909,7 +1049,47 @@
           "f3"
         ]
       ],
-      "edge_note": "Edge m9->m4 is the feedback loop back to production. Layout reference: docs/reference/slide18_operating_flow.png"
+      "edge_note": "Edge m9->m4 is the feedback loop back to production. Layout reference: docs/reference/slide18_operating_flow.png",
+      "image": "team_process_image",
+      "actors": {
+        "customer": "Khách hàng",
+        "bpo": "BPO BRYCEN VN",
+        "both": "Cùng phối hợp"
+      },
+      "steps": [
+        {
+          "actor": "customer",
+          "text": "Khách hàng gửi yêu cầu."
+        },
+        {
+          "actor": "bpo",
+          "text": "BPO BRYCEN VN tiếp nhận và đo đạc thử khối lượng, độ khó."
+        },
+        {
+          "actor": "both",
+          "text": "Khách hàng đặt hàng; BPO BRYCEN VN nhận order."
+        },
+        {
+          "actor": "bpo",
+          "text": "Xây dựng thể chế, môi trường làm việc, kickoff và đào tạo."
+        },
+        {
+          "actor": "bpo",
+          "text": "Thực hiện công việc và kiểm định chất lượng qua nhiều lớp."
+        },
+        {
+          "actor": "both",
+          "text": "Giao hàng trung gian; khách hàng kiểm định và gửi phản hồi (FB), BPO điều chỉnh."
+        },
+        {
+          "actor": "both",
+          "text": "Giao hàng lần cuối; khách hàng nghiệm thu."
+        },
+        {
+          "actor": "bpo",
+          "text": "Nhìn nhận, rút kinh nghiệm dự án."
+        }
+      ]
     },
     "people": {
       "title": "Nhân lực được đào tạo trong nước và tại Nhật Bản",
@@ -929,10 +1109,12 @@
         }
       ],
       "images": [
-        "team_japan_visit",
-        "team_training_meeting",
-        "team_event_booth"
-      ]
+        "team_people_japan",
+        "team_people_training",
+        "team_people_event"
+      ],
+      "country_image": "team_japan_country",
+      "country_caption": "Nhật Bản"
     },
     "recruit": {
       "title": "Nguồn nhân lực & tuyển dụng",
@@ -959,28 +1141,42 @@
         "award_top1_01",
         "award_top1_02",
         "award_top1_03",
-        "award_top1_04"
-      ]
+        "achievements_award_image"
+      ],
+      "headline": "#1",
+      "headline_text": "Số 1 Nhật Bản",
+      "image": "achievements_award_image"
     },
     "projects": {
       "title": "Dự án",
-      "text": "Với vị thế top 1 nhiều năm liên tiếp, bộ phận đã và đang thực hiện dự án cho nhiều khách hàng lớn trong và ngoài Nhật Bản. Đến nay đã hoàn thành tổng cộng 235 dự án, đặc biệt có nhiều dự án dài hạn với các khách hàng như Sony, Subaru, Denso, Sony Honda Mobility, Nikon.",
+      "text": "Với vị thế số 1 nhiều năm liên tiếp, bộ phận đã hoàn thành tổng cộng 235 dự án cho các khách hàng lớn trong và ngoài Nhật Bản, trong đó có nhiều dự án dài hạn với đối tác chính SUBARU.",
       "stat_value": "235",
       "stat_label": "Dự án đã hoàn thành",
       "customers": [
         "customer_sony",
-        "customer_subaru",
+        "subaru_logo",
         "customer_denso",
         "customer_afeela",
         "customer_nikon"
+      ],
+      "images": [
+        "achievements_projects_01",
+        "achievements_projects_02",
+        "achievements_projects_03"
       ]
+    },
+    "satisfaction": {
+      "image": "achievements_satisfaction",
+      "title": "Độ hài lòng của khách hàng",
+      "text": "Khách hàng luôn đánh giá cao chất lượng và luôn quay trở lại hợp tác cùng chúng tôi."
     }
   },
   "vision": {
     "page_title": "Tầm nhìn",
     "direction": {
       "title": "Định hướng phát triển",
-      "text": "Phát triển hơn nữa mảng chú thích (annotation), không chỉ tại Nhật Bản mà còn mở rộng cả về quy mô lẫn chất lượng. Sắp tới, công ty tại Nhật sẽ mở rộng thị trường sang Mỹ để tìm kiếm cơ hội và khách hàng mới."
+      "text": "Phát triển hơn nữa mảng chú thích (annotation), không chỉ tại Nhật Bản mà còn mở rộng cả về quy mô lẫn chất lượng. Sắp tới, công ty tại Nhật sẽ mở rộng thị trường sang Mỹ để tìm kiếm cơ hội và khách hàng mới.",
+      "image": "vision_direction_image"
     },
     "roadmap": {
       "title": "Lộ trình phát triển",
@@ -990,7 +1186,7 @@
           "id": "sea",
           "phase": "Hiện tại",
           "featured": false,
-          "image": "vision_southeast_asia",
+          "image": "vision_roadmap_sea",
           "title": "Đông Nam Á",
           "text": "Phát triển hoạt động tại khu vực Đông Nam Á, hiện tại gồm Việt Nam, Myanmar và Cambodia.",
           "countries": [
@@ -1012,7 +1208,7 @@
           "id": "usa",
           "phase": "Sắp tới",
           "featured": true,
-          "image": "vision_usa_map",
+          "image": "vision_roadmap_usa",
           "title": "Hoa Kỳ",
           "text": "Sắp tới, công ty tại Nhật Bản sẽ mở rộng thị trường sang Mỹ để tìm kiếm những cơ hội và khách hàng mới."
         },
@@ -1020,7 +1216,55 @@
           "id": "eu",
           "phase": "Tương lai xa hơn",
           "featured": false,
-          "image": "vision_eu",
+          "image": "vision_roadmap_eu",
+          "title": "Châu Âu (EU)",
+          "text": "Xa hơn nữa, hướng tới thị trường châu Âu để mở rộng phạm vi phục vụ khách hàng."
+        }
+      ]
+    },
+    "growth": {
+      "title": "Lộ trình phát triển",
+      "lead": "Từ nền tảng tại Nhật Bản và Đông Nam Á, tiếp tục mở rộng sang Hoa Kỳ và xa hơn là châu Âu.",
+      "stages": [
+        {
+          "id": "now",
+          "phase": "Hiện tại",
+          "level": 1,
+          "title": "Nhật Bản & Đông Nam Á",
+          "regions": [
+            {
+              "id": "jp",
+              "image": "vision_roadmap_japan",
+              "title": "Nhật Bản",
+              "text": "Thị trường hiện tại, nơi chúng tôi giữ vị trí số 1 về dịch vụ annotation."
+            },
+            {
+              "id": "sea",
+              "image": "vision_roadmap_sea",
+              "title": "Đông Nam Á",
+              "text": "Phát triển hoạt động tại khu vực, hiện tại gồm Việt Nam, Myanmar và Cambodia.",
+              "countries": [
+                "Việt Nam",
+                "Myanmar",
+                "Cambodia"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "next",
+          "phase": "Bước tiếp theo",
+          "level": 2,
+          "featured": true,
+          "image": "vision_roadmap_usa",
+          "title": "Hoa Kỳ",
+          "text": "Sắp tới, công ty tại Nhật Bản sẽ mở rộng thị trường sang Mỹ để tìm kiếm những cơ hội và khách hàng mới."
+        },
+        {
+          "id": "future",
+          "phase": "Tương lai xa hơn",
+          "level": 3,
+          "image": "vision_roadmap_eu",
           "title": "Châu Âu (EU)",
           "text": "Xa hơn nữa, hướng tới thị trường châu Âu để mở rộng phạm vi phục vụ khách hàng."
         }
@@ -1042,7 +1286,7 @@
   },
   "contact": {
     "page_title": "Liên hệ",
-    "lead": "Hãy liên hệ để trao đổi về dịch vụ tạo và thu thập dữ liệu học cho AI.",
+    "lead": "Hãy liên hệ với chúng tôi về dịch vụ tạo và thu thập dữ liệu học cho AI – câu hỏi, tư vấn hay báo giá đều được hoan nghênh.",
     "labels": {
       "address": "Địa chỉ",
       "email": "Email",
@@ -1053,6 +1297,227 @@
     },
     "hours": "",
     "facebook_link": "Mở trang Facebook của chúng tôi",
-    "note": "[CẦN BỔ SUNG] Slide thông tin liên hệ trong file PowerPoint đang để trống. Điền email, điện thoại, địa chỉ trong content/site.config.json."
+    "note": "[CẦN BỔ SUNG] Slide thông tin liên hệ trong file PowerPoint đang để trống. Điền email, điện thoại, địa chỉ trong content/site.config.json.",
+    "banner": "contact_banner",
+    "response_note": "Chúng tôi sẽ phản hồi trong vòng 2 ngày làm việc.",
+    "form": {
+      "title": "Biểu mẫu liên hệ",
+      "fields": {
+        "name": "Họ và tên",
+        "company": "Tên công ty",
+        "department": "Bộ phận",
+        "position": "Chức vụ",
+        "email": "Email",
+        "phone": "Số điện thoại",
+        "type": "Loại yêu cầu",
+        "message": "Nội dung liên hệ"
+      },
+      "required": "Bắt buộc",
+      "optional": "Tùy chọn",
+      "select_placeholder": "Vui lòng chọn",
+      "type_options": [
+        {
+          "value": "quote",
+          "label": "Yêu cầu báo giá"
+        },
+        {
+          "value": "meeting",
+          "label": "Đề nghị gặp trực tiếp để giới thiệu dịch vụ"
+        },
+        {
+          "value": "docs",
+          "label": "Yêu cầu tài liệu"
+        },
+        {
+          "value": "other",
+          "label": "Khác"
+        }
+      ],
+      "consent_label": "Tôi đồng ý với việc xử lý thông tin cá nhân như nêu ở trên",
+      "confirm_button": "Kiểm tra nội dung",
+      "edit_button": "Sửa lại",
+      "send_button": "Gửi",
+      "review_title": "Xác nhận nội dung",
+      "sending": "Đang gửi…",
+      "success": "Cảm ơn bạn! Chúng tôi đã nhận được thông tin và sẽ phản hồi sớm.",
+      "error": "Chưa gửi được. Vui lòng thử lại hoặc liên hệ trực tiếp qua email/điện thoại.",
+      "fallback_mailto": "Mở ứng dụng email để gửi",
+      "validation": {
+        "required": "Vui lòng nhập mục này",
+        "email": "Email chưa đúng định dạng",
+        "consent": "Vui lòng đồng ý với việc xử lý thông tin cá nhân"
+      }
+    },
+    "company_panel": {
+      "title": "Thông tin công ty",
+      "call_title": "Liên hệ qua điện thoại"
+    },
+    "privacy": {
+      "title": "Về việc xử lý thông tin cá nhân",
+      "intro": "Vui lòng đọc kỹ nội dung dưới đây trước khi gửi biểu mẫu.",
+      "policy_link_label": "Xem chính sách bảo vệ thông tin cá nhân",
+      "items": [
+        {
+          "title": "Tên đơn vị",
+          "body": "Công ty TNHH BRYCEN VIETNAM (Bộ phận BPO)"
+        },
+        {
+          "title": "Người quản lý thông tin cá nhân",
+          "body": "[CẦN BỔ SUNG] Họ tên và chức danh người phụ trách"
+        },
+        {
+          "title": "Mục đích sử dụng",
+          "body": "Thông tin cá nhân bạn cung cấp qua biểu mẫu này chỉ được sử dụng để trả lời các yêu cầu và câu hỏi của bạn."
+        },
+        {
+          "title": "Cung cấp cho bên thứ ba",
+          "body": "Chúng tôi không cung cấp thông tin cá nhân đã thu thập cho bên thứ ba, trừ khi có sự đồng ý của bạn hoặc theo quy định của pháp luật."
+        },
+        {
+          "title": "Ủy thác xử lý",
+          "body": "Trong phạm vi đạt được mục đích nêu trên, chúng tôi có thể ủy thác việc xử lý thông tin cá nhân. Bên nhận ủy thác được lựa chọn theo tiêu chuẩn của công ty, được giám sát và ký thỏa thuận không tiết lộ để bảo đảm an toàn thông tin."
+        },
+        {
+          "title": "Quyền của bạn và đầu mối tiếp nhận",
+          "body": "Theo yêu cầu của chính bạn, chúng tôi tiếp nhận các đề nghị thông báo mục đích sử dụng, xem, chỉnh sửa, bổ sung hoặc xóa, ngừng sử dụng, xóa bỏ và ngừng cung cấp cho bên thứ ba đối với thông tin cá nhân chúng tôi đang lưu giữ. Vui lòng liên hệ đầu mối ở cuối mục này."
+        },
+        {
+          "title": "Lưu ý khi nhập thông tin",
+          "body": "Nếu bạn không cung cấp các mục không bắt buộc, chúng tôi có thể không đưa ra được phản hồi phù hợp nhất."
+        },
+        {
+          "title": "Thu thập thông tin theo cách khó nhận biết",
+          "body": "Trang web có thể ghi nhận nhật ký truy cập phục vụ thống kê nhưng không dùng nhật ký này để thu thập hay sử dụng thông tin cá nhân. Chúng tôi không dùng cookie hay web beacon để thu thập thông tin cá nhân theo cách bạn khó nhận biết."
+        },
+        {
+          "title": "Chính sách bảo vệ thông tin cá nhân",
+          "body": "Vui lòng xem chính sách bảo vệ thông tin cá nhân của trang web.",
+          "link": "policy"
+        },
+        {
+          "title": "Đầu mối tiếp nhận khiếu nại và tư vấn",
+          "body": "Công ty TNHH BRYCEN VIETNAM – Bộ phận BPO",
+          "dynamic": "contact"
+        }
+      ]
+    }
+  },
+  "certifications": {
+    "title": "Chứng nhận",
+    "lead": "Chứng nhận quốc tế về quản lý chất lượng và an ninh thông tin.",
+    "items": [
+      {
+        "code": "ISO 9001:2015",
+        "name": "Hệ thống quản lý chất lượng",
+        "image": "common_iso_9001"
+      },
+      {
+        "code": "ISO/IEC 27001:2013",
+        "name": "Hệ thống quản lý an ninh thông tin",
+        "image": "common_iso_27001"
+      }
+    ]
+  },
+  "subaru": {
+    "page_title": "SUBARU",
+    "hero": {
+      "eyebrow": "ĐỐI TÁC CHÍNH",
+      "title": "SUBARU",
+      "subtitle": "Đối tác chính của BPO BRYCEN VIETNAM trong lĩnh vực dữ liệu học cho AI.",
+      "image": "subaru_hero"
+    },
+    "intro": {
+      "title": "Giới thiệu Subaru",
+      "history": {
+        "title": "Lịch sử hình thành",
+        "image": "subaru_intro_history",
+        "text": "Subaru có nguồn gốc từ Viện nghiên cứu máy bay do ông Chikuhei Nakajima thành lập năm 1917, về sau trở thành Nakajima Aircraft. Sau nhiều lần tái cơ cấu, Fuji Heavy Industries được thành lập năm 1953 và bắt đầu sản xuất xe Subaru từ mẫu Subaru 360 năm 1958. Năm 2017, công ty đổi tên thành Subaru Corporation. \"Subaru\" là tên tiếng Nhật của cụm sao Pleiades (\"Mutsuraboshi\" – sáu ngôi sao), biểu tượng cho sự hợp nhất của sáu công ty."
+      },
+      "global": {
+        "title": "Vị thế toàn cầu",
+        "image": "subaru_intro_global",
+        "text": "Subaru là thương hiệu ô tô và hàng không vũ trụ của Nhật Bản được khách hàng trên toàn thế giới tin dùng. Đến năm 2021, sản lượng tích lũy xe dẫn động bốn bánh (AWD) đạt 20 triệu chiếc; đến năm 2022, doanh số toàn cầu tích lũy của xe trang bị EyeSight đạt 5 triệu chiếc.",
+        "source": "Nguồn: công bố của Subaru Corporation (2023)."
+      }
+    },
+    "tech": {
+      "title": "Giá trị cốt lõi và Công nghệ",
+      "lead": "Bốn công nghệ làm nên đặc trưng của Subaru.",
+      "items": [
+        {
+          "id": "boxer",
+          "image": "subaru_tech_boxer",
+          "name": "Động cơ Boxer",
+          "text": "Thiết kế xi-lanh nằm ngang giúp trọng tâm xe thấp, tăng độ ổn định khi ôm cua."
+        },
+        {
+          "id": "sawd",
+          "image": "subaru_tech_sawd",
+          "name": "Hệ dẫn động S-AWD",
+          "text": "Hệ dẫn động 4 bánh toàn thời gian đối xứng tối ưu hóa độ bám đường trên mọi địa hình."
+        },
+        {
+          "id": "eyesight",
+          "image": "subaru_tech_eyesight",
+          "highlight": true,
+          "name": "Công nghệ EyeSight",
+          "text": "Hệ thống hỗ trợ người lái tiên tiến với các tính năng an toàn chủ động cao cấp.",
+          "partnership_badge": "BRYCEN VN × SUBARU",
+          "partnership": "Đối với công nghệ EyeSight, BPO BRYCEN VIETNAM đã hợp tác với SUBARU và tham gia xây dựng sản phẩm.",
+          "partnership_image": "subaru_eyesight_partnership"
+        },
+        {
+          "id": "sgp",
+          "image": "subaru_tech_sgp",
+          "name": "Hệ khung gầm SGP",
+          "text": "Khung gầm toàn cầu Subaru Global Platform tăng độ cứng vững và giảm rung lắc."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Cùng xây dựng dữ liệu cho AI",
+      "button": "Liên hệ"
+    }
+  },
+  "recruits": {
+    "page_title": "Tuyển dụng",
+    "banner": "recruits_banner",
+    "default_image": "recruits_default",
+    "lead": "Cùng xây dựng dữ liệu chất lượng cho AI. Xem các tin tuyển dụng của bộ phận BPO theo thời gian, kèm trạng thái đang mở hoặc đã đóng.",
+    "intro": {
+      "title": "Nguồn nhân lực & tuyển dụng",
+      "image": "recruits_intro",
+      "text": "Nhu cầu tuyển dụng có thể mở rộng để đáp ứng các thử thách mới. Công ty hợp tác chặt chẽ với các trường đại học, cao đẳng và cơ quan quản lý cấp phường, xã trong khu vực để tuyển dụng, nhờ đó luôn duy trì nguồn nhân lực cho các dự án quy mô lớn.",
+      "stats": [
+        {
+          "value": "79",
+          "label": "Nhân sự đang là sinh viên Đại học Kinh tế"
+        },
+        {
+          "value": "187",
+          "label": "Tổng số từ trước đến nay"
+        }
+      ]
+    },
+    "filters": {
+      "all": "Tất cả",
+      "open": "Đang mở",
+      "closed": "Đã đóng"
+    },
+    "labels": {
+      "posted": "Ngày đăng",
+      "deadline": "Hạn nộp hồ sơ",
+      "position": "Vị trí",
+      "location": "Địa điểm",
+      "type": "Hình thức",
+      "apply": "Ứng tuyển",
+      "how_to_apply": "Cách ứng tuyển",
+      "closed_note": "Vị trí này đã đóng.",
+      "no_deadline": "Cho đến khi đủ người",
+      "details": "Chi tiết công việc"
+    },
+    "empty": "Hiện chưa có tin tuyển dụng nào.",
+    "apply_subject": "Ứng tuyển:",
+    "back": "Quay lại danh sách"
   }
 }

@@ -1,0 +1,26 @@
+{
+  "set": {
+    "contact": {
+      "form": {
+        "endpoint": "",
+        "recipientEmail": "",
+        "subjectPrefix": "[BPO Website]"
+      },
+      "privacyPolicyUrl": ""
+    },
+    "recruits": {
+      "autoCloseByDeadline": true
+    },
+    "marquee": {
+      "home": {
+        "secondsPerLoop": 45
+      },
+      "services": {
+        "secondsPerLoop": 35
+      }
+    },
+    "theme": {
+      "mode": "dark-green"
+    }
+  }
+}

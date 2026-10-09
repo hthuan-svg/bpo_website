@@ -1,0 +1,176 @@
+<!-- Internal-only visual reference for the website design system; do not deploy. -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <meta name="description" content="">
+  <base href="../">
+  <link rel="icon" href="assets/images/branding/favicon.ico">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <style>
+    .styleguide-section {
+      padding-block: var(--space-6);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .styleguide-section > :where(* + *) {
+      margin-top: var(--space-4);
+    }
+
+    .styleguide-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .styleguide-demo {
+      padding: var(--space-4);
+      border: 1px dashed var(--line);
+      border-radius: var(--radius-m);
+      background: var(--bg);
+    }
+  </style>
+</head>
+<body data-page="styleguide">
+  <div id="site-header"></div>
+  <main id="main" class="container">
+    <section class="styleguide-section" data-reveal>
+      <p class="eyebrow" data-i18n="ui.brand.dept_full"></p>
+      <h1 class="section-title" data-i18n="home.hero.title"></h1>
+      <p class="section-lead" data-i18n="home.hero.subtitle"></p>
+      <div class="styleguide-buttons">
+        <a class="button button--primary" href="../services.html" data-i18n="home.hero.cta_primary"></a>
+        <a class="button button--secondary" href="../contact.html" data-i18n="home.hero.cta_secondary"></a>
+        <a class="button button--text" href="../services.html" data-i18n="ui.read_more"></a>
+      </div>
+    </section>
+
+    <section class="styleguide-section" data-reveal>
+      <header class="section-heading">
+        <p class="eyebrow" data-i18n="news.page_title"></p>
+        <h2 class="section-title" data-i18n="home.commitments_title"></h2>
+        <p class="section-lead" data-i18n="home.cta.text"></p>
+      </header>
+      <div class="grid grid--3">
+        <article class="card card--interactive">
+          <div class="card__body">
+            <span class="tag tag--brand" data-i18n="news.categories.announcement"></span>
+            <h3 data-i18n="home.commitments.0.title"></h3>
+            <p data-i18n="home.commitments.0.text"></p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__body">
+            <span class="chip" aria-pressed="false" data-i18n="news.categories.event"></span>
+            <h3 data-i18n="home.commitments.1.title"></h3>
+            <p data-i18n="home.commitments.1.text"></p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card__image" data-img="background_services_3d">
+          <div class="card__body">
+            <span class="tag" data-i18n="news.categories.project"></span>
+            <h3 data-i18n="home.commitments.2.title"></h3>
+            <p data-i18n="home.commitments.2.text"></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="styleguide-section" data-reveal>
+      <h2 data-i18n="home.stats_note"></h2>
+      <ul class="grid grid--4" data-list="home.stats">
+        <template>
+          <li class="stat styleguide-demo">
+            <strong class="stat__value" data-field="value"></strong>
+            <span class="stat__label" data-field="label"></span>
+          </li>
+        </template>
+      </ul>
+    </section>
+
+    <section class="styleguide-section" data-reveal>
+      <h2 data-i18n="about.history.title"></h2>
+      <ol class="timeline" data-list="about.history.timeline">
+        <template>
+          <li class="timeline__item">
+            <img class="timeline__icon" data-img-field="icon">
+            <div>
+              <strong class="timeline__year" data-field="year"></strong>
+              <p data-field="text"></p>
+            </div>
+          </li>
+        </template>
+      </ol>
+    </section>
+
+    <section class="styleguide-section" data-reveal>
+      <h2 data-i18n="achievements.projects.title"></h2>
+      <ul class="logo-wall">
+        <li class="logo-wall__item"><img data-img="customer_sony"></li>
+        <li class="logo-wall__item"><img data-img="customer_subaru"></li>
+        <li class="logo-wall__item"><img data-img="customer_denso"></li>
+        <li class="logo-wall__item"><img data-img="customer_honda"></li>
+        <li class="logo-wall__item"><img data-img="customer_afeela"></li>
+        <li class="logo-wall__item"><img data-img="customer_nikon"></li>
+      </ul>
+    </section>
+
+    <section class="styleguide-section" data-reveal>
+      <h2 data-i18n="news.page_title"></h2>
+      <div class="grid grid--2">
+        <article class="news-card card">
+          <img class="card__image" data-img="award_top1_04">
+          <div class="card__body news-card__body">
+            <div class="news-card__meta">
+              <span class="tag tag--brand" data-i18n="news.categories.award"></span>
+              <time class="news-card__date" datetime="2026-09-25" data-sample-date></time>
+            </div>
+            <h3 class="news-card__title" data-i18n="news.lead"></h3>
+            <a class="news-card__link" href="../news.html" data-i18n="ui.read_more"></a>
+          </div>
+        </article>
+        <div class="hero" data-bg="background_main">
+          <div class="hero__content">
+            <p class="eyebrow" data-i18n="ui.brand.dept_full"></p>
+            <h2 class="hero__title" data-i18n="home.hero.title"></h2>
+            <p class="hero__lead" data-i18n="home.hero.subtitle"></p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="../services.html" data-i18n="home.hero.cta_primary"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="styleguide-section" data-reveal>
+      <h2 data-i18n="home.cta.title"></h2>
+      <div class="grid grid--2">
+        <aside class="callout">
+          <h3 data-i18n="home.commitments.0.title"></h3>
+          <p data-i18n="home.commitments.0.text"></p>
+        </aside>
+        <aside class="warning-box">
+          <h3 data-i18n="services.collection.title"></h3>
+          <p data-i18n="services.collection.message"></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module">
+    // Format the sample timestamp from its machine-readable value.
+    const date = document.querySelector('[data-sample-date]');
+    if (date) {
+      date.textContent = date.dateTime.replaceAll('-', '.');
+    }
+  </script>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

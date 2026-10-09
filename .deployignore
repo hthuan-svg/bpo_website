@@ -1,10 +1,11 @@
 # Công cụ quản trị và tài liệu hỗ trợ chỉ chạy cục bộ; không được đưa lên bản phát hành website.
 admin/
-content/_backup_r2/
+assets/images/_unused/
+content/_backup_*/
 revision2/
-docs/reference/
-tools/
+revision3/
 docs/
+tools/
 AGENTS.md
 CLAUDE.md
 .github/

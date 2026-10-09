@@ -1,0 +1,138 @@
+<!-- Home page for the BRYCEN VIETNAM BPO division. -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BRYCEN VIETNAM BPO – Dữ liệu cho AI</title>
+  <meta name="description" content="Khám phá dịch vụ tạo và thu thập dữ liệu học AI 2D, 3D, LiDAR và camera hành trình của BRYCEN VIETNAM.">
+  <link rel="canonical" href="https://example.com/?lang=vi">
+  <link rel="alternate" hreflang="vi" href="https://example.com/?lang=vi">
+  <link rel="alternate" hreflang="en" href="https://example.com/?lang=en">
+  <link rel="alternate" hreflang="ja" href="https://example.com/?lang=ja">
+  <link rel="alternate" hreflang="x-default" href="https://example.com/?lang=vi">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BRYCEN VIETNAM – BPO">
+  <meta property="og:title" content="BRYCEN VIETNAM BPO – Dữ liệu cho AI">
+  <meta property="og:description" content="Khám phá dịch vụ tạo và thu thập dữ liệu học AI 2D, 3D, LiDAR và camera hành trình của BRYCEN VIETNAM.">
+  <meta property="og:url" content="https://example.com/?lang=vi">
+  <meta property="og:image" content="https://example.com/assets/images/branding/og_share.jpg" data-image-slot="og_share">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ảnh chia sẻ mạng xã hội">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BRYCEN VIETNAM BPO – Dữ liệu cho AI">
+  <meta name="twitter:description" content="Khám phá dịch vụ tạo và thu thập dữ liệu học AI 2D, 3D, LiDAR và camera hành trình của BRYCEN VIETNAM.">
+  <meta name="twitter:image" content="https://example.com/assets/images/branding/og_share.jpg" data-image-slot="og_share">
+  <meta name="twitter:image:alt" content="Ảnh chia sẻ mạng xã hội">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="assets/images/branding/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/branding/browser_logo_32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/branding/browser_logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/branding/browser_logo_180.png">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="index">
+  <div id="site-header"></div>
+  <main id="main" class="home-page">
+    <section class="home-hero" data-bg="background_main">
+      <div class="home-hero__content page-container" data-reveal>
+        <div class="home-hero__brand-lockup">
+          <span class="home-hero__brand-mark" data-i18n="ui.brand.dept_short"></span>
+          <span class="home-hero__brand-copy">
+            <span data-i18n="ui.brand.dept_full"></span>
+            <span data-i18n="ui.brand.company"></span>
+          </span>
+        </div>
+        <h1 data-i18n="home.hero.title"></h1>
+        <p class="home-hero__subtitle" data-i18n="home.hero.subtitle"></p>
+        <div class="home-hero__actions">
+          <a class="button button--primary" href="services.html" data-i18n="home.hero.cta_primary"></a>
+          <a class="button button--secondary" href="contact.html" data-i18n="home.hero.cta_secondary"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-stats section-shell">
+      <ul class="home-stats__list page-container" data-list="home.stats">
+        <template>
+          <li class="home-stats__item">
+            <strong class="home-stats__value" data-field="value" data-count-up></strong>
+            <span class="home-stats__label" data-field="label"></span>
+          </li>
+        </template>
+      </ul>
+      <p class="home-stats__note page-container" data-i18n="home.stats_note"></p>
+    </section>
+
+    <section class="home-section section-shell page-container" data-reveal>
+      <h2 class="home-section__title" data-i18n="home.pillars_title"></h2>
+      <div class="home-pillars" data-list="home.pillars">
+        <template>
+          <a class="home-pillar-card" data-link-field="link">
+            <img class="home-pillar-card__image" data-img-field="image" loading="lazy">
+            <span class="home-pillar-card__body">
+              <span class="home-pillar-card__badge" data-i18n="ui.coming_soon" data-show-if="coming_soon"></span>
+              <strong class="home-pillar-card__title" data-field="title"></strong>
+              <span class="home-pillar-card__text" data-field="text"></span>
+              <span class="home-pillar-card__arrow" aria-hidden="true">↗</span>
+            </span>
+          </a>
+        </template>
+      </div>
+    </section>
+
+    <section class="home-commitments section-shell">
+      <div class="page-container" data-reveal>
+        <h2 class="home-section__title" data-i18n="home.commitments_title"></h2>
+        <div class="home-commitments__grid" data-list="home.commitments">
+          <template>
+            <article class="home-commitment">
+              <svg class="home-commitment__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <path d="M24 5 39 11v11c0 10-6.4 17-15 21C15.4 39 9 32 9 22V11l15-6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="m17 23 5 5 10-11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3 data-field="title"></h3>
+              <p data-field="text"></p>
+            </article>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-customers section-shell page-container" data-reveal>
+      <h2 class="home-section__title" data-i18n="home.customers_title"></h2>
+      <ul class="home-customers__list" data-list="achievements.projects.customers">
+        <template>
+          <li><img class="home-customers__logo" data-img-field="." loading="lazy"></li>
+        </template>
+      </ul>
+    </section>
+
+    <section class="home-news section-shell page-container" data-reveal>
+      <h2 class="home-section__title" data-i18n="home.news_title"></h2>
+      <div id="home-news"></div>
+      <a class="button button--text home-news__all" href="news.html" data-i18n="ui.view_all_news"></a>
+    </section>
+
+    <section class="home-cta-band">
+      <div class="home-cta-band__inner page-container" data-reveal>
+        <div>
+          <h2 data-i18n="home.cta.title"></h2>
+          <p data-i18n="home.cta.text"></p>
+        </div>
+        <a class="button button--primary" href="contact.html" data-i18n="home.cta.button"></a>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

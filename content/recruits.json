@@ -1,0 +1,75 @@
+{
+  "_readme": "Mỗi tin tuyển dụng = 1 khối {...}. status: open | closed. hidden:true = chưa hiện. Thêm tin: sao chép khối '_template-open', đổi id/ngày/nội dung rồi đặt hidden:false. Tin mới nhất tự lên đầu theo 'date'. Nếu có 'deadline' (YYYY-MM-DD) và đã quá hạn thì tự hiện 'Đã đóng' (khi recruits.autoCloseByDeadline = true).",
+  "items": [
+    {
+      "id": "_template-open",
+      "date": "2026-01-01",
+      "deadline": "",
+      "status": "open",
+      "hidden": true,
+      "image": "recruits_default",
+      "apply_link": "",
+      "title": {
+        "vi": "Tên vị trí tuyển dụng",
+        "en": "Job title",
+        "ja": "募集職種"
+      },
+      "summary": {
+        "vi": "Mô tả ngắn 1–2 câu.",
+        "en": "1–2 sentence summary.",
+        "ja": "1〜2文の概要。"
+      },
+      "location": {
+        "vi": "Huế, Việt Nam",
+        "en": "Hue, Vietnam",
+        "ja": "ベトナム・フエ"
+      },
+      "type": {
+        "vi": "Toàn thời gian",
+        "en": "Full-time",
+        "ja": "正社員"
+      },
+      "body": {
+        "vi": "Mô tả công việc chi tiết.\n\nYêu cầu.\n\nQuyền lợi.",
+        "en": "Detailed job description.\n\nRequirements.\n\nBenefits.",
+        "ja": "仕事内容の詳細。\n\n応募資格。\n\n待遇。"
+      },
+      "_note": "Mẫu tin đang mở – sao chép khối này"
+    },
+    {
+      "id": "_template-closed",
+      "date": "2026-01-01",
+      "deadline": "",
+      "status": "closed",
+      "hidden": true,
+      "image": "recruits_default",
+      "apply_link": "",
+      "title": {
+        "vi": "Tên vị trí tuyển dụng",
+        "en": "Job title",
+        "ja": "募集職種"
+      },
+      "summary": {
+        "vi": "Mô tả ngắn 1–2 câu.",
+        "en": "1–2 sentence summary.",
+        "ja": "1〜2文の概要。"
+      },
+      "location": {
+        "vi": "Huế, Việt Nam",
+        "en": "Hue, Vietnam",
+        "ja": "ベトナム・フエ"
+      },
+      "type": {
+        "vi": "Toàn thời gian",
+        "en": "Full-time",
+        "ja": "正社員"
+      },
+      "body": {
+        "vi": "Mô tả công việc chi tiết.\n\nYêu cầu.\n\nQuyền lợi.",
+        "en": "Detailed job description.\n\nRequirements.\n\nBenefits.",
+        "ja": "仕事内容の詳細。\n\n応募資格。\n\n待遇。"
+      },
+      "_note": "Mẫu tin đã đóng"
+    }
+  ]
+}

@@ -1,0 +1,631 @@
+{
+  "set": {
+    "slots": {
+      "home_stat_founded": {
+        "src": "assets/images/home/home_stat_founded.jpg",
+        "alt": {
+          "vi": "Minh họa: năm khởi điểm 2015",
+          "en": "Illustration: founded in 2015",
+          "ja": "イラスト：2015年開始"
+        },
+        "placeholder": true
+      },
+      "home_stat_staff": {
+        "src": "assets/images/home/home_stat_staff.jpg",
+        "alt": {
+          "vi": "Minh họa: đội ngũ nhân sự",
+          "en": "Illustration: our team",
+          "ja": "イラスト：チームのスタッフ"
+        },
+        "placeholder": true
+      },
+      "home_stat_projects": {
+        "src": "assets/images/home/home_stat_projects.jpg",
+        "alt": {
+          "vi": "Minh họa: dự án đã thực hiện",
+          "en": "Illustration: projects delivered",
+          "ja": "イラスト：プロジェクト実績"
+        },
+        "placeholder": true
+      },
+      "home_stat_top1": {
+        "src": "assets/images/home/home_stat_top1.jpg",
+        "alt": {
+          "vi": "Minh họa: Top 1 thị trường Nhật Bản",
+          "en": "Illustration: No.1 in Japan",
+          "ja": "イラスト：国内シェアNo.1"
+        },
+        "placeholder": true
+      },
+      "home_showcase_01": {
+        "src": "assets/images/home/home_showcase_01.jpg",
+        "alt": {
+          "vi": "Sản phẩm dữ liệu AI 01",
+          "en": "AI data sample 01",
+          "ja": "AIデータ事例01"
+        }
+      },
+      "home_showcase_02": {
+        "src": "assets/images/home/home_showcase_02.jpg",
+        "alt": {
+          "vi": "Sản phẩm dữ liệu AI 02",
+          "en": "AI data sample 02",
+          "ja": "AIデータ事例02"
+        }
+      },
+      "home_showcase_03": {
+        "src": "assets/images/home/home_showcase_03.jpg",
+        "alt": {
+          "vi": "Sản phẩm dữ liệu AI 03",
+          "en": "AI data sample 03",
+          "ja": "AIデータ事例03"
+        }
+      },
+      "home_showcase_04": {
+        "src": "assets/images/home/home_showcase_04.jpg",
+        "alt": {
+          "vi": "Sản phẩm dữ liệu AI 04",
+          "en": "AI data sample 04",
+          "ja": "AIデータ事例04"
+        }
+      },
+      "home_showcase_05": {
+        "src": "assets/images/home/home_showcase_05.jpg",
+        "alt": {
+          "vi": "Sản phẩm dữ liệu AI 05",
+          "en": "AI data sample 05",
+          "ja": "AIデータ事例05"
+        }
+      },
+      "home_showcase_06": {
+        "src": "assets/images/home/home_showcase_06.jpg",
+        "alt": {
+          "vi": "Sản phẩm dữ liệu AI 06",
+          "en": "AI data sample 06",
+          "ja": "AIデータ事例06"
+        }
+      },
+      "home_service_creation": {
+        "src": "assets/images/home/home_service_creation.jpg",
+        "alt": {
+          "vi": "Tạo dữ liệu học cho AI",
+          "en": "AI training data creation",
+          "ja": "AI学習データ作成"
+        }
+      },
+      "home_service_collection": {
+        "src": "assets/images/home/home_service_collection.jpg",
+        "alt": {
+          "vi": "Thu thập dữ liệu học cho AI",
+          "en": "AI training data collection",
+          "ja": "AI学習データ収集"
+        }
+      },
+      "common_iso_9001": {
+        "src": "assets/images/common/common_iso_9001.jpg",
+        "alt": {
+          "vi": "Chứng nhận ISO 9001:2015",
+          "en": "ISO 9001:2015 certificate",
+          "ja": "ISO 9001:2015認証"
+        },
+        "placeholder": true
+      },
+      "common_iso_27001": {
+        "src": "assets/images/common/common_iso_27001.jpg",
+        "alt": {
+          "vi": "Chứng nhận ISO/IEC 27001",
+          "en": "ISO/IEC 27001 certificate",
+          "ja": "ISO/IEC 27001認証"
+        },
+        "placeholder": true
+      },
+      "about_global_banner": {
+        "src": "assets/images/about/about_global_banner.jpg",
+        "alt": {
+          "vi": "Hợp tác đa quốc gia",
+          "en": "Multinational collaboration",
+          "ja": "多国間の協業"
+        },
+        "placeholder": true
+      },
+      "about_global_vietnam": {
+        "src": "assets/images/about/about_global_vietnam.jpg",
+        "alt": {
+          "vi": "Việt Nam",
+          "en": "Vietnam",
+          "ja": "ベトナム"
+        },
+        "placeholder": true
+      },
+      "about_global_cambodia": {
+        "src": "assets/images/about/about_global_cambodia.jpg",
+        "alt": {
+          "vi": "Cambodia",
+          "en": "Cambodia",
+          "ja": "カンボジア"
+        },
+        "placeholder": true
+      },
+      "about_global_myanmar": {
+        "src": "assets/images/about/about_global_myanmar.jpg",
+        "alt": {
+          "vi": "Myanmar",
+          "en": "Myanmar",
+          "ja": "ミャンマー"
+        },
+        "placeholder": true
+      },
+      "services_3d_segment_strip_01": {
+        "src": "assets/images/services/services_3d_segment_strip_01.jpg",
+        "alt": {
+          "vi": "Hình minh họa 3D SEGMENT 01",
+          "en": "3D SEGMENT illustration 01",
+          "ja": "3D SEGMENT イメージ01"
+        },
+        "placeholder": true
+      },
+      "services_3d_segment_strip_02": {
+        "src": "assets/images/services/services_3d_segment_strip_02.jpg",
+        "alt": {
+          "vi": "Hình minh họa 3D SEGMENT 02",
+          "en": "3D SEGMENT illustration 02",
+          "ja": "3D SEGMENT イメージ02"
+        },
+        "placeholder": true
+      },
+      "services_3d_segment_strip_03": {
+        "src": "assets/images/services/services_3d_segment_strip_03.jpg",
+        "alt": {
+          "vi": "Hình minh họa 3D SEGMENT 03",
+          "en": "3D SEGMENT illustration 03",
+          "ja": "3D SEGMENT イメージ03"
+        },
+        "placeholder": true
+      },
+      "services_3d_segment_strip_04": {
+        "src": "assets/images/services/services_3d_segment_strip_04.jpg",
+        "alt": {
+          "vi": "Hình minh họa 3D SEGMENT 04",
+          "en": "3D SEGMENT illustration 04",
+          "ja": "3D SEGMENT イメージ04"
+        },
+        "placeholder": true
+      },
+      "services_3d_bbox_strip_01": {
+        "src": "assets/images/services/services_3d_bbox_strip_01.jpg",
+        "alt": {
+          "vi": "Hình minh họa 3D BBOX 01",
+          "en": "3D BBOX illustration 01",
+          "ja": "3D BBOX イメージ01"
+        },
+        "placeholder": true
+      },
+      "services_3d_bbox_strip_02": {
+        "src": "assets/images/services/services_3d_bbox_strip_02.jpg",
+        "alt": {
+          "vi": "Hình minh họa 3D BBOX 02",
+          "en": "3D BBOX illustration 02",
+          "ja": "3D BBOX イメージ02"
+        },
+        "placeholder": true
+      },
+      "services_3d_bbox_strip_03": {
+        "src": "assets/images/services/services_3d_bbox_strip_03.jpg",
+        "alt": {
+          "vi": "Hình minh họa 3D BBOX 03",
+          "en": "3D BBOX illustration 03",
+          "ja": "3D BBOX イメージ03"
+        },
+        "placeholder": true
+      },
+      "services_3d_bbox_strip_04": {
+        "src": "assets/images/services/services_3d_bbox_strip_04.jpg",
+        "alt": {
+          "vi": "Hình minh họa 3D BBOX 04",
+          "en": "3D BBOX illustration 04",
+          "ja": "3D BBOX イメージ04"
+        },
+        "placeholder": true
+      },
+      "services_2d_segment_strip_01": {
+        "src": "assets/images/services/services_2d_segment_strip_01.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D SEGMENT 01",
+          "en": "2D SEGMENT illustration 01",
+          "ja": "2D SEGMENT イメージ01"
+        },
+        "placeholder": true
+      },
+      "services_2d_segment_strip_02": {
+        "src": "assets/images/services/services_2d_segment_strip_02.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D SEGMENT 02",
+          "en": "2D SEGMENT illustration 02",
+          "ja": "2D SEGMENT イメージ02"
+        },
+        "placeholder": true
+      },
+      "services_2d_segment_strip_03": {
+        "src": "assets/images/services/services_2d_segment_strip_03.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D SEGMENT 03",
+          "en": "2D SEGMENT illustration 03",
+          "ja": "2D SEGMENT イメージ03"
+        },
+        "placeholder": true
+      },
+      "services_2d_segment_strip_04": {
+        "src": "assets/images/services/services_2d_segment_strip_04.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D SEGMENT 04",
+          "en": "2D SEGMENT illustration 04",
+          "ja": "2D SEGMENT イメージ04"
+        },
+        "placeholder": true
+      },
+      "services_2d_bbox_strip_01": {
+        "src": "assets/images/services/services_2d_bbox_strip_01.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D BBOX 01",
+          "en": "2D BBOX illustration 01",
+          "ja": "2D BBOX イメージ01"
+        },
+        "placeholder": true
+      },
+      "services_2d_bbox_strip_02": {
+        "src": "assets/images/services/services_2d_bbox_strip_02.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D BBOX 02",
+          "en": "2D BBOX illustration 02",
+          "ja": "2D BBOX イメージ02"
+        },
+        "placeholder": true
+      },
+      "services_2d_bbox_strip_03": {
+        "src": "assets/images/services/services_2d_bbox_strip_03.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D BBOX 03",
+          "en": "2D BBOX illustration 03",
+          "ja": "2D BBOX イメージ03"
+        },
+        "placeholder": true
+      },
+      "services_2d_bbox_strip_04": {
+        "src": "assets/images/services/services_2d_bbox_strip_04.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D BBOX 04",
+          "en": "2D BBOX illustration 04",
+          "ja": "2D BBOX イメージ04"
+        },
+        "placeholder": true
+      },
+      "services_2d_keypoint_strip_01": {
+        "src": "assets/images/services/services_2d_keypoint_strip_01.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D KEYPOINT 01",
+          "en": "2D KEYPOINT illustration 01",
+          "ja": "2D KEYPOINT イメージ01"
+        },
+        "placeholder": true
+      },
+      "services_2d_keypoint_strip_02": {
+        "src": "assets/images/services/services_2d_keypoint_strip_02.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D KEYPOINT 02",
+          "en": "2D KEYPOINT illustration 02",
+          "ja": "2D KEYPOINT イメージ02"
+        },
+        "placeholder": true
+      },
+      "services_2d_keypoint_strip_03": {
+        "src": "assets/images/services/services_2d_keypoint_strip_03.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D KEYPOINT 03",
+          "en": "2D KEYPOINT illustration 03",
+          "ja": "2D KEYPOINT イメージ03"
+        },
+        "placeholder": true
+      },
+      "services_2d_keypoint_strip_04": {
+        "src": "assets/images/services/services_2d_keypoint_strip_04.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D KEYPOINT 04",
+          "en": "2D KEYPOINT illustration 04",
+          "ja": "2D KEYPOINT イメージ04"
+        },
+        "placeholder": true
+      },
+      "services_2d_satellite_strip_01": {
+        "src": "assets/images/services/services_2d_satellite_strip_01.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D SATELLITE 01",
+          "en": "2D SATELLITE illustration 01",
+          "ja": "2D SATELLITE イメージ01"
+        },
+        "placeholder": true
+      },
+      "services_2d_satellite_strip_02": {
+        "src": "assets/images/services/services_2d_satellite_strip_02.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D SATELLITE 02",
+          "en": "2D SATELLITE illustration 02",
+          "ja": "2D SATELLITE イメージ02"
+        },
+        "placeholder": true
+      },
+      "services_2d_satellite_strip_03": {
+        "src": "assets/images/services/services_2d_satellite_strip_03.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D SATELLITE 03",
+          "en": "2D SATELLITE illustration 03",
+          "ja": "2D SATELLITE イメージ03"
+        },
+        "placeholder": true
+      },
+      "services_2d_satellite_strip_04": {
+        "src": "assets/images/services/services_2d_satellite_strip_04.jpg",
+        "alt": {
+          "vi": "Hình minh họa 2D SATELLITE 04",
+          "en": "2D SATELLITE illustration 04",
+          "ja": "2D SATELLITE イメージ04"
+        },
+        "placeholder": true
+      },
+      "services_quality_flow": {
+        "src": "assets/images/services/services_quality_flow.jpg",
+        "alt": {
+          "vi": "Hình diễn giải quy trình kiểm soát chất lượng",
+          "en": "Quality control process illustration",
+          "ja": "品質管理プロセスの図解"
+        },
+        "placeholder": true
+      },
+      "services_security_image": {
+        "src": "assets/images/services/services_security_image.jpg",
+        "alt": {
+          "vi": "Bảo mật thông tin",
+          "en": "Information security",
+          "ja": "情報セキュリティ"
+        },
+        "placeholder": true
+      },
+      "team_org_image": {
+        "src": "assets/images/team/team_org_image.jpg",
+        "alt": {
+          "vi": "Làm việc cùng khách hàng",
+          "en": "Working together with customers",
+          "ja": "お客様との協働"
+        },
+        "placeholder": true
+      },
+      "team_process_image": {
+        "src": "assets/images/team/team_process_image.jpg",
+        "alt": {
+          "vi": "Quy trình làm việc với khách hàng",
+          "en": "Working process with customers",
+          "ja": "お客様との業務プロセス"
+        },
+        "placeholder": true
+      },
+      "team_japan_country": {
+        "src": "assets/images/team/team_japan_country.jpg",
+        "alt": {
+          "vi": "Đất nước Nhật Bản",
+          "en": "Japan",
+          "ja": "日本"
+        },
+        "placeholder": true
+      },
+      "achievements_projects_01": {
+        "src": "assets/images/achievements/achievements_projects_01.jpg",
+        "alt": {
+          "vi": "Hình minh họa dự án 01",
+          "en": "Project illustration 01",
+          "ja": "プロジェクトのイメージ01"
+        },
+        "placeholder": true
+      },
+      "achievements_projects_02": {
+        "src": "assets/images/achievements/achievements_projects_02.jpg",
+        "alt": {
+          "vi": "Hình minh họa dự án 02",
+          "en": "Project illustration 02",
+          "ja": "プロジェクトのイメージ02"
+        },
+        "placeholder": true
+      },
+      "achievements_projects_03": {
+        "src": "assets/images/achievements/achievements_projects_03.jpg",
+        "alt": {
+          "vi": "Hình minh họa dự án 03",
+          "en": "Project illustration 03",
+          "ja": "プロジェクトのイメージ03"
+        },
+        "placeholder": true
+      },
+      "achievements_satisfaction": {
+        "src": "assets/images/achievements/achievements_satisfaction.jpg",
+        "alt": {
+          "vi": "Khách hàng hài lòng và quay trở lại",
+          "en": "Satisfied, returning customers",
+          "ja": "満足いただき再度ご依頼いただくお客様"
+        },
+        "placeholder": true
+      },
+      "vision_direction_image": {
+        "src": "assets/images/vision/vision_direction_image.jpg",
+        "alt": {
+          "vi": "Định hướng phát triển",
+          "en": "Direction of growth",
+          "ja": "今後の方向性"
+        },
+        "placeholder": true
+      },
+      "vision_roadmap_japan": {
+        "src": "assets/images/vision/vision_roadmap_japan.jpg",
+        "alt": {
+          "vi": "Nhật Bản",
+          "en": "Japan",
+          "ja": "日本"
+        },
+        "placeholder": true
+      },
+      "news_default": {
+        "src": "assets/images/news/news_default.jpg",
+        "alt": {
+          "vi": "Ảnh tin tức mặc định",
+          "en": "Default news image",
+          "ja": "ニュース既定画像"
+        },
+        "placeholder": true
+      },
+      "news_2026_01_top1": {
+        "src": "assets/images/news/news_2026_01_top1.jpg",
+        "alt": {
+          "vi": "Huy hiệu Top 1 thị trường annotation",
+          "en": "No.1 annotation market badge",
+          "ja": "アノテーション市場No.1バッジ"
+        }
+      },
+      "news_2026_09_us_dataset": {
+        "src": "assets/images/news/news_2026_09_us_dataset.jpg",
+        "alt": {
+          "vi": "Dữ liệu lái xe thực tế tại Mỹ",
+          "en": "US real-driving dataset",
+          "ja": "米国の実走行データ"
+        }
+      },
+      "contact_banner": {
+        "src": "assets/images/contact/contact_banner.jpg",
+        "alt": {
+          "vi": "Liên hệ BRYCEN VIETNAM BPO",
+          "en": "Contact BRYCEN VIETNAM BPO",
+          "ja": "BRYCEN VIETNAM BPOへのお問い合わせ"
+        },
+        "placeholder": true
+      },
+      "subaru_hero": {
+        "src": "assets/images/subaru/subaru_hero.jpg",
+        "alt": {
+          "vi": "SUBARU",
+          "en": "SUBARU",
+          "ja": "SUBARU"
+        },
+        "placeholder": true
+      },
+      "subaru_intro_history": {
+        "src": "assets/images/subaru/subaru_intro_history.jpg",
+        "alt": {
+          "vi": "Lịch sử hình thành của Subaru",
+          "en": "History of Subaru",
+          "ja": "スバルの歴史"
+        },
+        "placeholder": true
+      },
+      "subaru_intro_global": {
+        "src": "assets/images/subaru/subaru_intro_global.jpg",
+        "alt": {
+          "vi": "Vị thế toàn cầu của Subaru",
+          "en": "Subaru's global position",
+          "ja": "スバルのグローバルな位置づけ"
+        },
+        "placeholder": true
+      },
+      "subaru_tech_boxer": {
+        "src": "assets/images/subaru/subaru_tech_boxer.jpg",
+        "alt": {
+          "vi": "Động cơ Boxer",
+          "en": "Boxer engine",
+          "ja": "水平対向エンジン"
+        },
+        "placeholder": true
+      },
+      "subaru_tech_sawd": {
+        "src": "assets/images/subaru/subaru_tech_sawd.jpg",
+        "alt": {
+          "vi": "Hệ dẫn động S-AWD",
+          "en": "S-AWD system",
+          "ja": "S-AWD"
+        },
+        "placeholder": true
+      },
+      "subaru_tech_eyesight": {
+        "src": "assets/images/subaru/subaru_tech_eyesight.jpg",
+        "alt": {
+          "vi": "Công nghệ EyeSight",
+          "en": "EyeSight technology",
+          "ja": "アイサイト"
+        },
+        "placeholder": true
+      },
+      "subaru_tech_sgp": {
+        "src": "assets/images/subaru/subaru_tech_sgp.jpg",
+        "alt": {
+          "vi": "Khung gầm SGP",
+          "en": "Subaru Global Platform",
+          "ja": "SGP（スバルグローバルプラットフォーム）"
+        },
+        "placeholder": true
+      },
+      "subaru_eyesight_partnership": {
+        "src": "assets/images/subaru/subaru_eyesight_partnership.jpg",
+        "alt": {
+          "vi": "BRYCEN VIETNAM hợp tác với SUBARU về EyeSight",
+          "en": "BRYCEN VIETNAM and SUBARU collaboration on EyeSight",
+          "ja": "EyeSightに関するBRYCEN VIETNAMとSUBARUの協業"
+        },
+        "placeholder": true
+      },
+      "recruits_banner": {
+        "src": "assets/images/recruits/recruits_banner.jpg",
+        "alt": {
+          "vi": "Tuyển dụng tại BRYCEN VIETNAM BPO",
+          "en": "Careers at BRYCEN VIETNAM BPO",
+          "ja": "BRYCEN VIETNAM BPOの採用"
+        },
+        "placeholder": true
+      },
+      "recruits_default": {
+        "src": "assets/images/recruits/recruits_default.jpg",
+        "alt": {
+          "vi": "Ảnh tin tuyển dụng mặc định",
+          "en": "Default recruitment image",
+          "ja": "採用情報既定画像"
+        },
+        "placeholder": true
+      },
+      "recruits_intro": {
+        "src": "assets/images/recruits/recruits_intro.jpg",
+        "alt": {
+          "vi": "Đội ngũ BPO",
+          "en": "The BPO team",
+          "ja": "BPOチーム"
+        },
+        "placeholder": true
+      },
+      "company_logo_on_dark": {
+        "src": "assets/images/common/company_logo_on_dark.png",
+        "alt": {
+          "vi": "Logo BRYCEN VIETNAM (nền tối)",
+          "en": "BRYCEN VIETNAM logo (dark background)",
+          "ja": "BRYCEN VIETNAMロゴ（暗背景用）"
+        }
+      },
+      "company_logo_mark_on_dark": {
+        "src": "assets/images/common/company_logo_mark_on_dark.png",
+        "alt": {
+          "vi": "Biểu tượng BRYCEN VIETNAM (nền tối)",
+          "en": "BRYCEN VIETNAM emblem (dark background)",
+          "ja": "BRYCEN VIETNAMエンブレム（暗背景用）"
+        }
+      },
+      "vision_roadmap_usa": {
+        "alt": {
+          "vi": "Bản đồ nước Mỹ – thị trường tiếp theo",
+          "en": "Map of the United States – the next market",
+          "ja": "米国地図 – 次の市場"
+        }
+      }
+    }
+  }
+}

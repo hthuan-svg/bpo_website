@@ -1,43 +1,16 @@
-# Documentation Index
+# Tài liệu dự án (Docs index)
 
-Đây là source of truth cho bộ tài liệu v3.
+Bắt đầu một phiên làm việc mới? → đọc **`work/session-start.md`** (hoặc gõ `/session-start` trong VS Code Agent).
 
-## Structure
+| Thư mục | Nội dung | Dành cho |
+|---|---|---|
+| `overview/` | `project-spec.md` yêu cầu & kiến trúc · `page-specs.md` **mô tả chi tiết từng trang (nguồn sự thật)** · `design-system.md` theme đen–xanh | Agent + người phát triển |
+| `content/` | `content-model.md` cấu trúc nội dung & cách gắn dữ liệu · `editing-guide.md` hướng dẫn sửa nội dung | Agent / người biên tập |
+| `images/` | `image-slots.md` **bảng toàn bộ vị trí ảnh theo trang** · `image-guide.md` cách thay ảnh | Người biên tập |
+| `work/` | `session-start.md` · `current-work.md` tiến độ · `decisions-and-open-questions.md` | Mọi người |
+| `prompts/` | `revision-3-prompts.md` bộ prompt đợt cập nhật 3 · `helper-prompts.md` prompt dùng chung | Người điều khiển Agent |
+| `release/` | `publish-checklist.md` · `contact-form-setup.md` · `deploy-notes.md` | Trước khi công khai |
+| `reference/` | Ảnh tham chiếu trích từ PowerPoint | Agent |
+| `_archive/` | Tài liệu & prompt của các bước cũ (chỉ để tra cứu, **không dùng**) | — |
 
-```text
-docs/
-├── README.md
-├── 00-project/
-├── 01-design/
-├── 02-content/
-├── 03-development/
-└── 04-prompts/
-```
-
-## Reading order
-
-### Always
-- root `AGENTS.md`
-- this file
-
-### Project
-- `00-project/PROJECT_CONTEXT.md`
-- `00-project/ARCHITECTURE.md`
-- `00-project/CONVENTIONS.md`
-
-### Design
-- `01-design/DESIGN_SYSTEM.md`
-- `01-design/COMPONENTS.md`
-- `01-design/IMAGES.md`
-
-### Content
-Read only the page being changed.
-
-### Development
-- `TASKS.md`
-- `IMPLEMENTATION.md`
-- `QA_CHECKLIST.md`
-- `CHANGELOG.md`
-
-### Prompts
-Run prompts in numerical order. Each prompt is intended to be one Agent step.
+Quy tắc dự án nằm ở `../AGENTS.md`.

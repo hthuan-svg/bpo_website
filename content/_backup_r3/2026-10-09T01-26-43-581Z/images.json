@@ -1,0 +1,408 @@
+{
+  "_readme": "Mỗi 'slot' là một vị trí ảnh trên web. Muốn đổi ảnh: ghi đè file cùng tên, hoặc sửa 'src'. Sửa 'alt' để đổi mô tả ảnh (cho người khiếm thị & SEO).",
+  "slots": {
+    "company_logo": {
+      "src": "assets/images/common/company_logo.png",
+      "width": 1000,
+      "height": 315,
+      "alt": {
+        "vi": "Logo BRYCEN VIETNAM",
+        "en": "BRYCEN VIETNAM logo",
+        "ja": "BRYCEN VIETNAMロゴ"
+      }
+    },
+    "company_logo_mark": {
+      "src": "assets/images/common/company_logo_mark.png",
+      "width": 858,
+      "height": 912,
+      "alt": {
+        "vi": "Biểu tượng BRYCEN VIETNAM",
+        "en": "BRYCEN VIETNAM emblem",
+        "ja": "BRYCEN VIETNAMエンブレム"
+      }
+    },
+    "browser_logo": {
+      "src": "assets/images/common/browser_logo.png",
+      "width": 512,
+      "height": 512,
+      "alt": {
+        "vi": "Biểu tượng trình duyệt",
+        "en": "Browser icon",
+        "ja": "ブラウザアイコン"
+      }
+    },
+    "og_share": {
+      "src": "assets/images/common/og_share.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": {
+        "vi": "Ảnh chia sẻ mạng xã hội",
+        "en": "Social share image",
+        "ja": "SNS共有画像"
+      }
+    },
+    "home_hero_image": {
+      "src": "assets/images/home/home_hero_image.jpg",
+      "width": 1536,
+      "height": 1024,
+      "alt": {
+        "vi": "Công nghệ AI",
+        "en": "AI technology",
+        "ja": "AIテクノロジー"
+      }
+    },
+    "background_soft": {
+      "src": "assets/images/common/background_soft.png",
+      "width": 944,
+      "height": 541,
+      "alt": {
+        "vi": "Nền sóng mềm",
+        "en": "Soft wave background",
+        "ja": "やわらかな波の背景"
+      }
+    },
+    "services_overview_3d": {
+      "src": "assets/images/services/services_overview_3d.jpg",
+      "width": 960,
+      "height": 527,
+      "alt": {
+        "vi": "Dữ liệu 3D LiDAR",
+        "en": "LiDAR 3D data",
+        "ja": "LiDAR 3Dデータ"
+      }
+    },
+    "services_overview_2d": {
+      "src": "assets/images/services/services_overview_2d.jpg",
+      "width": 960,
+      "height": 565,
+      "alt": {
+        "vi": "Camera hành trình",
+        "en": "Dashcams",
+        "ja": "ドライブレコーダー"
+      }
+    },
+    "about_office_main": {
+      "src": "assets/images/about/about_office_main.jpg",
+      "width": 540,
+      "height": 350,
+      "alt": {
+        "vi": "Văn phòng 25 Nguyễn Văn Cừ",
+        "en": "Office at 25 Nguyen Van Cu",
+        "ja": "25 Nguyen Van Cuオフィス"
+      }
+    },
+    "about_office_branch": {
+      "src": "assets/images/about/about_office_branch.jpg",
+      "width": 669,
+      "height": 898,
+      "alt": {
+        "vi": "Văn phòng 28 Lý Thường Kiệt",
+        "en": "Office at 28 Ly Thuong Kiet",
+        "ja": "28 Ly Thuong Kietオフィス"
+      }
+    },
+    "about_timeline_2015": {
+      "src": "assets/images/about/about_timeline_2015.png",
+      "width": 384,
+      "height": 384,
+      "alt": {
+        "vi": "Biểu tượng xe ô tô",
+        "en": "Car icon",
+        "ja": "自動車アイコン"
+      }
+    },
+    "about_timeline_2016": {
+      "src": "assets/images/about/about_timeline_2016.png",
+      "width": 512,
+      "height": 512,
+      "alt": {
+        "vi": "Biểu tượng thẻ tag",
+        "en": "Tag icon",
+        "ja": "タグアイコン"
+      }
+    },
+    "about_timeline_2018": {
+      "src": "assets/images/about/about_timeline_2018.png",
+      "width": 225,
+      "height": 225,
+      "alt": {
+        "vi": "Biểu tượng tàu điện",
+        "en": "Train icon",
+        "ja": "電車アイコン"
+      }
+    },
+    "about_timeline_2019": {
+      "src": "assets/images/about/about_timeline_2019.png",
+      "width": 400,
+      "height": 400,
+      "alt": {
+        "vi": "Biểu tượng nhóm người",
+        "en": "Team icon",
+        "ja": "チームアイコン"
+      }
+    },
+    "about_timeline_2020": {
+      "src": "assets/images/about/about_timeline_2020.png",
+      "width": 225,
+      "height": 225,
+      "alt": {
+        "vi": "Biểu tượng vệ tinh",
+        "en": "Satellite icon",
+        "ja": "衛星アイコン"
+      }
+    },
+    "about_timeline_2023": {
+      "src": "assets/images/about/about_timeline_2023.png",
+      "width": 190,
+      "height": 190,
+      "alt": {
+        "vi": "Biểu tượng cảm biến LiDAR",
+        "en": "LiDAR sensor icon",
+        "ja": "LiDARセンサーアイコン"
+      }
+    },
+    "about_timeline_2025": {
+      "src": "assets/images/about/about_timeline_2025.png",
+      "width": 175,
+      "height": 175,
+      "alt": {
+        "vi": "Biểu tượng xe gắn LiDAR",
+        "en": "Car with LiDAR icon",
+        "ja": "LiDAR搭載車アイコン"
+      }
+    },
+    "services_3d_segment_01": {
+      "src": "assets/images/services/services_3d_segment_01.jpg",
+      "width": 1213,
+      "height": 549,
+      "alt": {
+        "vi": "Ví dụ 3D Segment",
+        "en": "3D Segment example",
+        "ja": "3Dセグメンテーション例"
+      }
+    },
+    "services_3d_segment_02": {
+      "src": "assets/images/services/services_3d_segment_02.jpg",
+      "width": 1143,
+      "height": 540,
+      "alt": {
+        "vi": "Ví dụ 3D Segment (2)",
+        "en": "3D Segment example (2)",
+        "ja": "3Dセグメンテーション例(2)"
+      }
+    },
+    "services_3d_bbox_01": {
+      "src": "assets/images/services/services_3d_bbox_01.jpg",
+      "width": 1217,
+      "height": 773,
+      "alt": {
+        "vi": "Ví dụ 3D Cuboid",
+        "en": "3D Cuboid example",
+        "ja": "3Dキューボイド例"
+      }
+    },
+    "services_3d_bbox_02": {
+      "src": "assets/images/services/services_3d_bbox_02.jpg",
+      "width": 1220,
+      "height": 776,
+      "alt": {
+        "vi": "Ví dụ 3D Cuboid (2)",
+        "en": "3D Cuboid example (2)",
+        "ja": "3Dキューボイド例(2)"
+      }
+    },
+    "services_2d_segment_01": {
+      "src": "assets/images/services/services_2d_segment_01.jpg",
+      "width": 719,
+      "height": 540,
+      "alt": {
+        "vi": "Ảnh gốc trước khi segment",
+        "en": "Original image before segmentation",
+        "ja": "セグメンテーション前の元画像"
+      }
+    },
+    "services_2d_segment_02": {
+      "src": "assets/images/services/services_2d_segment_02.jpg",
+      "width": 719,
+      "height": 540,
+      "alt": {
+        "vi": "Kết quả 2D Segment",
+        "en": "2D Segment result",
+        "ja": "2Dセグメンテーション結果"
+      }
+    },
+    "services_2d_bbox_01": {
+      "src": "assets/images/services/services_2d_bbox_01.jpg",
+      "width": 702,
+      "height": 377,
+      "alt": {
+        "vi": "Ví dụ 2D Bounding Box",
+        "en": "2D Bounding Box example",
+        "ja": "2Dバウンディングボックス例"
+      }
+    },
+    "services_2d_keypoint_01": {
+      "src": "assets/images/services/services_2d_keypoint_01.jpg",
+      "width": 680,
+      "height": 453,
+      "alt": {
+        "vi": "Ví dụ Keypoint",
+        "en": "Keypoint example",
+        "ja": "キーポイント例"
+      }
+    },
+    "services_2d_satellite_01": {
+      "src": "assets/images/services/services_2d_satellite_01.jpg",
+      "width": 1400,
+      "height": 1230,
+      "alt": {
+        "vi": "Ảnh vệ tinh sân bay",
+        "en": "Satellite image of an airport",
+        "ja": "空港の衛星画像"
+      }
+    },
+    "services_2d_satellite_02": {
+      "src": "assets/images/services/services_2d_satellite_02.jpg",
+      "width": 1400,
+      "height": 1227,
+      "alt": {
+        "vi": "Ảnh vệ tinh được gắn nhãn",
+        "en": "Annotated satellite image",
+        "ja": "アノテーション済み衛星画像"
+      }
+    },
+    "services_collection_sample_lidar": {
+      "src": "assets/images/services/services_collection_sample_lidar.jpg",
+      "width": 960,
+      "height": 527,
+      "alt": {
+        "vi": "Dữ liệu LiDAR",
+        "en": "LiDAR data",
+        "ja": "LiDARデータ"
+      }
+    },
+    "services_collection_sample_dashcam": {
+      "src": "assets/images/services/services_collection_sample_dashcam.jpg",
+      "width": 960,
+      "height": 565,
+      "alt": {
+        "vi": "Camera hành trình",
+        "en": "Dashcams",
+        "ja": "ドライブレコーダー"
+      }
+    },
+    "services_quality_principles": {
+      "src": "assets/images/services/services_quality_principles.png",
+      "width": 850,
+      "height": 260,
+      "alt": {
+        "vi": "Quy trình kiểm soát chất lượng",
+        "en": "Quality control process",
+        "ja": "品質管理プロセス"
+      }
+    },
+    "team_people_event": {
+      "src": "assets/images/team/team_people_event.jpg",
+      "width": 1200,
+      "height": 1096,
+      "alt": {
+        "vi": "Đội ngũ tại gian hàng triển lãm",
+        "en": "Team at an exhibition booth",
+        "ja": "展示会ブースのチーム"
+      }
+    },
+    "team_people_training": {
+      "src": "assets/images/team/team_people_training.jpg",
+      "width": 720,
+      "height": 540,
+      "alt": {
+        "vi": "Buổi trao đổi, đào tạo",
+        "en": "Training session",
+        "ja": "研修・打ち合わせ"
+      }
+    },
+    "team_people_japan": {
+      "src": "assets/images/team/team_people_japan.jpg",
+      "width": 719,
+      "height": 540,
+      "alt": {
+        "vi": "Nhân sự được cử sang Nhật",
+        "en": "Staff dispatched to Japan",
+        "ja": "日本派遣メンバー"
+      }
+    },
+    "subaru_logo": {
+      "src": "assets/images/subaru/subaru_logo.png",
+      "width": 1200,
+      "height": 324,
+      "alt": {
+        "vi": "Subaru",
+        "en": "Subaru",
+        "ja": "Subaru"
+      }
+    },
+    "achievements_award_image": {
+      "src": "assets/images/achievements/achievements_award_image.png",
+      "width": 450,
+      "height": 402,
+      "alt": {
+        "vi": "Huy hiệu Top 1 thị trường (Fuji Chimera)",
+        "en": "#1 market share badge (Fuji Chimera)",
+        "ja": "国内シェアNo.1バッジ（富士キメラ総研）"
+      }
+    },
+    "vision_roadmap_usa": {
+      "src": "assets/images/vision/vision_roadmap_usa.jpg",
+      "alt": {
+        "vi": "Bản đồ nước Mỹ và các khách hàng mục tiêu",
+        "en": "Map of the United States with target customers",
+        "ja": "米国地図と対象のお客様"
+      }
+    },
+    "vision_roadmap_eu": {
+      "src": "assets/images/vision/vision_roadmap_eu.jpg",
+      "alt": {
+        "vi": "Hình ảnh châu Âu (EU)",
+        "en": "Image of Europe (EU)",
+        "ja": "欧州（EU）のイメージ"
+      },
+      "placeholder": true
+    },
+    "vision_roadmap_sea": {
+      "src": "assets/images/vision/vision_roadmap_sea.jpg",
+      "alt": {
+        "vi": "Hình ảnh Đông Nam Á",
+        "en": "Image of Southeast Asia",
+        "ja": "東南アジアのイメージ"
+      },
+      "placeholder": true
+    },
+    "services_collection_01": {
+      "src": "assets/images/services/services_collection_01.jpg",
+      "alt": {
+        "vi": "Hình minh họa thu thập dữ liệu 1",
+        "en": "Data collection illustration 1",
+        "ja": "データ収集のイメージ1"
+      },
+      "placeholder": true
+    },
+    "services_collection_02": {
+      "src": "assets/images/services/services_collection_02.jpg",
+      "alt": {
+        "vi": "Hình minh họa thu thập dữ liệu 2",
+        "en": "Data collection illustration 2",
+        "ja": "データ収集のイメージ2"
+      },
+      "placeholder": true
+    },
+    "services_collection_03": {
+      "src": "assets/images/services/services_collection_03.jpg",
+      "alt": {
+        "vi": "Hình minh họa thu thập dữ liệu 3",
+        "en": "Data collection illustration 3",
+        "ja": "データ収集のイメージ3"
+      },
+      "placeholder": true
+    }
+  }
+}

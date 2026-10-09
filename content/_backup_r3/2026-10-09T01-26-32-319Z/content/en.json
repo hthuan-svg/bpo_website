@@ -1,0 +1,1058 @@
+{
+  "meta": {
+    "title": "BPO – Data for AI | BRYCEN VIETNAM",
+    "description": "The BPO Division of BRYCEN VIETNAM Co., Ltd. specializes in creating and collecting training data for AI."
+  },
+  "seo": {
+    "pages": {
+      "index": {
+        "title": "BRYCEN VIETNAM BPO – Data for AI",
+        "description": "Explore BRYCEN VIETNAM's 2D, 3D, LiDAR, and dashcam AI training data creation and collection services."
+      },
+      "about": {
+        "title": "About BRYCEN VIETNAM BPO",
+        "description": "Learn about the BPO division, its history, and BRYCEN VIETNAM office locations."
+      },
+      "services": {
+        "title": "AI Data Services | BRYCEN VIETNAM BPO",
+        "description": "An overview of BRYCEN VIETNAM BPO's AI training data creation and collection services."
+      },
+      "services-annotation": {
+        "title": "AI Training Data Creation | BRYCEN VIETNAM BPO",
+        "description": "Explore 2D, 3D, and satellite image annotation services with quality control."
+      },
+      "services-collection": {
+        "title": "AI Data Collection | BRYCEN VIETNAM BPO",
+        "description": "Learn about LiDAR and dashcam data collection for AI training."
+      },
+      "team": {
+        "title": "Our Team | BRYCEN VIETNAM BPO",
+        "description": "Learn about the team structure, operating process, and career opportunities at BRYCEN VIETNAM BPO."
+      },
+      "achievements": {
+        "title": "Achievements and Projects | BRYCEN VIETNAM BPO",
+        "description": "Explore the achievements and AI data projects of BRYCEN VIETNAM's BPO division."
+      },
+      "vision": {
+        "title": "Vision and Careers | BRYCEN VIETNAM BPO",
+        "description": "Discover BRYCEN VIETNAM's direction and career opportunities in AI data services."
+      },
+      "news": {
+        "title": "News | BRYCEN VIETNAM BPO",
+        "description": "Read news, event updates, and activities from the BRYCEN VIETNAM BPO division."
+      },
+      "contact": {
+        "title": "Contact | BRYCEN VIETNAM BPO",
+        "description": "Contact BRYCEN VIETNAM BPO to discuss AI training data services."
+      }
+    }
+  },
+  "not_found": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has moved.",
+    "home_link": "Return to home"
+  },
+  "ui": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "services_annotation": "AI Training Data Creation",
+      "services_collection": "AI Training Data Collection",
+      "team": "Team",
+      "achievements": "Achievements & Projects",
+      "vision": "Vision",
+      "news": "News",
+      "contact": "Contact"
+    },
+    "skip": "Skip to main content",
+    "read_more": "Read more",
+    "show_more": "Show more",
+    "read_original": "Read original",
+    "open_facebook_post": "Open Facebook post",
+    "share_facebook": "Share on Facebook",
+    "news_not_found": "We couldn't find this news item. It may have been removed or the link may be incorrect.",
+    "back": "Back",
+    "all": "All",
+    "view_map": "View map",
+    "view_all_news": "View all news",
+    "follow_us": "Follow us",
+    "quick_links": "Quick links",
+    "language_options": {
+      "vi": "VI",
+      "en": "EN",
+      "ja": "日本語"
+    },
+    "social_labels": {
+      "facebook": "Facebook",
+      "youtube": "YouTube",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "zalo": "Zalo"
+    },
+    "footer_company": "BRYCEN VIETNAM Co., Ltd.",
+    "footer_dept": "BPO Division (Business Process Outsourcing)",
+    "parent_site": "Brycen Japan website",
+    "news_empty": "No news in this category yet.",
+    "language": "Language",
+    "menu": "Menu",
+    "copyright": "All rights reserved. BRYCEN VIETNAM Co., Ltd.",
+    "back_to_top": "Back to top",
+    "coming_soon": "Coming soon",
+    "image_placeholder": "Image coming soon",
+    "tabs_label": "Main navigation",
+    "brand": {
+      "dept_short": "BPO",
+      "dept_full": "BUSINESS PROCESS OUTSOURCING",
+      "company": "BRYCEN VIETNAM",
+      "dept_native": "BPO Division",
+      "company_long": "BRYCEN VIETNAM Co., Ltd."
+    },
+    "breadcrumb": "Breadcrumb"
+  },
+  "home": {
+    "hero": {
+      "title": "High-quality data for trustworthy AI",
+      "subtitle": "The BPO Division creates and collects training data for AI — since 2015, with 550 people and 235+ projects.",
+      "cta_primary": "Explore services",
+      "cta_secondary": "Contact us"
+    },
+    "stats": [
+      {
+        "value": "2015",
+        "label": "Year founded"
+      },
+      {
+        "value": "550",
+        "label": "Team members"
+      },
+      {
+        "value": "235+",
+        "label": "Projects delivered"
+      },
+      {
+        "value": "5",
+        "label": "Consecutive years #1 in Japan*"
+      }
+    ],
+    "stats_note": "* Source: Fuji Chimera Research Institute, annotation services market.",
+    "pillars_title": "Our services",
+    "pillars": [
+      {
+        "link": "services-annotation.html",
+        "image": "background_services_2d",
+        "coming_soon": false,
+        "title": "AI Training Data Creation",
+        "text": "Annotation of 3D LiDAR data and 2D image data, with multi-layer quality checks."
+      },
+      {
+        "link": "services-collection.html",
+        "image": "background_services_3d",
+        "coming_soon": true,
+        "title": "AI Training Data Collection",
+        "text": "Content coming soon."
+      }
+    ],
+    "commitments_title": "Our commitments",
+    "commitments": [
+      {
+        "title": "High-quality data",
+        "text": "Diverse, representative and well-managed data — the foundation of robust AI models."
+      },
+      {
+        "title": "Information security",
+        "text": "Customer information is protected strictly under our information security rules."
+      },
+      {
+        "title": "On time, trusted by clients",
+        "text": "Projects are delivered on schedule, and clients are satisfied with the quality."
+      }
+    ],
+    "customers_title": "Featured customers",
+    "news_title": "Latest news",
+    "cta": {
+      "title": "Let's talk about your AI data",
+      "text": "Tell us what you need and we will propose the right solution.",
+      "button": "Contact"
+    },
+    "pillars_eyebrow": "SERVICES"
+  },
+  "about": {
+    "page_title": "About us",
+    "intro": {
+      "title": "Overview",
+      "paragraphs": [
+        "BPO (Business Process Outsourcing) specializes in creating training data for AI (Artificial Intelligence) and processing image data.",
+        "With the rapid growth of AI, demand for training data is huge. Creating data for AI is a core part of the AI ecosystem.",
+        "High-quality, diverse, representative and well-managed data is the basis for powerful, reliable AI models. Customer information is strictly protected under our information security rules."
+      ]
+    },
+    "history": {
+      "title": "Our history",
+      "lead": "We started in 2015 as a small project of about 15 people. Today the division operates with 550 people across 3 offices.",
+      "timeline": [
+        {
+          "year": "2015",
+          "icon": "timeline_2015",
+          "text": "Started annotation work with a 15-person project."
+        },
+        {
+          "year": "2016",
+          "icon": "timeline_2016",
+          "text": "Scaled up to 50 people, working on tagging data."
+        },
+        {
+          "year": "2018",
+          "icon": "timeline_2018",
+          "text": "Recognition data for Japan's railway system. Grew to 150 people."
+        },
+        {
+          "year": "2019",
+          "icon": "timeline_2019",
+          "text": "Received first 3D data orders and began segmentation data. Launched a policy to send staff to Japan to study and work."
+        },
+        {
+          "year": "2020",
+          "icon": "timeline_2020",
+          "text": "Began Bounding Box and satellite data. Grew to 200 people."
+        },
+        {
+          "year": "2023",
+          "icon": "timeline_2023",
+          "text": "Started working with 3D PointCloud data."
+        },
+        {
+          "year": "2025",
+          "icon": "timeline_2025",
+          "text": "Developed 3D Bounding Box. Grew to 550 people. Opened new offices at Pham Van Dong and Ly Thuong Kiet."
+        }
+      ]
+    },
+    "offices": {
+      "title": "Offices",
+      "items": [
+        {
+          "image": "office_nguyen_van_cu",
+          "name": "Office 1",
+          "address": "Floors 2–6, 25 Nguyen Van Cu"
+        },
+        {
+          "image": "office_pham_van_dong",
+          "name": "Office 2",
+          "address": "Floor 4, 72 Pham Van Dong"
+        },
+        {
+          "image": "office_ly_thuong_kiet",
+          "name": "Office 3",
+          "address": "Floor 11, 28 Ly Thuong Kiet"
+        }
+      ]
+    }
+  },
+  "services": {
+    "page_title": "Services",
+    "lead": "We specialize in creating training data for AI. Our main work is image annotation using dedicated tools.",
+    "overview_note": "We mainly handle two kinds of data: 3D and 2D. 3D data comes from LiDAR scanners; 2D data comes from dashcams mounted around the vehicle.",
+    "diagram": {
+      "lidar_source": "LiDAR scanner",
+      "target_3d": "3D data",
+      "dashcam_source": "Dashcam",
+      "target_2d": "2D data"
+    },
+    "lightbox": {
+      "close_image": "Close image"
+    },
+    "annotation": {
+      "title": "AI Training Data Creation",
+      "lead": "We turn raw LiDAR and camera data into model-ready training data — precisely labeled, checked through multiple layers and delivered on time.",
+      "quality": {
+        "title": "Quality control",
+        "text": "Every project goes through quality checks at the interim and final stages, with feedback (FB) shared with the client.",
+        "image": "service_quality_control",
+        "lead": "Data reaches the customer only after five layers of work and approval. If any layer finds an error, the data is sent back, corrected and cycled through the layers until it meets the requirement.",
+        "layers": [
+          {
+            "code": "VNA",
+            "role": "Annotator",
+            "action": "Annotate",
+            "desc": "Labels the data following the project guideline."
+          },
+          {
+            "code": "VNC",
+            "role": "Checker",
+            "action": "Review round 1",
+            "desc": "Quality check layer 1: finds errors and requests fixes."
+          },
+          {
+            "code": "VNSC",
+            "role": "Super Checker",
+            "action": "Review round 2",
+            "desc": "Quality check layer 2: re-examines the result of round 1."
+          },
+          {
+            "code": "SubPL",
+            "role": "Sub Project Leader",
+            "action": "Overall approval 1",
+            "desc": "Overall review of quality and consistency of the batch."
+          },
+          {
+            "code": "PL",
+            "role": "Project Leader",
+            "action": "Final overall approval",
+            "desc": "Final approval before delivery to the customer."
+          }
+        ],
+        "delivery_label": "Delivery to customer",
+        "pass_label": "Pass",
+        "fail_label": "Not passed → return for rework",
+        "loop_label": "Cycles through the layers until it passes",
+        "principles_title": "Quality principles",
+        "principles": [
+          {
+            "title": "Independent layers",
+            "text": "The person who annotates and the person who checks are separate roles."
+          },
+          {
+            "title": "Corrective loop",
+            "text": "Errors go back to the right layer to be fixed and re-checked."
+          },
+          {
+            "title": "Standards & training",
+            "text": "One guideline and training before production starts."
+          },
+          {
+            "title": "Customer feedback",
+            "text": "Interim deliveries bring feedback early."
+          }
+        ]
+      },
+      "tabs": {
+        "modalities": "Data types",
+        "workflow": "How we work",
+        "quality": "Quality control",
+        "usecases": "Use cases"
+      },
+      "highlights": [
+        {
+          "title": "3D & 2D",
+          "text": "LiDAR point clouds, camera images and satellite imagery"
+        },
+        {
+          "title": "5-layer review",
+          "text": "From annotator to final approval"
+        },
+        {
+          "title": "550 people · 235+ projects",
+          "text": "Large scale, on time, trusted by clients"
+        }
+      ],
+      "modalities": [
+        {
+          "id": "3d",
+          "label": "3D (LiDAR)",
+          "tag": "POINT CLOUD",
+          "title": "3D data from LiDAR scanners",
+          "text": "LiDAR produces point clouds that describe the 3D space around a vehicle. We label directly on the point cloud so AI can understand the shape, position and distance of objects.",
+          "types": [
+            {
+              "id": "seg3d",
+              "name": "SEGMENT",
+              "images": [
+                "service_3d_segment_1",
+                "service_3d_segment_2"
+              ],
+              "title": "3D Segment – label every point",
+              "summary": "Every point in the cloud receives an object class such as road surface, building, vegetation, vehicle or pedestrian.",
+              "points": [
+                "Semantic labels for every single point",
+                "Suited to high-definition mapping and scene understanding",
+                "Done with dedicated tools on LiDAR data"
+              ]
+            },
+            {
+              "id": "bbox3d",
+              "name": "BOUNDING BOX",
+              "images": [
+                "service_3d_cuboid_1",
+                "service_3d_cuboid_2"
+              ],
+              "title": "3D Bounding Box (Cuboid) – 3D boxes",
+              "summary": "Each object is enclosed in a 3D box that defines its position, size and heading.",
+              "points": [
+                "Locates vehicles, pedestrians, two-wheelers and more in 3D space",
+                "Core data for object detection in autonomous driving and driver assistance",
+                "A business area we have expanded strongly since 2025"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2d",
+          "label": "2D (Image)",
+          "tag": "IMAGE",
+          "title": "2D data from images",
+          "text": "Images from dashcams mounted around the vehicle, plus satellite imagery, are labeled so AI can recognize objects, regions and poses.",
+          "types": [
+            {
+              "id": "seg2d",
+              "name": "SEGMENT",
+              "images": [
+                "service_2d_segment_input",
+                "service_2d_segment_output"
+              ],
+              "captions": [
+                "Original image",
+                "Labeled result"
+              ],
+              "title": "2D Segment – label every pixel",
+              "summary": "Every pixel receives an object class (road, lane, vehicle, person, sky…) so AI understands the whole scene.",
+              "points": [
+                "Captures exact shapes of objects and regions",
+                "Used for lane recognition, drivable areas and street scenes",
+                "Original and result can be compared side by side"
+              ]
+            },
+            {
+              "id": "bbox2d",
+              "name": "BOUNDING BOX",
+              "images": [
+                "service_2d_bbox"
+              ],
+              "title": "2D Bounding Box – rectangles",
+              "summary": "Rectangles are drawn around each object (vehicles, people, signs…) so AI learns to detect them.",
+              "points": [
+                "Fast and efficient for large volumes of data",
+                "Foundation for object detection on dashcam images",
+                "Consistent labels through standard guidelines and multi-layer checks"
+              ]
+            },
+            {
+              "id": "keypoint",
+              "name": "KEYPOINT",
+              "images": [
+                "service_keypoint"
+              ],
+              "title": "Keypoint – landmark points",
+              "summary": "Marks landmark points such as body joints so AI can estimate pose and motion.",
+              "points": [
+                "Used for pose recognition and motion analysis",
+                "Each point follows one consistent rule set",
+                "Example shown: an athlete's pose"
+              ]
+            },
+            {
+              "id": "satellite",
+              "name": "SATELLITE",
+              "images": [
+                "service_satellite_1",
+                "service_satellite_2"
+              ],
+              "title": "Satellite imagery",
+              "summary": "Objects in satellite images (e.g., aircraft, structures) are labeled so AI can recognize them from above.",
+              "points": [
+                "Started in 2020",
+                "Example: aircraft at an airport",
+                "Supports monitoring, mapping and planning"
+              ]
+            }
+          ]
+        }
+      ],
+      "workflow": {
+        "title": "How we work",
+        "lead": "Every project follows four clear stages, with close coordination between the customer, BPO Japan and BPO Vietnam.",
+        "steps": [
+          {
+            "title": "Intake & trial measurement",
+            "text": "Receive the request, trial-measure volume and difficulty, and agree the order with the customer."
+          },
+          {
+            "title": "Team set-up & training",
+            "text": "Build the team, prepare the work environment, hold the kickoff and train to the project guideline."
+          },
+          {
+            "title": "Production & review",
+            "text": "Annotate and review through multiple layers; interim deliveries bring customer feedback (FB)."
+          },
+          {
+            "title": "Delivery & retrospective",
+            "text": "Final delivery, acceptance and lessons learned for the next project."
+          }
+        ]
+      },
+      "usecases": {
+        "title": "What is labeled data used for?",
+        "items": [
+          {
+            "title": "Autonomous driving & ADAS",
+            "text": "Helps vehicles recognize other vehicles, pedestrians, lanes and drivable areas."
+          },
+          {
+            "title": "Mapping & remote sensing",
+            "text": "Satellite images and point clouds support mapping and monitoring of structures."
+          },
+          {
+            "title": "Robotics & smart cities",
+            "text": "Object and space recognition for robots and traffic cameras."
+          },
+          {
+            "title": "Motion analysis",
+            "text": "Body keypoints help estimate pose and movement."
+          }
+        ]
+      },
+      "security": {
+        "title": "Information security",
+        "text": "Customer information is strictly protected under the company's information security rules."
+      },
+      "cta": {
+        "title": "Need training data for AI?",
+        "text": "Tell us your data type and requirements.",
+        "button": "Contact us"
+      }
+    },
+    "collection": {
+      "title": "AI Training Data Collection",
+      "lead": "Content is being prepared.",
+      "status": "Coming soon",
+      "message": "We are finalizing information about our AI training data collection service. Please check back soon or contact us for a direct consultation.",
+      "gallery": [
+        {
+          "image": "collection_image_01",
+          "caption": ""
+        },
+        {
+          "image": "collection_image_02",
+          "caption": ""
+        },
+        {
+          "image": "collection_image_03",
+          "caption": ""
+        }
+      ]
+    }
+  },
+  "team": {
+    "page_title": "Our team",
+    "tabs": {
+      "org": "Organization",
+      "process": "Operating flow",
+      "people": "Trained people",
+      "recruit": "People & recruitment"
+    },
+    "org": {
+      "title": "Organization structure",
+      "lead": "Driven by large-scale data demand, the division operates with a large workforce organized into management and quality-check levels.",
+      "headcount": {
+        "value": "550",
+        "label": "Team members",
+        "detail": "37 full-time staff + 523 part-time members"
+      },
+      "levels": [
+        {
+          "id": "overall",
+          "tone": "red",
+          "label": "Overall management",
+          "nodes": [
+            {
+              "role": "Manager"
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "tone": "orange",
+          "label": "Project management & support",
+          "nodes": [
+            {
+              "role": "Sub TeamLead"
+            },
+            {
+              "role": "PMO"
+            }
+          ]
+        },
+        {
+          "id": "pm",
+          "tone": "yellow",
+          "label": "Project management",
+          "nodes": [
+            {
+              "role": "Project Leader",
+              "code": "PL"
+            },
+            {
+              "role": "Project Leader",
+              "code": "PL"
+            },
+            {
+              "role": "Project Leader",
+              "code": "PL"
+            }
+          ]
+        },
+        {
+          "id": "pm_support",
+          "tone": "green",
+          "label": "Project management support",
+          "nodes": [
+            {
+              "role": "Sub Project Leader",
+              "code": "SubPL"
+            }
+          ]
+        },
+        {
+          "id": "qc2",
+          "tone": "blue",
+          "label": "Quality check – layer 2",
+          "nodes": [
+            {
+              "role": "Super Checker",
+              "code": "VNSC"
+            },
+            {
+              "role": "Super Checker",
+              "code": "VNSC"
+            }
+          ]
+        },
+        {
+          "id": "qc1",
+          "tone": "slate",
+          "label": "Quality check – layer 1",
+          "nodes": [
+            {
+              "role": "Checker",
+              "code": "VNC"
+            },
+            {
+              "role": "Checker",
+              "code": "VNC"
+            },
+            {
+              "role": "Checker",
+              "code": "VNC"
+            },
+            {
+              "role": "Checker",
+              "code": "VNC"
+            }
+          ]
+        },
+        {
+          "id": "annotation",
+          "tone": "purple",
+          "label": "Annotation",
+          "nodes": [
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            },
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            },
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            },
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            },
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            },
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            },
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            },
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            }
+          ]
+        }
+      ],
+      "links_note": "Connections (see docs/reference/slide17_org_chart.png): Manager -> Sub TeamLead and PMO; PMO -> 3 Project Leaders; Sub Project Leader sits below the Project Leader row; Sub Project Leader -> 2 Super Checkers; each Super Checker -> 2 Checkers; each Checker -> 2 Annotators."
+    },
+    "process": {
+      "title": "Operating flow",
+      "lead": "The work flow among the Customer, BPO (JP) and BPO (VN) across three stages: early, middle and final.",
+      "lanes": [
+        "Customer",
+        "BPO (JP)",
+        "BPO (VN)"
+      ],
+      "phases": [
+        "Early stage",
+        "Middle stage",
+        "Final stage"
+      ],
+      "nodes": [
+        {
+          "id": "e1",
+          "lane": 0,
+          "phase": 0,
+          "text": "Request"
+        },
+        {
+          "id": "e2",
+          "lane": 1,
+          "phase": 0,
+          "text": "Intake"
+        },
+        {
+          "id": "e3",
+          "lane": 2,
+          "phase": 0,
+          "text": "Intake"
+        },
+        {
+          "id": "e4",
+          "lane": 2,
+          "phase": 0,
+          "text": "Trial measurement"
+        },
+        {
+          "id": "e5",
+          "lane": 1,
+          "phase": 0,
+          "text": "Trial measurement"
+        },
+        {
+          "id": "e6",
+          "lane": 0,
+          "phase": 0,
+          "text": "Order"
+        },
+        {
+          "id": "e7",
+          "lane": 1,
+          "phase": 0,
+          "text": "Order received"
+        },
+        {
+          "id": "e8",
+          "lane": 2,
+          "phase": 0,
+          "text": "Order received"
+        },
+        {
+          "id": "e9",
+          "lane": 2,
+          "phase": 0,
+          "text": "Set up team structure"
+        },
+        {
+          "id": "m1",
+          "lane": 2,
+          "phase": 1,
+          "text": "Kickoff"
+        },
+        {
+          "id": "m2",
+          "lane": 2,
+          "phase": 1,
+          "text": "Set up work environment"
+        },
+        {
+          "id": "m3",
+          "lane": 2,
+          "phase": 1,
+          "text": "Training"
+        },
+        {
+          "id": "m4",
+          "lane": 2,
+          "phase": 1,
+          "text": "Production"
+        },
+        {
+          "id": "m5",
+          "lane": 1,
+          "phase": 1,
+          "text": "Quality inspection"
+        },
+        {
+          "id": "m6",
+          "lane": 1,
+          "phase": 1,
+          "text": "Interim delivery"
+        },
+        {
+          "id": "m7",
+          "lane": 0,
+          "phase": 1,
+          "text": "Quality inspection"
+        },
+        {
+          "id": "m8",
+          "lane": 0,
+          "phase": 1,
+          "text": "Send feedback"
+        },
+        {
+          "id": "m9",
+          "lane": 1,
+          "phase": 1,
+          "text": "Relay feedback"
+        },
+        {
+          "id": "f1",
+          "lane": 2,
+          "phase": 2,
+          "text": "Project review & lessons learned"
+        },
+        {
+          "id": "f2",
+          "lane": 1,
+          "phase": 2,
+          "text": "Final delivery"
+        },
+        {
+          "id": "f3",
+          "lane": 0,
+          "phase": 2,
+          "text": "Acceptance"
+        }
+      ],
+      "edges": [
+        [
+          "e1",
+          "e2"
+        ],
+        [
+          "e2",
+          "e3"
+        ],
+        [
+          "e3",
+          "e4"
+        ],
+        [
+          "e4",
+          "e5"
+        ],
+        [
+          "e5",
+          "e6"
+        ],
+        [
+          "e6",
+          "e7"
+        ],
+        [
+          "e7",
+          "e8"
+        ],
+        [
+          "e8",
+          "e9"
+        ],
+        [
+          "e9",
+          "m1"
+        ],
+        [
+          "m1",
+          "m2"
+        ],
+        [
+          "m2",
+          "m3"
+        ],
+        [
+          "m3",
+          "m4"
+        ],
+        [
+          "m4",
+          "m5"
+        ],
+        [
+          "m5",
+          "m6"
+        ],
+        [
+          "m6",
+          "m7"
+        ],
+        [
+          "m7",
+          "m8"
+        ],
+        [
+          "m8",
+          "m9"
+        ],
+        [
+          "m9",
+          "m4"
+        ],
+        [
+          "m4",
+          "f1"
+        ],
+        [
+          "f1",
+          "f2"
+        ],
+        [
+          "f2",
+          "f3"
+        ]
+      ],
+      "edge_note": "Edge m9->m4 is the feedback loop back to production. Layout reference: docs/reference/slide18_operating_flow.png"
+    },
+    "people": {
+      "title": "People trained in Vietnam and in Japan",
+      "lead": "Our team is trained in Vietnam and, through a company policy, sent to Japan to study and work — strengthening capability and assuring the quality of both work and products.",
+      "steps": [
+        {
+          "title": "Training in Vietnam",
+          "text": "Members are trained on each project's guideline before production starts."
+        },
+        {
+          "title": "Study & work in Japan",
+          "text": "Members are dispatched to Brycen Japan to study, work and experience the mindset and working style of a Japanese office."
+        },
+        {
+          "title": "Applied back in the division",
+          "text": "The experience is brought back to raise the quality of work and of products delivered to customers."
+        }
+      ],
+      "images": [
+        "team_japan_visit",
+        "team_training_meeting",
+        "team_event_booth"
+      ]
+    },
+    "recruit": {
+      "title": "People & recruitment",
+      "text": "Hiring needs may grow to meet new challenges. We work closely with universities, colleges and local ward/commune authorities to recruit, so we can always staff large-scale projects.",
+      "stats": [
+        {
+          "value": "79",
+          "label": "Current staff studying at the University of Economics"
+        },
+        {
+          "value": "187",
+          "label": "Total to date"
+        }
+      ]
+    }
+  },
+  "achievements": {
+    "page_title": "Achievements & Projects",
+    "awards": {
+      "title": "Achievements",
+      "text": "#1 in the Japanese market for AI training-data creation for 5 consecutive years — and aiming for a 6th.",
+      "source": "Source: Fuji Chimera Research Institute",
+      "badges": [
+        "award_top1_01",
+        "award_top1_02",
+        "award_top1_03",
+        "award_top1_04"
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "text": "As a long-standing #1, we serve many well-known customers in and outside Japan. We have completed 235 projects in total, including many long-term projects with Sony, Subaru, Denso, Sony Honda Mobility and Nikon.",
+      "stat_value": "235",
+      "stat_label": "Projects completed",
+      "customers": [
+        "customer_sony",
+        "customer_subaru",
+        "customer_denso",
+        "customer_afeela",
+        "customer_nikon"
+      ]
+    }
+  },
+  "vision": {
+    "page_title": "Vision",
+    "direction": {
+      "title": "Direction",
+      "text": "We will keep growing our annotation business in scale and quality, beyond Japan. Next, our Japan headquarters will expand into the United States to seek new opportunities and customers."
+    },
+    "roadmap": {
+      "title": "Growth roadmap",
+      "lead": "We will keep growing annotation in both scale and quality — not only in Japan but globally.",
+      "stages": [
+        {
+          "id": "sea",
+          "phase": "Now",
+          "featured": false,
+          "image": "vision_southeast_asia",
+          "title": "Southeast Asia",
+          "text": "We are developing operations across Southeast Asia — currently Vietnam, Myanmar and Cambodia.",
+          "countries": [
+            {
+              "name": "Vietnam",
+              "status": "current"
+            },
+            {
+              "name": "Myanmar",
+              "status": "current"
+            },
+            {
+              "name": "Cambodia",
+              "status": "current"
+            }
+          ]
+        },
+        {
+          "id": "usa",
+          "phase": "Next",
+          "featured": true,
+          "image": "vision_usa_map",
+          "title": "United States",
+          "text": "Next, our Japan headquarters will expand into the United States to seek new opportunities and customers."
+        },
+        {
+          "id": "eu",
+          "phase": "Further ahead",
+          "featured": false,
+          "image": "vision_eu",
+          "title": "Europe (EU)",
+          "text": "Further ahead, we look toward the European market to widen the customers we serve."
+        }
+      ]
+    }
+  },
+  "news": {
+    "page_title": "News",
+    "lead": "Updates on the BPO division's activities, events and achievements.",
+    "categories": {
+      "announcement": "Announcement",
+      "event": "Event",
+      "award": "Award",
+      "project": "Project",
+      "recruit": "Recruitment",
+      "media": "Media"
+    },
+    "facebook_title": "On Facebook"
+  },
+  "contact": {
+    "page_title": "Contact",
+    "lead": "Get in touch to discuss AI training-data creation and collection.",
+    "labels": {
+      "address": "Address",
+      "email": "Email",
+      "phone": "Phone",
+      "form": "Send a request via form",
+      "hours": "Business hours",
+      "map": "Map"
+    },
+    "hours": "",
+    "facebook_link": "Open our Facebook page",
+    "note": "[TO ADD] The contact slide in the PowerPoint is empty. Fill email, phone and address in content/site.config.json."
+  }
+}

@@ -1,0 +1,230 @@
+<!-- Renders the vision page roadmap and growth story for the BPO division. -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tầm nhìn và tuyển dụng | BRYCEN VIETNAM BPO</title>
+  <meta name="description" content="Tìm hiểu định hướng phát triển và cơ hội nghề nghiệp trong lĩnh vực dữ liệu AI tại BRYCEN VIETNAM.">
+  <link rel="canonical" href="https://example.com/vision.html?lang=vi">
+  <link rel="alternate" hreflang="vi" href="https://example.com/vision.html?lang=vi">
+  <link rel="alternate" hreflang="en" href="https://example.com/vision.html?lang=en">
+  <link rel="alternate" hreflang="ja" href="https://example.com/vision.html?lang=ja">
+  <link rel="alternate" hreflang="x-default" href="https://example.com/vision.html?lang=vi">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BRYCEN VIETNAM – BPO">
+  <meta property="og:title" content="Tầm nhìn và tuyển dụng | BRYCEN VIETNAM BPO">
+  <meta property="og:description" content="Tìm hiểu định hướng phát triển và cơ hội nghề nghiệp trong lĩnh vực dữ liệu AI tại BRYCEN VIETNAM.">
+  <meta property="og:url" content="https://example.com/vision.html?lang=vi">
+  <meta property="og:image" content="https://example.com/assets/images/branding/og_share.jpg" data-image-slot="og_share">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ảnh chia sẻ mạng xã hội">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tầm nhìn và tuyển dụng | BRYCEN VIETNAM BPO">
+  <meta name="twitter:description" content="Tìm hiểu định hướng phát triển và cơ hội nghề nghiệp trong lĩnh vực dữ liệu AI tại BRYCEN VIETNAM.">
+  <meta name="twitter:image" content="https://example.com/assets/images/branding/og_share.jpg" data-image-slot="og_share">
+  <meta name="twitter:image:alt" content="Ảnh chia sẻ mạng xã hội">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="assets/images/branding/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/branding/browser_logo_32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/branding/browser_logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/branding/browser_logo_180.png">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="vision">
+  <div id="site-header"></div>
+  <main id="main" class="content-page vision-page">
+    <section class="section-shell vision-direction">
+      <div class="page-container">
+        <header class="section-heading" data-reveal>
+          <p class="eyebrow" data-i18n="vision.page_title"></p>
+          <h1 class="section-title" data-i18n="vision.direction.title"></h1>
+          <p class="section-lead" data-i18n="vision.direction.text"></p>
+        </header>
+      </div>
+    </section>
+
+    <section class="section-shell vision-roadmap" aria-labelledby="vision-roadmap-title">
+      <div class="page-container">
+        <header class="section-heading vision-roadmap__heading" data-reveal>
+          <p class="eyebrow" data-i18n="vision.page_title"></p>
+          <h2 id="vision-roadmap-title" class="section-title" data-i18n="vision.roadmap.title"></h2>
+          <p class="section-lead" data-i18n="vision.roadmap.lead"></p>
+        </header>
+        <div id="vision-roadmap-list" class="vision-roadmap__timeline" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+
+  <dialog class="vision-lightbox" aria-labelledby="vision-lightbox-title">
+    <form class="vision-lightbox__form" method="dialog">
+      <button class="vision-lightbox__close" type="submit" aria-label="Close">×</button>
+      <img id="vision-lightbox-image" class="vision-lightbox__image" src="" alt="" loading="eager" width="1200" height="800">
+    </form>
+  </dialog>
+
+  <script type="module" src="assets/js/app.js"></script>
+  <script type="module">
+    const roadmapList = document.querySelector('#vision-roadmap-list');
+    const lightbox = document.querySelector('.vision-lightbox');
+    const lightboxImage = document.querySelector('#vision-lightbox-image');
+
+    function createElement(tagName, className, text) {
+      const element = document.createElement(tagName);
+      if (className) {
+        element.className = className;
+      }
+      if (text !== undefined) {
+        element.textContent = String(text);
+      }
+      return element;
+    }
+
+    function buildImage(slotName, context) {
+      const slot = context.images?.slots?.[slotName];
+      if (!slot) {
+        return null;
+      }
+
+      const image = document.createElement('img');
+      image.src = slot.src;
+      image.alt = slot.alt?.[context.language] ?? slot.alt?.vi ?? '';
+      if (slot.placeholder) {
+        image.classList.add('is-placeholder');
+        image.dataset.placeholderLabel = context.t('ui.image_placeholder');
+      }
+      if (Number.isInteger(slot.width) && Number.isInteger(slot.height)) {
+        image.width = slot.width;
+        image.height = slot.height;
+      }
+      image.loading = 'lazy';
+      image.className = 'vision-roadmap__image';
+      return image;
+    }
+
+    function renderVisionRoadmap() {
+      const context = window.siteI18n;
+      if (!context || !roadmapList) {
+        return;
+      }
+
+      const stages = Array.isArray(context.t('vision.roadmap.stages'))
+        ? context.t('vision.roadmap.stages')
+        : [];
+
+      roadmapList.replaceChildren();
+
+      stages.forEach((stage) => {
+        const article = createElement('article', 'vision-roadmap__stage');
+        if (stage.featured) {
+          article.classList.add('is-featured');
+        }
+        if (stage.id) {
+          article.dataset.stageId = stage.id;
+        }
+        if (stage.phase) {
+          article.dataset.phase = String(stage.phase);
+        }
+
+        const copy = createElement('div', 'vision-roadmap__copy');
+        const badge = createElement('span', 'vision-roadmap__badge', stage.phase ?? '');
+        const title = createElement('h3', 'vision-roadmap__title', stage.title ?? '');
+        const text = createElement('p', 'vision-roadmap__text', stage.text ?? '');
+
+        copy.append(badge, title, text);
+
+        if (Array.isArray(stage.countries) && stage.countries.length) {
+          const countries = createElement('ul', 'vision-roadmap__countries');
+          stage.countries.forEach((country) => {
+            const item = createElement('li', 'vision-roadmap__country', country.name ?? '');
+            if (country.status === 'current') {
+              item.classList.add('is-current');
+            }
+            countries.append(item);
+          });
+          copy.append(countries);
+        }
+
+        const media = createElement('div', 'vision-roadmap__media');
+        const imageButton = createElement('button', 'vision-roadmap__image-button');
+        imageButton.type = 'button';
+        imageButton.setAttribute('aria-label', stage.title ?? '');
+        const image = buildImage(stage.image, context);
+        if (image) {
+          imageButton.append(image);
+        }
+
+        if (stage.id === 'usa' && lightbox) {
+          imageButton.setAttribute('data-lightbox-trigger', 'usa');
+          const zoomLabel = createElement('span', 'vision-roadmap__zoom', '↗');
+          zoomLabel.setAttribute('aria-hidden', 'true');
+          imageButton.append(zoomLabel);
+        }
+
+        media.append(imageButton);
+        article.append(copy, media);
+        roadmapList.append(article);
+      });
+
+      const triggers = roadmapList.querySelectorAll('[data-lightbox-trigger="usa"]');
+      triggers.forEach((trigger) => {
+        trigger.addEventListener('click', () => {
+          if (!lightbox || !lightboxImage) {
+            return;
+          }
+
+          const stage = Array.isArray(context.t('vision.roadmap.stages'))
+            ? context.t('vision.roadmap.stages').find((item) => item.id === 'usa')
+            : null;
+          if (!stage) {
+            return;
+          }
+
+          const slot = context.images?.slots?.[stage.image];
+          if (!slot) {
+            return;
+          }
+
+          lightboxImage.src = slot.src;
+          lightboxImage.alt = slot.alt?.[context.language] ?? slot.alt?.vi ?? '';
+          lightboxImage.width = Number.isInteger(slot.width) ? slot.width : 1200;
+          lightboxImage.height = Number.isInteger(slot.height) ? slot.height : 800;
+          if (slot.placeholder) {
+            lightboxImage.classList.add('is-placeholder');
+            lightboxImage.dataset.placeholderLabel = context.t('ui.image_placeholder');
+          } else {
+            lightboxImage.classList.remove('is-placeholder');
+            delete lightboxImage.dataset.placeholderLabel;
+          }
+
+          if (typeof lightbox.showModal === 'function') {
+            lightbox.showModal();
+          } else {
+            lightbox.setAttribute('open', 'open');
+          }
+        });
+      });
+    }
+
+    function ensureVisionRoadmap() {
+      if (window.siteI18n) {
+        renderVisionRoadmap();
+        return;
+      }
+      requestAnimationFrame(ensureVisionRoadmap);
+    }
+
+    document.addEventListener('langchange', renderVisionRoadmap);
+    ensureVisionRoadmap();
+  </script>
+</body>
+</html>

@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const locales = ['vi', 'en', 'ja'];
-const ignoredContentRoots = ['content/_backup_r2', 'revision2', 'docs/reference'];
+const ignoredContentRoots = ['content/_backup_', 'assets/images/_unused', 'revision2', 'revision3', 'docs'];
 const placeholderMarkers = ['[CẦN BỔ SUNG]', '[TO ADD]', '【要追記】'];
 const newsCategories = ['announcement', 'event', 'award', 'project', 'recruit', 'media'];
 const slotReferenceKeys = new Set(['image', 'images', 'icon', 'customers', 'badges']);
@@ -22,10 +22,16 @@ function warn(target, message) {
   warnings.push(`⚠ ${target}: ${message}`);
 }
 
+function isIgnoredPath(normalizedPath) {
+  return ignoredContentRoots.some((item) => {
+    const cleanItem = item.replace(/\\/g, '/').replace(/^\.\//, '').replace(/\/+$/, '');
+    return normalizedPath === cleanItem || normalizedPath.startsWith(`${cleanItem}/`) || normalizedPath.startsWith(cleanItem);
+  });
+}
+
 async function readJson(relativePath) {
   const normalized = relativePath.split('\\').join('/');
-  const ignored = ignoredContentRoots.some((item) => normalized === item || normalized.startsWith(`${item}/`));
-  if (ignored) return undefined;
+  if (isIgnoredPath(normalized)) return undefined;
 
   const target = resolve(root, relativePath);
   try {
@@ -102,6 +108,12 @@ function getNestedValue(object, path) {
   return path.split('.').reduce((value, key) => value && value[key], object);
 }
 
+function getExpectedSlotDirectory(slotName) {
+  const sharedPrefixes = new Set(['company', 'browser', 'background', 'og']);
+  const prefix = slotName.split('_')[0];
+  return sharedPrefixes.has(prefix) ? 'common' : prefix || 'common';
+}
+
 async function checkImageSlots(images) {
   const slots = images?.slots;
   if (!slots || typeof slots !== 'object' || Array.isArray(slots)) {
@@ -118,6 +130,14 @@ async function checkImageSlots(images) {
     if (typeof slot.src !== 'string' || !slot.src.trim()) {
       report(`${target}.src`, 'Add a path to the image file for this slot.');
     } else {
+      const normalizedSrc = slot.src.replace(/\\/g, '/');
+      const expectedFolder = getExpectedSlotDirectory(slotName);
+      const segments = normalizedSrc.split('/');
+      const basename = segments.at(-1) ?? '';
+      const hasExpectedFolder = segments.length >= 4 && segments[0] === 'assets' && segments[1] === 'images' && segments[2] === expectedFolder;
+      if (!hasExpectedFolder || !basename.startsWith(`${slotName}.`)) {
+        report(`${target}.src`, `Store this slot under assets/images/${expectedFolder}/ and keep the file name as "${slotName}" (the current value is "${slot.src}").`);
+      }
       const imagePath = resolve(root, slot.src);
       const relativePath = relative(root, imagePath);
       if (isAbsolute(relativePath) || relativePath === '..' || relativePath.startsWith(`..${sep}`)) {
@@ -173,8 +193,7 @@ async function listFiles(directory, predicate = () => true) {
     if (entry.name === '.git' || entry.name === 'node_modules') continue;
     const fullPath = resolve(directory, entry.name);
     const relativePath = relative(root, fullPath).split(sep).join('/');
-    const isIgnored = ignoredContentRoots.some((item) => relativePath === item || relativePath.startsWith(`${item}/`));
-    if (isIgnored) continue;
+    if (isIgnoredPath(relativePath)) continue;
     if (entry.isDirectory()) results.push(...await listFiles(fullPath, predicate));
     else if (entry.isFile() && predicate(entry.name)) results.push(fullPath);
   }
@@ -239,6 +258,56 @@ function checkNews(news, slots) {
   });
 }
 
+function checkRecruits(recruits, slots) {
+  if (!Array.isArray(recruits?.items)) {
+    report('content/recruits.json → items', 'Expected a list of recruitment items. Check the JSON structure.');
+    return;
+  }
+
+  const seenIds = new Set();
+  recruits.items.forEach((item, index) => {
+    const target = `content/recruits.json → items[${index}]`;
+    if (!item || typeof item !== 'object' || Array.isArray(item)) {
+      report(target, 'Each recruitment item must be an object.');
+      return;
+    }
+
+    if (typeof item.id !== 'string' || !item.id.trim()) {
+      report(`${target}.id`, 'Add a unique ID for this recruitment post.');
+    } else if (seenIds.has(item.id)) {
+      report(`${target}.id`, `The ID "${item.id}" is repeated. Give each recruitment post a unique ID.`);
+    } else {
+      seenIds.add(item.id);
+    }
+
+    if (typeof item.status !== 'string' || !['open', 'closed'].includes(item.status)) {
+      report(`${target}.status`, 'Recruitment status must be "open" or "closed".');
+    }
+
+    if (typeof item.date !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(item.date) || Number.isNaN(Date.parse(`${item.date}T00:00:00Z`)) || new Date(`${item.date}T00:00:00Z`).toISOString().slice(0, 10) !== item.date) {
+      report(`${target}.date`, 'Use a real calendar date in YYYY-MM-DD format, for example 2026-10-15.');
+    }
+
+    if (typeof item.deadline === 'string' && item.deadline.trim() && (!/^\d{4}-\d{2}-\d{2}$/.test(item.deadline) || Number.isNaN(Date.parse(`${item.deadline}T00:00:00Z`)) || new Date(`${item.deadline}T00:00:00Z`).toISOString().slice(0, 10) !== item.deadline)) {
+      report(`${target}.deadline`, 'Optional deadline dates must use YYYY-MM-DD format.');
+    }
+
+    if (typeof item.image !== 'string' || !Object.hasOwn(slots, item.image)) {
+      report(`${target}.image`, `The image slot "${item.image ?? ''}" is not listed in content/images.json. Select a valid image slot.`);
+    }
+
+    if (item.hidden !== true) {
+      for (const field of ['title', 'summary', 'location', 'type', 'body']) {
+        for (const locale of locales) {
+          if (typeof item[field]?.[locale] !== 'string' || !item[field][locale].trim()) {
+            report(`${target}.${field}.${locale}`, `Add a ${field} in ${locale.toUpperCase()} for every visible recruitment item.`);
+          }
+        }
+      }
+    }
+  });
+}
+
 function isValidHttpUrl(value) {
   try {
     const url = new URL(value);
@@ -290,9 +359,10 @@ async function main() {
   }
   checkKeySets(languageFiles);
 
-  const [images, news, config] = await Promise.all([
+  const [images, news, recruits, config] = await Promise.all([
     readJson('content/images.json'),
     readJson('content/news.json'),
+    readJson('content/recruits.json'),
     readJson('content/site.config.json')
   ]);
   const slots = await checkImageSlots(images);
@@ -318,6 +388,7 @@ async function main() {
       }
     }
     if (news !== undefined) checkNews(news, slots);
+    if (recruits !== undefined) checkRecruits(recruits, slots);
   }
   if (config !== undefined) checkSiteConfig(config);
 

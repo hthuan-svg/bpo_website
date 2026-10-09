@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const releaseDir = path.join(root, 'release');
 const ignoreFile = path.join(root, '.deployignore');
+const defaultIgnorePatterns = ['assets/images/_unused', 'content/_backup_', 'revision2', 'revision3', 'docs'];
 
 function readPatterns() {
   if (!fs.existsSync(ignoreFile)) return [];
@@ -16,16 +17,23 @@ function readPatterns() {
     .map((line) => line.replace(/\\/g, '/').replace(/^\.\//, '').replace(/\/+$/, ''));
 }
 
-const patterns = readPatterns();
+const patterns = [...defaultIgnorePatterns, ...readPatterns()];
+
+function matchesPattern(normalizedPath, pattern) {
+  if (!pattern) return false;
+  const cleanPattern = pattern.replace(/\\/g, '/').replace(/^\.\//, '').replace(/\/+$/, '');
+  if (!cleanPattern) return false;
+  if (!cleanPattern.includes('*')) {
+    return normalizedPath === cleanPattern || normalizedPath.startsWith(`${cleanPattern}/`) || normalizedPath.startsWith(cleanPattern);
+  }
+  const regex = new RegExp(`^${cleanPattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\\\*/g, '.*')}(?:/|$)`);
+  return regex.test(normalizedPath);
+}
 
 function isIgnored(relativePath) {
   const normalized = relativePath.replace(/\\/g, '/').replace(/^\.\//, '').replace(/\/+$/, '');
   if (!normalized || normalized === 'release') return true;
-  return patterns.some((pattern) => {
-    if (!pattern) return false;
-    const cleanPattern = pattern.replace(/\\/g, '/').replace(/^\.\//, '').replace(/\/+$/, '');
-    return normalized === cleanPattern || normalized.startsWith(`${cleanPattern}/`);
-  });
+  return patterns.some((pattern) => matchesPattern(normalized, pattern));
 }
 
 function walk(sourceDir, targetDir) {

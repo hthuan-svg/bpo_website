@@ -1,0 +1,636 @@
+{
+  "_readme": "Revision 3 patch. 'set' deep-merged (arrays replace). 'remove' only with --cleanup.",
+  "set": {
+    "ui": {
+      "nav": {
+        "recruits": "Recruitment",
+        "subaru": "SUBARU"
+      },
+      "footer": {
+        "address_title": "Contact",
+        "links_title": "Quick links",
+        "office_main": "Head office",
+        "office_branch": "Branch"
+      },
+      "status": {
+        "open": "Open",
+        "closed": "Closed"
+      },
+      "partner_main": "Main partner",
+      "view_detail": "View details",
+      "on_this_page": "On this page",
+      "gallery": "Gallery"
+    },
+    "certifications": {
+      "title": "Certifications",
+      "lead": "International certifications for quality management and information security.",
+      "items": [
+        {
+          "code": "ISO 9001:2015",
+          "name": "Quality management system",
+          "image": "common_iso_9001"
+        },
+        {
+          "code": "ISO/IEC 27001:2013",
+          "name": "Information security management system",
+          "image": "common_iso_27001"
+        }
+      ]
+    },
+    "home": {
+      "stats": [
+        {
+          "value": "2015",
+          "label": "Year founded",
+          "image": "home_stat_founded"
+        },
+        {
+          "value": "550",
+          "label": "Team members",
+          "image": "home_stat_staff"
+        },
+        {
+          "value": "235+",
+          "label": "Projects delivered",
+          "image": "home_stat_projects"
+        },
+        {
+          "value": "5",
+          "label": "Consecutive years #1 in Japan*",
+          "image": "home_stat_top1"
+        }
+      ],
+      "pillars": [
+        {
+          "link": "services-annotation.html",
+          "image": "home_service_creation",
+          "coming_soon": false,
+          "title": "AI Training Data Creation",
+          "text": "Annotation of 3D LiDAR data and 2D image data, with multi-layer quality checks."
+        },
+        {
+          "link": "services-collection.html",
+          "image": "home_service_collection",
+          "coming_soon": true,
+          "title": "AI Training Data Collection",
+          "text": "Content coming soon."
+        }
+      ],
+      "showcase": {
+        "eyebrow": "SHOWCASE",
+        "title": "Our work in pictures",
+        "lead": "Examples of AI training data produced by our division.",
+        "items": [
+          {
+            "image": "home_showcase_01",
+            "caption": "3D Segment"
+          },
+          {
+            "image": "home_showcase_02",
+            "caption": "3D Bounding Box"
+          },
+          {
+            "image": "home_showcase_03",
+            "caption": "2D Segment"
+          },
+          {
+            "image": "home_showcase_04",
+            "caption": "2D Bounding Box"
+          },
+          {
+            "image": "home_showcase_05",
+            "caption": "Satellite"
+          },
+          {
+            "image": "home_showcase_06",
+            "caption": "Keypoint"
+          }
+        ]
+      },
+      "certifications_title": "Our certifications",
+      "partners": {
+        "eyebrow": "PARTNER",
+        "title": "Partners",
+        "lead": "Our main partner",
+        "main": {
+          "name": "SUBARU",
+          "logo": "subaru_logo",
+          "link": "subaru.html",
+          "text": "Learn about SUBARU and the EyeSight technology BPO BRYCEN VIETNAM collaborated on."
+        }
+      }
+    },
+    "subaru": {
+      "page_title": "SUBARU",
+      "hero": {
+        "eyebrow": "MAIN PARTNER",
+        "title": "SUBARU",
+        "subtitle": "The main partner of BPO BRYCEN VIETNAM in AI training data.",
+        "image": "subaru_hero"
+      },
+      "intro": {
+        "title": "About Subaru",
+        "history": {
+          "title": "History",
+          "image": "subaru_intro_history",
+          "text": "Subaru traces its roots to the Aircraft Research Laboratory founded by Chikuhei Nakajima in 1917, which later became Nakajima Aircraft. After a series of reorganizations, Fuji Heavy Industries was established in 1953 and began building Subaru vehicles with the Subaru 360 in 1958. In 2017 the company was renamed Subaru Corporation. \"Subaru\" is the Japanese name for the Pleiades star cluster (\"Mutsuraboshi\", the six stars), symbolizing the unity of six companies."
+        },
+        "global": {
+          "title": "Global position",
+          "image": "subaru_intro_global",
+          "text": "Subaru is a Japanese automotive and aerospace brand trusted by customers worldwide. Cumulative AWD production reached 20 million units in 2021, and cumulative global sales of EyeSight-equipped vehicles reached 5 million units in 2022.",
+          "source": "Source: Subaru Corporation announcement (2023)."
+        }
+      },
+      "tech": {
+        "title": "Core values and technology",
+        "lead": "Four technologies that define Subaru.",
+        "items": [
+          {
+            "id": "boxer",
+            "image": "subaru_tech_boxer",
+            "name": "Boxer engine",
+            "text": "A horizontally opposed cylinder layout lowers the vehicle's center of gravity and improves stability when cornering."
+          },
+          {
+            "id": "sawd",
+            "image": "subaru_tech_sawd",
+            "name": "S-AWD system",
+            "text": "Symmetrical full-time all-wheel drive optimizes grip on every kind of terrain."
+          },
+          {
+            "id": "eyesight",
+            "image": "subaru_tech_eyesight",
+            "highlight": true,
+            "name": "EyeSight technology",
+            "text": "An advanced driver-assistance system with high-grade active safety features.",
+            "partnership_badge": "BRYCEN VN × SUBARU",
+            "partnership": "For EyeSight, BPO BRYCEN VIETNAM has collaborated with SUBARU and taken part in building the product.",
+            "partnership_image": "subaru_eyesight_partnership"
+          },
+          {
+            "id": "sgp",
+            "image": "subaru_tech_sgp",
+            "name": "SGP chassis",
+            "text": "The Subaru Global Platform increases rigidity and reduces vibration."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Build AI data together",
+        "button": "Contact us"
+      }
+    },
+    "about": {
+      "history": {
+        "lead": "We started in 2015 as a small project of about 15 people. Today the division operates with 550 people across 2 offices.",
+        "timeline": [
+          {
+            "year": "2015",
+            "icon": "about_timeline_2015",
+            "text": "Started annotation work with a 15-person project."
+          },
+          {
+            "year": "2016",
+            "icon": "about_timeline_2016",
+            "text": "Scaled up to 50 people, working on tagging data."
+          },
+          {
+            "year": "2018",
+            "icon": "about_timeline_2018",
+            "text": "Recognition data for Japan's railway system. Grew to 150 people."
+          },
+          {
+            "year": "2019",
+            "icon": "about_timeline_2019",
+            "text": "Received first 3D data orders and began segmentation data. Launched a policy to send staff to Japan to study and work."
+          },
+          {
+            "year": "2020",
+            "icon": "about_timeline_2020",
+            "text": "Began Bounding Box and satellite data. Grew to 200 people."
+          },
+          {
+            "year": "2023",
+            "icon": "about_timeline_2023",
+            "text": "Started working with 3D PointCloud data."
+          },
+          {
+            "year": "2025",
+            "icon": "about_timeline_2025",
+            "text": "Developed 3D Bounding Box. Grew to 550 people."
+          }
+        ]
+      },
+      "offices": {
+        "title": "Offices",
+        "items": [
+          {
+            "type": "main",
+            "image": "about_office_main",
+            "name": "Head office",
+            "address": "Floors 2–6, 25 Nguyen Van Cu, Thuan Hoa, Hue, Vietnam",
+            "map_query": "25 Nguyễn Văn Cừ, Thuận Hóa, Huế, Vietnam"
+          },
+          {
+            "type": "branch",
+            "image": "about_office_branch",
+            "name": "Branch",
+            "address": "28 Ly Thuong Kiet, Thuan Hoa, Hue, Vietnam",
+            "map_query": "28 Lý Thường Kiệt, Thuận Hóa, Huế, Vietnam"
+          }
+        ]
+      },
+      "global": {
+        "title": "Multinational collaboration",
+        "image": "about_global_banner",
+        "lead": "The division works with teams in Vietnam, Cambodia and Myanmar to deliver AI data projects together.",
+        "countries": [
+          {
+            "id": "vn",
+            "image": "about_global_vietnam",
+            "name": "Vietnam",
+            "text": "Where the BPO division operates with a team of 550."
+          },
+          {
+            "id": "kh",
+            "image": "about_global_cambodia",
+            "name": "Cambodia",
+            "text": "The Cambodia team joins AI data projects."
+          },
+          {
+            "id": "mm",
+            "image": "about_global_myanmar",
+            "name": "Myanmar",
+            "text": "The Myanmar team joins AI data projects."
+          }
+        ]
+      }
+    },
+    "services": {
+      "annotation": {
+        "side_nav_title": "On this page",
+        "order": [
+          "usecases",
+          "modalities",
+          "workflow",
+          "quality",
+          "security"
+        ],
+        "tabs": {
+          "security": "Information security"
+        },
+        "strips": {
+          "seg3d": [
+            "services_3d_segment_strip_01",
+            "services_3d_segment_strip_02",
+            "services_3d_segment_strip_03",
+            "services_3d_segment_strip_04"
+          ],
+          "bbox3d": [
+            "services_3d_bbox_strip_01",
+            "services_3d_bbox_strip_02",
+            "services_3d_bbox_strip_03",
+            "services_3d_bbox_strip_04"
+          ],
+          "seg2d": [
+            "services_2d_segment_strip_01",
+            "services_2d_segment_strip_02",
+            "services_2d_segment_strip_03",
+            "services_2d_segment_strip_04"
+          ],
+          "bbox2d": [
+            "services_2d_bbox_strip_01",
+            "services_2d_bbox_strip_02",
+            "services_2d_bbox_strip_03",
+            "services_2d_bbox_strip_04"
+          ],
+          "keypoint": [
+            "services_2d_keypoint_strip_01",
+            "services_2d_keypoint_strip_02",
+            "services_2d_keypoint_strip_03",
+            "services_2d_keypoint_strip_04"
+          ],
+          "satellite": [
+            "services_2d_satellite_strip_01",
+            "services_2d_satellite_strip_02",
+            "services_2d_satellite_strip_03",
+            "services_2d_satellite_strip_04"
+          ]
+        },
+        "quality": {
+          "flow_image": "services_quality_flow",
+          "principles_image": "services_quality_principles",
+          "flow_caption": "",
+          "flow_title": "Quality control process"
+        },
+        "security": {
+          "image": "services_security_image"
+        }
+      }
+    },
+    "team": {
+      "org": {
+        "image": "team_org_image",
+        "lead": "Driven by large-scale data demand, the division runs with a large workforce and always puts customers' peace of mind and trust first."
+      },
+      "process": {
+        "title": "Operating flow",
+        "image": "team_process_image",
+        "lead": "How BPO BRYCEN VIETNAM and the customer work together, from the first request to final acceptance.",
+        "actors": {
+          "customer": "Customer",
+          "bpo": "BPO BRYCEN VN",
+          "both": "Together"
+        },
+        "steps": [
+          {
+            "actor": "customer",
+            "text": "The customer sends a request."
+          },
+          {
+            "actor": "bpo",
+            "text": "BPO BRYCEN VN receives the request and trial-measures volume and difficulty."
+          },
+          {
+            "actor": "both",
+            "text": "The customer places the order; BPO BRYCEN VN accepts it."
+          },
+          {
+            "actor": "bpo",
+            "text": "Set up the team, work environment, kickoff and training."
+          },
+          {
+            "actor": "bpo",
+            "text": "Carry out the work with multi-layer quality inspection."
+          },
+          {
+            "actor": "both",
+            "text": "Interim delivery; the customer inspects and sends feedback (FB), and BPO adjusts."
+          },
+          {
+            "actor": "both",
+            "text": "Final delivery; the customer accepts the work."
+          },
+          {
+            "actor": "bpo",
+            "text": "Project review and lessons learned."
+          }
+        ]
+      },
+      "people": {
+        "country_image": "team_japan_country",
+        "country_caption": "Japan",
+        "images": [
+          "team_people_japan",
+          "team_people_training",
+          "team_people_event"
+        ]
+      }
+    },
+    "achievements": {
+      "awards": {
+        "headline": "#1",
+        "headline_text": "No.1 in Japan",
+        "image": "achievements_award_image",
+        "text": "#1 in the Japanese market for AI training-data creation for 5 consecutive years — and aiming for a 6th."
+      },
+      "projects": {
+        "images": [
+          "achievements_projects_01",
+          "achievements_projects_02",
+          "achievements_projects_03"
+        ],
+        "text": "As a long-standing #1, the division has completed 235 projects in total for major customers in and outside Japan, including many long-term projects with our main partner SUBARU."
+      },
+      "satisfaction": {
+        "image": "achievements_satisfaction",
+        "title": "Customer satisfaction",
+        "text": "Customers consistently rate our quality highly and keep coming back to work with us."
+      }
+    },
+    "vision": {
+      "direction": {
+        "image": "vision_direction_image"
+      },
+      "growth": {
+        "title": "Growth timeline",
+        "lead": "From our base in Japan and Southeast Asia, we expand next to the United States and further to Europe.",
+        "stages": [
+          {
+            "id": "now",
+            "phase": "Now",
+            "level": 1,
+            "title": "Japan & Southeast Asia",
+            "regions": [
+              {
+                "id": "jp",
+                "image": "vision_roadmap_japan",
+                "title": "Japan",
+                "text": "Our current market, where we hold the No.1 position in annotation services."
+              },
+              {
+                "id": "sea",
+                "image": "vision_roadmap_sea",
+                "title": "Southeast Asia",
+                "text": "Developing operations across the region — currently Vietnam, Myanmar and Cambodia.",
+                "countries": [
+                  "Vietnam",
+                  "Myanmar",
+                  "Cambodia"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "next",
+            "phase": "Next step",
+            "level": 2,
+            "featured": true,
+            "image": "vision_roadmap_usa",
+            "title": "United States",
+            "text": "Next, our Japan headquarters will expand into the United States to seek new opportunities and customers."
+          },
+          {
+            "id": "future",
+            "phase": "Further ahead",
+            "level": 3,
+            "image": "vision_roadmap_eu",
+            "title": "Europe (EU)",
+            "text": "Further ahead, we look toward the European market to widen the customers we serve."
+          }
+        ]
+      }
+    },
+    "recruits": {
+      "page_title": "Recruitment",
+      "banner": "recruits_banner",
+      "default_image": "recruits_default",
+      "lead": "Help us build quality data for AI. Browse BPO job posts by date, with an open or closed status.",
+      "intro": {
+        "title": "People & recruitment",
+        "image": "recruits_intro",
+        "text": "Hiring needs may grow to meet new challenges. We work closely with universities, colleges and local ward/commune authorities to recruit, so we can always staff large-scale projects.",
+        "stats": [
+          {
+            "value": "79",
+            "label": "Current staff studying at the University of Economics"
+          },
+          {
+            "value": "187",
+            "label": "Total to date"
+          }
+        ]
+      },
+      "filters": {
+        "all": "All",
+        "open": "Open",
+        "closed": "Closed"
+      },
+      "labels": {
+        "posted": "Posted",
+        "deadline": "Application deadline",
+        "position": "Position",
+        "location": "Location",
+        "type": "Employment type",
+        "apply": "Apply",
+        "how_to_apply": "How to apply",
+        "closed_note": "This position is closed.",
+        "no_deadline": "Until filled",
+        "details": "Job details"
+      },
+      "empty": "There are no job posts yet.",
+      "apply_subject": "Application:",
+      "back": "Back to the list"
+    },
+    "contact": {
+      "lead": "Contact us about AI training data creation and collection — questions, consultations and quotations are all welcome.",
+      "banner": "contact_banner",
+      "response_note": "We will reply within 2 business days.",
+      "form": {
+        "title": "Contact form",
+        "fields": {
+          "name": "Full name",
+          "company": "Company",
+          "department": "Department",
+          "position": "Job title",
+          "email": "Email",
+          "phone": "Phone",
+          "type": "Inquiry type",
+          "message": "Message"
+        },
+        "required": "Required",
+        "optional": "Optional",
+        "select_placeholder": "Please select",
+        "type_options": [
+          {
+            "value": "quote",
+            "label": "Request a quote"
+          },
+          {
+            "value": "meeting",
+            "label": "Request a meeting for a service introduction"
+          },
+          {
+            "value": "docs",
+            "label": "Request materials"
+          },
+          {
+            "value": "other",
+            "label": "Other"
+          }
+        ],
+        "consent_label": "I agree to the handling of personal information described above",
+        "confirm_button": "Review your entry",
+        "edit_button": "Edit",
+        "send_button": "Send",
+        "review_title": "Please confirm your entry",
+        "sending": "Sending…",
+        "success": "Thank you! We have received your message and will reply soon.",
+        "error": "Could not send. Please try again or contact us by email or phone.",
+        "fallback_mailto": "Open your email app to send",
+        "validation": {
+          "required": "This field is required",
+          "email": "Invalid email address",
+          "consent": "Please agree to the handling of personal information"
+        }
+      },
+      "company_panel": {
+        "title": "Company information",
+        "call_title": "Call us"
+      },
+      "privacy": {
+        "title": "Handling of personal information",
+        "intro": "Please read the following carefully before submitting the form.",
+        "policy_link_label": "View the privacy policy",
+        "items": [
+          {
+            "title": "Operator",
+            "body": "BRYCEN VIETNAM Co., Ltd. (BPO Division)"
+          },
+          {
+            "title": "Personal information manager",
+            "body": "[TO ADD] Name and title of the person in charge"
+          },
+          {
+            "title": "Purpose of use",
+            "body": "Personal information you provide through this form is used only to respond to your inquiry."
+          },
+          {
+            "title": "Provision to third parties",
+            "body": "We do not provide the personal information we collect to third parties, except with your consent or where required by law."
+          },
+          {
+            "title": "Outsourcing",
+            "body": "Within the scope of the purpose above, we may outsource the handling of personal information. Contractors are selected according to our standards, supervised, and bound by a non-disclosure agreement to keep the information secure."
+          },
+          {
+            "title": "Your rights and point of contact",
+            "body": "At your request, we accept requests to be informed of the purpose of use, to view, correct, add to or delete your personal information, and to stop its use or its provision to third parties. Please use the contact point at the end of this section."
+          },
+          {
+            "title": "Notes on entering information",
+            "body": "If optional items are left blank, we may not be able to give the most suitable reply."
+          },
+          {
+            "title": "Collection in ways you may not notice",
+            "body": "This site may keep access logs for statistics, but they are not used to collect or use personal information. We do not use cookies or web beacons to collect personal information in ways you cannot easily notice."
+          },
+          {
+            "title": "Privacy policy",
+            "body": "Please see the privacy policy of this website.",
+            "link": "policy"
+          },
+          {
+            "title": "Complaints and consultation desk",
+            "body": "BRYCEN VIETNAM Co., Ltd. – BPO Division",
+            "dynamic": "contact"
+          }
+        ]
+      }
+    }
+  },
+  "remove": [
+    "ui.skip",
+    "home.customers_title",
+    "achievements.awards.badges",
+    "achievements.projects.customers",
+    "vision.roadmap",
+    "team.tabs.recruit",
+    "team.org.levels",
+    "team.org.links_note",
+    "team.process.lanes",
+    "team.process.phases",
+    "team.process.nodes",
+    "team.process.edges",
+    "team.process.edge_note",
+    "team.recruit",
+    "services.annotation.quality.image",
+    "services.annotation.quality.delivery_label",
+    "services.annotation.quality.pass_label",
+    "services.annotation.quality.fail_label",
+    "services.annotation.quality.loop_label",
+    "contact.note",
+    "contact.labels.form"
+  ]
+}

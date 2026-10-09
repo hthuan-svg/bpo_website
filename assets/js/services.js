@@ -183,13 +183,13 @@ function renderOverview(context, main) {
     createOverviewCard(context, {
       titleKey: 'services.annotation.title',
       leadKey: 'services.annotation.lead',
-      slotName: 'background_services_3d',
+      slotName: 'services_overview_3d',
       href: 'services-annotation.html'
     }),
     createOverviewCard(context, {
       titleKey: 'services.collection.title',
       leadKey: 'services.collection.lead',
-      slotName: 'background_services_2d',
+      slotName: 'services_overview_2d',
       href: 'services-collection.html'
     })
   );
@@ -586,7 +586,7 @@ function createAnnotationQualitySection(context, dialog) {
   }
 
   const referenceWrap = createElement('div', 'annotation-quality__reference');
-  const image = createImage(context, 'service_quality_control', 'annotation-quality__reference-image');
+  const image = createImage(context, 'services_quality_principles', 'annotation-quality__reference-image');
   if (image) {
     const button = createElement('button', 'annotation-quality__reference-button');
     button.type = 'button';

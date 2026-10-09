@@ -1,0 +1,1058 @@
+{
+  "meta": {
+    "title": "BPO – AI向けデータ | BRYCEN VIETNAM",
+    "description": "BRYCEN VIETNAM BPO部門は、AI学習データの作成・収集を専門としています。"
+  },
+  "seo": {
+    "pages": {
+      "index": {
+        "title": "BRYCEN VIETNAM BPO – AIデータ",
+        "description": "BRYCEN VIETNAMの2D・3D・LiDAR・ドライブレコーダーによるAI学習データ作成・収集サービスをご紹介します。"
+      },
+      "about": {
+        "title": "BRYCEN VIETNAM BPOについて",
+        "description": "BPO部門の概要、沿革、BRYCEN VIETNAMのオフィスをご紹介します。"
+      },
+      "services": {
+        "title": "AIデータサービス | BRYCEN VIETNAM BPO",
+        "description": "BRYCEN VIETNAM BPOのAI学習データ作成・収集サービスの概要をご案内します。"
+      },
+      "services-annotation": {
+        "title": "AI学習データ作成 | BRYCEN VIETNAM BPO",
+        "description": "品質管理を含む2D・3D・衛星画像のアノテーションサービスをご紹介します。"
+      },
+      "services-collection": {
+        "title": "AIデータ収集 | BRYCEN VIETNAM BPO",
+        "description": "AI学習向けLiDARデータおよびドライブレコーダーデータの収集をご紹介します。"
+      },
+      "team": {
+        "title": "チーム | BRYCEN VIETNAM BPO",
+        "description": "BRYCEN VIETNAM BPOの組織体制、運用フロー、キャリア形成についてご紹介します。"
+      },
+      "achievements": {
+        "title": "実績・プロジェクト | BRYCEN VIETNAM BPO",
+        "description": "BRYCEN VIETNAM BPO部門の実績とAIデータプロジェクトをご紹介します。"
+      },
+      "vision": {
+        "title": "ビジョン・採用 | BRYCEN VIETNAM BPO",
+        "description": "BRYCEN VIETNAMの事業方針とAIデータ分野のキャリア機会をご紹介します。"
+      },
+      "news": {
+        "title": "ニュース | BRYCEN VIETNAM BPO",
+        "description": "BRYCEN VIETNAM BPO部門のニュース、イベント、活動をご覧いただけます。"
+      },
+      "contact": {
+        "title": "お問い合わせ | BRYCEN VIETNAM BPO",
+        "description": "AI学習データサービスについて、BRYCEN VIETNAM BPOへお問い合わせください。"
+      }
+    }
+  },
+  "not_found": {
+    "title": "ページが見つかりません",
+    "description": "お探しのページは存在しないか、移動した可能性があります。",
+    "home_link": "トップページへ戻る"
+  },
+  "ui": {
+    "nav": {
+      "home": "ホーム",
+      "about": "概要",
+      "services": "サービス",
+      "services_annotation": "AI学習データ作成",
+      "services_collection": "AI学習データ収集",
+      "team": "チーム",
+      "achievements": "実績・プロジェクト",
+      "vision": "ビジョン",
+      "news": "ニュース",
+      "contact": "お問い合わせ"
+    },
+    "skip": "メインコンテンツへ",
+    "read_more": "詳しく見る",
+    "show_more": "もっと見る",
+    "read_original": "元の記事を読む",
+    "open_facebook_post": "Facebook投稿を開く",
+    "share_facebook": "Facebookでシェア",
+    "news_not_found": "ニュースが見つかりません。削除されたか、URLが正しくない可能性があります。",
+    "back": "戻る",
+    "all": "すべて",
+    "view_map": "地図を見る",
+    "view_all_news": "ニュース一覧へ",
+    "follow_us": "公式SNS",
+    "quick_links": "クイックリンク",
+    "language_options": {
+      "vi": "VI",
+      "en": "EN",
+      "ja": "日本語"
+    },
+    "social_labels": {
+      "facebook": "Facebook",
+      "youtube": "YouTube",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "zalo": "Zalo"
+    },
+    "footer_company": "BRYCEN VIETNAM Co., Ltd.",
+    "footer_dept": "BPO部門（Business Process Outsourcing）",
+    "parent_site": "ブライセン日本サイト",
+    "news_empty": "このカテゴリにはまだニュースがありません。",
+    "language": "言語",
+    "menu": "メニュー",
+    "copyright": "© BRYCEN VIETNAM Co., Ltd. All Rights Reserved.",
+    "back_to_top": "ページの先頭へ",
+    "coming_soon": "準備中",
+    "image_placeholder": "画像準備中",
+    "tabs_label": "メインナビゲーション",
+    "brand": {
+      "dept_short": "BPO",
+      "dept_full": "BUSINESS PROCESS OUTSOURCING",
+      "company": "BRYCEN VIETNAM",
+      "dept_native": "BPO部門",
+      "company_long": "BRYCEN VIETNAM Co., Ltd."
+    },
+    "breadcrumb": "パンくずリスト"
+  },
+  "home": {
+    "hero": {
+      "title": "信頼できるAIのための高品質データ",
+      "subtitle": "BPO部門は2015年から、550名の体制と235件超のプロジェクト実績でAI学習データの作成・収集を行っています。",
+      "cta_primary": "サービスを見る",
+      "cta_secondary": "お問い合わせ"
+    },
+    "stats": [
+      {
+        "value": "2015",
+        "label": "開始年"
+      },
+      {
+        "value": "550",
+        "label": "スタッフ数"
+      },
+      {
+        "value": "235+",
+        "label": "プロジェクト実績"
+      },
+      {
+        "value": "5",
+        "label": "年連続 国内シェアNo.1*"
+      }
+    ],
+    "stats_note": "※富士キメラ総研調べ（アノテーションサービス市場）",
+    "pillars_title": "私たちのサービス",
+    "pillars": [
+      {
+        "link": "services-annotation.html",
+        "image": "background_services_2d",
+        "coming_soon": false,
+        "title": "AI学習データ作成",
+        "text": "LiDARの3Dデータと2D画像データへのアノテーション。多層の品質検査付き。"
+      },
+      {
+        "link": "services-collection.html",
+        "image": "background_services_3d",
+        "coming_soon": true,
+        "title": "AI学習データ収集",
+        "text": "コンテンツは準備中です。"
+      }
+    ],
+    "commitments_title": "私たちの約束",
+    "commitments": [
+      {
+        "title": "高品質なデータ",
+        "text": "多様で代表性があり、適切に管理されたデータが、強力なAIモデルの基盤です。"
+      },
+      {
+        "title": "情報セキュリティ",
+        "text": "情報セキュリティ規程により、お客様の情報を厳格に保護します。"
+      },
+      {
+        "title": "納期遵守・高い満足度",
+        "text": "プロジェクトは納期を守り、品質にご満足いただいています。"
+      }
+    ],
+    "customers_title": "主なお客様",
+    "news_title": "最新ニュース",
+    "cta": {
+      "title": "AIデータについてご相談ください",
+      "text": "ご要望をお聞かせください。最適なご提案をいたします。",
+      "button": "お問い合わせ"
+    },
+    "pillars_eyebrow": "SERVICES"
+  },
+  "about": {
+    "page_title": "概要",
+    "intro": {
+      "title": "会社・部門概要",
+      "paragraphs": [
+        "BPO（Business Process Outsourcing）は、AI（人工知能）の学習データ作成と画像データ処理を専門としています。",
+        "AIの急速な発展に伴い、学習データの需要は非常に大きくなっています。AI向けデータの作成は、AIエコシステムの中核です。",
+        "高品質で多様、代表性があり適切に管理されたデータは、強力で信頼できるAIモデル開発の基盤です。お客様の情報は情報セキュリティ規程により厳格に保護されます。"
+      ]
+    },
+    "history": {
+      "title": "沿革",
+      "lead": "2015年に約15名の小さなプロジェクトとして始まり、現在は3拠点・550名体制で運営しています。",
+      "timeline": [
+        {
+          "year": "2015",
+          "icon": "timeline_2015",
+          "text": "15名規模のプロジェクトでアノテーション業務を開始。"
+        },
+        {
+          "year": "2016",
+          "icon": "timeline_2016",
+          "text": "50名規模に拡大し、タグ付けデータの作業を開始。"
+        },
+        {
+          "year": "2018",
+          "icon": "timeline_2018",
+          "text": "日本の鉄道システム向け認識データを作成。150名規模に拡大。"
+        },
+        {
+          "year": "2019",
+          "icon": "timeline_2019",
+          "text": "初の3Dデータ案件を受注し、セグメンテーションを開始。日本で学び働く人材派遣制度を整備。"
+        },
+        {
+          "year": "2020",
+          "icon": "timeline_2020",
+          "text": "バウンディングボックスと衛星データを開始。200名規模に拡大。"
+        },
+        {
+          "year": "2023",
+          "icon": "timeline_2023",
+          "text": "3D点群（PointCloud）データの作業を開始。"
+        },
+        {
+          "year": "2025",
+          "icon": "timeline_2025",
+          "text": "3Dバウンディングボックス領域を拡充。550名規模に。Pham Van Dong・Ly Thuong Kietに新オフィスを開設。"
+        }
+      ]
+    },
+    "offices": {
+      "title": "オフィス",
+      "items": [
+        {
+          "image": "office_nguyen_van_cu",
+          "name": "オフィス1",
+          "address": "25 Nguyen Van Cu 2〜6階"
+        },
+        {
+          "image": "office_pham_van_dong",
+          "name": "オフィス2",
+          "address": "72 Pham Van Dong 4階"
+        },
+        {
+          "image": "office_ly_thuong_kiet",
+          "name": "オフィス3",
+          "address": "28 Ly Thuong Kiet 11階"
+        }
+      ]
+    }
+  },
+  "services": {
+    "page_title": "サービス",
+    "lead": "AI学習データの作成を専門とし、主な業務は専用ツールによる画像アノテーションです。",
+    "overview_note": "主に3Dと2Dの2種類のデータを扱います。3DデータはLiDARスキャナー、2Dデータは車両周囲に設置したドライブレコーダーから取得します。",
+    "diagram": {
+      "lidar_source": "LiDARスキャナー",
+      "target_3d": "3Dデータ",
+      "dashcam_source": "ドライブレコーダー",
+      "target_2d": "2Dデータ"
+    },
+    "lightbox": {
+      "close_image": "画像を閉じる"
+    },
+    "annotation": {
+      "title": "AI学習データ作成",
+      "lead": "LiDARやカメラの生データを、AIモデルがすぐ使える学習データへ。高精度なラベル付け、多層検査、納期遵守でお届けします。",
+      "quality": {
+        "title": "品質管理",
+        "text": "すべてのプロジェクトで、中間・最終の各段階で品質検査を行い、お客様へのフィードバック（FB）を共有します。",
+        "image": "service_quality_control",
+        "lead": "データは、作業と承認の5層を通過して初めてお客様に届きます。いずれかの層で不備が見つかれば差し戻して修正し、基準を満たすまで各層を循環します。",
+        "layers": [
+          {
+            "code": "VNA",
+            "role": "Annotator",
+            "action": "作業（アノテーション）",
+            "desc": "プロジェクトのガイドラインに沿ってラベル付けを行います。"
+          },
+          {
+            "code": "VNC",
+            "role": "Checker",
+            "action": "一次レビュー",
+            "desc": "品質検査（第1層）：不備を発見し修正を依頼します。"
+          },
+          {
+            "code": "VNSC",
+            "role": "Super Checker",
+            "action": "二次レビュー",
+            "desc": "品質検査（第2層）：一次レビューの結果を再確認します。"
+          },
+          {
+            "code": "SubPL",
+            "role": "Sub Project Leader",
+            "action": "総合承認（1回目）",
+            "desc": "バッチ全体の品質と一貫性を総合的に確認します。"
+          },
+          {
+            "code": "PL",
+            "role": "Project Leader",
+            "action": "最終総合承認",
+            "desc": "お客様へ納品する前の最終承認を行います。"
+          }
+        ],
+        "delivery_label": "お客様へ納品",
+        "pass_label": "合格",
+        "fail_label": "不合格 → 差し戻し",
+        "loop_label": "合格するまで各層を循環",
+        "principles_title": "品質管理の原則",
+        "principles": [
+          {
+            "title": "独立した複数の層",
+            "text": "作業者と検査者は別の役割です。"
+          },
+          {
+            "title": "是正のループ",
+            "text": "不備は該当の層へ差し戻し、修正・再検査します。"
+          },
+          {
+            "title": "標準化と教育",
+            "text": "本番作業の前に、統一ガイドラインと教育を実施します。"
+          },
+          {
+            "title": "お客様のフィードバック",
+            "text": "中間納品で早期にフィードバックを受けます。"
+          }
+        ]
+      },
+      "tabs": {
+        "modalities": "データの種類",
+        "workflow": "進め方",
+        "quality": "品質管理",
+        "usecases": "活用例"
+      },
+      "highlights": [
+        {
+          "title": "3D・2D",
+          "text": "LiDAR点群、カメラ画像、衛星画像"
+        },
+        {
+          "title": "5層のレビュー",
+          "text": "作業者から最終承認まで"
+        },
+        {
+          "title": "550名・235件超",
+          "text": "大規模体制・納期遵守・高い満足度"
+        }
+      ],
+      "modalities": [
+        {
+          "id": "3d",
+          "label": "3D (LiDAR)",
+          "tag": "POINT CLOUD",
+          "title": "LiDARスキャナーによる3Dデータ",
+          "text": "LiDARは車両周囲の3D空間を点群として捉えます。点群に直接ラベルを付けることで、AIが物体の形状・位置・距離を理解できるようにします。",
+          "types": [
+            {
+              "id": "seg3d",
+              "name": "SEGMENT",
+              "images": [
+                "service_3d_segment_1",
+                "service_3d_segment_2"
+              ],
+              "title": "3Dセグメンテーション – 点ごとにラベル付け",
+              "summary": "点群の各点に、路面・建物・植生・車両・歩行者などのクラスを付与します。",
+              "points": [
+                "全ての点に意味ラベルを付与",
+                "高精度地図の作成や周辺環境の理解に最適",
+                "LiDARデータ向けの専用ツールで作業"
+              ]
+            },
+            {
+              "id": "bbox3d",
+              "name": "BOUNDING BOX",
+              "images": [
+                "service_3d_cuboid_1",
+                "service_3d_cuboid_2"
+              ],
+              "title": "3Dバウンディングボックス（キューボイド）",
+              "summary": "各物体を3Dボックスで囲み、位置・大きさ・向きを定義します。",
+              "points": [
+                "車両・歩行者・二輪車などを3D空間で特定",
+                "自動運転・運転支援の物体検出の基盤データ",
+                "2025年から本格的に拡大している領域"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2d",
+          "label": "2D (Image)",
+          "tag": "IMAGE",
+          "title": "画像による2Dデータ",
+          "text": "車両周囲のドライブレコーダー画像や衛星画像にラベルを付け、AIが物体・領域・姿勢を認識できるようにします。",
+          "types": [
+            {
+              "id": "seg2d",
+              "name": "SEGMENT",
+              "images": [
+                "service_2d_segment_input",
+                "service_2d_segment_output"
+              ],
+              "captions": [
+                "元画像",
+                "ラベル付け結果"
+              ],
+              "title": "2Dセグメンテーション – ピクセル単位のラベル付け",
+              "summary": "全てのピクセルにクラス（道路・車線・車両・人物・空など）を付与し、AIがシーン全体を理解できるようにします。",
+              "points": [
+                "物体や領域の正確な形状を表現",
+                "車線認識・走行可能領域・街路シーンに活用",
+                "元画像と結果を見比べて確認できる"
+              ]
+            },
+            {
+              "id": "bbox2d",
+              "name": "BOUNDING BOX",
+              "images": [
+                "service_2d_bbox"
+              ],
+              "title": "2Dバウンディングボックス – 矩形",
+              "summary": "各物体（車両・人物・標識など）を矩形で囲み、AIが物体検出を学習できるようにします。",
+              "points": [
+                "大量データに対して高速・効率的",
+                "ドライブレコーダー画像の物体検出の基盤",
+                "標準ガイドラインと多層検査で一貫したラベル"
+              ]
+            },
+            {
+              "id": "keypoint",
+              "name": "KEYPOINT",
+              "images": [
+                "service_keypoint"
+              ],
+              "title": "キーポイント – 特徴点",
+              "summary": "関節などの特徴点をマーキングし、AIが姿勢や動きを推定できるようにします。",
+              "points": [
+                "姿勢認識や動作分析に活用",
+                "各点を統一ルールでマーキング",
+                "例：アスリートの姿勢"
+              ]
+            },
+            {
+              "id": "satellite",
+              "name": "SATELLITE",
+              "images": [
+                "service_satellite_1",
+                "service_satellite_2"
+              ],
+              "title": "衛星画像",
+              "summary": "衛星画像上の物体（航空機・構造物など）にラベルを付け、AIが上空から認識できるようにします。",
+              "points": [
+                "2020年に開始",
+                "例：空港の航空機",
+                "監視・地図作成・計画に活用"
+              ]
+            }
+          ]
+        }
+      ],
+      "workflow": {
+        "title": "私たちの進め方",
+        "lead": "全てのプロジェクトは4つの段階で進み、お客様・BPO日本・BPOベトナムが緊密に連携します。",
+        "steps": [
+          {
+            "title": "受付・計測",
+            "text": "依頼を受け、作業量・難易度を試行計測し、発注内容をお客様と合意します。"
+          },
+          {
+            "title": "体制構築・教育",
+            "text": "体制を組み、作業環境を整え、キックオフとガイドラインに沿った教育を行います。"
+          },
+          {
+            "title": "本番作業・検査",
+            "text": "アノテーションと多層検査を実施し、中間納品でお客様のフィードバック（FB）を反映します。"
+          },
+          {
+            "title": "納品・振り返り",
+            "text": "最終納品・検収を行い、次のプロジェクトに向けて振り返ります。"
+          }
+        ]
+      },
+      "usecases": {
+        "title": "ラベル付けされたデータの用途",
+        "items": [
+          {
+            "title": "自動運転・運転支援",
+            "text": "他車両・歩行者・車線・走行可能領域の認識を支えます。"
+          },
+          {
+            "title": "地図・リモートセンシング",
+            "text": "衛星画像や点群を地図作成や構造物の監視に活用します。"
+          },
+          {
+            "title": "ロボット・スマートシティ",
+            "text": "ロボットや交通カメラの物体・空間認識に活用します。"
+          },
+          {
+            "title": "動作分析",
+            "text": "身体のキーポイントから姿勢や動きを推定します。"
+          }
+        ]
+      },
+      "security": {
+        "title": "情報セキュリティ",
+        "text": "お客様の情報は、社内の情報セキュリティ規程により厳格に保護されます。"
+      },
+      "cta": {
+        "title": "AI学習データが必要ですか？",
+        "text": "データの種類とご要望をお聞かせください。",
+        "button": "お問い合わせ"
+      }
+    },
+    "collection": {
+      "title": "AI学習データ収集",
+      "lead": "コンテンツは準備中です。",
+      "status": "準備中",
+      "message": "AI学習データ収集サービスの情報を準備中です。後日あらためてご確認いただくか、直接お問い合わせください。",
+      "gallery": [
+        {
+          "image": "collection_image_01",
+          "caption": ""
+        },
+        {
+          "image": "collection_image_02",
+          "caption": ""
+        },
+        {
+          "image": "collection_image_03",
+          "caption": ""
+        }
+      ]
+    }
+  },
+  "team": {
+    "page_title": "チーム",
+    "tabs": {
+      "org": "組織体制",
+      "process": "運用フロー",
+      "people": "人材育成",
+      "recruit": "人材・採用"
+    },
+    "org": {
+      "title": "組織体制",
+      "lead": "大規模データの需要に応えるため、管理層と品質検査層に分かれた大人数体制で運営しています。",
+      "headcount": {
+        "value": "550",
+        "label": "スタッフ数",
+        "detail": "正社員37名＋パートタイム523名"
+      },
+      "levels": [
+        {
+          "id": "overall",
+          "tone": "red",
+          "label": "全体管理層",
+          "nodes": [
+            {
+              "role": "Manager"
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "tone": "orange",
+          "label": "プロジェクト管理・支援層",
+          "nodes": [
+            {
+              "role": "Sub TeamLead"
+            },
+            {
+              "role": "PMO"
+            }
+          ]
+        },
+        {
+          "id": "pm",
+          "tone": "yellow",
+          "label": "プロジェクトリーダー層",
+          "nodes": [
+            {
+              "role": "Project Leader",
+              "code": "PL"
+            },
+            {
+              "role": "Project Leader",
+              "code": "PL"
+            },
+            {
+              "role": "Project Leader",
+              "code": "PL"
+            }
+          ]
+        },
+        {
+          "id": "pm_support",
+          "tone": "green",
+          "label": "プロジェクト管理補佐層",
+          "nodes": [
+            {
+              "role": "Sub Project Leader",
+              "code": "SubPL"
+            }
+          ]
+        },
+        {
+          "id": "qc2",
+          "tone": "blue",
+          "label": "品質検査（第2層）",
+          "nodes": [
+            {
+              "role": "Super Checker",
+              "code": "VNSC"
+            },
+            {
+              "role": "Super Checker",
+              "code": "VNSC"
+            }
+          ]
+        },
+        {
+          "id": "qc1",
+          "tone": "slate",
+          "label": "品質検査（第1層）",
+          "nodes": [
+            {
+              "role": "Checker",
+              "code": "VNC"
+            },
+            {
+              "role": "Checker",
+              "code": "VNC"
+            },
+            {
+              "role": "Checker",
+              "code": "VNC"
+            },
+            {
+              "role": "Checker",
+              "code": "VNC"
+            }
+          ]
+        },
+        {
+          "id": "annotation",
+          "tone": "purple",
+          "label": "アノテーション層",
+          "nodes": [
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            },
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            },
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            },
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            },
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            },
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            },
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            },
+            {
+              "role": "Annotator",
+              "code": "VNA"
+            }
+          ]
+        }
+      ],
+      "links_note": "Connections (see docs/reference/slide17_org_chart.png): Manager -> Sub TeamLead and PMO; PMO -> 3 Project Leaders; Sub Project Leader sits below the Project Leader row; Sub Project Leader -> 2 Super Checkers; each Super Checker -> 2 Checkers; each Checker -> 2 Annotators."
+    },
+    "process": {
+      "title": "運用フロー",
+      "lead": "お客様・BPO（日本）・BPO（ベトナム）の間の業務フローを、初期・中間・最終の3段階で示します。",
+      "lanes": [
+        "お客様",
+        "BPO（日本）",
+        "BPO（ベトナム）"
+      ],
+      "phases": [
+        "初期段階",
+        "中間段階",
+        "最終段階"
+      ],
+      "nodes": [
+        {
+          "id": "e1",
+          "lane": 0,
+          "phase": 0,
+          "text": "依頼"
+        },
+        {
+          "id": "e2",
+          "lane": 1,
+          "phase": 0,
+          "text": "受付"
+        },
+        {
+          "id": "e3",
+          "lane": 2,
+          "phase": 0,
+          "text": "受付"
+        },
+        {
+          "id": "e4",
+          "lane": 2,
+          "phase": 0,
+          "text": "計測"
+        },
+        {
+          "id": "e5",
+          "lane": 1,
+          "phase": 0,
+          "text": "計測"
+        },
+        {
+          "id": "e6",
+          "lane": 0,
+          "phase": 0,
+          "text": "発注"
+        },
+        {
+          "id": "e7",
+          "lane": 1,
+          "phase": 0,
+          "text": "受注"
+        },
+        {
+          "id": "e8",
+          "lane": 2,
+          "phase": 0,
+          "text": "受注"
+        },
+        {
+          "id": "e9",
+          "lane": 2,
+          "phase": 0,
+          "text": "体制構築"
+        },
+        {
+          "id": "m1",
+          "lane": 2,
+          "phase": 1,
+          "text": "キックオフ"
+        },
+        {
+          "id": "m2",
+          "lane": 2,
+          "phase": 1,
+          "text": "作業環境の構築"
+        },
+        {
+          "id": "m3",
+          "lane": 2,
+          "phase": 1,
+          "text": "トレーニング"
+        },
+        {
+          "id": "m4",
+          "lane": 2,
+          "phase": 1,
+          "text": "本番作業"
+        },
+        {
+          "id": "m5",
+          "lane": 1,
+          "phase": 1,
+          "text": "品質検査"
+        },
+        {
+          "id": "m6",
+          "lane": 1,
+          "phase": 1,
+          "text": "中間納品"
+        },
+        {
+          "id": "m7",
+          "lane": 0,
+          "phase": 1,
+          "text": "品質検査"
+        },
+        {
+          "id": "m8",
+          "lane": 0,
+          "phase": 1,
+          "text": "FB送付"
+        },
+        {
+          "id": "m9",
+          "lane": 1,
+          "phase": 1,
+          "text": "FB連携"
+        },
+        {
+          "id": "f1",
+          "lane": 2,
+          "phase": 2,
+          "text": "プロジェクト振り返り"
+        },
+        {
+          "id": "f2",
+          "lane": 1,
+          "phase": 2,
+          "text": "最終納品"
+        },
+        {
+          "id": "f3",
+          "lane": 0,
+          "phase": 2,
+          "text": "検収"
+        }
+      ],
+      "edges": [
+        [
+          "e1",
+          "e2"
+        ],
+        [
+          "e2",
+          "e3"
+        ],
+        [
+          "e3",
+          "e4"
+        ],
+        [
+          "e4",
+          "e5"
+        ],
+        [
+          "e5",
+          "e6"
+        ],
+        [
+          "e6",
+          "e7"
+        ],
+        [
+          "e7",
+          "e8"
+        ],
+        [
+          "e8",
+          "e9"
+        ],
+        [
+          "e9",
+          "m1"
+        ],
+        [
+          "m1",
+          "m2"
+        ],
+        [
+          "m2",
+          "m3"
+        ],
+        [
+          "m3",
+          "m4"
+        ],
+        [
+          "m4",
+          "m5"
+        ],
+        [
+          "m5",
+          "m6"
+        ],
+        [
+          "m6",
+          "m7"
+        ],
+        [
+          "m7",
+          "m8"
+        ],
+        [
+          "m8",
+          "m9"
+        ],
+        [
+          "m9",
+          "m4"
+        ],
+        [
+          "m4",
+          "f1"
+        ],
+        [
+          "f1",
+          "f2"
+        ],
+        [
+          "f2",
+          "f3"
+        ]
+      ],
+      "edge_note": "Edge m9->m4 is the feedback loop back to production. Layout reference: docs/reference/slide18_operating_flow.png"
+    },
+    "people": {
+      "title": "国内外（日本）で育成された人材",
+      "lead": "チームはベトナム国内で体系的に育成されるとともに、会社の制度により日本で学び働くことで能力を高め、業務と成果物の品質を確保しています。",
+      "steps": [
+        {
+          "title": "ベトナム国内での教育",
+          "text": "本番作業の前に、プロジェクトごとのガイドラインに沿って教育を受けます。"
+        },
+        {
+          "title": "日本での学習・就業",
+          "text": "ブライセン日本に派遣され、学びながら働き、日本のオフィスの考え方や仕事の進め方を体験します。"
+        },
+        {
+          "title": "部門での実践",
+          "text": "得た経験を持ち帰り、業務とお客様への成果物の品質向上に活かします。"
+        }
+      ],
+      "images": [
+        "team_japan_visit",
+        "team_training_meeting",
+        "team_event_booth"
+      ]
+    },
+    "recruit": {
+      "title": "人材・採用",
+      "text": "新たな挑戦に対応するため、今後採用ニーズが拡大する可能性があります。大学・短大、地域の行政機関と緊密に連携して採用を行い、大規模プロジェクトにも十分な人材を確保しています。",
+      "stats": [
+        {
+          "value": "79",
+          "label": "経済大学に在学中の現スタッフ"
+        },
+        {
+          "value": "187",
+          "label": "累計"
+        }
+      ]
+    }
+  },
+  "achievements": {
+    "page_title": "実績・プロジェクト",
+    "awards": {
+      "title": "実績",
+      "text": "AI学習データ作成の分野で、日本国内5年連続シェアNo.1。6年連続を目指しています。",
+      "source": "出典：富士キメラ総研",
+      "badges": [
+        "award_top1_01",
+        "award_top1_02",
+        "award_top1_03",
+        "award_top1_04"
+      ]
+    },
+    "projects": {
+      "title": "プロジェクト",
+      "text": "長年トップの実績により、日本国内外の多くの著名なお客様と取り組んでいます。これまでに計235件のプロジェクトを完了し、Sony、Subaru、Denso、Sony Honda Mobility、Nikonなどと長期案件を継続しています。",
+      "stat_value": "235",
+      "stat_label": "完了プロジェクト数",
+      "customers": [
+        "customer_sony",
+        "customer_subaru",
+        "customer_denso",
+        "customer_afeela",
+        "customer_nikon"
+      ]
+    }
+  },
+  "vision": {
+    "page_title": "ビジョン",
+    "direction": {
+      "title": "今後の方向性",
+      "text": "アノテーション事業を日本国内にとどまらず、規模・品質の両面でさらに発展させます。今後、日本の本社は米国へ市場を拡大し、新たな機会とお客様を開拓します。"
+    },
+    "roadmap": {
+      "title": "成長ロードマップ",
+      "lead": "アノテーション事業を、日本国内にとどまらず、規模・品質の両面でグローバルに発展させます。",
+      "stages": [
+        {
+          "id": "sea",
+          "phase": "現在",
+          "featured": false,
+          "image": "vision_southeast_asia",
+          "title": "東南アジア",
+          "text": "東南アジアで事業を展開しており、現在はベトナム、ミャンマー、カンボジアで活動しています。",
+          "countries": [
+            {
+              "name": "ベトナム",
+              "status": "current"
+            },
+            {
+              "name": "ミャンマー",
+              "status": "current"
+            },
+            {
+              "name": "カンボジア",
+              "status": "current"
+            }
+          ]
+        },
+        {
+          "id": "usa",
+          "phase": "次のステップ",
+          "featured": true,
+          "image": "vision_usa_map",
+          "title": "アメリカ",
+          "text": "今後、日本の本社が米国へ市場を拡大し、新たな機会とお客様を開拓します。"
+        },
+        {
+          "id": "eu",
+          "phase": "さらに先の未来",
+          "featured": false,
+          "image": "vision_eu",
+          "title": "欧州（EU）",
+          "text": "さらに将来的には、欧州市場へも視野を広げ、サービス提供の範囲を拡大していきます。"
+        }
+      ]
+    }
+  },
+  "news": {
+    "page_title": "ニュース",
+    "lead": "BPO部門の活動・イベント・実績をお知らせします。",
+    "categories": {
+      "announcement": "お知らせ",
+      "event": "イベント",
+      "award": "表彰・受賞",
+      "project": "プロジェクト",
+      "recruit": "採用",
+      "media": "メディア"
+    },
+    "facebook_title": "Facebook"
+  },
+  "contact": {
+    "page_title": "お問い合わせ",
+    "lead": "AI学習データの作成・収集についてお気軽にご相談ください。",
+    "labels": {
+      "address": "住所",
+      "email": "メール",
+      "phone": "電話",
+      "form": "フォームで問い合わせる",
+      "hours": "営業時間",
+      "map": "地図"
+    },
+    "hours": "",
+    "facebook_link": "Facebookページを開く",
+    "note": "【要追記】PowerPointの連絡先スライドが空白でした。content/site.config.json にメール・電話・住所を入力してください。"
+  }
+}

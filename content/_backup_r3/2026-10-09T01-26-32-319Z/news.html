@@ -1,0 +1,75 @@
+<!-- News page shell. -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tin tức | BRYCEN VIETNAM BPO</title>
+  <meta name="description" content="Cập nhật tin tức, sự kiện và hoạt động của bộ phận BPO thuộc BRYCEN VIETNAM.">
+  <link rel="canonical" href="https://example.com/news.html?lang=vi">
+  <link rel="alternate" hreflang="vi" href="https://example.com/news.html?lang=vi">
+  <link rel="alternate" hreflang="en" href="https://example.com/news.html?lang=en">
+  <link rel="alternate" hreflang="ja" href="https://example.com/news.html?lang=ja">
+  <link rel="alternate" hreflang="x-default" href="https://example.com/news.html?lang=vi">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BRYCEN VIETNAM – BPO">
+  <meta property="og:title" content="Tin tức | BRYCEN VIETNAM BPO">
+  <meta property="og:description" content="Cập nhật tin tức, sự kiện và hoạt động của bộ phận BPO thuộc BRYCEN VIETNAM.">
+  <meta property="og:url" content="https://example.com/news.html?lang=vi">
+  <meta property="og:image" content="https://example.com/assets/images/branding/og_share.jpg" data-image-slot="og_share">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ảnh chia sẻ mạng xã hội">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tin tức | BRYCEN VIETNAM BPO">
+  <meta name="twitter:description" content="Cập nhật tin tức, sự kiện và hoạt động của bộ phận BPO thuộc BRYCEN VIETNAM.">
+  <meta name="twitter:image" content="https://example.com/assets/images/branding/og_share.jpg" data-image-slot="og_share">
+  <meta name="twitter:image:alt" content="Ảnh chia sẻ mạng xã hội">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="assets/images/branding/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/branding/browser_logo_32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/branding/browser_logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/branding/browser_logo_180.png">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="news">
+  <div id="site-header"></div>
+  <main id="main" class="news-page">
+    <section class="news-section section">
+      <div class="container">
+        <header class="section-heading news-heading" data-reveal>
+          <h1 class="section-title" data-i18n="news.page_title"></h1>
+          <p class="section-lead" data-i18n="news.lead"></p>
+        </header>
+        <div class="news-layout">
+          <div class="news-content">
+            <section data-news-list-view aria-label="">
+              <div class="news-filters" data-news-filters role="group"></div>
+              <div class="news-grid" data-news-cards></div>
+              <p class="news-empty" data-news-empty role="status" hidden></p>
+              <button class="button button--secondary news-show-more" type="button" data-news-show-more hidden></button>
+            </section>
+            <article class="news-detail card" data-news-detail hidden></article>
+          </div>
+          <aside class="news-sidebar" data-news-sidebar>
+            <section class="news-facebook" data-facebook-plugin hidden>
+              <h2 class="news-facebook__title" data-i18n="news.facebook_title"></h2>
+              <iframe data-facebook-frame loading="lazy" title=""></iframe>
+              <a class="news-facebook__fallback" data-facebook-link data-i18n="contact.facebook_link" target="_blank" rel="noopener noreferrer" hidden></a>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
