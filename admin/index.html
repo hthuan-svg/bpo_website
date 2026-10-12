@@ -9,13 +9,13 @@
   <style>
     :root {
       color-scheme: light;
-      --green: #5e9a24;
-      --green-soft: #eaf5dc;
-      --ink: #17231a;
-      --muted: #5a6b5f;
-      --line: #dce5d8;
-      --paper: #fff;
-      --soft: #f5f8f3;
+      --green: #7BBE35;
+      --green-soft: #1A211C;
+      --ink: #F1F3F2;
+      --muted: #98A39B;
+      --line: #2B342D;
+      --paper: #121814;
+      --soft: #0B0F0C;
       --danger: #a52b25;
       font-family: Inter, "Be Vietnam Pro", "Noto Sans JP", system-ui, "Segoe UI", "Hiragino Sans", "Yu Gothic", sans-serif;
       color: var(--ink);
@@ -30,12 +30,12 @@
       border: 1px solid var(--line);
       border-radius: 9px;
       padding: 8px 14px;
-      background: white;
+      background: #121814;
       color: var(--ink);
       cursor: pointer;
     }
-    button:hover { border-color: var(--green); background: #f8fcf4; }
-    button.primary { border-color: var(--green); background: var(--green); color: white; font-weight: 700; }
+    button:hover { border-color: var(--green); background: #1A211C; }
+    button.primary { border-color: var(--green); background: var(--green); color: #070A08; font-weight: 700; }
     button.primary:hover { background: #4b801c; }
     button.danger { color: var(--danger); }
     button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
@@ -48,7 +48,7 @@
       border: 1px solid #cbd7c6;
       border-radius: 8px;
       padding: 9px 10px;
-      background: white;
+      background: #121814;
       color: var(--ink);
     }
     textarea { min-height: 88px; resize: vertical; }
@@ -95,6 +95,11 @@
     .news-item strong, .news-item small { display: block; }
     .news-item small { color: var(--muted); margin-top: 4px; }
     .news-item.selected { border-color: var(--green); background: var(--green-soft); }
+    .status-toggle .is-selected { border-color: var(--green); background: var(--green); color: #070A08; font-weight: 750; box-shadow: 0 0 0 3px #7BBE3540; }
+    .status-chip { display: inline-flex; align-items: center; min-height: 28px; padding: 3px 10px; border-radius: 999px; font-size: .84rem; font-weight: 750; }
+    .status-chip--open { background: #7BBE35; color: #070A08; }
+    .status-chip--closed { background: #2B342D; color: #F1F3F2; }
+    .status-chip--draft { background: #232C25; color: #B5E57F; border: 1px solid #4A7C1B; }
     .field { min-width: 0; }
     .field + .field { margin-top: 12px; }
     .language-heading { margin: 4px 0 10px; color: var(--green); font-size: .8rem; letter-spacing: .04em; }
@@ -126,12 +131,13 @@
   </style>
 </head>
 <body>
-  <div class="warning" role="alert"><span>⚠ CÔNG CỤ NỘI BỘ – CHỈ DÙNG TRÊN MÁY CỤC BỘ. Không đưa thư mục <code>admin/</code> lên website công khai. Hãy sao lưu dự án trước khi chỉnh sửa.</span></div>
+  <div class="warning" role="alert"><span>Trang quản trị – chỉ dùng trên máy của bạn, không đưa lên mạng.</span></div>
   <header>
     <h1>Công cụ quản lý nội dung BPO</h1>
     <p>Chỉnh sửa tin tức, nội dung, hình ảnh và thông tin website. Các thay đổi chỉ được ghi khi bạn xác nhận lưu.</p>
     <div class="toolbar">
-      <button class="primary" id="choose-folder" type="button">Chọn thư mục dự án</button>
+      <button class="primary" id="choose-folder" type="button">Chọn thư mục</button>
+      <button id="restore-folder" type="button" hidden>Cho phép lại</button>
       <button id="choose-files" type="button">Tải file JSON lên (trình duyệt khác)</button>
       <input id="file-input" type="file" accept=".json,application/json" multiple hidden>
       <span id="connection" class="connection">Chưa chọn thư mục. Có thể mở bằng Live Server rồi tải JSON lên.</span>
@@ -139,19 +145,35 @@
     <p id="status" role="status" aria-live="polite"></p>
     <nav class="tabbar" aria-label="Các mục quản lý">
       <button type="button" role="tab" aria-selected="true" aria-controls="news-panel" data-tab="news-panel">Tin tức</button>
-      <button type="button" role="tab" aria-selected="false" aria-controls="content-panel" data-tab="content-panel">Nội dung</button>
-      <button type="button" role="tab" aria-selected="false" aria-controls="images-panel" data-tab="images-panel">Hình ảnh</button>
-      <button type="button" role="tab" aria-selected="false" aria-controls="settings-panel" data-tab="settings-panel">Cài đặt</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="recruits-panel" data-tab="recruits-panel">Tuyển dụng</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="advanced-panel" data-tab="advanced-panel">Nâng cao ▾</button>
     </nav>
   </header>
   <main>
+    <section id="recruits-panel" class="panel" role="tabpanel">
+      <div class="section-card">
+        <div class="row" style="justify-content:space-between"><h2>Danh sách tuyển dụng</h2><button class="primary" id="add-recruit" type="button">+ Thêm tin tuyển dụng</button></div>
+        <div class="grid two"><label>Tìm kiếm<small>Tìm theo chức danh, địa điểm hoặc mã tin.</small><input id="recruit-search" type="search"></label><label>Lọc trạng thái<small>Chọn trạng thái tin tuyển dụng.</small><select id="recruit-filter"><option value="all">Tất cả</option><option value="open">Đang mở</option><option value="closed">Đã đóng</option><option value="draft">Nháp</option></select></label></div>
+        <div id="recruit-list" class="news-list"></div>
+      </div>
+      <form id="recruit-form" class="section-card" hidden>
+        <h2 id="recruit-form-title">Thêm tin tuyển dụng</h2><div id="recruit-status-buttons" class="row status-toggle" role="group" aria-label="Trạng thái tin tuyển dụng"><button type="button" id="recruit-open" data-recruit-status="open" aria-pressed="true">Đang mở</button><button type="button" id="recruit-closed" data-recruit-status="closed" aria-pressed="false">Đã đóng</button></div>
+        <div class="grid two"><label>Ngày đăng<small>Ngày tin được đăng trên website.</small><input id="r-date" type="date" required></label><label>Hạn nộp hồ sơ<small>Quá hạn, website tự hiện Đã đóng.</small><input id="r-deadline" type="date"></label><label>Ảnh<small>Chọn slot ảnh hiện có cho tin tuyển dụng.</small><select id="r-image"></select></label><label>Link / email ứng tuyển<small>Để trống để website dùng email liên hệ.</small><input id="r-apply" type="text"></label></div>
+        <div id="r-languages" class="grid three"></div><p class="hint">Mỗi trường có tab ngôn ngữ. Để đăng, cần điền đủ VI, EN và JA; nếu thiếu có thể đăng với nội dung tiếng Việt.</p>
+        <label class="inline-check"><input id="r-hidden" type="checkbox"> Hiển thị trên website</label>
+        <div class="actions"><button class="primary" type="button" data-r-save="keep">Lưu</button><button type="button" data-r-save="draft">Lưu nháp</button><button type="button" data-r-save="publish">Đăng</button><button type="button" id="r-cancel">Hủy</button></div>
+      </form>
+    </section>
     <section id="news-panel" class="panel active" role="tabpanel">
       <div class="news-layout">
         <aside class="section-card">
           <div class="row" style="justify-content:space-between">
             <h2>Danh sách tin</h2>
-            <button class="primary" id="add-news" type="button">+ Thêm tin</button>
+            <button class="primary" id="add-news" type="button">+ Thêm tin mới</button>
           </div>
+          <label>Tìm kiếm<small>Tìm theo tiêu đề hoặc mã tin.</small><input id="news-search" type="search"></label>
+          <label>Lọc theo loại tin<small>Chọn danh mục tin.</small><select id="news-filter"><option value="all">Tất cả</option></select></label>
+          <button id="undo-save" type="button">Hoàn tác lần lưu gần nhất</button>
           <p class="hint">Chọn một tin để sửa. Tin ẩn vẫn được giữ trong dữ liệu.</p>
           <div id="news-list" class="news-list"></div>
         </aside>
@@ -160,7 +182,7 @@
           <div class="grid two">
             <div class="field">
               <label for="news-id">Mã tin (id)<small>Mã ASCII duy nhất, tự gợi ý từ tiêu đề tiếng Việt.</small></label>
-              <input id="news-id" name="id" autocomplete="off" required>
+              <input id="news-id" name="id" autocomplete="off" required readonly>
             </div>
             <div class="field">
               <label for="news-date">Ngày đăng<small>Chọn ngày hiển thị theo định dạng YYYY-MM-DD.</small></label>
@@ -173,7 +195,7 @@
               </select>
             </div>
             <div class="field">
-              <label for="news-image">Ảnh đại diện<small>Chọn một slot có sẵn trong images.json.</small></label>
+              <label for="news-image">Ảnh đại diện<small>Chọn ảnh trong assets/images/news/ đã đăng ký tại content/images.json.</small></label>
               <select id="news-image" name="image"></select>
               <img id="news-image-preview" class="preview" alt="Xem trước ảnh đã chọn">
             </div>
@@ -216,6 +238,7 @@
       </div>
     </section>
 
+    <details id="advanced-panel" class="panel"><summary>Nâng cao ▾ — Nội dung, Hình ảnh, Cài đặt</summary>
     <section id="content-panel" class="panel" role="tabpanel">
       <div class="section-card">
         <h2>Nội dung website</h2>
@@ -264,13 +287,15 @@
         <div class="actions" style="margin-top:18px"><button class="primary" type="submit">Lưu cài đặt</button></div>
       </form>
     </section>
+    </details>
   </main>
   <script>
     // Đọc và lưu các JSON của website, chỉ trên máy đang mở công cụ.
     const languages = ['vi', 'en', 'ja'];
-    const fileNames = ['news.json', 'images.json', 'site.config.json', 'vi.json', 'en.json', 'ja.json'];
+    const fileNames = ['news.json', 'recruits.json', 'images.json', 'site.config.json', 'vi.json', 'en.json', 'ja.json'];
     const data = Object.create(null);
     const sourceFiles = Object.create(null);
+    const loadedModified = Object.create(null);
     let projectDirectory = null;
     let editingNewsIndex = -1;
     let slugWasEdited = false;
@@ -324,6 +349,7 @@
         const file = await handle.getFile();
         loaded[name] = JSON.parse(await file.text());
         sourceFiles[name] = handle;
+        loadedModified[name] = file.lastModified;
       }
       Object.assign(data, loaded);
       projectDirectory = root;
@@ -333,12 +359,14 @@
     }
     async function chooseProjectFolder() {
       if (!('showDirectoryPicker' in window)) {
-        showStatus('Trình duyệt này không hỗ trợ chọn thư mục trực tiếp. Dùng “Tải file JSON lên” để chỉnh sửa và tải file đã sửa xuống.', true);
+        showStatus('Trình duyệt này không ghi trực tiếp được. Hãy dùng Chrome hoặc Edge. Dùng “Mở file” rồi tải file đã sửa xuống và chép vào thư mục content/.', true);
         return;
       }
       try {
         const root = await window.showDirectoryPicker({ mode: 'readwrite' });
         await readDirectoryJson(root);
+        const db = await new Promise((resolve, reject) => { const request = indexedDB.open('brycen-admin', 1); request.onsuccess = () => resolve(request.result); request.onerror = () => reject(request.error); });
+        db.transaction('handles', 'readwrite').objectStore('handles').put(root, 'project');
       } catch (error) {
         if (error.name === 'AbortError') return;
         showStatus(`Không mở được thư mục dự án: ${error.message}`, true);
@@ -366,13 +394,35 @@
     }
     async function writeFile(name, value) {
       const parsed = safeJson(value, name);
-      const text = JSON.stringify(parsed, null, 2);
+      const text = `${JSON.stringify(parsed, null, 2)}\n`;
       if (projectDirectory) {
         const handle = sourceFiles[name] ?? await (await projectDirectory.getDirectoryHandle('content')).getFileHandle(name);
+        const current = await handle.getFile();
+        if (loadedModified[name] !== undefined && current.lastModified !== loadedModified[name]) {
+          if (!window.confirm('File đã bị thay đổi bên ngoài – tải lại?')) throw new Error('Đã hủy lưu để tránh ghi đè thay đổi bên ngoài.');
+          await readDirectoryJson(projectDirectory);
+          throw new Error('Đã tải lại dữ liệu. Hãy áp dụng thay đổi lần nữa.');
+        }
+        {
+          const backupDir = await (await projectDirectory.getDirectoryHandle('content')).getDirectoryHandle('_backup_admin', { create: true });
+          const entries = [];
+          for await (const entry of backupDir.values()) if (entry.kind === 'file' && entry.name.startsWith(`${name}-`)) entries.push(entry);
+          const stamp = new Date().toISOString().replace(/[:.]/g, '-');
+          const backup = await backupDir.getFileHandle(`${name}-${stamp}.json`, { create: true });
+          const backupWriter = await backup.createWritable(); await backupWriter.write(await current.text()); await backupWriter.close();
+          entries.sort((a, b) => a.name.localeCompare(b.name));
+          for (const old of entries.slice(0, Math.max(0, entries.length - 19))) await backupDir.removeEntry(old.name);
+        }
         const writable = await handle.createWritable();
         try {
           await writable.write(text);
           await writable.close();
+          loadedModified[name] = (await handle.getFile()).lastModified;
+          if ('BroadcastChannel' in window) {
+            const channel = new BroadcastChannel('brycen-content-updated');
+            channel.postMessage({ file: name, savedAt: Date.now() });
+            channel.close();
+          }
         } catch (error) {
           await writable.abort();
           throw error;
@@ -408,14 +458,25 @@
       const previous = select.value;
       select.replaceChildren();
       const slots = imageSlots();
-      for (const slot of Object.keys(slots)) {
+      const newsSlots = Object.entries(slots).filter(([, entry]) =>
+        typeof entry?.src === 'string' && entry.src.replace(/\\/g, '/').startsWith('assets/images/news/')
+      );
+      for (const [slot, entry] of newsSlots) {
         const option = document.createElement('option');
         option.value = slot;
-        option.textContent = slot;
+        option.textContent = `${slot} · ${entry.src.split('/').at(-1)}`;
         select.append(option);
       }
-      if (slots[previous]) select.value = previous;
+      if (newsSlots.some(([slot]) => slot === previous)) select.value = previous;
       if (!slots[select.value] && select.options.length) select.selectedIndex = 0;
+      if (!select.options.length) {
+        const option = document.createElement('option');
+        option.value = '';
+        option.textContent = 'Chưa có ảnh Tin tức trong content/images.json';
+        option.disabled = true;
+        option.selected = true;
+        select.append(option);
+      }
       updateNewsImagePreview();
     }
     function updateNewsImagePreview() {
@@ -430,18 +491,31 @@
       list.replaceChildren();
       const items = newsItems().map((item, index) => ({ item, index }))
         .sort((a, b) => String(b.item.date).localeCompare(String(a.item.date)));
-      for (const { item, index } of items) {
-        const button = document.createElement('button');
-        button.type = 'button';
-        button.className = `news-item${editingNewsIndex === index ? ' selected' : ''}`;
+      const search = $('#news-search')?.value.trim().toLocaleLowerCase() ?? '';
+      const category = $('#news-filter')?.value ?? 'all';
+      const normal = items.filter(({item}) => !item.id.startsWith('_'));
+      const templates = items.filter(({item}) => item.id.startsWith('_'));
+      for (const option of $('#news-filter')?.options ?? []) if (!option.dataset.ready && data['vi.json']?.news?.categories?.[option.value]) option.remove();
+      const categories = data['vi.json']?.news?.categories ?? {};
+      for (const [key, label] of Object.entries(categories)) if (![...($('#news-filter')?.options ?? [])].some(option=>option.value===key)) { const option=document.createElement('option');option.value=key;option.textContent=label;$('#news-filter').append(option); }
+      const shown = normal.filter(({item}) => (!search || `${item.title?.vi||item.title?.en||item.title?.ja||''} ${item.id}`.toLocaleLowerCase().includes(search)) && (category==='all'||item.category===category));
+      for (const { item, index } of shown) {
+        const button = document.createElement('article');
+        button.className = 'news-item card';
         const title = document.createElement('strong');
-        title.textContent = item.title?.vi || item.id || '(Chưa có tiêu đề)';
+        title.textContent = item.title?.vi || item.title?.en || item.title?.ja || item.id || '(Chưa có tiêu đề)';
         const meta = document.createElement('small');
-        meta.textContent = `${item.date || 'Chưa có ngày'} · ${item.category || ''}${item.hidden ? ' · ĐANG ẨN' : ''}`;
-        button.append(title, meta);
-        button.addEventListener('click', () => editNews(index));
+        meta.textContent = `${String(item.date || 'Chưa có ngày').replaceAll('-','.')} · ${item.hidden ? 'Nháp (đang ẩn)' : 'Đang hiển thị'} · ${languages.map(lang=>item.title?.[lang]&&item.summary?.[lang]?'✔':'⚠').join(' ')}`;
+        const thumb=document.createElement('img');thumb.className='preview';thumb.src=imageUrl(item.image);thumb.alt=imageSlots()[item.image]?.alt?.vi||item.title?.vi||'';
+        const actions=document.createElement('div');actions.className='actions';
+        const act=(label,fn)=>{const b=document.createElement('button');b.type='button';b.textContent=label;b.addEventListener('click',fn);actions.append(b);};
+        act('Sửa',()=>editNews(index));act(item.hidden?'Hiện':'Ẩn',()=>{editingNewsIndex=index;toggleNewsHidden();});
+        act('Nhân bản',()=>{const clone=JSON.parse(JSON.stringify(item));clone.id='';clone.date=new Date().toISOString().slice(0,10);clone.hidden=true;setNewsForm(clone,-1);});
+        act('Xóa',()=>{editingNewsIndex=index;deleteNews();});act('Xem trên website',()=>window.open(`../news.html?id=${encodeURIComponent(item.id)}`,'_blank','noopener'));
+        button.append(title,meta,thumb,actions);
         list.append(button);
       }
+      if(templates.length){const box=document.createElement('details');const summary=document.createElement('summary');summary.textContent='Mẫu (không hiện trên website)';box.append(summary);for(const {item} of templates){const b=document.createElement('button');b.type='button';b.textContent=`Nhân bản: ${item.title?.vi||item.id}`;b.addEventListener('click',()=>{const clone=JSON.parse(JSON.stringify(item));clone.id='';clone.date=new Date().toISOString().slice(0,10);setNewsForm(clone,-1);});box.append(b);}list.append(box);}
       if (!items.length) {
         const empty = document.createElement('p');
         empty.className = 'hint';
@@ -508,7 +582,11 @@
     async function saveNews(forceDraft) {
       if (!data['news.json']) return showStatus('Hãy chọn thư mục dự án hoặc tải news.json lên trước.', true);
       const { item, complete } = readNewsForm(forceDraft);
-      if (!item.id) item.id = slugify(item.title.vi);
+      if (editingNewsIndex < 0) {
+        const base = `${item.date.slice(0, 7)}-${slugify(item.title.vi).slice(0, 60) || 'tin-tuc'}`;
+        item.id = base; let suffix = 2;
+        while (newsItems().some(existing => existing.id === item.id)) item.id = `${base}-${suffix++}`;
+      }
       if (!item.id || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id)) {
         showStatus('Mã tin cần có chữ thường, số và dấu gạch nối; hãy nhập tiêu đề tiếng Việt hoặc sửa mã tin.', true);
         return;
@@ -736,6 +814,7 @@
     }));
     $('#add-news').addEventListener('click', () => setNewsForm(blankNews(), -1));
     $('#news-image').addEventListener('change', updateNewsImagePreview);
+    $('#news-search').addEventListener('input',renderNewsList); $('#news-filter').addEventListener('change',renderNewsList);
     $('#title-vi').addEventListener('input', () => {
       if (!slugWasEdited) $('#news-id').value = slugify($('#title-vi').value);
     });
@@ -793,6 +872,148 @@
         }
       });
     }
+  </script>
+  <script>
+    // Recruitment editor and local folder permission recovery.
+    (() => {
+      const langs = ['vi', 'en', 'ja'];
+      let recruitIndex = -1;
+      let recruitStatus = 'open';
+      const $r = (selector) => document.querySelector(selector);
+      const escText = (element, value) => { element.textContent = value == null ? '' : String(value); };
+      const today = () => new Date().toISOString().slice(0, 10);
+      const slug = (value) => value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[đĐ]/g, 'd').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+      const uniqueId = (date, title, items, current = '') => {
+        const base = `${(date || today()).slice(0, 7)}-${slug(title) || 'tin-tuyen-dung'}`;
+        let id = base, suffix = 2;
+        while (items.some(item => item.id === id && id !== current)) id = `${base}-${suffix++}`;
+        return id;
+      };
+      const makeField = (key, label, hint, multiline = false) => {
+        const wrap = document.createElement('section'); wrap.className = 'section-card';
+        const heading = document.createElement('h3'); escText(heading, label); wrap.append(heading);
+        const note = document.createElement('p'); note.className = 'hint'; escText(note, hint); wrap.append(note);
+        const cols = document.createElement('div'); cols.className = 'grid three';
+        langs.forEach(lang => {
+          const field = document.createElement('label'); escText(field, {vi:'Tiếng Việt',en:'English',ja:'日本語'}[lang]);
+          const input = document.createElement(multiline ? 'textarea' : 'input'); input.dataset.rfield = `${key}.${lang}`;
+          const state = document.createElement('small'); state.className = 'hint'; state.dataset.complete = `${key}.${lang}`; state.textContent = '⚠';
+          field.append(input, state); cols.append(field);
+        });
+        wrap.append(cols); return wrap;
+      };
+      const fieldsHost = $r('#r-languages');
+      [['title','Vị trí tuyển dụng','Tên vị trí tuyển dụng.'],['summary','Mô tả ngắn','Tóm tắt trong 1–2 câu.'],['location','Địa điểm','Địa điểm làm việc; mặc định lấy từ tin trước.'],['type','Hình thức','Chọn hoặc nhập hình thức làm việc.'],['body','Chi tiết công việc','Cách nhau một dòng trống = một đoạn; có thể ghi: Mô tả công việc, Yêu cầu, Quyền lợi',true]].forEach(args => fieldsHost.append(makeField(...args)));
+      const recruitItems = () => data['recruits.json']?.items ?? [];
+      function updateMarks() {
+        document.querySelectorAll('[data-rfield]').forEach(input => {
+          const mark = document.querySelector(`[data-complete="${input.dataset.rfield}"]`);
+          mark.textContent = input.value.trim() ? '✔' : '⚠';
+        });
+      }
+      function updateRecruitStatusButtons() {
+        document.querySelectorAll('[data-recruit-status]').forEach(button => {
+          const selected = button.dataset.recruitStatus === recruitStatus;
+          button.classList.toggle('is-selected', selected);
+          button.setAttribute('aria-pressed', String(selected));
+        });
+      }
+      function blankRecruit() {
+        const previous = recruitItems().find(item => !item.id.startsWith('_'));
+        const copy = (key, fallback = '') => previous?.[key] ?? Object.fromEntries(langs.map(lang => [lang, fallback]));
+        return {id:'',date:today(),deadline:'',status:'open',hidden:true,image:'recruits_default',apply_link:'',title:copy('title'),summary:copy('summary'),location:previous?.location ?? {vi:'Huế, Việt Nam',en:'Hue, Vietnam',ja:'ベトナム・フエ'},type:previous?.type ?? {vi:'Toàn thời gian',en:'Full-time',ja:'正社員'},body:copy('body')};
+      }
+      function formItem(item) {
+        recruitIndex = item ? recruitItems().indexOf(item) : -1;
+        const value = item ?? blankRecruit(); recruitStatus = value.status || 'open';
+        updateRecruitStatusButtons();
+        $r('#recruit-form').hidden = false;
+        escText($r('#recruit-form-title'), recruitIndex < 0 ? 'Thêm tin tuyển dụng' : 'Sửa tin tuyển dụng');
+        $r('#r-date').value = value.date || today(); $r('#r-deadline').value = value.deadline || '';
+        $r('#r-apply').value = value.apply_link || ''; $r('#r-hidden').checked = !value.hidden;
+        const image = $r('#r-image'); image.replaceChildren();
+        Object.keys(imageSlots()).filter(slot => slot.startsWith('recruits_')).forEach(slot => { const option = document.createElement('option'); option.value = slot; option.textContent = slot; image.append(option); });
+        image.value = imageSlots()[value.image] ? value.image : (imageSlots().recruits_default ? 'recruits_default' : image.options[0]?.value);
+        document.querySelectorAll('[data-rfield]').forEach(input => { const [key,lang] = input.dataset.rfield.split('.'); input.value = value[key]?.[lang] ?? ''; });
+        updateMarks();
+      }
+      function drawRecruits() {
+        const host = $r('#recruit-list'); host.replaceChildren();
+        const search = $r('#recruit-search').value.trim().toLocaleLowerCase(); const filter = $r('#recruit-filter').value;
+        const items = recruitItems().map((item,index)=>({item,index})).sort((a,b)=>String(b.item.date).localeCompare(String(a.item.date)));
+        const normal = items.filter(({item})=>!item.id.startsWith('_')); const templates = items.filter(({item})=>item.id.startsWith('_'));
+        const addRows = (rows, target) => rows.forEach(({item,index})=>{
+          const titleText = item.title?.vi || item.title?.en || item.title?.ja || item.id;
+          const autoClosed = data['site.config.json']?.recruits?.autoCloseByDeadline && item.deadline && item.deadline < today() && item.status === 'open';
+          const status = item.hidden ? 'Nháp (đang ẩn)' : autoClosed ? 'Tự đóng (quá hạn)' : item.status === 'open' ? 'Đang mở' : 'Đã đóng';
+          if (search && !`${titleText} ${item.id} ${item.location?.vi||''}`.toLocaleLowerCase().includes(search)) return;
+          if (!item.id.startsWith('_') && filter !== 'all' && (filter === 'draft' ? !item.hidden : item.hidden || item.status !== filter)) return;
+          const row = document.createElement('article'); row.className='card';
+          const title=document.createElement('strong'); escText(title,titleText); const meta=document.createElement('p'); meta.className='hint'; escText(meta,`${String(item.date||'').replaceAll('-','.')} · ${langs.map(l=>item.title?.[l]? '✔':'⚠').join(' ')}`); const chip=document.createElement('span');chip.className=`status-chip ${item.hidden?'status-chip--draft':(autoClosed||item.status==='closed')?'status-chip--closed':'status-chip--open'}`;escText(chip,status);row.append(title,meta,chip);
+          const actions=document.createElement('div'); actions.className='actions';
+          const addButton=(label,fn,disabled=false)=>{const b=document.createElement('button');b.type='button';b.textContent=label;b.disabled=disabled;b.addEventListener('click',fn);actions.append(b);};
+          addButton('Sửa',()=>formItem(item),item.id.startsWith('_')); addButton(item.hidden?'Hiện':'Ẩn',()=>mutateRecruit(index,x=>x.hidden=!x.hidden)); addButton('Nhân bản',()=>{const duplicate=JSON.parse(JSON.stringify(item));duplicate.id='';duplicate.date=today();duplicate.hidden=true;recruitIndex=-1;formItem(duplicate);});
+          addButton(item.status==='open'?'Đóng tin':'Mở lại',()=>mutateRecruit(index,x=>x.status=x.status==='open'?'closed':'open'));
+          addButton('Xóa',()=>deleteRecruit(index),item.id.startsWith('_'));
+          addButton('Xem trên website',()=>window.open(`../recruits.html?id=${encodeURIComponent(item.id)}`,'_blank','noopener'));
+          row.append(actions); target.append(row);
+        });
+        addRows(normal,host);
+        if (templates.length) { const details=document.createElement('details'); const summary=document.createElement('summary');summary.textContent='Mẫu (không hiện trên website)';details.append(summary);const box=document.createElement('div');box.className='news-list';details.append(box);addRows(templates,box);host.append(details); }
+      }
+      async function persistRecruit(nextItems, message) {
+        const before = JSON.parse(JSON.stringify(recruitItems())); data['recruits.json'].items=nextItems;
+        if (await saveFiles(['recruits.json'],message)) { drawRecruits(); return true; }
+        data['recruits.json'].items=before; drawRecruits(); return false;
+      }
+      async function mutateRecruit(index, change) {
+        const next=JSON.parse(JSON.stringify(recruitItems())); change(next[index]);
+        if (await persistRecruit(next,'Lưu tin tuyển dụng')) showStatus(`Đã đóng tin ${next[index].title?.vi||next[index].id}.`);
+      }
+      async function deleteRecruit(index) {
+        const item=recruitItems()[index]; if (!item || item.id.startsWith('_')) return;
+        const choice=window.prompt(`Xóa “${item.title?.vi||item.id}”? Không thể khôi phục từ giao diện (có thể hoàn tác lần lưu gần nhất).\nNhập XÓA để xóa, ẨN để chỉ ẩn, hoặc HỦY.`,'HỦY');
+        if (choice==='ẨN') return mutateRecruit(index,x=>x.hidden=true); if (choice!=='XÓA') return;
+        const next=JSON.parse(JSON.stringify(recruitItems())); next.splice(index,1); await persistRecruit(next,'Xóa tin tuyển dụng');
+      }
+      async function saveRecruit(mode) {
+        if (!data['recruits.json']) return showStatus('Hãy chọn thư mục dự án trước.',true);
+        const item=recruitIndex<0?blankRecruit():JSON.parse(JSON.stringify(recruitItems()[recruitIndex]));
+        item.date=$r('#r-date').value; item.deadline=$r('#r-deadline').value; item.status=recruitStatus; item.image=$r('#r-image').value; item.apply_link=$r('#r-apply').value.trim(); item.hidden=mode==='draft'?true:mode==='publish'?false:!$r('#r-hidden').checked;
+        for(const input of document.querySelectorAll('[data-rfield]')) {const [key,lang]=input.dataset.rfield.split('.');item[key][lang]=input.value.trim();}
+        if(!/^\d{4}-\d{2}-\d{2}$/.test(item.date)||Number.isNaN(Date.parse(item.date))) return showStatus('Ngày đăng không hợp lệ.',true);
+        if(!item.title.vi) return showStatus('Vui lòng nhập Vị trí tuyển dụng bằng tiếng Việt.',true);
+        const required=['title','summary','location','type','body']; const complete=required.every(k=>langs.every(l=>item[k][l]));
+        if(!item.hidden&&!complete&&!window.confirm('Thiếu nội dung tiếng Anh hoặc tiếng Nhật. Đăng với nội dung tiếng Việt cho ngôn ngữ còn thiếu?')) { item.hidden=true; }
+        if(!item.id) item.id=uniqueId(item.date,item.title.vi,recruitItems());
+        const next=JSON.parse(JSON.stringify(recruitItems())); if(recruitIndex<0) next.push(item); else next[recruitIndex]=item;
+        if(await persistRecruit(next,'Lưu tin tuyển dụng')) { $r('#recruit-form').hidden=true; showStatus('Đã lưu ✔ Đã sửa file content/recruits.json. Hãy commit/đăng tải lại website để người xem thấy thay đổi.'); }
+      }
+      $r('#add-recruit').addEventListener('click',()=>formItem(null)); $r('#r-cancel').addEventListener('click',()=>{$r('#recruit-form').hidden=true;});
+      $r('#recruit-open').addEventListener('click',()=>{recruitStatus='open';updateRecruitStatusButtons();}); $r('#recruit-closed').addEventListener('click',()=>{recruitStatus='closed';updateRecruitStatusButtons();});
+      document.querySelectorAll('[data-r-save]').forEach(button=>button.addEventListener('click',()=>saveRecruit(button.dataset.rSave)));
+      document.querySelectorAll('[data-rfield]').forEach(input=>input.addEventListener('input',updateMarks));
+      $r('#recruit-search').addEventListener('input',drawRecruits); $r('#recruit-filter').addEventListener('change',drawRecruits);
+      document.querySelectorAll('.tabbar [role="tab"]').forEach(tab=>tab.addEventListener('click',()=>{
+        const isAdvanced=tab.dataset.tab==='advanced-panel';
+        if(isAdvanced){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));$r('#advanced-panel').classList.add('active');$r('#advanced-panel').open=true;['content-panel','images-panel','settings-panel'].forEach(id=>$r(`#${id}`).classList.add('active'));}
+        if(tab.dataset.tab==='recruits-panel'&&data['recruits.json'])drawRecruits();
+      }));
+      const indexedDbRequest=indexedDB.open('brycen-admin',1);
+      indexedDbRequest.onupgradeneeded=()=>indexedDbRequest.result.createObjectStore('handles');
+      indexedDbRequest.onsuccess=()=>{const db=indexedDbRequest.result;const tx=db.transaction('handles','readonly');tx.objectStore('handles').get('project').onsuccess=event=>{if(event.target.result)$r('#restore-folder').hidden=false;};};
+      $r('#restore-folder').addEventListener('click',async()=>{try{const db=await new Promise((resolve,reject)=>{const req=indexedDB.open('brycen-admin',1);req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});const handle=await new Promise(resolve=>db.transaction('handles').objectStore('handles').get('project').onsuccess=e=>resolve(e.target.result));if(!handle)return;let permission=await handle.queryPermission({mode:'readwrite'});if(permission!=='granted')permission=await handle.requestPermission({mode:'readwrite'});if(permission==='granted')await readDirectoryJson(handle);}catch(error){showStatus(`Không thể mở lại thư mục: ${error.message}`,true);}});
+      const originalReadDirectoryJson=readDirectoryJson;
+      window.addEventListener('beforeunload',()=>{});
+      const initTimer=setInterval(()=>{if(data['recruits.json']){clearInterval(initTimer);drawRecruits();}},200);
+      $r('#undo-save').addEventListener('click',async()=>{
+        if(!projectDirectory)return showStatus('Hoàn tác chỉ dùng được khi đã chọn thư mục dự án.',true);
+        if(!window.confirm('Khôi phục bản sao lưu mới nhất của tin tức?'))return;
+        try{const dir=await(await projectDirectory.getDirectoryHandle('content')).getDirectoryHandle('_backup_admin');const matches=[];for await(const entry of dir.values())if(entry.kind==='file'&&entry.name.startsWith('news.json-'))matches.push(entry);matches.sort((a,b)=>b.name.localeCompare(a.name));if(!matches.length)return showStatus('Chưa có bản sao lưu để hoàn tác.',true);data['news.json']=JSON.parse(await(await matches[0].getFile()).text());await writeFile('news.json',data['news.json']);renderAll();showStatus('Đã hoàn tác ✔');}catch(error){showStatus(`Không thể hoàn tác: ${error.message}`,true);}
+      });
+      const originalChooser=$r('#choose-folder'); originalChooser.addEventListener('click',async()=>{if(!projectDirectory)return;try{const db=await new Promise((resolve,reject)=>{const req=indexedDB.open('brycen-admin',1);req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});db.transaction('handles','readwrite').objectStore('handles').put(projectDirectory,'project');$r('#restore-folder').hidden=false;}catch{}});
+      window.addEventListener('DOMContentLoaded',()=>{});
+    })();
   </script>
 </body>
 </html>

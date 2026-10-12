@@ -8,7 +8,7 @@ let selectedCategory = 'all';
 let visibleNewsCount = visibleNewsLimit;
 
 async function loadNews() {
-  const response = await fetch(newsUrl);
+  const response = await fetch(newsUrl, { cache: 'no-store' });
   if (!response.ok) {
     throw new Error(`Could not load ${newsUrl}: ${response.status}`);
   }

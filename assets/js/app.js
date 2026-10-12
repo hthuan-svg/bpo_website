@@ -12,6 +12,19 @@ import { initializeMarquee } from './marquee.js';
 import { initializeRecruitment, renderRecruitment } from './recruits.js';
 import { initializeContact } from './contact.js';
 
+// Refresh open public content pages after a local admin save.
+if ('BroadcastChannel' in window) {
+  const adminUpdates = new BroadcastChannel('brycen-content-updated');
+  adminUpdates.addEventListener('message', (event) => {
+    const page = document.body?.dataset.page;
+    const changedFile = event.data?.file;
+    const affectsPage = (page === 'news' && changedFile === 'news.json')
+      || (page === 'recruits' && changedFile === 'recruits.json')
+      || (page === 'home' && changedFile === 'news.json');
+    if (affectsPage) window.location.reload();
+  });
+}
+
 const openPageMessage = 'Hãy mở trang bằng Live Server (không bấm đúp file .html)';
 
 function showStartupError(error) {

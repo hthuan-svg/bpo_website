@@ -1,5 +1,7 @@
 # Hướng dẫn sửa nội dung (cho người không chuyên)
 
+Muốn quản lý tin tức và tuyển dụng bằng biểu mẫu? Mở `admin/index.html` qua Live Server trong Chrome/Edge; xem [hướng dẫn trang quản trị](admin-guide.md).
+
 Mở web bằng **Live Server** để xem thử. Trước khi sửa lớn: `git commit` hoặc sao chép cả thư mục dự án để có bản dự phòng.
 
 | Tôi muốn… | Sửa ở đâu |

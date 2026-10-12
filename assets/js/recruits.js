@@ -207,7 +207,7 @@ export function renderRecruitment(context) {
 export async function initializeRecruitment(context) {
   if (!document.querySelector('#recruits-filters')) return;
   if (!initialized) {
-    const response = await fetch('content/recruits.json');
+    const response = await fetch('content/recruits.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`Could not load content/recruits.json: ${response.status}`);
     const data = await response.json();
     posts = Array.isArray(data.items) ? data.items : [];

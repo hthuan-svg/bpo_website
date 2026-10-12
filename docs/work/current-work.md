@@ -21,6 +21,7 @@ Chạy theo thứ tự. Mỗi bước: chat mới → kiểm tra Definition of d
 | [x] | `/r3-09-recruits` | Trang Tuyển dụng | 4 |
 | [x] | `/r3-10-contact` | Trang Liên hệ (biểu mẫu + chính sách) | 11 |
 | [ ] | `/r3-11-qa-cleanup` | Kiểm tra toàn bộ, xóa khóa cũ, đồng bộ docs | – |
+| [ ] | `/r3-12-admin` | Công cụ cục bộ quản lý tin tức và tuyển dụng | Hoàn tất tải ảnh, retire ảnh, và kiểm thử luồng thao tác |
 
 ## Việc còn lại sau Revision 3
 - [ ] Nhập thông tin thật: `site.config.json` (email, điện thoại, địa chỉ, Facebook, form endpoint) — xem `docs/release/contact-form-setup.md`

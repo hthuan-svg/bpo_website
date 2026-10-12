@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const locales = ['vi', 'en', 'ja'];
-const ignoredContentRoots = ['content/_backup_', 'assets/images/_unused', 'revision2', 'revision3', 'docs'];
+const ignoredContentRoots = ['content/_backup_admin', 'content/_backup_', 'assets/images/_unused', 'revision2', 'revision3', 'docs'];
 const placeholderMarkers = ['[CẦN BỔ SUNG]', '[TO ADD]', '【要追記】'];
 const newsCategories = ['announcement', 'event', 'award', 'project', 'recruit', 'media'];
 const slotReferenceKeys = new Set(['image', 'images', 'icon', 'customers', 'badges']);
