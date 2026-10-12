@@ -42,22 +42,6 @@
 <body data-page="team">
   <div id="site-header"></div>
   <main id="main" class="content-page team-page">
-    <div class="page-container">
-      <nav class="team-tabs" aria-label="Team sections">
-        <div class="team-tabs__list" role="tablist" aria-label="Team sections">
-          <button class="team-tabs__tab is-active" type="button" role="tab" aria-selected="true" aria-current="page" data-target="#org">
-            <span data-i18n="team.tabs.org"></span>
-          </button>
-          <button class="team-tabs__tab" type="button" role="tab" aria-selected="false" data-target="#principles">
-            <span data-i18n="team.tabs.principles"></span>
-          </button>
-          <button class="team-tabs__tab" type="button" role="tab" aria-selected="false" data-target="#people">
-            <span data-i18n="team.tabs.people"></span>
-          </button>
-        </div>
-      </nav>
-    </div>
-
     <section id="org" class="section-shell team-org" aria-labelledby="team-org-title">
       <div class="team-org__figure" data-bg="team_org_image" aria-hidden="true"></div>
       <div class="page-container">
@@ -101,7 +85,7 @@
       </div>
     </section>
 
-    <section id="people" class="section-shell team-people" aria-labelledby="team-people-title">
+    <section id="people" class="section-shell team-people" data-bg="team_japan_country" aria-labelledby="team-people-title">
       <div class="page-container">
         <header class="section-heading" data-reveal>
           <p class="eyebrow" data-i18n="team.page_title"></p>
@@ -132,10 +116,15 @@
             </ul>
           </div>
         </div>
-        <figure class="team-people__country" data-reveal>
-          <img class="team-people__country-image" data-img="team_japan_country" loading="lazy" alt="">
-          <figcaption data-i18n="team.people.country_caption"></figcaption>
-        </figure>
+      </div>
+    </section>
+
+    <section class="section-shell subaru-cta team-cta" aria-labelledby="team-cta-title">
+      <div class="page-container">
+        <div class="subaru-cta__panel" data-reveal>
+          <h2 id="team-cta-title" data-i18n="team.cta.title"></h2>
+          <a class="button" href="contact.html" data-i18n="team.cta.button"></a>
+        </div>
       </div>
     </section>
   </main>

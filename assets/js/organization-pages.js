@@ -1,54 +1,3 @@
-// Handles in-page team navigation and small presentation details.
-function updateTeamTabs() {
-  const sections = Array.from(document.querySelectorAll('#org, #principles, #people'));
-  const buttons = Array.from(document.querySelectorAll('.team-tabs__tab'));
-  if (!sections.length || !buttons.length) {
-    return;
-  }
-
-  const scrollY = window.scrollY + window.innerHeight * 0.35;
-  let activeId = sections[0].id;
-  for (const section of sections) {
-    if (section.offsetTop <= scrollY) {
-      activeId = section.id;
-    }
-  }
-
-  buttons.forEach((button) => {
-    const target = button.dataset.target;
-    const isActive = target === `#${activeId}`;
-    button.classList.toggle('is-active', isActive);
-    button.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    button.setAttribute('aria-current', isActive ? 'page' : 'false');
-  });
-}
-
-function bindTeamTabs() {
-  if (document.body.dataset.teamTabsBound === 'true') {
-    return;
-  }
-
-  const buttons = document.querySelectorAll('.team-tabs__tab');
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const target = document.querySelector(button.dataset.target ?? '#org');
-      if (!target) {
-        return;
-      }
-      const offset = target.getBoundingClientRect().top + window.scrollY - 96;
-      window.scrollTo({
-        top: offset,
-        behavior: 'smooth'
-      });
-    });
-  });
-
-  document.addEventListener('scroll', updateTeamTabs, { passive: true });
-  window.addEventListener('resize', updateTeamTabs);
-  document.body.dataset.teamTabsBound = 'true';
-  updateTeamTabs();
-}
-
 function renderTeamOrg(context) {
   const container = document.querySelector('.team-org__figure');
   if (!container) {
@@ -148,9 +97,7 @@ function renderSubaruTech(context) {
 }
 
 export function renderOrganizationPages(context) {
-  bindTeamTabs();
   renderTeamOrg(context);
   renderTeamPeople(context);
   renderSubaruTech(context);
-  updateTeamTabs();
 }

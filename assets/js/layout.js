@@ -339,11 +339,6 @@ function initializeInteractions(header, i18n) {
     updateLanguageButtons(header, event.detail?.language ?? i18n.language);
   });
 
-  const updateScrollState = () => {
-    header.querySelector('.site-header')?.classList.toggle('is-scrolled', window.scrollY > 12);
-  };
-  window.addEventListener('scroll', updateScrollState, { passive: true });
-  updateScrollState();
   updateLanguageButtons(header, i18n.language);
 }
 

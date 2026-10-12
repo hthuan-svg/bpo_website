@@ -289,21 +289,6 @@ export function renderPage(context, root = document) {
     }
   });
 
-  root.querySelectorAll('[data-image-list]').forEach((list) => {
-    const slotNames = context.t(list.dataset.imageList);
-    list.replaceChildren();
-    if (!Array.isArray(slotNames)) return;
-    slotNames.forEach((slotName) => {
-      if (typeof slotName !== 'string') return;
-      const item = document.createElement('li');
-      const image = document.createElement('img');
-      image.className = 'achievements-projects__image';
-      applyImage(image, slotName, context.images, context.language, context.t('ui.image_placeholder'));
-      item.append(image);
-      list.append(item);
-    });
-  });
-
   root.querySelectorAll('[data-bg]').forEach((element) => {
     applyBackground(element, element.dataset.bg, context.images, context.t('ui.image_placeholder'));
   });

@@ -4,6 +4,11 @@
 - [x] Bộ kit gốc + bước 0–12 (khung web, i18n, theme cũ, các trang, tin tức, admin, SEO, validator)
 - [x] Revision 2 (`r2-00`…`r2-08`): tab menu, BPO lockup, trang Tạo dữ liệu, QC, Đội ngũ, Tầm nhìn, nút lên đầu trang
 - [x] Team follow-up: replace Operating flow with five vertically stacked principles cards and a left-side image
+- [x] Team follow-up: show the full Japan image as a faded, uncropped background in the People trained section
+- [x] Team follow-up: remove the BRYCEN GROUP caption
+- [x] Team follow-up: add a Contact us CTA at the bottom
+- [x] Team follow-up: center the People section background image
+- [x] Team follow-up: add a little vertical space to the People section
 
 ## Đang làm — Revision 3 (cập nhật & tinh chỉnh theo từng trang)
 Chạy theo thứ tự. Mỗi bước: chat mới → kiểm tra Definition of done → `git commit`.

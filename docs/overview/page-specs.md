@@ -46,10 +46,11 @@ Intentionally empty "coming soon" page: status chip, lead, message, 3 placeholde
 ## Services › Data Engineering (`services-data-engineering.html`)
 Intentionally empty "coming soon" page matching the Collection page: status chip, lead, message, 3 placeholder gallery frames (`services.data_engineering.gallery`), CTA. Do not add technical content.
 
-## Team (`team.html`) — in-page tabs: Organization · Our principles · Trained people
-1. `#org` "Organization structure": headcount number + `org.lead` + ONE large image slot `team_org_image` (owner will add a photo of working with customers conveying trust). **No org-chart drawing.**
-2. `#principles` "Our 5 Principles": five equal-size cards stacked vertically from `principles.items[]`, with the existing `team_process_image` slot on the left at desktop widths. The slot is an ordinary image, not a placeholder frame.
-3. `#people` "People trained in Vietnam and Japan": lead, 3 steps timeline, 3 photos (`people.images`), and a large **Japan country image** slot `people.country_image` with caption.
+## Team (`team.html`) — vertical sections, no in-page tabs: Organization · Our principles · Trained people
+1. `#org` "Organization structure": headcount number + `org.lead` + ONE large image slot `team_org_image` (owner will add a photo of working with customers conveying trust). Keep the section at the image's 3:2 ratio on desktop so its background fits without distortion. **No org-chart drawing.**
+2. `#principles` "Our Principles": five equal-size cards stacked vertically from `principles.items[]`, with the existing `team_process_image` slot on the left at desktop widths. The slot is an ordinary image, not a placeholder frame.
+3. `#people` "People trained in Vietnam and Japan": lead, 3 steps timeline, 3 photos (`people.images`), and the **Japan country image** slot `people.country_image` shown faded behind the section content at full width and its original aspect ratio.
+4. Contact CTA at the bottom links to `contact.html`.
 Recruitment moved to the **Recruitment** page; remove every link to `team.html#recruit`.
 
 ## Achievements (`achievements.html`)
