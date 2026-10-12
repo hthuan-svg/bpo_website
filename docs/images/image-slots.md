@@ -115,7 +115,7 @@
 | `team_people_event` | `team/team_people_event.jpg` | Nhân lực đào tạo – ảnh 3 | 1200×1096 |  |
 | `team_people_japan` | `team/team_people_japan.jpg` | Nhân lực đào tạo – ảnh 1 | 719×540 |  |
 | `team_people_training` | `team/team_people_training.jpg` | Nhân lực đào tạo – ảnh 2 | 720×540 |  |
-| `team_process_image` | `team/team_process_image.jpg` | Quy trình vận hành – ảnh làm việc | 1600×900 | **Ảnh giữ chỗ** |
+| `team_process_image` | `team/team_process_image.jpg` | Nguyên tắc làm việc – ảnh bên trái | 1600×900 |  |
 
 ## `achievements/`  (5 ảnh)
 
@@ -152,7 +152,7 @@
 |---|---|---|---|---|
 | `recruits_banner` | `recruits/recruits_banner.jpg` | Tuyển dụng – banner | 1920×600 | **Ảnh giữ chỗ** |
 | `recruits_default` | `recruits/recruits_default.jpg` | Tuyển dụng – ảnh mặc định của tin | 1200×675 | **Ảnh giữ chỗ** |
-| `recruits_intro` | `recruits/recruits_intro.jpg` | Tuyển dụng – ảnh giới thiệu nhân lực | 1200×800 | **Ảnh giữ chỗ** |
+| `recruits_intro` | `recruits/recruits_intro.jpg` | Tuyển dụng – ảnh giới thiệu nhân lực (hiện không dùng trên trang) | 1200×800 | **Ảnh giữ chỗ; giữ slot theo quy tắc placeholder** |
 
 ## `contact/`  (1 ảnh)
 

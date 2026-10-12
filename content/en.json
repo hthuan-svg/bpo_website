@@ -696,9 +696,8 @@
     "page_title": "Our team",
     "tabs": {
       "org": "Organization",
-      "process": "Operating flow",
-      "people": "Trained people",
-      "recruit": "People & recruitment"
+      "principles": "Our principles",
+      "people": "Trained people"
     },
     "org": {
       "title": "Organization structure",
@@ -842,6 +841,16 @@
       ],
       "links_note": "Connections (see docs/reference/slide17_org_chart.png): Manager -> Sub TeamLead and PMO; PMO -> 3 Project Leaders; Sub Project Leader sits below the Project Leader row; Sub Project Leader -> 2 Super Checkers; each Super Checker -> 2 Checkers; each Checker -> 2 Annotators.",
       "image": "team_org_image"
+    },
+    "principles": {
+      "title": "Our Principles",
+      "items": [
+        { "title": "Quality First", "text": "We always put quality and accuracy first." },
+        { "title": "Keep Our Commitments", "text": "We deliver what we promise, on time and to the agreed standards." },
+        { "title": "Be Proactive", "text": "We identify issues early and take action before they become problems." },
+        { "title": "Build Trust", "text": "We value transparency, honesty, and long-term trust with our customers." },
+        { "title": "Grow Together", "text": "We work as a partner, creating value and growing together with our customers." }
+      ]
     },
     "process": {
       "title": "Operating flow",
@@ -1139,20 +1148,6 @@
       "gallery": {
         "label": "Training photo gallery"
       }
-    },
-    "recruit": {
-      "title": "People & recruitment",
-      "text": "Hiring needs may grow to meet new challenges. We work closely with universities, colleges and local ward/commune authorities to recruit, so we can always staff large-scale projects.",
-      "stats": [
-        {
-          "value": "79",
-          "label": "Current staff studying at the University of Economics"
-        },
-        {
-          "value": "187",
-          "label": "Total to date"
-        }
-      ]
     }
   },
   "achievements": {
@@ -1448,36 +1443,36 @@
       }
     },
     "tech": {
-      "title": "Core values and technology",
-      "lead": "Four technologies that define Subaru.",
+      "title": "Core technology",
+      "lead": "Learn about SUBARU and the EyeSight technology BPO BRYCEN VIETNAM collaborated on.",
       "items": [
+        {
+          "id": "sgp",
+          "image": "subaru_tech_sgp",
+          "name": "SUBARU Global Platform (SGP)",
+          "text": "A vehicle platform designed to enhance body rigidity, lower the center of gravity, and improve driving stability and safety."
+        },
         {
           "id": "boxer",
           "image": "subaru_tech_boxer",
-          "name": "Boxer engine",
-          "text": "A horizontally opposed cylinder layout lowers the vehicle's center of gravity and improves stability when cornering."
-        },
-        {
-          "id": "sawd",
-          "image": "subaru_tech_sawd",
-          "name": "S-AWD system",
-          "text": "Symmetrical full-time all-wheel drive optimizes grip on every kind of terrain."
+          "name": "SUBARU BOXER Engine",
+          "text": "A horizontally opposed engine that provides a low center of gravity and contributes to balanced vehicle handling."
         },
         {
           "id": "eyesight",
           "image": "subaru_tech_eyesight",
           "highlight": true,
-          "name": "EyeSight technology",
-          "text": "An advanced driver-assistance system with high-grade active safety features.",
+          "name": "EyeSight Driver Assist Technology",
+          "text": "An advanced driver assistance system that uses stereo cameras and image recognition technology to help detect potential hazards and support safer driving.",
           "partnership_badge": "BRYCEN VN × SUBARU",
-          "partnership": "For EyeSight, BPO BRYCEN VIETNAM has collaborated with SUBARU and taken part in building the product.",
+          "partnership": "BPO BRYCEN VIETNAM worked with SUBARU to create data supporting the development of EyeSight technology.",
           "partnership_image": "subaru_eyesight_partnership"
         },
         {
-          "id": "sgp",
-          "image": "subaru_tech_sgp",
-          "name": "SGP chassis",
-          "text": "The Subaru Global Platform increases rigidity and reduces vibration."
+          "id": "sawd",
+          "image": "subaru_tech_sawd",
+          "name": "Symmetrical All-Wheel Drive (AWD)",
+          "text": "A symmetrical all-wheel-drive system designed to deliver stable handling, traction, and control across various road conditions."
         }
       ]
     },
@@ -1491,21 +1486,6 @@
     "banner": "recruits_banner",
     "default_image": "recruits_default",
     "lead": "Help us build quality data for AI. Browse BPO job posts by date, with an open or closed status.",
-    "intro": {
-      "title": "People & recruitment",
-      "image": "recruits_intro",
-      "text": "Hiring needs may grow to meet new challenges. We work closely with universities, colleges and local ward/commune authorities to recruit, so we can always staff large-scale projects.",
-      "stats": [
-        {
-          "value": "79",
-          "label": "Current staff studying at the University of Economics"
-        },
-        {
-          "value": "187",
-          "label": "Total to date"
-        }
-      ]
-    },
     "filters": {
       "all": "All",
       "open": "Open",

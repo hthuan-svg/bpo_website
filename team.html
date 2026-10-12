@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Đội ngũ BPO | BRYCEN VIETNAM</title>
-  <meta name="description" content="Tìm hiểu cơ cấu đội ngũ, quy trình vận hành và cơ hội phát triển tại BRYCEN VIETNAM BPO.">
+  <meta name="description" content="Tìm hiểu cơ cấu đội ngũ, các nguyên tắc làm việc và cơ hội phát triển tại BRYCEN VIETNAM BPO.">
   <link rel="canonical" href="https://example.com/team.html?lang=vi">
   <link rel="alternate" hreflang="vi" href="https://example.com/team.html?lang=vi">
   <link rel="alternate" hreflang="en" href="https://example.com/team.html?lang=en">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BRYCEN VIETNAM – BPO">
   <meta property="og:title" content="Đội ngũ BPO | BRYCEN VIETNAM">
-  <meta property="og:description" content="Tìm hiểu cơ cấu đội ngũ, quy trình vận hành và cơ hội phát triển tại BRYCEN VIETNAM BPO.">
+  <meta property="og:description" content="Tìm hiểu cơ cấu đội ngũ, các nguyên tắc làm việc và cơ hội phát triển tại BRYCEN VIETNAM BPO.">
   <meta property="og:url" content="https://example.com/team.html?lang=vi">
   <meta property="og:image" content="https://example.com/assets/images/common/og_share.jpg" data-image-slot="og_share">
   <meta property="og:image:type" content="image/jpeg">
@@ -26,7 +26,7 @@
   <meta property="og:locale:alternate" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Đội ngũ BPO | BRYCEN VIETNAM">
-  <meta name="twitter:description" content="Tìm hiểu cơ cấu đội ngũ, quy trình vận hành và cơ hội phát triển tại BRYCEN VIETNAM BPO.">
+  <meta name="twitter:description" content="Tìm hiểu cơ cấu đội ngũ, các nguyên tắc làm việc và cơ hội phát triển tại BRYCEN VIETNAM BPO.">
   <meta name="twitter:image" content="https://example.com/assets/images/common/og_share.jpg" data-image-slot="og_share">
   <meta name="twitter:image:alt" content="Ảnh chia sẻ mạng xã hội">
   <meta name="theme-color" content="#FFFFFF">
@@ -48,8 +48,8 @@
           <button class="team-tabs__tab is-active" type="button" role="tab" aria-selected="true" aria-current="page" data-target="#org">
             <span data-i18n="team.tabs.org"></span>
           </button>
-          <button class="team-tabs__tab" type="button" role="tab" aria-selected="false" data-target="#process">
-            <span data-i18n="team.tabs.process"></span>
+          <button class="team-tabs__tab" type="button" role="tab" aria-selected="false" data-target="#principles">
+            <span data-i18n="team.tabs.principles"></span>
           </button>
           <button class="team-tabs__tab" type="button" role="tab" aria-selected="false" data-target="#people">
             <span data-i18n="team.tabs.people"></span>
@@ -77,18 +77,26 @@
       </div>
     </section>
 
-    <section id="process" class="section-shell team-process" aria-labelledby="team-process-title">
+    <section id="principles" class="section-shell team-principles" aria-labelledby="team-principles-title">
       <div class="page-container">
         <header class="section-heading" data-reveal>
           <p class="eyebrow" data-i18n="team.page_title"></p>
-          <h2 class="section-title" id="team-process-title" data-i18n="team.process.title"></h2>
-          <p class="section-lead" data-i18n="team.process.lead"></p>
+          <h2 class="section-title" id="team-principles-title" data-i18n="team.principles.title"></h2>
         </header>
-        <div class="team-process__layout" data-reveal>
-          <ol id="team-process-list" class="team-process__list" tabindex="0" aria-live="polite"></ol>
-          <figure class="team-process__figure">
-            <img class="team-process__image" data-img="team_process_image" loading="lazy" alt="">
+        <div class="team-principles__layout" data-reveal>
+          <figure class="team-principles__figure">
+            <img class="team-principles__image" data-img="team_process_image" loading="lazy" alt="">
           </figure>
+          <ol class="team-principles__list" data-list="team.principles.items">
+            <template>
+              <li class="team-principles__item">
+                <article class="team-principles__card">
+                  <h3 class="team-principles__card-title" data-field="title"></h3>
+                  <p class="team-principles__card-text" data-field="text"></p>
+                </article>
+              </li>
+            </template>
+          </ol>
         </div>
       </div>
     </section>

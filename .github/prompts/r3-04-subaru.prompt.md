@@ -11,7 +11,7 @@ Scope: ONLY this step. Do not run `git commit`. The content patch and image migr
 Create subaru.html per docs/overview/page-specs.md > Subaru, using keys under subaru.* and ui.*; follow the same page skeleton, header/footer and data-binding as the other pages.
 - Breadcrumb Home > Partners > SUBARU. Hero with subaru_hero (dark overlay), eyebrow, title "SUBARU", subtitle, subaru_logo.
 - "Subaru introduction" with two blocks (History, Global position), each: image slot left, text right; show subaru.intro.global.source as small text.
-- "Core values & technology": 4 large rows (image left, text right) for Boxer engine, S-AWD, EyeSight, SGP using subaru.tech.items[] (image slot per item). The EyeSight row is highlighted: green badge (partnership_badge), the partnership sentence and the extra image (partnership_image).
+- "Core technology": show SGP, BOXER Engine, Symmetrical AWD, and EyeSight as four responsive image cards. Give EyeSight the main emphasis in a wide highlighted feature with a green badge (partnership_badge), the collaboration sentence, and a visibly framed image placeholder using partnership_image. SUBARU is a header tab.
 - CTA to contact.html. Do not add SUBARU to the main menu. Make the SUBARU logo on Home link here and make the word SUBARU in achievements.projects.text a link to subaru.html (do this by rendering the first "SUBARU" occurrence in that text as a link, without hard-coding text).
 - Add subaru.html to sitemap.xml. Placeholder-flagged images keep the dashed frame.
 

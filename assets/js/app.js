@@ -4,7 +4,7 @@ import { initializeLayout } from './layout.js';
 import { renderPage } from './render.js';
 import { initReveal } from './reveal.js';
 import { initHomeCounters } from './home.js';
-import { renderServices } from './services.js';
+import { renderHomeServices, renderServices } from './services.js';
 import { renderOrganizationPages } from './organization-pages.js';
 import { renderSocial } from './social.js';
 import { initializeNews, renderNews } from './news.js';
@@ -47,6 +47,7 @@ async function start() {
       renderNews(i18n);
       renderRecruitment(i18n);
       renderSocial(i18n);
+      renderHomeServices(i18n);
       renderServices(i18n);
       renderOrganizationPages(i18n);
       initializeContact(i18n);
@@ -58,6 +59,7 @@ async function start() {
     await initializeNews(i18n);
     await initializeRecruitment(i18n);
     renderSocial(i18n);
+    renderHomeServices(i18n);
     renderServices(i18n);
     renderOrganizationPages(i18n);
     initializeContact(i18n);

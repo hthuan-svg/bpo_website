@@ -175,6 +175,35 @@ function createOverviewCard(context, { titleKey, leadKey, slotName, href, status
   return link;
 }
 
+const overviewServices = [
+  {
+    titleKey: 'services.annotation.title',
+    leadKey: 'services.annotation.lead',
+    slotName: 'services_overview_3d',
+    href: 'services-annotation.html',
+    statusKey: 'services.status.open'
+  },
+  {
+    titleKey: 'services.collection.title',
+    leadKey: 'services.collection.lead',
+    slotName: 'services_overview_2d',
+    href: 'services-collection.html',
+    statusKey: 'services.status.open'
+  },
+  {
+    titleKey: 'services.data_engineering.title',
+    leadKey: 'services.data_engineering.lead',
+    href: 'services-data-engineering.html',
+    statusKey: 'services.data_engineering.status'
+  }
+];
+
+export function renderHomeServices(context, root = document) {
+  const cards = root.querySelector('[data-home-services]');
+  if (!cards) return;
+  cards.replaceChildren(...overviewServices.map((service) => createOverviewCard(context, service)));
+}
+
 function renderOverview(context, main) {
   const intro = createElement('section', 'services-overview section-shell');
   const container = createElement('div', 'page-container');
@@ -184,28 +213,7 @@ function renderOverview(context, main) {
   );
 
   const cards = createElement('div', 'services-overview__cards');
-  cards.append(
-    createOverviewCard(context, {
-      titleKey: 'services.annotation.title',
-      leadKey: 'services.annotation.lead',
-      slotName: 'services_overview_3d',
-      href: 'services-annotation.html',
-      statusKey: 'services.status.open'
-    }),
-    createOverviewCard(context, {
-      titleKey: 'services.collection.title',
-      leadKey: 'services.collection.lead',
-      slotName: 'services_overview_2d',
-      href: 'services-collection.html',
-      statusKey: 'services.status.open'
-    }),
-    createOverviewCard(context, {
-      titleKey: 'services.data_engineering.title',
-      leadKey: 'services.data_engineering.lead',
-      href: 'services-data-engineering.html',
-      statusKey: 'services.data_engineering.status'
-    })
-  );
+  cards.append(...overviewServices.map((service) => createOverviewCard(context, service)));
   container.append(cards);
 
   intro.append(container);

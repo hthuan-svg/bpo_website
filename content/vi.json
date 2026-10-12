@@ -696,9 +696,8 @@
     "page_title": "Đội ngũ",
     "tabs": {
       "org": "Cơ cấu bộ phận",
-      "process": "Quy trình vận hành",
-      "people": "Nhân lực được đào tạo",
-      "recruit": "Nguồn nhân lực & tuyển dụng"
+      "principles": "Nguyên tắc của chúng tôi",
+      "people": "Nhân lực được đào tạo"
     },
     "org": {
       "title": "Cơ cấu bộ phận",
@@ -842,6 +841,16 @@
       ],
       "links_note": "Connections (see docs/reference/slide17_org_chart.png): Manager -> Sub TeamLead and PMO; PMO -> 3 Project Leaders; Sub Project Leader sits below the Project Leader row; Sub Project Leader -> 2 Super Checkers; each Super Checker -> 2 Checkers; each Checker -> 2 Annotators.",
       "image": "team_org_image"
+    },
+    "principles": {
+      "title": "Nguyên tắc của chúng tôi",
+      "items": [
+        { "title": "Chất lượng là ưu tiên hàng đầu", "text": "Chúng tôi luôn đặt chất lượng và độ chính xác lên hàng đầu." },
+        { "title": "Giữ vững cam kết", "text": "Chúng tôi thực hiện đúng những gì đã cam kết, đúng thời hạn và theo các tiêu chuẩn đã thống nhất." },
+        { "title": "Chủ động", "text": "Chúng tôi nhận diện vấn đề sớm và hành động trước khi chúng trở thành trở ngại." },
+        { "title": "Xây dựng niềm tin", "text": "Chúng tôi đề cao sự minh bạch, trung thực và niềm tin lâu dài với khách hàng." },
+        { "title": "Cùng nhau phát triển", "text": "Chúng tôi đồng hành như một đối tác, cùng tạo ra giá trị và phát triển với khách hàng." }
+      ]
     },
     "process": {
       "title": "Quy trình vận hành",
@@ -1139,20 +1148,6 @@
       "gallery": {
         "label": "Thư viện ảnh đào tạo"
       }
-    },
-    "recruit": {
-      "title": "Nguồn nhân lực & tuyển dụng",
-      "text": "Nhu cầu tuyển dụng có thể mở rộng để đáp ứng các thử thách mới. Công ty hợp tác chặt chẽ với các trường đại học, cao đẳng và cơ quan quản lý cấp phường, xã trong khu vực để tuyển dụng, nhờ đó luôn duy trì nguồn nhân lực cho các dự án quy mô lớn.",
-      "stats": [
-        {
-          "value": "79",
-          "label": "Nhân sự đang là sinh viên Đại học Kinh tế"
-        },
-        {
-          "value": "187",
-          "label": "Tổng số từ trước đến nay"
-        }
-      ]
     }
   },
   "achievements": {
@@ -1448,36 +1443,36 @@
       }
     },
     "tech": {
-      "title": "Giá trị cốt lõi và Công nghệ",
-      "lead": "Bốn công nghệ làm nên đặc trưng của Subaru.",
+      "title": "Công nghệ cốt lõi",
+      "lead": "Tìm hiểu về SUBARU và công nghệ EyeSight mà BPO BRYCEN VIETNAM đã hợp tác phát triển.",
       "items": [
+        {
+          "id": "sgp",
+          "image": "subaru_tech_sgp",
+          "name": "Nền tảng SUBARU Global Platform (SGP)",
+          "text": "Nền tảng xe được thiết kế để tăng độ cứng thân xe, hạ thấp trọng tâm và cải thiện độ ổn định cũng như an toàn khi lái xe."
+        },
         {
           "id": "boxer",
           "image": "subaru_tech_boxer",
-          "name": "Động cơ Boxer",
-          "text": "Thiết kế xi-lanh nằm ngang giúp trọng tâm xe thấp, tăng độ ổn định khi ôm cua."
-        },
-        {
-          "id": "sawd",
-          "image": "subaru_tech_sawd",
-          "name": "Hệ dẫn động S-AWD",
-          "text": "Hệ dẫn động 4 bánh toàn thời gian đối xứng tối ưu hóa độ bám đường trên mọi địa hình."
+          "name": "Động cơ SUBARU BOXER",
+          "text": "Động cơ xi-lanh đối đỉnh giúp hạ thấp trọng tâm và góp phần tạo nên khả năng xử lý cân bằng cho xe."
         },
         {
           "id": "eyesight",
           "image": "subaru_tech_eyesight",
           "highlight": true,
-          "name": "Công nghệ EyeSight",
-          "text": "Hệ thống hỗ trợ người lái tiên tiến với các tính năng an toàn chủ động cao cấp.",
+          "name": "Công nghệ hỗ trợ lái xe EyeSight",
+          "text": "Hệ thống hỗ trợ lái xe tiên tiến sử dụng camera kép và công nghệ nhận diện hình ảnh để giúp phát hiện nguy cơ tiềm ẩn và hỗ trợ lái xe an toàn hơn.",
           "partnership_badge": "BRYCEN VN × SUBARU",
-          "partnership": "Đối với công nghệ EyeSight, BPO BRYCEN VIETNAM đã hợp tác với SUBARU và tham gia xây dựng sản phẩm.",
+          "partnership": "BPO BRYCEN VIETNAM hợp tác với SUBARU, tạo dữ liệu phục vụ quá trình phát triển công nghệ EyeSight.",
           "partnership_image": "subaru_eyesight_partnership"
         },
         {
-          "id": "sgp",
-          "image": "subaru_tech_sgp",
-          "name": "Hệ khung gầm SGP",
-          "text": "Khung gầm toàn cầu Subaru Global Platform tăng độ cứng vững và giảm rung lắc."
+          "id": "sawd",
+          "image": "subaru_tech_sawd",
+          "name": "Hệ dẫn động bốn bánh đối xứng (AWD)",
+          "text": "Hệ dẫn động bốn bánh đối xứng được thiết kế để mang lại khả năng xử lý, độ bám và kiểm soát ổn định trên nhiều điều kiện đường sá."
         }
       ]
     },
@@ -1491,21 +1486,6 @@
     "banner": "recruits_banner",
     "default_image": "recruits_default",
     "lead": "Cùng xây dựng dữ liệu chất lượng cho AI. Xem các tin tuyển dụng của bộ phận BPO theo thời gian, kèm trạng thái đang mở hoặc đã đóng.",
-    "intro": {
-      "title": "Nguồn nhân lực & tuyển dụng",
-      "image": "recruits_intro",
-      "text": "Nhu cầu tuyển dụng có thể mở rộng để đáp ứng các thử thách mới. Công ty hợp tác chặt chẽ với các trường đại học, cao đẳng và cơ quan quản lý cấp phường, xã trong khu vực để tuyển dụng, nhờ đó luôn duy trì nguồn nhân lực cho các dự án quy mô lớn.",
-      "stats": [
-        {
-          "value": "79",
-          "label": "Nhân sự đang là sinh viên Đại học Kinh tế"
-        },
-        {
-          "value": "187",
-          "label": "Tổng số từ trước đến nay"
-        }
-      ]
-    },
     "filters": {
       "all": "Tất cả",
       "open": "Đang mở",

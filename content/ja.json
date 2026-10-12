@@ -696,9 +696,8 @@
     "page_title": "チーム",
     "tabs": {
       "org": "組織体制",
-      "process": "運用フロー",
-      "people": "人材育成",
-      "recruit": "人材・採用"
+      "principles": "私たちの原則",
+      "people": "人材育成"
     },
     "org": {
       "title": "組織体制",
@@ -842,6 +841,16 @@
       ],
       "links_note": "Connections (see docs/reference/slide17_org_chart.png): Manager -> Sub TeamLead and PMO; PMO -> 3 Project Leaders; Sub Project Leader sits below the Project Leader row; Sub Project Leader -> 2 Super Checkers; each Super Checker -> 2 Checkers; each Checker -> 2 Annotators.",
       "image": "team_org_image"
+    },
+    "principles": {
+      "title": "私たちの原則",
+      "items": [
+        { "title": "品質最優先", "text": "私たちは品質と正確性を常に最優先します。" },
+        { "title": "約束を守る", "text": "約束した内容を、合意した基準に沿って期限内に提供します。" },
+        { "title": "主体的に行動する", "text": "課題を早期に見つけ、問題になる前に対応します。" },
+        { "title": "信頼を築く", "text": "透明性と誠実さを大切にし、お客様との長期的な信頼関係を築きます。" },
+        { "title": "共に成長する", "text": "パートナーとして価値を生み出し、お客様と共に成長します。" }
+      ]
     },
     "process": {
       "title": "運用フロー",
@@ -1139,20 +1148,6 @@
       "gallery": {
         "label": "研修写真ギャラリー"
       }
-    },
-    "recruit": {
-      "title": "人材・採用",
-      "text": "新たな挑戦に対応するため、今後採用ニーズが拡大する可能性があります。大学・短大、地域の行政機関と緊密に連携して採用を行い、大規模プロジェクトにも十分な人材を確保しています。",
-      "stats": [
-        {
-          "value": "79",
-          "label": "経済大学に在学中の現スタッフ"
-        },
-        {
-          "value": "187",
-          "label": "累計"
-        }
-      ]
     }
   },
   "achievements": {
@@ -1448,36 +1443,36 @@
       }
     },
     "tech": {
-      "title": "コアバリューとテクノロジー",
-      "lead": "スバルを特徴づける4つの技術。",
+      "title": "コアテクノロジー",
+      "lead": "SUBARUと、BPO BRYCEN VIETNAMが協業したEyeSight技術についてご紹介します。",
       "items": [
+        {
+          "id": "sgp",
+          "image": "subaru_tech_sgp",
+          "name": "SUBARU Global Platform（SGP）",
+          "text": "ボディ剛性を高め、重心を低くし、走行安定性と安全性を向上させる車両プラットフォームです。"
+        },
         {
           "id": "boxer",
           "image": "subaru_tech_boxer",
-          "name": "水平対向エンジン",
-          "text": "シリンダーを水平に配置する設計で重心が低くなり、コーナリング時の安定性が高まります。"
-        },
-        {
-          "id": "sawd",
-          "image": "subaru_tech_sawd",
-          "name": "S-AWD",
-          "text": "シンメトリカルな常時四輪駆動により、あらゆる路面でグリップを最適化します。"
+          "name": "SUBARU BOXERエンジン",
+          "text": "水平対向エンジンにより重心を低くし、バランスの取れた操縦安定性に貢献します。"
         },
         {
           "id": "eyesight",
           "image": "subaru_tech_eyesight",
           "highlight": true,
-          "name": "アイサイト技術",
-          "text": "高度な先進運転支援システム。先進的な予防安全機能を備えています。",
+          "name": "アイサイト運転支援技術",
+          "text": "ステレオカメラと画像認識技術を用いて潜在的な危険の検知を支援し、より安全な運転をサポートする先進運転支援システムです。",
           "partnership_badge": "BRYCEN VN × SUBARU",
-          "partnership": "アイサイトでは、BPO BRYCEN VIETNAMがSUBARUと協業し、製品づくりに参画しました。",
+          "partnership": "BPO BRYCEN VIETNAMはSUBARUと協業し、アイサイト技術の開発を支えるデータを作成しました。",
           "partnership_image": "subaru_eyesight_partnership"
         },
         {
-          "id": "sgp",
-          "image": "subaru_tech_sgp",
-          "name": "SGPプラットフォーム",
-          "text": "スバルグローバルプラットフォームにより、剛性が高まり振動が低減されます。"
+          "id": "sawd",
+          "image": "subaru_tech_sawd",
+          "name": "シンメトリカルAWD",
+          "text": "さまざまな路面状況で安定した操縦性、トラクション、コントロールを実現するために設計された四輪駆動システムです。"
         }
       ]
     },
@@ -1491,21 +1486,6 @@
     "banner": "recruits_banner",
     "default_image": "recruits_default",
     "lead": "AIのための高品質データを一緒につくりませんか。BPO部門の採用情報を日付順に、募集中・募集終了のステータス付きでご覧いただけます。",
-    "intro": {
-      "title": "人材・採用",
-      "image": "recruits_intro",
-      "text": "新たな挑戦に対応するため、今後採用ニーズが拡大する可能性があります。大学・短大、地域の行政機関と緊密に連携して採用を行い、大規模プロジェクトにも十分な人材を確保しています。",
-      "stats": [
-        {
-          "value": "79",
-          "label": "経済大学に在学中の現スタッフ"
-        },
-        {
-          "value": "187",
-          "label": "累計"
-        }
-      ]
-    },
     "filters": {
       "all": "すべて",
       "open": "募集中",

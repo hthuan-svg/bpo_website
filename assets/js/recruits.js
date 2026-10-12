@@ -31,20 +31,15 @@ function formattedDate(value) {
   return /^\d{4}-\d{2}-\d{2}$/.test(value ?? '') ? value.replaceAll('-', '.') : value ?? '';
 }
 
-function postImage(post, context) {
-  const slot = context.images.slots?.[post.image || context.t('recruits.default_image')];
-  if (!slot) return null;
-  const image = element('img', 'recruits-card__image');
-  image.src = slot.src;
-  image.alt = slot.alt?.[context.language] ?? slot.alt?.vi ?? '';
-  image.loading = 'lazy';
-  if (slot.placeholder) {
-    image.classList.add('is-placeholder');
-    image.dataset.placeholderLabel = context.t('ui.image_placeholder');
-  }
-  if (Number.isInteger(slot.width)) image.width = slot.width;
-  if (Number.isInteger(slot.height)) image.height = slot.height;
-  return image;
+function isSectionTitle(paragraph, language) {
+  const text = paragraph.trim();
+  const letters = text.match(/\p{L}/gu) ?? [];
+  const hasCasedLetters = letters.some((letter) => letter.toLocaleLowerCase() !== letter.toLocaleUpperCase());
+  const isAllCaps = hasCasedLetters && letters.every((letter) => letter === letter.toLocaleUpperCase());
+  const isShortJapaneseHeading = language === 'ja'
+    && text.length <= 12
+    && !/[。.!?！？：:]/u.test(text);
+  return isAllCaps || isShortJapaneseHeading;
 }
 
 function postUrl(id, language) {
@@ -54,8 +49,6 @@ function postUrl(id, language) {
 function buildCard(post, status, context) {
   const labels = context.t('recruits.labels');
   const card = element('article', 'recruits-card');
-  const image = postImage(post, context);
-  if (image) card.append(image);
   const content = element('div', 'recruits-card__content');
   const top = element('div', 'recruits-card__top');
   const date = element('time', 'recruits-card__date', formattedDate(post.date));
@@ -105,7 +98,47 @@ function renderDetail(post, status, context, target) {
     });
   const body = element('section', 'recruits-detail__body');
   body.append(element('h2', 'recruits-detail__subheading', labels.details));
-  localized(post.body, language).split(/\n\s*\n/).filter(Boolean).forEach((paragraph) => body.append(element('p', '', paragraph)));
+  let insideSection = false;
+  let currentList = null;
+  localized(post.body, language).split(/\n\s*\n/).filter(Boolean).forEach((paragraph) => {
+    const text = paragraph.trim();
+    if (isSectionTitle(text, language)) {
+      insideSection = true;
+      currentList = null;
+      body.append(element('h3', 'recruits-detail__body-title', text));
+      return;
+    }
+
+    if (insideSection) {
+      if (!currentList) {
+        currentList = element('ul', 'recruits-detail__body-list');
+        body.append(currentList);
+      }
+      currentList.append(element('li', '', text));
+      return;
+    }
+
+    body.append(element('p', '', text));
+  });
+  const registrationLink = post.registration_link;
+  const registrationUrl = typeof registrationLink?.url === 'string' ? registrationLink.url.trim() : '';
+  const registrationLabel = localized(registrationLink?.label, language);
+  if (registrationUrl && registrationLabel) {
+    try {
+      const url = new URL(registrationUrl);
+      if (url.protocol === 'https:' || url.protocol === 'http:') {
+        const linkParagraph = element('p', 'recruits-registration-link');
+        const link = element('a', '', url.href);
+        link.href = url.href;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        linkParagraph.append(element('strong', 'recruits-registration-link__label', `${registrationLabel}:`), link);
+        body.append(linkParagraph);
+      }
+    } catch (error) {
+      console.warn(`Invalid registration link for recruitment post "${post.id}".`, error);
+    }
+  }
   detail.append(back, heading, metadata, body);
   if (status === 'closed') {
     detail.append(element('p', 'recruits-detail__closed', labels.closed_note));

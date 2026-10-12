@@ -1,17 +1,6 @@
-// Renders team-section data and the supporting diagrams used on organization pages.
-function createElement(tagName, className, text) {
-  const element = document.createElement(tagName);
-  if (className) {
-    element.className = className;
-  }
-  if (text !== undefined) {
-    element.textContent = String(text);
-  }
-  return element;
-}
-
+// Handles in-page team navigation and small presentation details.
 function updateTeamTabs() {
-  const sections = Array.from(document.querySelectorAll('#org, #process, #people'));
+  const sections = Array.from(document.querySelectorAll('#org, #principles, #people'));
   const buttons = Array.from(document.querySelectorAll('.team-tabs__tab'));
   if (!sections.length || !buttons.length) {
     return;
@@ -72,48 +61,6 @@ function renderTeamOrg(context) {
   }
 }
 
-function renderTeamProcess(context) {
-  const list = document.querySelector('#team-process-list');
-  if (!list) {
-    return;
-  }
-
-  const steps = Array.isArray(context.t('team.process.steps')) ? context.t('team.process.steps') : [];
-  if (!steps.length) {
-    return;
-  }
-
-  const actors = context.t('team.process.actors') ?? {};
-  const fragment = document.createDocumentFragment();
-
-  steps.forEach((step, index) => {
-    const item = document.createElement('li');
-    item.className = 'team-process__step';
-
-    const number = document.createElement('span');
-    number.className = 'team-process__number';
-    number.textContent = String(index + 1);
-
-    const content = document.createElement('div');
-    content.className = 'team-process__step-content';
-
-    const actor = document.createElement('div');
-    actor.className = 'team-process__actor';
-    const actorKey = step.actor ?? 'both';
-    actor.textContent = actors[actorKey] ?? actorKey;
-
-    const text = document.createElement('p');
-    text.className = 'team-process__text';
-    text.textContent = step.text ?? '';
-
-    content.append(actor, text);
-    item.append(number, content);
-    fragment.appendChild(item);
-  });
-
-  list.replaceChildren(fragment);
-}
-
 function renderTeamPeople(context) {
   const timeline = document.querySelector('.team-people__timeline');
   if (timeline) {
@@ -127,10 +74,83 @@ function renderTeamPeople(context) {
   }
 }
 
+function renderSubaruTech(context) {
+  const root = document.querySelector('#subaru-tech-list');
+  if (!root) return;
+
+  const items = Array.isArray(context.t('subaru.tech.items')) ? context.t('subaru.tech.items') : [];
+  root.replaceChildren();
+
+  items.forEach((item) => {
+    const article = document.createElement('article');
+    article.className = `subaru-tech__item${item.highlight ? ' is-highlighted' : ''}`;
+    const imageWrap = document.createElement('div');
+    imageWrap.className = 'subaru-tech__image';
+    const image = document.createElement('img');
+    const slot = context.images?.slots?.[item.image];
+    if (slot) {
+      image.src = slot.src;
+      image.alt = slot.alt?.[context.language] ?? slot.alt?.vi ?? '';
+      if (slot.placeholder) {
+        imageWrap.classList.add('is-placeholder');
+        imageWrap.dataset.placeholderLabel = context.t('ui.image_placeholder');
+      }
+      image.loading = 'lazy';
+    }
+    imageWrap.append(image);
+
+    const body = document.createElement('div');
+    body.className = 'subaru-tech__body';
+    const header = document.createElement('div');
+    header.className = 'subaru-tech__header';
+    if (item.highlight && item.partnership_badge) {
+      const badge = document.createElement('span');
+      badge.className = 'subaru-tech__badge';
+      badge.textContent = item.partnership_badge;
+      header.append(badge);
+    }
+    const title = document.createElement('h3');
+    title.className = 'subaru-tech__title';
+    title.textContent = item.name ?? '';
+    header.append(title);
+    body.append(header);
+
+    const text = document.createElement('p');
+    text.className = 'subaru-tech__text';
+    text.textContent = item.text ?? '';
+    body.append(text);
+    if (item.highlight && item.partnership) {
+      const partnership = document.createElement('p');
+      partnership.className = 'subaru-tech__partnership';
+      partnership.textContent = item.partnership;
+      body.append(partnership);
+    }
+    if (item.highlight && item.partnership_image) {
+      const extraWrap = document.createElement('div');
+      extraWrap.className = 'subaru-tech__partnership-image';
+      const extraSlot = context.images?.slots?.[item.partnership_image];
+      if (extraSlot?.placeholder) {
+        extraWrap.classList.add('is-placeholder');
+        extraWrap.dataset.placeholderLabel = context.t('ui.image_placeholder');
+      }
+      if (extraSlot) {
+        const extraImage = document.createElement('img');
+        extraImage.src = extraSlot.src;
+        extraImage.alt = extraSlot.alt?.[context.language] ?? extraSlot.alt?.vi ?? '';
+        extraImage.loading = 'lazy';
+        extraWrap.append(extraImage);
+      }
+      body.append(extraWrap);
+    }
+    article.append(imageWrap, body);
+    root.append(article);
+  });
+}
+
 export function renderOrganizationPages(context) {
   bindTeamTabs();
   renderTeamOrg(context);
-  renderTeamProcess(context);
   renderTeamPeople(context);
+  renderSubaruTech(context);
   updateTeamTabs();
 }

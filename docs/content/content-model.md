@@ -22,7 +22,7 @@ team{tabs,org{lead,headcount,image},process{lead,actors,steps[{actor,text}],imag
 achievements{awards{headline,headline_text,image,text,source},projects{text,stat_value,stat_label,images[],satisfaction{image,title,text}}}
 vision{direction{text,image},growth{lead,stages[{id,phase,level,title,text,image|regions[]}]}}
 news{page_title,lead,categories,facebook_title}
-recruits{page_title,banner,default_image,lead,intro,filters,labels,empty,apply_subject,back}
+recruits{page_title,banner,default_image,lead,filters,labels,empty,apply_subject,back}
 contact{page_title,lead,banner,response_note,labels,form{fields,type_options,…},company_panel,privacy{items[]}}
 ```
 `*` = kept but not rendered (`quality.layers`).
@@ -35,7 +35,7 @@ contact{page_title,lead,banner,response_note,labels,form{fields,type_options,…
 
 ## news.json / recruits.json item
 News: `{id,date,category,hidden,image,link,facebook_post,title{vi,en,ja},summary{…}}`. Image slot convention for news: `news_<yyyy>_<mm>_<slug>`.
-Recruits: `{id,date,deadline,status:"open|closed",hidden,image,apply_link,title{…},summary{…},location{…},type{…},body{…}}` — paragraphs in `body` are separated by a blank line (`\n\n`).
+Recruits: `{id,date,deadline,status:"open|closed",hidden,apply_link,title{…},summary{…},location{…},type{…},registration_link?:{label{…},url},body{…}}` — `date` is the posting date (enter the date the post is published); recruitment cards do not display images. Optional registration links are rendered on detail pages; paragraphs in `body` are separated by a blank line (`\n\n`).
 Real JSON has no comments. Ids: lowercase ASCII, no spaces, unique.
 
 ## Tools that change content

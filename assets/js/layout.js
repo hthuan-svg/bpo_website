@@ -13,6 +13,7 @@ const pageLinks = [
   { page: 'vision', file: 'vision.html', key: 'vision' },
   { page: 'news', file: 'news.html', key: 'news' },
   { page: 'recruits', file: 'recruits.html', key: 'recruits' },
+  { page: 'subaru', file: 'subaru.html', key: 'subaru' },
   { page: 'contact', file: 'contact.html', key: 'contact' }
 ];
 
@@ -57,6 +58,7 @@ function navigationMarkup(currentPage) {
       <li>${navigationLink(pageLinks[9], currentPage)}</li>
       <li>${navigationLink(pageLinks[10], currentPage)}</li>
       <li>${navigationLink(pageLinks[11], currentPage)}</li>
+      <li>${navigationLink(pageLinks[12], currentPage)}</li>
     </ul>`;
 }
 

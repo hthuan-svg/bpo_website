@@ -576,7 +576,7 @@
         "en": "BRYCEN VIETNAM history background",
         "ja": "BRYCEN VIETNAMの歴史の背景画像"
       },
-      "placeholder": true
+      "placeholder": false
     },
     "about_global_vietnam": {
       "src": "assets/images/about/about_global_vietnam.jpg",
