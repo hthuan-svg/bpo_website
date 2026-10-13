@@ -31,14 +31,11 @@ Lead + overview note, three cards (images `services_overview_3d/2d`; Data Engine
 
 ## Services › AI Training Data Creation (`services-annotation.html`)
 Breadcrumb Home › Services › Creation + service switch (Creation | Collection | Data Engineering). Hero (title, lead, 3 highlights).
-**Left vertical side-nav** (desktop ≥1024px): sticky, follows the screen while scrolling, scroll-spy highlight, title `ui.on_this_page`; entries in the order of `services.annotation.order` = **Use cases → Data types → How we work → Quality control → Information security** (labels `services.annotation.tabs.*`). On mobile it becomes a sticky horizontal chip bar.
+**Left vertical side-nav** (desktop ≥1024px): sticky, follows the screen while scrolling, scroll-spy highlight, title `ui.on_this_page`; entries in the order of `services.annotation.order` = **Use cases → Data types** (labels `services.annotation.tabs.*`). On mobile it becomes a sticky horizontal chip bar.
 Sections in that same order:
 1. `#usecases` "What is labeled data used for?" (`usecases`, 4 cards) — placed **before** the work areas.
 2. `#modalities` two bands: **3D (LiDAR)** = SEGMENT, BOUNDING BOX; **2D (Image)** = SEGMENT, BOUNDING BOX, KEYPOINT, SATELLITE. Each type is a full-width row: **image(s) left, text right** (`site.config.json → layout.annotationRows`: `image-left` default or `zigzag`); lightbox on images. **Under each row a marquee strip** of 4 images from `services.annotation.strips[type.id]` (label `ui.gallery`) — placeholders for the owner to fill in.
-3. `#workflow` 4 numbered steps.
-4. `#quality` **Quality control**: `quality.lead`; a wide image slot `quality.flow_image` (empty placeholder where the owner will put an explanatory picture; caption `flow_caption` hidden when empty); the 4 `principles` cards; then the principles image `quality.principles_image` **large and centred** (max ≈ 960px, opens in lightbox). The old drawn layer diagram is **removed** (`quality.layers` data stays unused for future use — do not render it).
-5. `#security` **Information security**: `security.title/text`, image `security.image`, and the **Certifications** block (ISO 9001:2015, ISO/IEC 27001:2013 — shared `certifications.items`).
-CTA band at the end.
+3. Contact CTA at the end.
 
 ## Services › AI Training Data Collection (`services-collection.html`)
 Intentionally empty "coming soon" page: status chip, lead, message, 3 placeholder gallery frames (`services.collection.gallery`), CTA. Do not add technical content.
@@ -46,12 +43,15 @@ Intentionally empty "coming soon" page: status chip, lead, message, 3 placeholde
 ## Services › Data Engineering (`services-data-engineering.html`)
 Intentionally empty "coming soon" page matching the Collection page: status chip, lead, message, 3 placeholder gallery frames (`services.data_engineering.gallery`), CTA. Do not add technical content.
 
-## Team (`team.html`) — vertical sections, no in-page tabs: Organization · Our principles · Trained people
-1. `#org` "Organization structure": headcount number + `org.lead` + ONE large image slot `team_org_image` (owner will add a photo of working with customers conveying trust). Keep the section at the image's 3:2 ratio on desktop so its background fits without distortion. **No org-chart drawing.**
-2. `#principles` "Our Principles": five equal-size cards stacked vertically from `principles.items[]`, with the existing `team_process_image` slot on the left at desktop widths. The slot is an ordinary image, not a placeholder frame.
-3. `#people` "People trained in Vietnam and Japan": lead, 3 steps timeline, 3 photos (`people.images`), and the **Japan country image** slot `people.country_image` shown faded behind the section content at full width and its original aspect ratio.
-4. Contact CTA at the bottom links to `contact.html`.
-Recruitment moved to the **Recruitment** page; remove every link to `team.html#recruit`.
+## Why BRYCEN BPO (`why_bpo.html`) — vertical sections, no in-page tabs: Our Organization · Our principles · Our work · Our quality control · Our information security · Trained people
+1. `#org` "Our Organization": four equal metric cards (550 team members, 10+ years of AI training data creation, No. 1 in Japan for five consecutive years, and 235+ completed projects with major Japanese companies) + `org.lead` + ONE large image slot `why_bpo_org_image` (owner will add a photo of working with customers conveying trust). Keep the section at the image's 3:2 ratio on desktop so its background fits without distortion. **No org-chart drawing.**
+2. `#principles` "Our Principles": gray section with five equal-size light cards stacked vertically from `principles.items[]`, with the existing `why_bpo_process_image` slot on the left at desktop widths. The image is an ordinary image, not a placeholder frame.
+3. `#workflow` "Our work": dark section; lead, with four equal-size vertical cards from `workflow.steps[]` on the left and the `why_bpo_workflow_image` slot on the right, using the Our Principles layout.
+4. `#quality` "Our quality control": gray section with `quality.lead`, `quality.flow_image` (`why_bpo_quality_flow`) on the left of four equal-size light cards from `quality.principles[]`; hide its caption when empty. Do not add a separate heading above the cards.
+5. `#security` "Our information security": dark section; place `security.text` directly under the section title as its lead, followed by `security.image` (`why_bpo_security_image`) and the shared `certifications.items[]` displayed as cards.
+6. `#people` "People trained in Vietnam and Japan": lead, 3 steps timeline, 3 photos (`people.images`) in a centered, bordered gallery box the same width as each step's content card, and the **Japan country image** slot `people.country_image` shown faded behind the section content at full width and its original aspect ratio.
+7. Contact CTA at the bottom links to `contact.html`.
+Recruitment moved to the **Recruitment** page; remove every link to `why_bpo.html#recruit`.
 
 ## Achievements (`achievements.html`)
 1. **Achievements**: huge "#1" + `awards.headline_text` ("No.1 in Japan") + ONE image slot `awards.image` + the 5-years text and source (rest unchanged). No row of four badges.

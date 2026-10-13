@@ -105,7 +105,7 @@ if (!dry) for (const f of walk(root)) {
   for (const s of [...retired, ...ids.map(i => i[0])]) if (txt.includes('"' + s + '"') || txt.includes("'" + s + "'") || txt.includes('`' + s + '`')) report.leftovers.push(`${base}: còn nhắc tới "${s}"`);
 }
 // dọn thư mục rỗng cũ
-if (!dry) for (const d of ['branding', 'backgrounds', 'about', 'timeline', 'services', 'team', 'customers', 'awards', 'placeholders']) {
+if (!dry) for (const d of ['branding', 'backgrounds', 'about', 'timeline', 'services', 'why_bpo', 'customers', 'awards', 'placeholders']) {
   const dir = P('assets', 'images', d); try { if (fs.existsSync(dir) && fs.readdirSync(dir).length === 0) fs.rmdirSync(dir); } catch {}
 }
 const L = (t, a) => { console.log(`\n${t} (${a.length})`); a.forEach(x => console.log('  ' + x)); };

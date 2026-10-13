@@ -31,7 +31,7 @@
 ## Pages
 - [ ] Home
 - [ ] About
-- [ ] Team
+- [ ] Why BRYCEN BPO
 - [ ] Achievements
 - [ ] Vision
 - [ ] Services

@@ -24,9 +24,9 @@
     "email": "bpovn_ldr@brycen.com.vn",
     "phone": "+84-397-7170722",
     "address": {
-      "vi": "25 Nguyen Van Cu, Hue, Vietnam",
-      "en": "25 Nguyen Van Cu, Hue, Vietnam",
-      "ja": "25 Nguyen Van Cu, Hue, Vietnam"
+      "vi": "25 Nguyễn Văn Cừ, Huế, Việt Nam",
+      "en": "25 Nguyen Van Cu, Hue, Viet Nam",
+      "ja": "25 Nguyen Van Cu, Hue, Viet Nam"
     },
     "mapEmbedUrl": "",
     "formUrl": "",
@@ -58,7 +58,7 @@
     "services": {
       "secondsPerLoop": 35
     },
-    "team": {
+    "why_bpo": {
       "secondsPerLoop": 32
     }
   },

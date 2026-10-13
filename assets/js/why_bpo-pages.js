@@ -1,21 +1,21 @@
-function renderTeamOrg(context) {
-  const container = document.querySelector('.team-org__figure');
+function renderWhyBpoOrg(context) {
+  const container = document.querySelector('.why_bpo-org__figure');
   if (!container) {
     return;
   }
 
-  const image = container.querySelector('.team-org__image');
+  const image = container.querySelector('.why_bpo-org__image');
   if (image) {
-    image.alt = context.t('team.org.image') || image.alt || '';
+    image.alt = context.t('why_bpo.org.image') || image.alt || '';
   }
 }
 
-function renderTeamPeople(context) {
-  const timeline = document.querySelector('.team-people__timeline');
+function renderWhyBpoPeople(context) {
+  const timeline = document.querySelector('.why_bpo-people__timeline');
   if (timeline) {
-    const steps = Array.isArray(context.t('team.people.steps')) ? context.t('team.people.steps') : [];
+    const steps = Array.isArray(context.t('why_bpo.people.steps')) ? context.t('why_bpo.people.steps') : [];
     if (steps.length > 0) {
-      const cards = timeline.querySelectorAll('.team-people__step');
+      const cards = timeline.querySelectorAll('.why_bpo-people__step');
       cards.forEach((card, index) => {
         card.classList.toggle('is-featured', index === 0);
       });
@@ -96,8 +96,8 @@ function renderSubaruTech(context) {
   });
 }
 
-export function renderOrganizationPages(context) {
-  renderTeamOrg(context);
-  renderTeamPeople(context);
+export function renderWhyBpoPages(context) {
+  renderWhyBpoOrg(context);
+  renderWhyBpoPeople(context);
   renderSubaruTech(context);
 }

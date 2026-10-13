@@ -29,9 +29,9 @@
         "title": "データエンジニアリング | BRYCEN VIETNAM BPO",
         "description": "BRYCEN VIETNAM BPOのデータエンジニアリングサービスをご紹介します。"
       },
-      "team": {
-        "title": "チーム | BRYCEN VIETNAM BPO",
-        "description": "BRYCEN VIETNAM BPOの組織体制、運用フロー、キャリア形成についてご紹介します。"
+      "why_bpo": {
+        "title": "BRYCEN BPOが選ばれる理由 | BRYCEN VIETNAM BPO",
+        "description": "明確な業務原則、品質管理、情報セキュリティ、ベトナムと日本で研修を受けたチームを通じて、BRYCEN BPOが信頼されるパートナーである理由をご紹介します。"
       },
       "achievements": {
         "title": "実績 | BRYCEN VIETNAM BPO",
@@ -64,7 +64,7 @@
       "services_annotation": "AI学習データ作成",
       "services_collection": "AI学習データ収集",
       "services_data_engineering": "データエンジニアリング",
-      "team": "チーム",
+      "why_bpo": "BRYCEN BPOが選ばれる理由",
       "achievements": "実績",
       "vision": "ビジョン",
       "news": "ニュース",
@@ -429,10 +429,7 @@
       },
       "tabs": {
         "modalities": "データの種類",
-        "workflow": "進め方",
-        "quality": "品質管理",
-        "usecases": "活用例",
-        "security": "情報セキュリティ"
+        "usecases": "活用例"
       },
       "highlights": [
         {
@@ -616,10 +613,7 @@
       "side_nav_title": "このページ内",
       "order": [
         "usecases",
-        "modalities",
-        "workflow",
-        "quality",
-        "security"
+        "modalities"
       ],
       "strips": {
         "seg3d": [
@@ -692,21 +686,43 @@
       ]
     }
   },
-  "team": {
-    "page_title": "チーム",
+  "why_bpo": {
+    "page_title": "BRYCEN BPOが選ばれる理由",
     "tabs": {
-      "org": "組織体制",
+      "org": "私たちの組織",
       "principles": "私たちの原則",
       "people": "人材育成"
     },
     "org": {
-      "title": "組織体制",
+      "title": "私たちの組織",
       "lead": "大規模データの需要に応える大人数体制で、お客様の安心と信頼を最優先にしています。",
       "headcount": {
         "value": "550",
         "label": "スタッフ数",
         "detail": "正社員37名＋パートタイム523名"
       },
+      "highlights": [
+        {
+          "value": "550",
+          "title": "スタッフ数",
+          "text": "お客様のプロジェクトを支える大規模な専門チームです。"
+        },
+        {
+          "value": "10+",
+          "title": "豊富な経験",
+          "text": "AI学習データ作成において10年以上の経験があります。"
+        },
+        {
+          "value": "#1",
+          "title": "日本市場でトップクラス",
+          "text": "日本市場で5年連続No.1に選ばれています。"
+        },
+        {
+          "value": "235+",
+          "title": "完了プロジェクト数",
+          "text": "日本の大手企業とともに235件以上のプロジェクトを完了しました。"
+        }
+      ],
       "levels": [
         {
           "id": "overall",
@@ -840,7 +856,7 @@
         }
       ],
       "links_note": "Connections (see docs/reference/slide17_org_chart.png): Manager -> Sub TeamLead and PMO; PMO -> 3 Project Leaders; Sub Project Leader sits below the Project Leader row; Sub Project Leader -> 2 Super Checkers; each Super Checker -> 2 Checkers; each Checker -> 2 Annotators.",
-      "image": "team_org_image"
+      "image": "why_bpo_org_image"
     },
     "principles": {
       "title": "私たちの原則",
@@ -851,6 +867,33 @@
         { "title": "信頼を築く", "text": "透明性と誠実さを大切にし、お客様との長期的な信頼関係を築きます。" },
         { "title": "共に成長する", "text": "パートナーとして価値を生み出し、お客様と共に成長します。" }
       ]
+    },
+    "workflow": {
+      "title": "私たちの仕事",
+      "lead": "各プロジェクトは4つの明確な段階で進み、お客様とBRYCEN BPOが緊密に連携します。",
+      "steps": [
+        { "title": "受付・計測", "text": "依頼を受け、作業量・難易度を試行計測し、発注内容をお客様と合意します。" },
+        { "title": "体制構築・教育", "text": "体制を組み、作業環境を整え、キックオフとガイドラインに沿った教育を行います。" },
+        { "title": "本番作業・検査", "text": "アノテーションと多層検査を実施し、中間納品でお客様のフィードバック（FB）を反映します。" },
+        { "title": "納品・振り返り", "text": "最終納品・検収を行い、次のプロジェクトに向けて振り返ります。" }
+      ]
+    },
+    "quality": {
+      "title": "私たちの品質管理",
+      "lead": "データは、作業と承認の5層を通過して初めてお客様に届きます。いずれかの層で不備が見つかれば差し戻して修正し、基準を満たすまで各層を循環します。",
+      "principles": [
+        { "title": "独立した複数の層", "text": "作業者と検査者は別の役割です。" },
+        { "title": "是正のループ", "text": "不備は該当の層へ差し戻し、修正・再検査します。" },
+        { "title": "標準化と教育", "text": "本番作業の前に、統一ガイドラインと教育を実施します。" },
+        { "title": "お客様のフィードバック", "text": "中間納品で早期にフィードバックを受けます。" }
+      ],
+      "flow_image": "why_bpo_quality_flow",
+      "flow_caption": ""
+    },
+    "security": {
+      "title": "私たちの情報セキュリティ",
+      "text": "お客様の情報は、社内の情報セキュリティ規程により厳格に保護されます。",
+      "image": "why_bpo_security_image"
     },
     "process": {
       "title": "運用フロー",
@@ -1080,7 +1123,7 @@
         ]
       ],
       "edge_note": "Edge m9->m4 is the feedback loop back to production. Layout reference: docs/reference/slide18_operating_flow.png",
-      "image": "team_process_image",
+      "image": "why_bpo_process_image",
       "actors": {
         "customer": "お客様",
         "bpo": "BPO BRYCEN VN",
@@ -1139,11 +1182,11 @@
         }
       ],
       "images": [
-        "team_people_japan",
-        "team_people_training",
-        "team_people_event"
+        "why_bpo_people_japan",
+        "why_bpo_people_training",
+        "why_bpo_people_event"
       ],
-      "country_image": "team_japan_country",
+      "country_image": "why_bpo_japan_country",
       "gallery": {
         "label": "研修写真ギャラリー"
       }

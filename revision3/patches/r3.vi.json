@@ -272,10 +272,7 @@
         "side_nav_title": "Trên trang này",
         "order": [
           "usecases",
-          "modalities",
-          "workflow",
-          "quality",
-          "security"
+          "modalities"
         ],
         "tabs": {
           "security": "Bảo mật thông tin"
@@ -329,14 +326,14 @@
         }
       }
     },
-    "team": {
+    "why_bpo": {
       "org": {
-        "image": "team_org_image",
+        "image": "why_bpo_org_image",
         "lead": "Với nhu cầu về dữ liệu lớn, bộ phận vận hành với số lượng nhân sự lớn và luôn đặt sự yên tâm, uy tín của khách hàng lên hàng đầu."
       },
       "process": {
         "title": "Quy trình vận hành",
-        "image": "team_process_image",
+        "image": "why_bpo_process_image",
         "lead": "Quy trình làm việc giữa BPO BRYCEN VIETNAM và khách hàng, từ khi nhận yêu cầu đến khi nghiệm thu.",
         "actors": {
           "customer": "Khách hàng",
@@ -379,12 +376,12 @@
         ]
       },
       "people": {
-        "country_image": "team_japan_country",
+        "country_image": "why_bpo_japan_country",
         "country_caption": "Nhật Bản",
         "images": [
-          "team_people_japan",
-          "team_people_training",
-          "team_people_event"
+          "why_bpo_people_japan",
+          "why_bpo_people_training",
+          "why_bpo_people_event"
         ]
       }
     },
@@ -616,20 +613,21 @@
     "achievements.awards.badges",
     "achievements.projects.customers",
     "vision.roadmap",
-    "team.tabs.recruit",
-    "team.org.levels",
-    "team.org.links_note",
-    "team.process.lanes",
-    "team.process.phases",
-    "team.process.nodes",
-    "team.process.edges",
-    "team.process.edge_note",
-    "team.recruit",
-    "services.annotation.quality.image",
-    "services.annotation.quality.delivery_label",
-    "services.annotation.quality.pass_label",
-    "services.annotation.quality.fail_label",
-    "services.annotation.quality.loop_label",
+    "why_bpo.tabs.recruit",
+    "why_bpo.org.levels",
+    "why_bpo.org.links_note",
+    "why_bpo.process.lanes",
+    "why_bpo.process.phases",
+    "why_bpo.process.nodes",
+    "why_bpo.process.edges",
+    "why_bpo.process.edge_note",
+    "why_bpo.recruit",
+    "services.annotation.workflow",
+    "services.annotation.quality",
+    "services.annotation.security",
+    "services.annotation.tabs.workflow",
+    "services.annotation.tabs.quality",
+    "services.annotation.tabs.security",
     "contact.note",
     "contact.labels.form"
   ]

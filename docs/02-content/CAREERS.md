@@ -34,4 +34,4 @@ If no approved job information exists, show an intentional empty state rather th
 
 ## Recruitment source
 
-Remove recruitment content from Team.
+Remove recruitment content from Why BRYCEN BPO.

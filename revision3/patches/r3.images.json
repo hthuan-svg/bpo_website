@@ -389,8 +389,8 @@
         },
         "placeholder": true
       },
-      "team_org_image": {
-        "src": "assets/images/team/team_org_image.jpg",
+      "why_bpo_org_image": {
+        "src": "assets/images/why_bpo/why_bpo_org_image.jpg",
         "alt": {
           "vi": "Làm việc cùng khách hàng",
           "en": "Working together with customers",
@@ -398,8 +398,8 @@
         },
         "placeholder": true
       },
-      "team_process_image": {
-        "src": "assets/images/team/team_process_image.jpg",
+      "why_bpo_process_image": {
+        "src": "assets/images/why_bpo/why_bpo_process_image.jpg",
         "alt": {
           "vi": "Quy trình làm việc với khách hàng",
           "en": "Working process with customers",
@@ -407,8 +407,8 @@
         },
         "placeholder": true
       },
-      "team_japan_country": {
-        "src": "assets/images/team/team_japan_country.jpg",
+      "why_bpo_japan_country": {
+        "src": "assets/images/why_bpo/why_bpo_japan_country.jpg",
         "alt": {
           "vi": "Đất nước Nhật Bản",
           "en": "Japan",

@@ -19,7 +19,7 @@ These files are intended to be run one at a time in Agent mode.
 3. `02-HOME.md`
 4. `03-SUBARU.md`
 5. `04-ABOUT.md`
-6. `05-TEAM.md`
+6. `05-WHY-BPO.md`
 7. `06-ACHIEVEMENTS.md`
 8. `07-VISION.md`
 9. `08-CAREERS.md`

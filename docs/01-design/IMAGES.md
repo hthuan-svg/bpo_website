@@ -35,10 +35,10 @@ Do not fetch random stock images.
 - about_office_main
 - about_office_branch
 
-### Team
-- team_structure_bg
-- team_operation_bg
-- team_training_japan_bg
+### Why BRYCEN BPO
+- why_bpo_structure_bg
+- why_bpo_operation_bg
+- why_bpo_training_japan_bg
 
 ### Achievements
 - achievements_bg

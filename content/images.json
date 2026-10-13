@@ -301,8 +301,8 @@
         "ja": "品質管理プロセス"
       }
     },
-    "team_people_event": {
-      "src": "assets/images/team/team_people_event.jpg",
+    "why_bpo_people_event": {
+      "src": "assets/images/why_bpo/why_bpo_people_event.jpg",
       "width": 1200,
       "height": 1096,
       "alt": {
@@ -311,8 +311,8 @@
         "ja": "展示会ブースのチーム"
       }
     },
-    "team_people_training": {
-      "src": "assets/images/team/team_people_training.jpg",
+    "why_bpo_people_training": {
+      "src": "assets/images/why_bpo/why_bpo_people_training.jpg",
       "width": 720,
       "height": 540,
       "alt": {
@@ -321,8 +321,8 @@
         "ja": "研修・打ち合わせ"
       }
     },
-    "team_people_japan": {
-      "src": "assets/images/team/team_people_japan.jpg",
+    "why_bpo_people_japan": {
+      "src": "assets/images/why_bpo/why_bpo_people_japan.jpg",
       "width": 719,
       "height": 540,
       "alt": {
@@ -839,8 +839,8 @@
       },
       "placeholder": true
     },
-    "team_org_image": {
-      "src": "assets/images/team/team_org_image.jpg",
+    "why_bpo_org_image": {
+      "src": "assets/images/why_bpo/why_bpo_org_image.jpg",
       "alt": {
         "vi": "Làm việc cùng khách hàng",
         "en": "Working together with customers",
@@ -848,8 +848,8 @@
       },
       "placeholder": false
     },
-    "team_process_image": {
-      "src": "assets/images/team/team_process_image.jpg",
+    "why_bpo_process_image": {
+      "src": "assets/images/why_bpo/why_bpo_process_image.jpg",
       "alt": {
         "vi": "Quy trình làm việc với khách hàng",
         "en": "Working process with customers",
@@ -857,8 +857,35 @@
       },
       "placeholder": false
     },
-    "team_japan_country": {
-      "src": "assets/images/team/team_japan_country.jpg",
+    "why_bpo_workflow_image": {
+      "src": "assets/images/why_bpo/why_bpo_workflow_image.jpg",
+      "alt": {
+        "vi": "Hình minh họa quy trình làm việc",
+        "en": "Work process illustration",
+        "ja": "業務プロセスのイメージ"
+      },
+      "placeholder": true
+    },
+    "why_bpo_quality_flow": {
+      "src": "assets/images/why_bpo/why_bpo_quality_flow.jpg",
+      "alt": {
+        "vi": "Hình diễn giải quy trình kiểm soát chất lượng",
+        "en": "Quality control process illustration",
+        "ja": "品質管理プロセスの図解"
+      },
+      "placeholder": true
+    },
+    "why_bpo_security_image": {
+      "src": "assets/images/why_bpo/why_bpo_security_image.jpg",
+      "alt": {
+        "vi": "Bảo mật thông tin",
+        "en": "Information security",
+        "ja": "情報セキュリティ"
+      },
+      "placeholder": true
+    },
+    "why_bpo_japan_country": {
+      "src": "assets/images/why_bpo/why_bpo_japan_country.jpg",
       "alt": {
         "vi": "Đất nước Nhật Bản",
         "en": "Japan",

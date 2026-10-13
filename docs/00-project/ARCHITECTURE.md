@@ -9,7 +9,7 @@
 | `services.html` | Services parent |
 | `services-annotation.html` | AI training data creation / annotation |
 | `services-collection.html` | AI training data collection |
-| `team.html` | Organization / operation / people |
+| `why_bpo.html` | Organization / operation / people |
 | `achievements.html` | Achievements / projects |
 | `vision.html` | Direction / roadmap |
 | `news.html` | News |

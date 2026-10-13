@@ -11,9 +11,9 @@ If asked to "start a session", run `/session-start`.
 Plain static site: HTML + CSS + JavaScript (ES modules). **No** framework, **no** build step, **no** runtime npm dependency. Runs with VS Code Live Server or `node tools/serve.mjs` (http://localhost:5500).
 ```
 *.html   index about services services-annotation services-collection services-data-engineering
-         team achievements vision news recruits contact subaru (13 pages; subaru + recruits are not-in-footer extras, see page-specs)
+         why_bpo achievements vision news recruits contact subaru (13 pages; subaru + recruits are not-in-footer extras, see page-specs)
 assets/css/{tokens,base,components,pages}.css     assets/js/*.js     (header/footer injected by layout.js)
-assets/images/<page>/<slot>.<ext>                 one folder per page: home about services team achievements vision news contact subaru recruits + common
+assets/images/<page>/<slot>.<ext>                 one folder per page: home about services why_bpo achievements vision news contact subaru recruits + common
 assets/images/_unused/                            retired images (never referenced, never deployed)
 content/{vi,en,ja}.json  news.json  recruits.json  images.json  site.config.json
 tools/*.mjs   admin/ (local editor, never deploy)   docs/   revision3/ (patch data used by tools)   .github/prompts/

@@ -18,7 +18,7 @@ home{hero,stats[{value,label,image}],stats_note,pillars_*,pillars[],showcase{ite
 subaru{hero,intro{history,global},tech{items[{id,image,name,text,highlight?,partnership*}]},cta}
 about{intro,history{lead,timeline[{year,icon,text}]},offices{items[{type,image,name,address,map_query}]},global{image,lead,countries[]}}
 services{page_title,lead,overview_note,status{open},annotation{lead,tabs,order[],highlights[],usecases,modalities[{id,label,tag,title,text,types[{id,name,images[],captions?,title,summary,points[]}]}],strips{typeId:[slots]},workflow,quality{lead,principles[],flow_image,principles_image,flow_caption,layers[]*},security{title,text,image},cta},collection{status,lead,message,gallery[]},data_engineering{status,lead,message,gallery[]}}
-team{tabs,org{lead,headcount,image},process{lead,actors,steps[{actor,text}],image},people{lead,steps[],images[],country_image,country_caption}}
+why_bpo{tabs,org{lead,headcount,highlights[{value,title,text}],image},principles{items[]},workflow{lead,steps[],image_slot},quality{lead,principles[],flow_image,flow_caption},security{text,image},people{lead,steps[],images[],country_image}}
 achievements{awards{headline,headline_text,image,text,source},projects{text,stat_value,stat_label,images[],satisfaction{image,title,text}}}
 vision{direction{text,image},growth{lead,stages[{id,phase,level,title,text,image|regions[]}]}}
 news{page_title,lead,categories,facebook_title}
@@ -31,7 +31,7 @@ contact{page_title,lead,banner,response_note,labels,form{fields,type_options,…
 `data-i18n="path"` · `data-i18n-html` (sanitised: b i em strong br a) · `data-i18n-attr="attr:path"` · `data-img="slot"` · `data-bg="slot"` · `data-list="path"` + `<template>` + `data-field` / `data-img-field` · `data-config="path"` (from `site.config.json`) · `data-show-if="path"` (hide when empty).
 
 ## Slot naming
-`<page>_<section>_<item>[_<nn>]`, folder = the page prefix (`home about services team achievements vision news contact subaru recruits`, anything shared = `common`). Examples: `home_stat_staff`, `services_3d_bbox_strip_02`, `subaru_tech_eyesight`, `news_2026_09_us_dataset`.
+`<page>_<section>_<item>[_<nn>]`, folder = the page prefix (`home about services why_bpo achievements vision news contact subaru recruits`, anything shared = `common`). Examples: `home_stat_staff`, `services_3d_bbox_strip_02`, `subaru_tech_eyesight`, `news_2026_09_us_dataset`.
 
 ## news.json / recruits.json item
 News: `{id,date,category,hidden,image,link,facebook_post,title{vi,en,ja},summary{…}}`. Image slot convention for news: `news_<yyyy>_<mm>_<slug>`.

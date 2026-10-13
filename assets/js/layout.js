@@ -8,7 +8,7 @@ const pageLinks = [
   { page: 'services-annotation', file: 'services-annotation.html', key: 'services_annotation' },
   { page: 'services-collection', file: 'services-collection.html', key: 'services_collection' },
   { page: 'services-data-engineering', file: 'services-data-engineering.html', key: 'services_data_engineering' },
-  { page: 'team', file: 'team.html', key: 'team' },
+  { page: 'why_bpo', file: 'why_bpo.html', key: 'why_bpo' },
   { page: 'achievements', file: 'achievements.html', key: 'achievements' },
   { page: 'vision', file: 'vision.html', key: 'vision' },
   { page: 'news', file: 'news.html', key: 'news' },

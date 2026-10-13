@@ -3,15 +3,15 @@
 ## Cấu trúc thư mục ảnh (mỗi trang một thư mục)
 ```
 assets/images/
-  home/ about/ services/ team/ achievements/ vision/ news/ recruits/ contact/ subaru/   ← ảnh của từng trang
+  home/ about/ services/ why_bpo/ achievements/ vision/ news/ recruits/ contact/ subaru/   ← ảnh của từng trang
   common/        ← dùng chung: logo (2 bản: nền sáng / nền tối), favicon, ảnh chia sẻ, chứng nhận ISO, nền sóng
   _unused/       ← ảnh đã bỏ khỏi web (không dùng, không đưa lên mạng)
 ```
 Tên file = tên slot = `<trang>_<mục>_<mã>`. Tra tên và nơi dùng ở **`image-slots.md`**.
 
 ## Thay một ảnh (cách nhanh)
-1. Tìm slot trong `image-slots.md` (ví dụ `team_org_image`).
-2. Chuẩn bị ảnh mới, đổi tên **đúng tên file cũ** (cả đuôi `.jpg`/`.png`), chép đè vào `assets/images/team/`.
+1. Tìm slot trong `image-slots.md` (ví dụ `why_bpo_org_image`).
+2. Chuẩn bị ảnh mới, đổi tên **đúng tên file cũ** (cả đuôi `.jpg`/`.png`), chép đè vào `assets/images/why_bpo/`.
 3. Nếu là ảnh giữ chỗ: mở `content/images.json` → slot đó → `"placeholder": false`; sửa `alt` 3 ngôn ngữ nếu cần.
 4. `Ctrl+F5` để làm mới.
 

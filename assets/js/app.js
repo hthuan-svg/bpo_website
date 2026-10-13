@@ -5,7 +5,7 @@ import { renderPage } from './render.js';
 import { initReveal } from './reveal.js';
 import { initHomeCounters } from './home.js';
 import { renderHomeServices, renderServices } from './services.js';
-import { renderOrganizationPages } from './organization-pages.js';
+import { renderWhyBpoPages } from './why_bpo-pages.js';
 import { renderSocial } from './social.js';
 import { initializeNews, renderNews } from './news.js';
 import { initializeMarquee } from './marquee.js';
@@ -62,7 +62,7 @@ async function start() {
       renderSocial(i18n);
       renderHomeServices(i18n);
       renderServices(i18n);
-      renderOrganizationPages(i18n);
+      renderWhyBpoPages(i18n);
       initializeContact(i18n);
       initializeMarquee();
       initReveal();
@@ -74,7 +74,7 @@ async function start() {
     renderSocial(i18n);
     renderHomeServices(i18n);
     renderServices(i18n);
-    renderOrganizationPages(i18n);
+    renderWhyBpoPages(i18n);
     initializeContact(i18n);
     initializeMarquee();
     initReveal();

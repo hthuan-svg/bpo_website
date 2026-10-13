@@ -23,7 +23,7 @@
 | Q4 | **Người quản lý thông tin cá nhân** (họ tên, chức danh) và **URL chính sách bảo vệ thông tin cá nhân** | Điền `[CẦN BỔ SUNG]` ở `contact.privacy.items[1]`, `site.config.json → contact.privacyPolicyUrl`. Nên nhờ pháp chế rà soát (tham khảo Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân) |
 | Q5 | "Phản hồi trong 2 ngày làm việc" (lấy theo mẫu Brycen JP) có đúng với bạn? | `contact.response_note` |
 | Q6 | Tài khoản dịch vụ form (Formspree/Web3Forms…) và email nhận | Xem `docs/release/contact-form-setup.md` |
-| Q7 | Số nhân sự **550 = 37 + 523** (tổng là 560) | `home.stats`, `team.org.headcount`, `home.hero.subtitle` |
+| Q7 | Số nhân sự **550 = 37 + 523** (tổng là 560) | `home.stats`, `why_bpo.org.headcount`, `home.hero.subtitle` |
 | Q8 | Bản dịch EN/JA đã được người bản ngữ rà soát chưa? | Đăng web doanh nghiệp |
 | Q9 | Mô tả quốc gia Cambodia/Myanmar trong "Hợp tác đa quốc gia" mới là câu chung chung — cần mô tả thật | `about.global.countries[]` |
 | Q10 | Nội dung "Thu thập dữ liệu học cho AI" (khi nào cập nhật?) | Trang đang "Đang cập nhật" |

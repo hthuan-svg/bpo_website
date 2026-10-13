@@ -329,14 +329,14 @@
         }
       }
     },
-    "team": {
+    "why_bpo": {
       "org": {
-        "image": "team_org_image",
+        "image": "why_bpo_org_image",
         "lead": "大規模データの需要に応える大人数体制で、お客様の安心と信頼を最優先にしています。"
       },
       "process": {
         "title": "運用フロー",
-        "image": "team_process_image",
+        "image": "why_bpo_process_image",
         "lead": "お客様の依頼から検収まで、BPO BRYCEN VIETNAMとお客様がどのように進めるかをご紹介します。",
         "actors": {
           "customer": "お客様",
@@ -379,12 +379,12 @@
         ]
       },
       "people": {
-        "country_image": "team_japan_country",
+        "country_image": "why_bpo_japan_country",
         "country_caption": "日本",
         "images": [
-          "team_people_japan",
-          "team_people_training",
-          "team_people_event"
+          "why_bpo_people_japan",
+          "why_bpo_people_training",
+          "why_bpo_people_event"
         ]
       }
     },
@@ -616,15 +616,15 @@
     "achievements.awards.badges",
     "achievements.projects.customers",
     "vision.roadmap",
-    "team.tabs.recruit",
-    "team.org.levels",
-    "team.org.links_note",
-    "team.process.lanes",
-    "team.process.phases",
-    "team.process.nodes",
-    "team.process.edges",
-    "team.process.edge_note",
-    "team.recruit",
+    "why_bpo.tabs.recruit",
+    "why_bpo.org.levels",
+    "why_bpo.org.links_note",
+    "why_bpo.process.lanes",
+    "why_bpo.process.phases",
+    "why_bpo.process.nodes",
+    "why_bpo.process.edges",
+    "why_bpo.process.edge_note",
+    "why_bpo.recruit",
     "services.annotation.quality.image",
     "services.annotation.quality.delivery_label",
     "services.annotation.quality.pass_label",

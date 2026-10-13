@@ -22,7 +22,7 @@ Start a work session on this project.
 ## Fix a defect (`/fix-bug`)
 ```text
 Follow AGENTS.md and docs/overview/page-specs.md.
-Page: ${input:page:Page file, e.g. team.html}
+Page: ${input:page:Page file, e.g. why_bpo.html}
 Problem: ${input:problem:What is wrong? Be specific}
 Console error or screenshot description (optional): ${input:detail:Paste the error or describe}
 

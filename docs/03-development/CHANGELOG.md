@@ -5,7 +5,7 @@
 - Rebuilt project documentation around a single source of truth.
 - Preserved useful source notes from the legacy README.
 - Added explicit dark-default/light-toggle requirements.
-- Added Home, Subaru, About, Team, Achievements, Vision, Careers, Contact and Services requirements.
+- Added Home, Subaru, About, Why BRYCEN BPO, Achievements, Vision, Careers, Contact and Services requirements.
 - Added data verification warnings.
 - Added phased Agent prompts.
 - Added QA and implementation workflow.

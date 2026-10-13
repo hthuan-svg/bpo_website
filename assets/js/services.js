@@ -250,7 +250,7 @@ function createAnnotationSideNav(context, content) {
   nav.setAttribute('aria-label', context.t('ui.on_this_page'));
   const title = createElement('p', 'annotation-side-nav__title', context.t('ui.on_this_page'));
   const list = createElement('ul', 'annotation-side-nav__list');
-  const order = Array.isArray(content?.order) && content.order.length ? content.order : ['usecases', 'modalities', 'workflow', 'quality', 'security'];
+  const order = Array.isArray(content?.order) && content.order.length ? content.order : ['usecases', 'modalities'];
 
   order.forEach((id) => {
     const label = context.t(`services.annotation.tabs.${id}`);
@@ -352,87 +352,6 @@ function createAnnotationModality(context, modality, index) {
   return section;
 }
 
-function createAnnotationWorkflow(context) {
-  const section = createElement('section', 'annotation-workflow section-shell');
-  section.id = 'workflow';
-  section.dataset.annotationSection = 'workflow';
-
-  const container = createElement('div', 'page-container');
-  const heading = createElement('header', 'annotation-section-heading');
-  heading.append(
-    createElement('p', 'eyebrow', context.t('services.annotation.tabs.workflow')),
-    createElement('h2', 'section-title', context.t('services.annotation.workflow.title'))
-  );
-  if (context.t('services.annotation.workflow.lead')) {
-    heading.append(createElement('p', 'section-lead', context.t('services.annotation.workflow.lead')));
-  }
-  container.append(heading);
-
-  const steps = createElement('ol', 'annotation-workflow__steps');
-  const workflow = context.t('services.annotation.workflow');
-  (Array.isArray(workflow?.steps) ? workflow.steps : []).forEach((step, index) => {
-    const item = createElement('li', 'annotation-workflow__step');
-    const label = createElement('span', 'annotation-workflow__number', String(index + 1).padStart(2, '0'));
-    const copy = createElement('div', 'annotation-workflow__copy');
-    copy.append(
-      createElement('h3', 'annotation-workflow__title', step.title ?? ''),
-      createElement('p', 'annotation-workflow__text', step.text ?? '')
-    );
-    item.append(label, copy);
-    steps.append(item);
-  });
-  container.append(steps);
-  section.append(container);
-  return section;
-}
-
-function createAnnotationQualitySection(context) {
-  const section = createElement('section', 'annotation-quality section-shell');
-  section.id = 'quality';
-  section.dataset.annotationSection = 'quality';
-
-  const container = createElement('div', 'page-container');
-  const heading = createElement('header', 'annotation-section-heading');
-  heading.append(
-    createElement('p', 'eyebrow', context.t('services.annotation.tabs.quality')),
-    createElement('h2', 'section-title', context.t('services.annotation.quality.title'))
-  );
-  const quality = context.t('services.annotation.quality') ?? {};
-  const qualityLead = typeof quality.lead === 'string' ? quality.lead : '';
-  if (qualityLead) {
-    heading.append(createElement('p', 'section-lead', qualityLead));
-  }
-  container.append(heading);
-
-  const principleItems = Array.isArray(quality.principles) ? quality.principles : [];
-  const principles = createElement('div', 'annotation-quality__principles');
-  if (principleItems.length) {
-    const principlesHeader = createElement('h3', 'annotation-quality__principles-title', quality.principles_title ?? '');
-    principles.append(principlesHeader);
-    principleItems.forEach((principle) => {
-      const card = createElement('article', 'annotation-quality__principle');
-      card.append(
-        createElement('h4', 'annotation-quality__principle-title', principle.title ?? ''),
-        createElement('p', 'annotation-quality__principle-text', principle.text ?? '')
-      );
-      principles.append(card);
-    });
-  }
-
-  const flowImage = createImage(context, quality.flow_image, 'annotation-quality__flow-image');
-  const flowWrap = createElement('div', 'annotation-quality__flow-image-wrap');
-  if (flowImage) {
-    flowWrap.append(flowImage);
-    if (typeof quality.flow_caption === 'string' && quality.flow_caption.trim()) {
-      flowWrap.append(createElement('p', 'annotation-quality__flow-caption', quality.flow_caption));
-    }
-  }
-
-  container.append(principles, flowWrap);
-  section.append(container);
-  return section;
-}
-
 function createAnnotationUsecases(context) {
   const section = createElement('section', 'annotation-usecases section-shell');
   section.id = 'usecases';
@@ -458,48 +377,6 @@ function createAnnotationUsecases(context) {
     grid.append(card);
   });
   container.append(grid);
-  section.append(container);
-  return section;
-}
-
-function createAnnotationSecurity(context) {
-  const section = createElement('section', 'annotation-security section-shell');
-  section.id = 'security';
-  section.dataset.annotationSection = 'security';
-
-  const container = createElement('div', 'page-container');
-  const heading = createElement('header', 'annotation-section-heading');
-  heading.append(
-    createElement('p', 'eyebrow', context.t('services.annotation.tabs.security')),
-    createElement('h2', 'section-title', context.t('services.annotation.security.title'))
-  );
-  container.append(heading);
-
-  const securityText = createElement('p', 'annotation-security__text', context.t('services.annotation.security.text'));
-  const securityImage = createImage(context, context.t('services.annotation.security.image'), 'annotation-security__image');
-  const imageWrap = createElement('div', 'annotation-security__image-wrap');
-  if (securityImage) {
-    imageWrap.append(securityImage);
-  }
-
-  const certs = createElement('div', 'certifications-grid');
-  const certificationItems = Array.isArray(context.t('certifications.items')) ? context.t('certifications.items') : [];
-  certificationItems.forEach((item) => {
-    const card = createElement('article', 'home-certification');
-    const image = createImage(context, item.image, 'home-certification__image');
-    const body = createElement('div', 'home-certification__body');
-    body.append(
-      createElement('span', 'home-certification__code', item.code ?? ''),
-      createElement('strong', 'home-certification__name', item.name ?? '')
-    );
-    if (image) {
-      card.append(image);
-    }
-    card.append(body);
-    certs.append(card);
-  });
-
-  container.append(securityText, imageWrap, certs);
   section.append(container);
   return section;
 }
@@ -601,9 +478,6 @@ function renderAnnotation(context, main) {
   stack.append(
     usecases,
     modalitiesWrapper,
-    createAnnotationWorkflow(context),
-    createAnnotationQualitySection(context),
-    createAnnotationSecurity(context),
     createAnnotationCta(context)
   );
   layout.append(sideNav, stack);

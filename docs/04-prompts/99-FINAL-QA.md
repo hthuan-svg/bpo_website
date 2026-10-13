@@ -34,7 +34,7 @@ Check:
 22. no invented business facts
 23. no obsolete Phạm Văn Đồng address
 24. no customer-logo section where prohibited
-25. no recruitment section left in Team
+25. no recruitment section left in Why BRYCEN BPO
 
 Check that:
 - `AGENTS.md` remains authoritative

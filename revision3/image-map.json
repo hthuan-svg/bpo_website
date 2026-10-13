@@ -4,7 +4,7 @@
     "home",
     "about",
     "services",
-    "team",
+    "why_bpo",
     "achievements",
     "vision",
     "news",
@@ -152,16 +152,16 @@
       "to": "services_collection_03"
     },
     {
-      "from": "team_event_booth",
-      "to": "team_people_event"
+      "from": "why_bpo_event_booth",
+      "to": "why_bpo_people_event"
     },
     {
-      "from": "team_training_meeting",
-      "to": "team_people_training"
+      "from": "why_bpo_training_meeting",
+      "to": "why_bpo_people_training"
     },
     {
-      "from": "team_japan_visit",
-      "to": "team_people_japan"
+      "from": "why_bpo_japan_visit",
+      "to": "why_bpo_people_japan"
     },
     {
       "from": "customer_subaru",

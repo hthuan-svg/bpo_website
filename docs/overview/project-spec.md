@@ -5,7 +5,7 @@
 **Audience:** customers/partners (mainly Japan), job candidates, group colleagues. **Languages:** vi (default), en, ja with an instant switcher.
 
 ## Sitemap
-Menu (tabs, immediately left of the language switcher): Home · About · Services (dropdown: AI Training Data Creation, AI Training Data Collection) · Team · Achievements & Projects · Vision · News · Recruitment · Contact.
+Menu (tabs, immediately left of the language switcher): Home · About · Services (dropdown: AI Training Data Creation, AI Training Data Collection) · Why BRYCEN BPO · Achievements & Projects · Vision · News · Recruitment · Contact.
 Not in menu: `subaru.html` (reached by clicking the SUBARU logo on Home and from the SUBARU mention on Achievements).
 Footer: logo, contact address block (from `site.config.json`), quick links, social icons.
 

@@ -19,7 +19,7 @@ Generated documentation files:
 - `docs/02-content/HOME.md`
 - `docs/02-content/SERVICES.md`
 - `docs/02-content/SUBARU.md`
-- `docs/02-content/TEAM.md`
+- `docs/02-content/WHY_BPO.md`
 - `docs/02-content/VISION.md`
 - `docs/03-development/CHANGELOG.md`
 - `docs/03-development/DATA-VERIFICATION.md`
@@ -32,7 +32,7 @@ Generated documentation files:
 - `docs/04-prompts/02-HOME.md`
 - `docs/04-prompts/03-SUBARU.md`
 - `docs/04-prompts/04-ABOUT.md`
-- `docs/04-prompts/05-TEAM.md`
+- `docs/04-prompts/05-WHY-BPO.md`
 - `docs/04-prompts/06-ACHIEVEMENTS.md`
 - `docs/04-prompts/07-VISION.md`
 - `docs/04-prompts/08-CAREERS.md`

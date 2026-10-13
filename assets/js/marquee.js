@@ -159,9 +159,9 @@ export function initializeMarquee(root = document) {
         track.append(clone);
       }
       enableMouseDrag(track, list);
-    } else if (container.classList.contains('team-people__showcase')) {
+    } else if (container.classList.contains('why_bpo-people__showcase')) {
       track.querySelector(':scope > .marquee__list[aria-hidden="true"]')?.remove();
-      const loopSeconds = window.siteI18n?.siteConfig?.marquee?.team?.secondsPerLoop;
+      const loopSeconds = window.siteI18n?.siteConfig?.marquee?.why_bpo?.secondsPerLoop;
       if (Number.isFinite(loopSeconds) && loopSeconds > 0) {
         container.style.setProperty('--marquee-duration', `${loopSeconds}s`);
       }

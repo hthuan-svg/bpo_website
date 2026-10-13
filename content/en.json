@@ -29,9 +29,9 @@
         "title": "Data Engineering | BRYCEN VIETNAM BPO",
         "description": "Learn about the Data Engineering service from BRYCEN VIETNAM BPO."
       },
-      "team": {
-        "title": "Our Team | BRYCEN VIETNAM BPO",
-        "description": "Learn about the team structure, operating process, and career opportunities at BRYCEN VIETNAM BPO."
+      "why_bpo": {
+        "title": "Why BRYCEN BPO | BRYCEN VIETNAM BPO",
+        "description": "Discover why BRYCEN BPO is a trusted partner, with clear work principles, quality controls, information security, and a team trained in Vietnam and Japan."
       },
       "achievements": {
         "title": "Achievements | BRYCEN VIETNAM BPO",
@@ -64,7 +64,7 @@
       "services_annotation": "AI Training Data Creation",
       "services_collection": "AI Training Data Collection",
       "services_data_engineering": "Data Engineering",
-      "team": "Team",
+      "why_bpo": "Why BRYCEN BPO",
       "achievements": "Achievements",
       "vision": "Vision",
       "news": "News",
@@ -429,10 +429,7 @@
       },
       "tabs": {
         "modalities": "Data types",
-        "workflow": "How we work",
-        "quality": "Quality control",
-        "usecases": "Use cases",
-        "security": "Information security"
+        "usecases": "Use cases"
       },
       "highlights": [
         {
@@ -616,10 +613,7 @@
       "side_nav_title": "On this page",
       "order": [
         "usecases",
-        "modalities",
-        "workflow",
-        "quality",
-        "security"
+        "modalities"
       ],
       "strips": {
         "seg3d": [
@@ -692,21 +686,43 @@
       ]
     }
   },
-  "team": {
-    "page_title": "Our team",
+  "why_bpo": {
+    "page_title": "Why BRYCEN BPO",
     "tabs": {
-      "org": "Organization",
+      "org": "Our Organization",
       "principles": "Our principles",
       "people": "Trained people"
     },
     "org": {
-      "title": "Organization structure",
+      "title": "Our Organization",
       "lead": "Driven by large-scale data demand, the division runs with a large workforce and always puts customers' peace of mind and trust first.",
       "headcount": {
         "value": "550",
         "label": "Team members",
         "detail": "37 full-time staff + 523 part-time members"
       },
+      "highlights": [
+        {
+          "value": "550",
+          "title": "Team members",
+          "text": "A large, dedicated team supporting customer projects."
+        },
+        {
+          "value": "10+",
+          "title": "Years of experience",
+          "text": "More than 10 years creating AI training data."
+        },
+        {
+          "value": "#1",
+          "title": "Top in Japan",
+          "text": "Ranked No. 1 in the Japanese market for five consecutive years."
+        },
+        {
+          "value": "235+",
+          "title": "Projects completed",
+          "text": "Completed more than 235 projects with major companies in Japan."
+        }
+      ],
       "levels": [
         {
           "id": "overall",
@@ -840,7 +856,7 @@
         }
       ],
       "links_note": "Connections (see docs/reference/slide17_org_chart.png): Manager -> Sub TeamLead and PMO; PMO -> 3 Project Leaders; Sub Project Leader sits below the Project Leader row; Sub Project Leader -> 2 Super Checkers; each Super Checker -> 2 Checkers; each Checker -> 2 Annotators.",
-      "image": "team_org_image"
+      "image": "why_bpo_org_image"
     },
     "principles": {
       "title": "Our Principles",
@@ -851,6 +867,33 @@
         { "title": "Build Trust", "text": "We value transparency, honesty, and long-term trust with our customers." },
         { "title": "Grow Together", "text": "We work as a partner, creating value and growing together with our customers." }
       ]
+    },
+    "workflow": {
+      "title": "Our work",
+      "lead": "Every project follows four clear stages, with close coordination between the customer and BRYCEN BPO.",
+      "steps": [
+        { "title": "Intake & trial measurement", "text": "Receive the request, trial-measure volume and difficulty, and agree the order with the customer." },
+        { "title": "Team set-up & training", "text": "Build the team, prepare the work environment, hold the kickoff and train to the project guideline." },
+        { "title": "Production & review", "text": "Annotate and review through multiple layers; interim deliveries bring customer feedback (FB)." },
+        { "title": "Delivery & retrospective", "text": "Final delivery, acceptance and lessons learned for the next project." }
+      ]
+    },
+    "quality": {
+      "title": "Our quality control",
+      "lead": "Data reaches the customer only after five layers of work and approval. If any layer finds an error, the data is sent back, corrected and cycled through the layers until it meets the requirement.",
+      "principles": [
+        { "title": "Independent layers", "text": "The person who annotates and the person who checks are separate roles." },
+        { "title": "Corrective loop", "text": "Errors go back to the right layer to be fixed and re-checked." },
+        { "title": "Standards & training", "text": "One guideline and training before production starts." },
+        { "title": "Customer feedback", "text": "Interim deliveries bring feedback early." }
+      ],
+      "flow_image": "why_bpo_quality_flow",
+      "flow_caption": ""
+    },
+    "security": {
+      "title": "Our information security",
+      "text": "Customer information is strictly protected under the company's information security rules.",
+      "image": "why_bpo_security_image"
     },
     "process": {
       "title": "Operating flow",
@@ -1080,7 +1123,7 @@
         ]
       ],
       "edge_note": "Edge m9->m4 is the feedback loop back to production. Layout reference: docs/reference/slide18_operating_flow.png",
-      "image": "team_process_image",
+      "image": "why_bpo_process_image",
       "actors": {
         "customer": "Customer",
         "bpo": "BPO BRYCEN VN",
@@ -1139,11 +1182,11 @@
         }
       ],
       "images": [
-        "team_people_japan",
-        "team_people_training",
-        "team_people_event"
+        "why_bpo_people_japan",
+        "why_bpo_people_training",
+        "why_bpo_people_event"
       ],
-      "country_image": "team_japan_country",
+      "country_image": "why_bpo_japan_country",
       "gallery": {
         "label": "Training photo gallery"
       }

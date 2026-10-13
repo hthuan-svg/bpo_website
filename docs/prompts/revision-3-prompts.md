@@ -11,7 +11,7 @@
 | `/r3-04-subaru` | SUBARU page | 6 |
 | `/r3-05-about` | About page | 7 |
 | `/r3-06-services` | Services › AI Training Data Creation | 12 |
-| `/r3-07-team` | Team page | 8 |
+| `/r3-07-why-bpo` | Why BRYCEN BPO page | 8 |
 | `/r3-08-achievements-vision` | Achievements & Projects, Vision | 9, 10 |
 | `/r3-09-recruits` | Recruitment page | 4 |
 | `/r3-10-contact` | Contact page | 11 |
@@ -174,25 +174,25 @@ Finish: update the checkbox of this step in docs/work/current-work.md. Reply wit
 
 ---
 
-## Team page  (`/r3-07-team`)
+## Why BRYCEN BPO page  (`/r3-07-why-bpo`)
 
 ```text
 Follow AGENTS.md. Specs: docs/overview/page-specs.md (the area you touch), docs/overview/design-system.md, docs/content/content-model.md, docs/images/image-slots.md.
 This is an UPDATE of an existing, working site: read the current implementation of what you will touch first, then modify it IN PLACE. Keep conventions (data-* binding, CSS tokens, components). Do not rewrite working parts that are not part of this step.
 Scope: ONLY this step. Do not run `git commit`. The content patch and image migration are already applied (step r3-00): use the NEW keys and slot names; do NOT read obsolete keys (listed in revision3/patches/r3.vi.json -> remove). Do not edit text values in content/*.json; if a key is truly missing, add it to vi.json, en.json AND ja.json together and tell me.
 
-Update team.html per docs/overview/page-specs.md > Team (keys team.*).
+Update why_bpo.html per docs/overview/page-specs.md > Why BRYCEN BPO (keys why_bpo.*).
 1. In-page tabs: Organization · Operating flow · Trained people (recruit tab removed).
-2. #org: headcount number + org.lead + ONE large image slot team_org_image (placeholder). REMOVE the org-chart drawing and its JS/CSS.
+2. #org: headcount number + org.lead + ONE large image slot why_bpo_org_image (placeholder). REMOVE the org-chart drawing and its JS/CSS.
 3. #process: only BPO BRYCEN VN <-> Customer. Render process.steps[] as a numbered list with an actor chip (process.actors[actor]) next to the image slot process.image. REMOVE the swim-lane drawing, its SVG/JS/CSS, and every mention of BPO (JP).
 4. #people: lead, the 3 steps as a timeline, the 3 photos (people.images) and a large Japan-country image slot people.country_image with caption.
-5. REMOVE the recruitment section from this page and any link to team.html#recruit (recruitment now lives on recruits.html).
+5. REMOVE the recruitment section from this page and any link to why_bpo.html#recruit (recruitment now lives on recruits.html).
 
 Finish: update the checkbox of this step in docs/work/current-work.md. Reply with (1) files changed, (2) how I verify, (3) assumptions, (4) open issues — then STOP and wait for me.
 ```
 
 **Definition of done**
-- No drawings left; 8-step list beside an image slot; Japan image slot present; no recruitment on Team.
+- No drawings left; 8-step list beside an image slot; Japan image slot present; no recruitment on Why BRYCEN BPO.
 
 ---
 
@@ -271,7 +271,7 @@ This is an UPDATE of an existing, working site: read the current implementation 
 Scope: ONLY this step. Do not run `git commit`. The content patch and image migration are already applied (step r3-00): use the NEW keys and slot names; do NOT read obsolete keys (listed in revision3/patches/r3.vi.json -> remove). Do not edit text values in content/*.json; if a key is truly missing, add it to vi.json, en.json AND ja.json together and tell me.
 
 Final QA for Revision 3.
-1. Before deleting anything, search all HTML/JS/CSS for the obsolete keys in revision3/patches/r3.vi.json -> remove (ui.skip, home.customers_title, team.process.nodes, vision.roadmap, achievements.projects.customers, services.annotation.quality.delivery_label, …). Fix any remaining use.
+1. Before deleting anything, search all HTML/JS/CSS for the obsolete keys in revision3/patches/r3.vi.json -> remove (ui.skip, home.customers_title, why_bpo.process.nodes, vision.roadmap, achievements.projects.customers, services.annotation.quality.delivery_label, …). Fix any remaining use.
 2. Run `node tools/apply-patch.mjs revision3 --cleanup`, then `node tools/validate-content.mjs`.
 3. Extend the validator: ⚠ for each slot with placeholder:true still in use (list them grouped by page folder); ✖ if a slot's file is not in assets/images/<prefix>/; ✖ if any retired slot (see revision3/image-map.json -> retire) is still referenced; ✖ if a page contains an other-customer name or logo (Sony, Denso, Honda, Nikon, AFEELA) outside docs/archive.
 4. Test with `node tools/serve.mjs` (curl + headless browser if available): every page × vi/en/ja, no console errors, no raw keys, no 404 images, no horizontal scroll at 375px, back-to-top works, footer address block, 9 header tabs behave, recruits/contact/subaru pages work, no "skip to main content" text.

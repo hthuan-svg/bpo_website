@@ -29,9 +29,9 @@
         "title": "Data Engineering | BRYCEN VIETNAM BPO",
         "description": "Tìm hiểu dịch vụ Data Engineering của BRYCEN VIETNAM BPO."
       },
-      "team": {
-        "title": "Đội ngũ BPO | BRYCEN VIETNAM",
-        "description": "Tìm hiểu cơ cấu đội ngũ, quy trình vận hành và cơ hội phát triển tại BRYCEN VIETNAM BPO."
+      "why_bpo": {
+        "title": "Vì sao chọn BRYCEN BPO | BRYCEN VIETNAM",
+        "description": "Khám phá lý do BRYCEN BPO là đối tác đáng tin cậy, với nguyên tắc làm việc rõ ràng, quy trình kiểm soát chất lượng, bảo mật thông tin và đội ngũ được đào tạo tại Việt Nam và Nhật Bản."
       },
       "achievements": {
         "title": "Thành tựu | BRYCEN VIETNAM BPO",
@@ -64,7 +64,7 @@
       "services_annotation": "Tạo dữ liệu học cho AI",
       "services_collection": "Thu thập dữ liệu học cho AI",
       "services_data_engineering": "Data Engineering",
-      "team": "Đội ngũ",
+      "why_bpo": "Vì sao chọn BRYCEN BPO",
       "achievements": "Thành tựu",
       "vision": "Tầm nhìn",
       "news": "Tin tức",
@@ -429,10 +429,7 @@
       },
       "tabs": {
         "modalities": "Loại dữ liệu",
-        "workflow": "Cách chúng tôi làm việc",
-        "quality": "Kiểm soát chất lượng",
-        "usecases": "Ứng dụng",
-        "security": "Bảo mật thông tin"
+        "usecases": "Ứng dụng"
       },
       "highlights": [
         {
@@ -616,10 +613,7 @@
       "side_nav_title": "Trên trang này",
       "order": [
         "usecases",
-        "modalities",
-        "workflow",
-        "quality",
-        "security"
+        "modalities"
       ],
       "strips": {
         "seg3d": [
@@ -692,21 +686,43 @@
       ]
     }
   },
-  "team": {
-    "page_title": "Đội ngũ",
+  "why_bpo": {
+    "page_title": "Vì sao chọn BRYCEN BPO",
     "tabs": {
-      "org": "Cơ cấu bộ phận",
+      "org": "Tổ chức của chúng tôi",
       "principles": "Nguyên tắc của chúng tôi",
       "people": "Nhân lực được đào tạo"
     },
     "org": {
-      "title": "Cơ cấu bộ phận",
+      "title": "Tổ chức của chúng tôi",
       "lead": "Với nhu cầu về dữ liệu lớn, bộ phận vận hành với số lượng nhân sự lớn và luôn đặt sự yên tâm, uy tín của khách hàng lên hàng đầu.",
       "headcount": {
         "value": "550",
         "label": "Nhân sự",
         "detail": "37 nhân viên chính thức + 523 nhân sự part-time"
       },
+      "highlights": [
+        {
+          "value": "550",
+          "title": "Nhân sự",
+          "text": "Đội ngũ quy mô lớn, tận tâm hỗ trợ các dự án của khách hàng."
+        },
+        {
+          "value": "10+",
+          "title": "Năm kinh nghiệm",
+          "text": "Hơn 10 năm kinh nghiệm tạo dữ liệu huấn luyện AI."
+        },
+        {
+          "value": "#1",
+          "title": "Dẫn đầu tại Nhật Bản",
+          "text": "Được xếp hạng số 1 trên thị trường Nhật Bản trong 5 năm liên tiếp."
+        },
+        {
+          "value": "235+",
+          "title": "Dự án đã hoàn thành",
+          "text": "Đã hoàn thành hơn 235 dự án cùng các doanh nghiệp lớn tại Nhật Bản."
+        }
+      ],
       "levels": [
         {
           "id": "overall",
@@ -840,7 +856,7 @@
         }
       ],
       "links_note": "Connections (see docs/reference/slide17_org_chart.png): Manager -> Sub TeamLead and PMO; PMO -> 3 Project Leaders; Sub Project Leader sits below the Project Leader row; Sub Project Leader -> 2 Super Checkers; each Super Checker -> 2 Checkers; each Checker -> 2 Annotators.",
-      "image": "team_org_image"
+      "image": "why_bpo_org_image"
     },
     "principles": {
       "title": "Nguyên tắc của chúng tôi",
@@ -851,6 +867,33 @@
         { "title": "Xây dựng niềm tin", "text": "Chúng tôi đề cao sự minh bạch, trung thực và niềm tin lâu dài với khách hàng." },
         { "title": "Cùng nhau phát triển", "text": "Chúng tôi đồng hành như một đối tác, cùng tạo ra giá trị và phát triển với khách hàng." }
       ]
+    },
+    "workflow": {
+      "title": "Hoạt động của chúng tôi",
+      "lead": "Mỗi dự án trải qua 4 giai đoạn rõ ràng, với sự phối hợp chặt chẽ giữa khách hàng và BRYCEN BPO.",
+      "steps": [
+        { "title": "Tiếp nhận & đo đạc", "text": "Nhận yêu cầu, đo đạc thử khối lượng và độ khó, thống nhất đơn hàng với khách hàng." },
+        { "title": "Thể chế & đào tạo", "text": "Lập đội ngũ, chuẩn bị môi trường làm việc, kickoff và đào tạo theo hướng dẫn của dự án." },
+        { "title": "Thực hiện & kiểm tra", "text": "Gán nhãn và kiểm tra qua nhiều lớp; giao hàng trung gian để nhận phản hồi (FB) từ khách hàng." },
+        { "title": "Giao hàng & rút kinh nghiệm", "text": "Giao hàng lần cuối, nghiệm thu và tổng kết kinh nghiệm cho dự án sau." }
+      ]
+    },
+    "quality": {
+      "title": "Kiểm soát chất lượng của chúng tôi",
+      "lead": "Dữ liệu chỉ đến tay khách hàng sau khi đã đi qua 5 lớp làm và duyệt. Nếu một lớp phát hiện lỗi, dữ liệu được trả lại để sửa rồi xoay vòng qua các lớp cho đến khi đạt yêu cầu.",
+      "principles": [
+        { "title": "Nhiều lớp độc lập", "text": "Người làm và người kiểm tra là các vai trò riêng biệt." },
+        { "title": "Sửa lỗi theo vòng lặp", "text": "Lỗi được trả lại đúng lớp để sửa và kiểm tra lại." },
+        { "title": "Chuẩn hóa và đào tạo", "text": "Hướng dẫn thống nhất và đào tạo trước khi làm thực tế." },
+        { "title": "Phản hồi từ khách hàng", "text": "Giao hàng trung gian để nhận phản hồi sớm." }
+      ],
+      "flow_image": "why_bpo_quality_flow",
+      "flow_caption": ""
+    },
+    "security": {
+      "title": "Bảo mật thông tin của chúng tôi",
+      "text": "Thông tin của khách hàng được bảo vệ nghiêm ngặt thông qua các quy định về an ninh thông tin của công ty.",
+      "image": "why_bpo_security_image"
     },
     "process": {
       "title": "Quy trình vận hành",
@@ -1080,7 +1123,7 @@
         ]
       ],
       "edge_note": "Edge m9->m4 is the feedback loop back to production. Layout reference: docs/reference/slide18_operating_flow.png",
-      "image": "team_process_image",
+      "image": "why_bpo_process_image",
       "actors": {
         "customer": "Khách hàng",
         "bpo": "BPO BRYCEN VN",
@@ -1139,11 +1182,11 @@
         }
       ],
       "images": [
-        "team_people_japan",
-        "team_people_training",
-        "team_people_event"
+        "why_bpo_people_japan",
+        "why_bpo_people_training",
+        "why_bpo_people_event"
       ],
-      "country_image": "team_japan_country",
+      "country_image": "why_bpo_japan_country",
       "gallery": {
         "label": "Thư viện ảnh đào tạo"
       }

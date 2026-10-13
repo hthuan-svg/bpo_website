@@ -15,7 +15,7 @@ Requirements:
 - clear empty state if no approved jobs exist
 - no invented job information
 
-Remove recruitment content from Team if not already done.
+Remove recruitment content from Why BRYCEN BPO if not already done.
 
 Test:
 - sorting

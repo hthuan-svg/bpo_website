@@ -1,4 +1,4 @@
-# Team Content Specification
+# Why BRYCEN BPO Content Specification
 
 ## Cơ Cấu bộ phận
 

@@ -102,20 +102,23 @@
 | `services_collection_sample_lidar` | `services/services_collection_sample_lidar.jpg` | Ảnh mẫu LiDAR (chưa dùng) | 960×527 |  |
 | `services_overview_2d` | `services/services_overview_2d.jpg` | Thẻ dịch vụ 2D | 960×565 |  |
 | `services_overview_3d` | `services/services_overview_3d.jpg` | Thẻ dịch vụ 3D | 960×527 |  |
-| `services_quality_flow` | `services/services_quality_flow.jpg` | Kiểm soát chất lượng – ảnh diễn giải (bạn thêm) | 1600×900 | **Ảnh giữ chỗ** |
+| `services_quality_flow` | `services/services_quality_flow.jpg` | Dịch vụ – ảnh minh họa kiểm soát chất lượng | 1600×900 | **Ảnh giữ chỗ** |
 | `services_quality_principles` | `services/services_quality_principles.png` | Kiểm soát chất lượng – ảnh Nguyên tắc (to, giữa trang) | 850×260 |  |
-| `services_security_image` | `services/services_security_image.jpg` | Bảo mật thông tin – ảnh minh họa | 1200×800 | **Ảnh giữ chỗ** |
+| `services_security_image` | `services/services_security_image.jpg` | Dịch vụ – ảnh minh họa bảo mật thông tin | 1200×800 | **Ảnh giữ chỗ** |
 
-## `team/`  (6 ảnh)
+## `why_bpo/`  (9 ảnh)
 
 | Slot | File | Dùng ở đâu | Kích thước | Ghi chú |
 |---|---|---|---|---|
-| `team_japan_country` | `team/team_japan_country.jpg` | Nhân lực đào tạo – ảnh đất nước Nhật Bản | 1600×760 | **Ảnh giữ chỗ** |
-| `team_org_image` | `team/team_org_image.jpg` | Cơ cấu bộ phận – ảnh làm việc với khách hàng | 1600×900 | **Ảnh giữ chỗ** |
-| `team_people_event` | `team/team_people_event.jpg` | Nhân lực đào tạo – ảnh 3 | 1200×1096 |  |
-| `team_people_japan` | `team/team_people_japan.jpg` | Nhân lực đào tạo – ảnh 1 | 719×540 |  |
-| `team_people_training` | `team/team_people_training.jpg` | Nhân lực đào tạo – ảnh 2 | 720×540 |  |
-| `team_process_image` | `team/team_process_image.jpg` | Nguyên tắc làm việc – ảnh bên trái | 1600×900 |  |
+| `why_bpo_japan_country` | `why_bpo/why_bpo_japan_country.jpg` | Nhân lực đào tạo – ảnh đất nước Nhật Bản | 1600×760 | **Ảnh giữ chỗ** |
+| `why_bpo_org_image` | `why_bpo/why_bpo_org_image.jpg` | Cơ cấu bộ phận – ảnh làm việc với khách hàng | 1600×900 | **Ảnh giữ chỗ** |
+| `why_bpo_people_event` | `why_bpo/why_bpo_people_event.jpg` | Nhân lực đào tạo – ảnh 3 | 1200×1096 |  |
+| `why_bpo_people_japan` | `why_bpo/why_bpo_people_japan.jpg` | Nhân lực đào tạo – ảnh 1 | 719×540 |  |
+| `why_bpo_people_training` | `why_bpo/why_bpo_people_training.jpg` | Nhân lực đào tạo – ảnh 2 | 720×540 |  |
+| `why_bpo_process_image` | `why_bpo/why_bpo_process_image.jpg` | Nguyên tắc làm việc – ảnh bên trái | 1600×900 |  |
+| `why_bpo_quality_flow` | `why_bpo/why_bpo_quality_flow.jpg` | Our quality control – ảnh minh họa | 1600×900 | **Ảnh giữ chỗ** |
+| `why_bpo_security_image` | `why_bpo/why_bpo_security_image.jpg` | Our information security – ảnh minh họa | 1200×800 | **Ảnh giữ chỗ** |
+| `why_bpo_workflow_image` | `why_bpo/why_bpo_workflow_image.jpg` | Our work – ảnh bên trái | — | **Ảnh giữ chỗ** |
 
 ## `achievements/`  (5 ảnh)
 
