@@ -31,7 +31,7 @@ contact{page_title,lead,banner,response_note,labels,form{fields,type_options,…
 `data-i18n="path"` · `data-i18n-html` (sanitised: b i em strong br a) · `data-i18n-attr="attr:path"` · `data-img="slot"` · `data-bg="slot"` · `data-list="path"` + `<template>` + `data-field` / `data-img-field` · `data-config="path"` (from `site.config.json`) · `data-show-if="path"` (hide when empty).
 
 ## Slot naming
-`<page>_<section>_<item>[_<nn>]`, folder = the page prefix (`home about services why_bpo achievements vision news contact subaru recruits`, anything shared = `common`). Examples: `home_stat_staff`, `services_3d_bbox_strip_02`, `subaru_tech_eyesight`, `news_2026_09_us_dataset`.
+`<page>_<section>_<item>[_<nn>]`, folder = the owning page (`home about services why_bpo achievements vision news contact subaru recruits`; shared brand assets use `common`). The legacy `growth_timeline_image` slot is stored under `vision/`. Examples: `home_stat_staff`, `services_3d_bbox_strip_02`, `subaru_tech_eyesight`, `news_2026_09_us_dataset`.
 
 ## news.json / recruits.json item
 News: `{id,date,category,hidden,image,link,facebook_post,title{vi,en,ja},summary{…}}`. Image slot convention for news: `news_<yyyy>_<mm>_<slug>`.

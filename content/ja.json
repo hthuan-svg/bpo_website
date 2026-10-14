@@ -72,7 +72,6 @@
       "recruits": "採用情報",
       "subaru": "SUBARU"
     },
-    "skip": "メインコンテンツへ",
     "read_more": "詳しく見る",
     "show_more": "もっと見る",
     "read_original": "元の記事を読む",
@@ -195,7 +194,6 @@
         "text": "プロジェクトは納期を守り、品質にご満足いただいています。"
       }
     ],
-    "customers_title": "主なお客様",
     "news_title": "最新ニュース",
     "cta": {
       "title": "AIデータについてご相談ください",
@@ -362,71 +360,6 @@
     "annotation": {
       "title": "AI学習データ作成",
       "lead": "LiDARやカメラの生データを、AIモデルがすぐ使える学習データへ。高精度なラベル付け、多層検査、納期遵守でお届けします。",
-      "quality": {
-        "title": "品質管理",
-        "text": "すべてのプロジェクトで、中間・最終の各段階で品質検査を行い、お客様へのフィードバック（FB）を共有します。",
-        "image": "services_quality_principles",
-        "lead": "データは、作業と承認の5層を通過して初めてお客様に届きます。いずれかの層で不備が見つかれば差し戻して修正し、基準を満たすまで各層を循環します。",
-        "layers": [
-          {
-            "code": "VNA",
-            "role": "Annotator",
-            "action": "作業（アノテーション）",
-            "desc": "プロジェクトのガイドラインに沿ってラベル付けを行います。"
-          },
-          {
-            "code": "VNC",
-            "role": "Checker",
-            "action": "一次レビュー",
-            "desc": "品質検査（第1層）：不備を発見し修正を依頼します。"
-          },
-          {
-            "code": "VNSC",
-            "role": "Super Checker",
-            "action": "二次レビュー",
-            "desc": "品質検査（第2層）：一次レビューの結果を再確認します。"
-          },
-          {
-            "code": "SubPL",
-            "role": "Sub Project Leader",
-            "action": "総合承認（1回目）",
-            "desc": "バッチ全体の品質と一貫性を総合的に確認します。"
-          },
-          {
-            "code": "PL",
-            "role": "Project Leader",
-            "action": "最終総合承認",
-            "desc": "お客様へ納品する前の最終承認を行います。"
-          }
-        ],
-        "delivery_label": "お客様へ納品",
-        "pass_label": "合格",
-        "fail_label": "不合格 → 差し戻し",
-        "loop_label": "合格するまで各層を循環",
-        "principles_title": "品質管理の原則",
-        "principles": [
-          {
-            "title": "独立した複数の層",
-            "text": "作業者と検査者は別の役割です。"
-          },
-          {
-            "title": "是正のループ",
-            "text": "不備は該当の層へ差し戻し、修正・再検査します。"
-          },
-          {
-            "title": "標準化と教育",
-            "text": "本番作業の前に、統一ガイドラインと教育を実施します。"
-          },
-          {
-            "title": "お客様のフィードバック",
-            "text": "中間納品で早期にフィードバックを受けます。"
-          }
-        ],
-        "flow_image": "services_quality_flow",
-        "principles_image": "services_quality_principles",
-        "flow_caption": "",
-        "flow_title": "品質管理プロセス"
-      },
       "tabs": {
         "modalities": "データの種類",
         "usecases": "活用例"
@@ -557,28 +490,6 @@
           ]
         }
       ],
-      "workflow": {
-        "title": "私たちの進め方",
-        "lead": "全てのプロジェクトは4つの段階で進み、お客様・BPO日本・BPOベトナムが緊密に連携します。",
-        "steps": [
-          {
-            "title": "受付・計測",
-            "text": "依頼を受け、作業量・難易度を試行計測し、発注内容をお客様と合意します。"
-          },
-          {
-            "title": "体制構築・教育",
-            "text": "体制を組み、作業環境を整え、キックオフとガイドラインに沿った教育を行います。"
-          },
-          {
-            "title": "本番作業・検査",
-            "text": "アノテーションと多層検査を実施し、中間納品でお客様のフィードバック（FB）を反映します。"
-          },
-          {
-            "title": "納品・振り返り",
-            "text": "最終納品・検収を行い、次のプロジェクトに向けて振り返ります。"
-          }
-        ]
-      },
       "usecases": {
         "title": "ラベル付けされたデータの用途",
         "items": [
@@ -599,11 +510,6 @@
             "text": "身体のキーポイントから姿勢や動きを推定します。"
           }
         ]
-      },
-      "security": {
-        "title": "情報セキュリティ",
-        "text": "お客様の情報は、社内の情報セキュリティ規程により厳格に保護されます。",
-        "image": "services_security_image"
       },
       "cta": {
         "title": "AI学習データが必要ですか？",
@@ -680,9 +586,18 @@
       "status": "近日公開",
       "message": "データエンジニアリングサービスの情報を準備中です。公開まで今しばらくお待ちいただくか、直接お問い合わせください。",
       "gallery": [
-        { "image": "services_data_engineering_01", "caption": "" },
-        { "image": "services_data_engineering_02", "caption": "" },
-        { "image": "services_data_engineering_03", "caption": "" }
+        {
+          "image": "services_data_engineering_01",
+          "caption": ""
+        },
+        {
+          "image": "services_data_engineering_02",
+          "caption": ""
+        },
+        {
+          "image": "services_data_engineering_03",
+          "caption": ""
+        }
       ]
     }
   },
@@ -723,169 +638,75 @@
           "text": "日本の大手企業とともに235件以上のプロジェクトを完了しました。"
         }
       ],
-      "levels": [
-        {
-          "id": "overall",
-          "tone": "red",
-          "label": "全体管理層",
-          "nodes": [
-            {
-              "role": "Manager"
-            }
-          ]
-        },
-        {
-          "id": "support",
-          "tone": "orange",
-          "label": "プロジェクト管理・支援層",
-          "nodes": [
-            {
-              "role": "Sub TeamLead"
-            },
-            {
-              "role": "PMO"
-            }
-          ]
-        },
-        {
-          "id": "pm",
-          "tone": "yellow",
-          "label": "プロジェクトリーダー層",
-          "nodes": [
-            {
-              "role": "Project Leader",
-              "code": "PL"
-            },
-            {
-              "role": "Project Leader",
-              "code": "PL"
-            },
-            {
-              "role": "Project Leader",
-              "code": "PL"
-            }
-          ]
-        },
-        {
-          "id": "pm_support",
-          "tone": "green",
-          "label": "プロジェクト管理補佐層",
-          "nodes": [
-            {
-              "role": "Sub Project Leader",
-              "code": "SubPL"
-            }
-          ]
-        },
-        {
-          "id": "qc2",
-          "tone": "blue",
-          "label": "品質検査（第2層）",
-          "nodes": [
-            {
-              "role": "Super Checker",
-              "code": "VNSC"
-            },
-            {
-              "role": "Super Checker",
-              "code": "VNSC"
-            }
-          ]
-        },
-        {
-          "id": "qc1",
-          "tone": "slate",
-          "label": "品質検査（第1層）",
-          "nodes": [
-            {
-              "role": "Checker",
-              "code": "VNC"
-            },
-            {
-              "role": "Checker",
-              "code": "VNC"
-            },
-            {
-              "role": "Checker",
-              "code": "VNC"
-            },
-            {
-              "role": "Checker",
-              "code": "VNC"
-            }
-          ]
-        },
-        {
-          "id": "annotation",
-          "tone": "purple",
-          "label": "アノテーション層",
-          "nodes": [
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            }
-          ]
-        }
-      ],
-      "links_note": "Connections (see docs/reference/slide17_org_chart.png): Manager -> Sub TeamLead and PMO; PMO -> 3 Project Leaders; Sub Project Leader sits below the Project Leader row; Sub Project Leader -> 2 Super Checkers; each Super Checker -> 2 Checkers; each Checker -> 2 Annotators.",
       "image": "why_bpo_org_image"
     },
     "principles": {
       "title": "私たちの原則",
       "items": [
-        { "title": "品質最優先", "text": "私たちは品質と正確性を常に最優先します。" },
-        { "title": "約束を守る", "text": "約束した内容を、合意した基準に沿って期限内に提供します。" },
-        { "title": "主体的に行動する", "text": "課題を早期に見つけ、問題になる前に対応します。" },
-        { "title": "信頼を築く", "text": "透明性と誠実さを大切にし、お客様との長期的な信頼関係を築きます。" },
-        { "title": "共に成長する", "text": "パートナーとして価値を生み出し、お客様と共に成長します。" }
+        {
+          "title": "品質最優先",
+          "text": "私たちは品質と正確性を常に最優先します。"
+        },
+        {
+          "title": "約束を守る",
+          "text": "約束した内容を、合意した基準に沿って期限内に提供します。"
+        },
+        {
+          "title": "主体的に行動する",
+          "text": "課題を早期に見つけ、問題になる前に対応します。"
+        },
+        {
+          "title": "信頼を築く",
+          "text": "透明性と誠実さを大切にし、お客様との長期的な信頼関係を築きます。"
+        },
+        {
+          "title": "共に成長する",
+          "text": "パートナーとして価値を生み出し、お客様と共に成長します。"
+        }
       ]
     },
     "workflow": {
       "title": "私たちの仕事",
       "lead": "各プロジェクトは4つの明確な段階で進み、お客様とBRYCEN BPOが緊密に連携します。",
       "steps": [
-        { "title": "受付・計測", "text": "依頼を受け、作業量・難易度を試行計測し、発注内容をお客様と合意します。" },
-        { "title": "体制構築・教育", "text": "体制を組み、作業環境を整え、キックオフとガイドラインに沿った教育を行います。" },
-        { "title": "本番作業・検査", "text": "アノテーションと多層検査を実施し、中間納品でお客様のフィードバック（FB）を反映します。" },
-        { "title": "納品・振り返り", "text": "最終納品・検収を行い、次のプロジェクトに向けて振り返ります。" }
+        {
+          "title": "受付・計測",
+          "text": "依頼を受け、作業量・難易度を試行計測し、発注内容をお客様と合意します。"
+        },
+        {
+          "title": "体制構築・教育",
+          "text": "体制を組み、作業環境を整え、キックオフとガイドラインに沿った教育を行います。"
+        },
+        {
+          "title": "本番作業・検査",
+          "text": "アノテーションと多層検査を実施し、中間納品でお客様のフィードバック（FB）を反映します。"
+        },
+        {
+          "title": "納品・振り返り",
+          "text": "最終納品・検収を行い、次のプロジェクトに向けて振り返ります。"
+        }
       ]
     },
     "quality": {
       "title": "私たちの品質管理",
       "lead": "データは、作業と承認の5層を通過して初めてお客様に届きます。いずれかの層で不備が見つかれば差し戻して修正し、基準を満たすまで各層を循環します。",
       "principles": [
-        { "title": "独立した複数の層", "text": "作業者と検査者は別の役割です。" },
-        { "title": "是正のループ", "text": "不備は該当の層へ差し戻し、修正・再検査します。" },
-        { "title": "標準化と教育", "text": "本番作業の前に、統一ガイドラインと教育を実施します。" },
-        { "title": "お客様のフィードバック", "text": "中間納品で早期にフィードバックを受けます。" }
+        {
+          "title": "独立した複数の層",
+          "text": "作業者と検査者は別の役割です。"
+        },
+        {
+          "title": "是正のループ",
+          "text": "不備は該当の層へ差し戻し、修正・再検査します。"
+        },
+        {
+          "title": "標準化と教育",
+          "text": "本番作業の前に、統一ガイドラインと教育を実施します。"
+        },
+        {
+          "title": "お客様のフィードバック",
+          "text": "中間納品で早期にフィードバックを受けます。"
+        }
       ],
       "flow_image": "why_bpo_quality_flow",
       "flow_caption": ""
@@ -898,231 +719,6 @@
     "process": {
       "title": "運用フロー",
       "lead": "お客様の依頼から検収まで、BPO BRYCEN VIETNAMとお客様がどのように進めるかをご紹介します。",
-      "lanes": [
-        "お客様",
-        "BPO（日本）",
-        "BPO（ベトナム）"
-      ],
-      "phases": [
-        "初期段階",
-        "中間段階",
-        "最終段階"
-      ],
-      "nodes": [
-        {
-          "id": "e1",
-          "lane": 0,
-          "phase": 0,
-          "text": "依頼"
-        },
-        {
-          "id": "e2",
-          "lane": 1,
-          "phase": 0,
-          "text": "受付"
-        },
-        {
-          "id": "e3",
-          "lane": 2,
-          "phase": 0,
-          "text": "受付"
-        },
-        {
-          "id": "e4",
-          "lane": 2,
-          "phase": 0,
-          "text": "計測"
-        },
-        {
-          "id": "e5",
-          "lane": 1,
-          "phase": 0,
-          "text": "計測"
-        },
-        {
-          "id": "e6",
-          "lane": 0,
-          "phase": 0,
-          "text": "発注"
-        },
-        {
-          "id": "e7",
-          "lane": 1,
-          "phase": 0,
-          "text": "受注"
-        },
-        {
-          "id": "e8",
-          "lane": 2,
-          "phase": 0,
-          "text": "受注"
-        },
-        {
-          "id": "e9",
-          "lane": 2,
-          "phase": 0,
-          "text": "体制構築"
-        },
-        {
-          "id": "m1",
-          "lane": 2,
-          "phase": 1,
-          "text": "キックオフ"
-        },
-        {
-          "id": "m2",
-          "lane": 2,
-          "phase": 1,
-          "text": "作業環境の構築"
-        },
-        {
-          "id": "m3",
-          "lane": 2,
-          "phase": 1,
-          "text": "トレーニング"
-        },
-        {
-          "id": "m4",
-          "lane": 2,
-          "phase": 1,
-          "text": "本番作業"
-        },
-        {
-          "id": "m5",
-          "lane": 1,
-          "phase": 1,
-          "text": "品質検査"
-        },
-        {
-          "id": "m6",
-          "lane": 1,
-          "phase": 1,
-          "text": "中間納品"
-        },
-        {
-          "id": "m7",
-          "lane": 0,
-          "phase": 1,
-          "text": "品質検査"
-        },
-        {
-          "id": "m8",
-          "lane": 0,
-          "phase": 1,
-          "text": "FB送付"
-        },
-        {
-          "id": "m9",
-          "lane": 1,
-          "phase": 1,
-          "text": "FB連携"
-        },
-        {
-          "id": "f1",
-          "lane": 2,
-          "phase": 2,
-          "text": "プロジェクト振り返り"
-        },
-        {
-          "id": "f2",
-          "lane": 1,
-          "phase": 2,
-          "text": "最終納品"
-        },
-        {
-          "id": "f3",
-          "lane": 0,
-          "phase": 2,
-          "text": "検収"
-        }
-      ],
-      "edges": [
-        [
-          "e1",
-          "e2"
-        ],
-        [
-          "e2",
-          "e3"
-        ],
-        [
-          "e3",
-          "e4"
-        ],
-        [
-          "e4",
-          "e5"
-        ],
-        [
-          "e5",
-          "e6"
-        ],
-        [
-          "e6",
-          "e7"
-        ],
-        [
-          "e7",
-          "e8"
-        ],
-        [
-          "e8",
-          "e9"
-        ],
-        [
-          "e9",
-          "m1"
-        ],
-        [
-          "m1",
-          "m2"
-        ],
-        [
-          "m2",
-          "m3"
-        ],
-        [
-          "m3",
-          "m4"
-        ],
-        [
-          "m4",
-          "m5"
-        ],
-        [
-          "m5",
-          "m6"
-        ],
-        [
-          "m6",
-          "m7"
-        ],
-        [
-          "m7",
-          "m8"
-        ],
-        [
-          "m8",
-          "m9"
-        ],
-        [
-          "m9",
-          "m4"
-        ],
-        [
-          "m4",
-          "f1"
-        ],
-        [
-          "f1",
-          "f2"
-        ],
-        [
-          "f2",
-          "f3"
-        ]
-      ],
-      "edge_note": "Edge m9->m4 is the feedback loop back to production. Layout reference: docs/reference/slide18_operating_flow.png",
       "image": "why_bpo_process_image",
       "actors": {
         "customer": "お客様",
@@ -1202,12 +798,6 @@
       "title": "実績",
       "text": "AI学習データ作成の分野で、日本国内5年連続シェアNo.1。6年連続を目指しています。",
       "source": "出典：富士キメラ総研",
-      "badges": [
-        "award_top1_01",
-        "award_top1_02",
-        "award_top1_03",
-        "achievements_award_image"
-      ],
       "headline": "#1",
       "headline_text": "日本国内No.1",
       "image": "achievements_award_image"
@@ -1217,13 +807,6 @@
       "text": "長年トップの実績により、日本国内外の大手のお客様向けに計235件のプロジェクトを完了しました。メインパートナーであるSUBARUとは長期案件も多数あります。",
       "stat_value": "235",
       "stat_label": "完了プロジェクト数",
-      "customers": [
-        "customer_sony",
-        "subaru_logo",
-        "customer_denso",
-        "customer_afeela",
-        "customer_nikon"
-      ],
       "images": [
         "achievements_projects_01",
         "achievements_projects_02",
@@ -1242,50 +825,6 @@
       "title": "今後の方向性",
       "text": "アノテーション事業を日本国内にとどまらず、規模・品質の両面でさらに発展させます。今後、日本の本社は米国へ市場を拡大し、新たな機会とお客様を開拓します。",
       "image": "vision_direction_image"
-    },
-    "roadmap": {
-      "title": "成長ロードマップ",
-      "lead": "アノテーション事業を、日本国内にとどまらず、規模・品質の両面でグローバルに発展させます。",
-      "stages": [
-        {
-          "id": "sea",
-          "phase": "現在",
-          "featured": false,
-          "image": "vision_roadmap_sea",
-          "title": "東南アジア",
-          "text": "東南アジアで事業を展開しており、現在はベトナム、ミャンマー、カンボジアで活動しています。",
-          "countries": [
-            {
-              "name": "ベトナム",
-              "status": "current"
-            },
-            {
-              "name": "ミャンマー",
-              "status": "current"
-            },
-            {
-              "name": "カンボジア",
-              "status": "current"
-            }
-          ]
-        },
-        {
-          "id": "usa",
-          "phase": "次のステップ",
-          "featured": true,
-          "image": "vision_roadmap_usa",
-          "title": "アメリカ",
-          "text": "今後、日本の本社が米国へ市場を拡大し、新たな機会とお客様を開拓します。"
-        },
-        {
-          "id": "eu",
-          "phase": "さらに先の未来",
-          "featured": false,
-          "image": "vision_roadmap_eu",
-          "title": "欧州（EU）",
-          "text": "さらに将来的には、欧州市場へも視野を広げ、サービス提供の範囲を拡大していきます。"
-        }
-      ]
     },
     "growth": {
       "title": "成長タイムライン",
@@ -1339,13 +878,11 @@
       "address": "住所",
       "email": "メール",
       "phone": "電話",
-      "form": "フォームで問い合わせる",
       "hours": "営業時間",
       "map": "地図"
     },
     "hours": "",
     "facebook_link": "Facebookページを開く",
-    "note": "【要追記】PowerPointの連絡先スライドが空白でした。content/site.config.json にメール・電話・住所を入力してください。",
     "banner": "contact_banner",
     "response_note": "2営業日以内にご連絡いたします。",
     "form": {

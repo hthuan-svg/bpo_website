@@ -1,0 +1,68 @@
+{
+  "_readme": "Cấu hình chung. Để trống ('') = tự động ẩn mục đó trên web. Mạng xã hội hỗ trợ: facebook, youtube, linkedin, instagram, zalo.",
+  "siteName": "BRYCEN VIETNAM – BPO",
+  "defaultLang": "vi",
+  "languages": [
+    "vi",
+    "en",
+    "ja"
+  ],
+  "parentCompanySite": "https://www.brycen.co.jp/",
+  "social": {
+    "facebook": "",
+    "youtube": "",
+    "linkedin": "",
+    "instagram": "",
+    "zalo": ""
+  },
+  "facebookPagePlugin": {
+    "enabled": false,
+    "pageUrl": "",
+    "height": 600
+  },
+  "contact": {
+    "email": "bpovn_ldr@brycen.com.vn",
+    "phone": "+84-397-7170722",
+    "address": {
+      "vi": "25 Nguyễn Văn Cừ, Huế, Việt Nam",
+      "en": "25 Nguyen Van Cu, Hue, Viet Nam",
+      "ja": "25 Nguyen Van Cu, Hue, Viet Nam"
+    },
+    "mapEmbedUrl": "",
+    "formUrl": "",
+    "form": {
+      "endpoint": "",
+      "recipientEmail": "",
+      "subjectPrefix": "[BPO Website]"
+    },
+    "privacyPolicyUrl": ""
+  },
+  "analytics": {
+    "googleAnalyticsId": ""
+  },
+  "layout": {
+    "annotationRows": "image-left",
+    "_annotationRowsOptions": "image-left | zigzag"
+  },
+  "backToTop": {
+    "enabled": true,
+    "showAfterPx": 400
+  },
+  "recruits": {
+    "autoCloseByDeadline": true
+  },
+  "marquee": {
+    "home": {
+      "secondsPerLoop": 24
+    },
+    "services": {
+      "secondsPerLoop": 35
+    },
+    "why_bpo": {
+      "secondsPerLoop": 32
+    }
+  },
+  "theme": {
+    "mode": "dark-green"
+  }
+}

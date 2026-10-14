@@ -9,6 +9,7 @@ const ignoredContentRoots = ['content/_backup_admin', 'content/_backup_', 'asset
 const placeholderMarkers = ['[CẦN BỔ SUNG]', '[TO ADD]', '【要追記】'];
 const newsCategories = ['announcement', 'event', 'award', 'project', 'recruit', 'media'];
 const slotReferenceKeys = new Set(['image', 'images', 'icon', 'customers', 'badges']);
+const retiredCustomerNames = /\b(?:Sony|Denso|Honda|Nikon|AFEELA)\b/i;
 const optionalEmptyTextPaths = new Set(['contact.hours']);
 const errors = [];
 const warnings = [];
@@ -109,9 +110,9 @@ function getNestedValue(object, path) {
 }
 
 function getExpectedSlotDirectory(slotName) {
-  const sharedPrefixes = new Set(['company', 'browser', 'background', 'og']);
-  const prefix = slotName.split('_')[0];
-  return sharedPrefixes.has(prefix) ? 'common' : prefix || 'common';
+  const pageFolders = ['why_bpo', 'achievements', 'services', 'recruits', 'subaru', 'contact', 'vision', 'about', 'home', 'news'];
+  const page = pageFolders.find((folder) => slotName.startsWith(`${folder}_`));
+  return page || (slotName === 'growth_timeline_image' ? 'vision' : 'common');
 }
 
 async function checkImageSlots(images) {
@@ -207,6 +208,9 @@ async function checkHtmlSlotReferences(slots) {
   for (const filePath of htmlFiles) {
     const sourcePath = relative(root, filePath).split(sep).join('/');
     const html = await readFile(filePath, 'utf8');
+    if (retiredCustomerNames.test(html)) {
+      report(sourcePath, 'Other-customer names or logos must not appear on site pages or style guides.');
+    }
     for (const match of html.matchAll(attributePattern)) {
       const slotName = match[1].trim();
       if (slotName) usedSlots.add(slotName);
@@ -365,6 +369,8 @@ async function main() {
     readJson('content/recruits.json'),
     readJson('content/site.config.json')
   ]);
+  const imageMap = await readJson('revision3/image-map.json');
+  const retiredSlots = new Set(imageMap?.retire ?? []);
   const slots = await checkImageSlots(images);
   if (images !== undefined) {
     const references = [];
@@ -379,18 +385,48 @@ async function main() {
       }
     }
     const usedSlots = new Set(references.map((reference) => reference.slotName));
+    for (const reference of references) {
+      if (retiredSlots.has(reference.slotName)) {
+        report(`${reference.sourcePath} → ${reference.key}="${reference.slotName}"`, 'This image slot is retired. Remove the reference or use its replacement.');
+      }
+    }
     for (const slotName of await checkHtmlSlotReferences(slots)) {
       usedSlots.add(slotName);
+      if (retiredSlots.has(slotName)) report(`HTML image slot "${slotName}"`, 'This image slot is retired. Remove the reference or use its replacement.');
     }
+    const placeholdersByFolder = new Map();
     for (const [slotName, slot] of Object.entries(slots)) {
       if (slot?.placeholder === true && usedSlots.has(slotName)) {
-        warn(`content/images.json → slots.${slotName}`, 'Placeholder image is still in use; replace this image before publishing.');
+        const folder = getExpectedSlotDirectory(slotName);
+        if (!placeholdersByFolder.has(folder)) placeholdersByFolder.set(folder, []);
+        placeholdersByFolder.get(folder).push(slotName);
       }
+    }
+    for (const [folder, names] of placeholdersByFolder) {
+      warn(`assets/images/${folder}/`, `Placeholder slots still in use: ${names.join(', ')}.`);
     }
     if (news !== undefined) checkNews(news, slots);
     if (recruits !== undefined) checkRecruits(recruits, slots);
   }
   if (config !== undefined) checkSiteConfig(config);
+
+  for (const [filePath, value] of parsedFiles) {
+    if (!/^content\/(?:vi|en|ja)\.json$/.test(filePath)) continue;
+    const serialized = JSON.stringify(value);
+    if (retiredCustomerNames.test(serialized)) {
+      report(filePath, 'Other-customer names must not appear in public content.');
+    }
+  }
+  const sourceFiles = await listFiles(root, (name) => /\.(?:html|js|css)$/.test(name.toLowerCase()));
+  for (const filePath of sourceFiles) {
+    const sourcePath = relative(root, filePath).split(sep).join('/');
+    if (isIgnoredPath(sourcePath)) continue;
+    const source = await readFile(filePath, 'utf8');
+    if (retiredCustomerNames.test(source)) report(sourcePath, 'Other-customer names or logos must not appear on site pages or source files.');
+    for (const retiredSlot of retiredSlots) {
+      if (source.includes(retiredSlot)) report(sourcePath, `Retired image slot "${retiredSlot}" is still referenced.`);
+    }
+  }
 
   for (const warning of warnings) console.warn(warning);
   for (const error of errors) console.error(error);

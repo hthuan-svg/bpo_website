@@ -72,7 +72,6 @@
       "recruits": "Recruitment",
       "subaru": "SUBARU"
     },
-    "skip": "Skip to main content",
     "read_more": "Read more",
     "show_more": "Show more",
     "read_original": "Read original",
@@ -195,7 +194,6 @@
         "text": "Projects are delivered on schedule, and clients are satisfied with the quality."
       }
     ],
-    "customers_title": "Featured customers",
     "news_title": "Latest news",
     "cta": {
       "title": "Let's talk about your AI data",
@@ -362,71 +360,6 @@
     "annotation": {
       "title": "AI Training Data Creation",
       "lead": "We turn raw LiDAR and camera data into model-ready training data — precisely labeled, checked through multiple layers and delivered on time.",
-      "quality": {
-        "title": "Quality control",
-        "text": "Every project goes through quality checks at the interim and final stages, with feedback (FB) shared with the client.",
-        "image": "services_quality_principles",
-        "lead": "Data reaches the customer only after five layers of work and approval. If any layer finds an error, the data is sent back, corrected and cycled through the layers until it meets the requirement.",
-        "layers": [
-          {
-            "code": "VNA",
-            "role": "Annotator",
-            "action": "Annotate",
-            "desc": "Labels the data following the project guideline."
-          },
-          {
-            "code": "VNC",
-            "role": "Checker",
-            "action": "Review round 1",
-            "desc": "Quality check layer 1: finds errors and requests fixes."
-          },
-          {
-            "code": "VNSC",
-            "role": "Super Checker",
-            "action": "Review round 2",
-            "desc": "Quality check layer 2: re-examines the result of round 1."
-          },
-          {
-            "code": "SubPL",
-            "role": "Sub Project Leader",
-            "action": "Overall approval 1",
-            "desc": "Overall review of quality and consistency of the batch."
-          },
-          {
-            "code": "PL",
-            "role": "Project Leader",
-            "action": "Final overall approval",
-            "desc": "Final approval before delivery to the customer."
-          }
-        ],
-        "delivery_label": "Delivery to customer",
-        "pass_label": "Pass",
-        "fail_label": "Not passed → return for rework",
-        "loop_label": "Cycles through the layers until it passes",
-        "principles_title": "Quality principles",
-        "principles": [
-          {
-            "title": "Independent layers",
-            "text": "The person who annotates and the person who checks are separate roles."
-          },
-          {
-            "title": "Corrective loop",
-            "text": "Errors go back to the right layer to be fixed and re-checked."
-          },
-          {
-            "title": "Standards & training",
-            "text": "One guideline and training before production starts."
-          },
-          {
-            "title": "Customer feedback",
-            "text": "Interim deliveries bring feedback early."
-          }
-        ],
-        "flow_image": "services_quality_flow",
-        "principles_image": "services_quality_principles",
-        "flow_caption": "",
-        "flow_title": "Quality control process"
-      },
       "tabs": {
         "modalities": "Data types",
         "usecases": "Use cases"
@@ -557,28 +490,6 @@
           ]
         }
       ],
-      "workflow": {
-        "title": "How we work",
-        "lead": "Every project follows four clear stages, with close coordination between the customer, BPO Japan and BPO Vietnam.",
-        "steps": [
-          {
-            "title": "Intake & trial measurement",
-            "text": "Receive the request, trial-measure volume and difficulty, and agree the order with the customer."
-          },
-          {
-            "title": "Team set-up & training",
-            "text": "Build the team, prepare the work environment, hold the kickoff and train to the project guideline."
-          },
-          {
-            "title": "Production & review",
-            "text": "Annotate and review through multiple layers; interim deliveries bring customer feedback (FB)."
-          },
-          {
-            "title": "Delivery & retrospective",
-            "text": "Final delivery, acceptance and lessons learned for the next project."
-          }
-        ]
-      },
       "usecases": {
         "title": "What is labeled data used for?",
         "items": [
@@ -599,11 +510,6 @@
             "text": "Body keypoints help estimate pose and movement."
           }
         ]
-      },
-      "security": {
-        "title": "Information security",
-        "text": "Customer information is strictly protected under the company's information security rules.",
-        "image": "services_security_image"
       },
       "cta": {
         "title": "Need training data for AI?",
@@ -680,9 +586,18 @@
       "status": "Coming soon",
       "message": "We are preparing information about our Data Engineering service. Please check back soon or contact us for a direct consultation.",
       "gallery": [
-        { "image": "services_data_engineering_01", "caption": "" },
-        { "image": "services_data_engineering_02", "caption": "" },
-        { "image": "services_data_engineering_03", "caption": "" }
+        {
+          "image": "services_data_engineering_01",
+          "caption": ""
+        },
+        {
+          "image": "services_data_engineering_02",
+          "caption": ""
+        },
+        {
+          "image": "services_data_engineering_03",
+          "caption": ""
+        }
       ]
     }
   },
@@ -723,169 +638,75 @@
           "text": "Completed more than 235 projects with major companies in Japan."
         }
       ],
-      "levels": [
-        {
-          "id": "overall",
-          "tone": "red",
-          "label": "Overall management",
-          "nodes": [
-            {
-              "role": "Manager"
-            }
-          ]
-        },
-        {
-          "id": "support",
-          "tone": "orange",
-          "label": "Project management & support",
-          "nodes": [
-            {
-              "role": "Sub TeamLead"
-            },
-            {
-              "role": "PMO"
-            }
-          ]
-        },
-        {
-          "id": "pm",
-          "tone": "yellow",
-          "label": "Project management",
-          "nodes": [
-            {
-              "role": "Project Leader",
-              "code": "PL"
-            },
-            {
-              "role": "Project Leader",
-              "code": "PL"
-            },
-            {
-              "role": "Project Leader",
-              "code": "PL"
-            }
-          ]
-        },
-        {
-          "id": "pm_support",
-          "tone": "green",
-          "label": "Project management support",
-          "nodes": [
-            {
-              "role": "Sub Project Leader",
-              "code": "SubPL"
-            }
-          ]
-        },
-        {
-          "id": "qc2",
-          "tone": "blue",
-          "label": "Quality check – layer 2",
-          "nodes": [
-            {
-              "role": "Super Checker",
-              "code": "VNSC"
-            },
-            {
-              "role": "Super Checker",
-              "code": "VNSC"
-            }
-          ]
-        },
-        {
-          "id": "qc1",
-          "tone": "slate",
-          "label": "Quality check – layer 1",
-          "nodes": [
-            {
-              "role": "Checker",
-              "code": "VNC"
-            },
-            {
-              "role": "Checker",
-              "code": "VNC"
-            },
-            {
-              "role": "Checker",
-              "code": "VNC"
-            },
-            {
-              "role": "Checker",
-              "code": "VNC"
-            }
-          ]
-        },
-        {
-          "id": "annotation",
-          "tone": "purple",
-          "label": "Annotation",
-          "nodes": [
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            }
-          ]
-        }
-      ],
-      "links_note": "Connections (see docs/reference/slide17_org_chart.png): Manager -> Sub TeamLead and PMO; PMO -> 3 Project Leaders; Sub Project Leader sits below the Project Leader row; Sub Project Leader -> 2 Super Checkers; each Super Checker -> 2 Checkers; each Checker -> 2 Annotators.",
       "image": "why_bpo_org_image"
     },
     "principles": {
       "title": "Our Principles",
       "items": [
-        { "title": "Quality First", "text": "We always put quality and accuracy first." },
-        { "title": "Keep Our Commitments", "text": "We deliver what we promise, on time and to the agreed standards." },
-        { "title": "Be Proactive", "text": "We identify issues early and take action before they become problems." },
-        { "title": "Build Trust", "text": "We value transparency, honesty, and long-term trust with our customers." },
-        { "title": "Grow Together", "text": "We work as a partner, creating value and growing together with our customers." }
+        {
+          "title": "Quality First",
+          "text": "We always put quality and accuracy first."
+        },
+        {
+          "title": "Keep Our Commitments",
+          "text": "We deliver what we promise, on time and to the agreed standards."
+        },
+        {
+          "title": "Be Proactive",
+          "text": "We identify issues early and take action before they become problems."
+        },
+        {
+          "title": "Build Trust",
+          "text": "We value transparency, honesty, and long-term trust with our customers."
+        },
+        {
+          "title": "Grow Together",
+          "text": "We work as a partner, creating value and growing together with our customers."
+        }
       ]
     },
     "workflow": {
       "title": "Our work",
       "lead": "Every project follows four clear stages, with close coordination between the customer and BRYCEN BPO.",
       "steps": [
-        { "title": "Intake & trial measurement", "text": "Receive the request, trial-measure volume and difficulty, and agree the order with the customer." },
-        { "title": "Team set-up & training", "text": "Build the team, prepare the work environment, hold the kickoff and train to the project guideline." },
-        { "title": "Production & review", "text": "Annotate and review through multiple layers; interim deliveries bring customer feedback (FB)." },
-        { "title": "Delivery & retrospective", "text": "Final delivery, acceptance and lessons learned for the next project." }
+        {
+          "title": "Intake & trial measurement",
+          "text": "Receive the request, trial-measure volume and difficulty, and agree the order with the customer."
+        },
+        {
+          "title": "Team set-up & training",
+          "text": "Build the team, prepare the work environment, hold the kickoff and train to the project guideline."
+        },
+        {
+          "title": "Production & review",
+          "text": "Annotate and review through multiple layers; interim deliveries bring customer feedback (FB)."
+        },
+        {
+          "title": "Delivery & retrospective",
+          "text": "Final delivery, acceptance and lessons learned for the next project."
+        }
       ]
     },
     "quality": {
       "title": "Our quality control",
       "lead": "Data reaches the customer only after five layers of work and approval. If any layer finds an error, the data is sent back, corrected and cycled through the layers until it meets the requirement.",
       "principles": [
-        { "title": "Independent layers", "text": "The person who annotates and the person who checks are separate roles." },
-        { "title": "Corrective loop", "text": "Errors go back to the right layer to be fixed and re-checked." },
-        { "title": "Standards & training", "text": "One guideline and training before production starts." },
-        { "title": "Customer feedback", "text": "Interim deliveries bring feedback early." }
+        {
+          "title": "Independent layers",
+          "text": "The person who annotates and the person who checks are separate roles."
+        },
+        {
+          "title": "Corrective loop",
+          "text": "Errors go back to the right layer to be fixed and re-checked."
+        },
+        {
+          "title": "Standards & training",
+          "text": "One guideline and training before production starts."
+        },
+        {
+          "title": "Customer feedback",
+          "text": "Interim deliveries bring feedback early."
+        }
       ],
       "flow_image": "why_bpo_quality_flow",
       "flow_caption": ""
@@ -898,231 +719,6 @@
     "process": {
       "title": "Operating flow",
       "lead": "How BPO BRYCEN VIETNAM and the customer work together, from the first request to final acceptance.",
-      "lanes": [
-        "Customer",
-        "BPO (JP)",
-        "BPO (VN)"
-      ],
-      "phases": [
-        "Early stage",
-        "Middle stage",
-        "Final stage"
-      ],
-      "nodes": [
-        {
-          "id": "e1",
-          "lane": 0,
-          "phase": 0,
-          "text": "Request"
-        },
-        {
-          "id": "e2",
-          "lane": 1,
-          "phase": 0,
-          "text": "Intake"
-        },
-        {
-          "id": "e3",
-          "lane": 2,
-          "phase": 0,
-          "text": "Intake"
-        },
-        {
-          "id": "e4",
-          "lane": 2,
-          "phase": 0,
-          "text": "Trial measurement"
-        },
-        {
-          "id": "e5",
-          "lane": 1,
-          "phase": 0,
-          "text": "Trial measurement"
-        },
-        {
-          "id": "e6",
-          "lane": 0,
-          "phase": 0,
-          "text": "Order"
-        },
-        {
-          "id": "e7",
-          "lane": 1,
-          "phase": 0,
-          "text": "Order received"
-        },
-        {
-          "id": "e8",
-          "lane": 2,
-          "phase": 0,
-          "text": "Order received"
-        },
-        {
-          "id": "e9",
-          "lane": 2,
-          "phase": 0,
-          "text": "Set up team structure"
-        },
-        {
-          "id": "m1",
-          "lane": 2,
-          "phase": 1,
-          "text": "Kickoff"
-        },
-        {
-          "id": "m2",
-          "lane": 2,
-          "phase": 1,
-          "text": "Set up work environment"
-        },
-        {
-          "id": "m3",
-          "lane": 2,
-          "phase": 1,
-          "text": "Training"
-        },
-        {
-          "id": "m4",
-          "lane": 2,
-          "phase": 1,
-          "text": "Production"
-        },
-        {
-          "id": "m5",
-          "lane": 1,
-          "phase": 1,
-          "text": "Quality inspection"
-        },
-        {
-          "id": "m6",
-          "lane": 1,
-          "phase": 1,
-          "text": "Interim delivery"
-        },
-        {
-          "id": "m7",
-          "lane": 0,
-          "phase": 1,
-          "text": "Quality inspection"
-        },
-        {
-          "id": "m8",
-          "lane": 0,
-          "phase": 1,
-          "text": "Send feedback"
-        },
-        {
-          "id": "m9",
-          "lane": 1,
-          "phase": 1,
-          "text": "Relay feedback"
-        },
-        {
-          "id": "f1",
-          "lane": 2,
-          "phase": 2,
-          "text": "Project review & lessons learned"
-        },
-        {
-          "id": "f2",
-          "lane": 1,
-          "phase": 2,
-          "text": "Final delivery"
-        },
-        {
-          "id": "f3",
-          "lane": 0,
-          "phase": 2,
-          "text": "Acceptance"
-        }
-      ],
-      "edges": [
-        [
-          "e1",
-          "e2"
-        ],
-        [
-          "e2",
-          "e3"
-        ],
-        [
-          "e3",
-          "e4"
-        ],
-        [
-          "e4",
-          "e5"
-        ],
-        [
-          "e5",
-          "e6"
-        ],
-        [
-          "e6",
-          "e7"
-        ],
-        [
-          "e7",
-          "e8"
-        ],
-        [
-          "e8",
-          "e9"
-        ],
-        [
-          "e9",
-          "m1"
-        ],
-        [
-          "m1",
-          "m2"
-        ],
-        [
-          "m2",
-          "m3"
-        ],
-        [
-          "m3",
-          "m4"
-        ],
-        [
-          "m4",
-          "m5"
-        ],
-        [
-          "m5",
-          "m6"
-        ],
-        [
-          "m6",
-          "m7"
-        ],
-        [
-          "m7",
-          "m8"
-        ],
-        [
-          "m8",
-          "m9"
-        ],
-        [
-          "m9",
-          "m4"
-        ],
-        [
-          "m4",
-          "f1"
-        ],
-        [
-          "f1",
-          "f2"
-        ],
-        [
-          "f2",
-          "f3"
-        ]
-      ],
-      "edge_note": "Edge m9->m4 is the feedback loop back to production. Layout reference: docs/reference/slide18_operating_flow.png",
       "image": "why_bpo_process_image",
       "actors": {
         "customer": "Customer",
@@ -1202,12 +798,6 @@
       "title": "Achievements",
       "text": "#1 in the Japanese market for AI training-data creation for 5 consecutive years — and aiming for a 6th.",
       "source": "Source: Fuji Chimera Research Institute",
-      "badges": [
-        "award_top1_01",
-        "award_top1_02",
-        "award_top1_03",
-        "achievements_award_image"
-      ],
       "headline": "#1",
       "headline_text": "No.1 in Japan",
       "image": "achievements_award_image"
@@ -1217,13 +807,6 @@
       "text": "As a long-standing #1, the division has completed 235 projects in total for major customers in and outside Japan, including many long-term projects with our main partner SUBARU.",
       "stat_value": "235",
       "stat_label": "Projects completed",
-      "customers": [
-        "customer_sony",
-        "subaru_logo",
-        "customer_denso",
-        "customer_afeela",
-        "customer_nikon"
-      ],
       "images": [
         "achievements_projects_01",
         "achievements_projects_02",
@@ -1242,50 +825,6 @@
       "title": "Direction",
       "text": "We will keep growing our annotation business in scale and quality, beyond Japan. Next, our Japan headquarters will expand into the United States to seek new opportunities and customers.",
       "image": "vision_direction_image"
-    },
-    "roadmap": {
-      "title": "Growth roadmap",
-      "lead": "We will keep growing annotation in both scale and quality — not only in Japan but globally.",
-      "stages": [
-        {
-          "id": "sea",
-          "phase": "Now",
-          "featured": false,
-          "image": "vision_roadmap_sea",
-          "title": "Southeast Asia",
-          "text": "We are developing operations across Southeast Asia — currently Vietnam, Myanmar and Cambodia.",
-          "countries": [
-            {
-              "name": "Vietnam",
-              "status": "current"
-            },
-            {
-              "name": "Myanmar",
-              "status": "current"
-            },
-            {
-              "name": "Cambodia",
-              "status": "current"
-            }
-          ]
-        },
-        {
-          "id": "usa",
-          "phase": "Next",
-          "featured": true,
-          "image": "vision_roadmap_usa",
-          "title": "United States",
-          "text": "Next, our Japan headquarters will expand into the United States to seek new opportunities and customers."
-        },
-        {
-          "id": "eu",
-          "phase": "Further ahead",
-          "featured": false,
-          "image": "vision_roadmap_eu",
-          "title": "Europe (EU)",
-          "text": "Further ahead, we look toward the European market to widen the customers we serve."
-        }
-      ]
     },
     "growth": {
       "title": "Growth timeline",
@@ -1339,13 +878,11 @@
       "address": "Address",
       "email": "Email",
       "phone": "Phone",
-      "form": "Send a request via form",
       "hours": "Business hours",
       "map": "Map"
     },
     "hours": "",
     "facebook_link": "Open our Facebook page",
-    "note": "[TO ADD] The contact slide in the PowerPoint is empty. Fill email, phone and address in content/site.config.json.",
     "banner": "contact_banner",
     "response_note": "We will reply within 2 business days.",
     "form": {

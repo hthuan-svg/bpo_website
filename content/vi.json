@@ -72,7 +72,6 @@
       "recruits": "Tuyển dụng",
       "subaru": "SUBARU"
     },
-    "skip": "Bỏ qua, đến nội dung chính",
     "read_more": "Xem thêm",
     "show_more": "Hiển thị thêm",
     "read_original": "Đọc bài gốc",
@@ -195,7 +194,6 @@
         "text": "Các dự án đều đạt deadline và khách hàng hài lòng với chất lượng sản phẩm."
       }
     ],
-    "customers_title": "Khách hàng tiêu biểu",
     "news_title": "Tin tức mới nhất",
     "cta": {
       "title": "Cùng bàn về dữ liệu AI của bạn",
@@ -362,71 +360,6 @@
     "annotation": {
       "title": "Tạo dữ liệu học cho AI",
       "lead": "Chúng tôi biến dữ liệu thô từ LiDAR và camera thành dữ liệu học sẵn sàng cho mô hình AI – được gán nhãn chính xác, kiểm tra qua nhiều lớp và giao đúng hạn.",
-      "quality": {
-        "title": "Kiểm soát chất lượng",
-        "text": "Mỗi dự án đều qua kiểm định chất lượng ở các giai đoạn trung gian và cuối cùng, kèm phản hồi (FB) với khách hàng.",
-        "image": "services_quality_principles",
-        "lead": "Dữ liệu chỉ đến tay khách hàng sau khi đã đi qua 5 lớp làm và duyệt. Nếu một lớp phát hiện lỗi, dữ liệu được trả lại để sửa rồi xoay vòng qua các lớp cho đến khi đạt yêu cầu.",
-        "layers": [
-          {
-            "code": "VNA",
-            "role": "Annotator",
-            "action": "Làm (gán nhãn)",
-            "desc": "Thực hiện gán nhãn theo hướng dẫn của dự án."
-          },
-          {
-            "code": "VNC",
-            "role": "Checker",
-            "action": "Review đợt 1",
-            "desc": "Kiểm tra chất lượng lớp 1, phát hiện và yêu cầu sửa lỗi."
-          },
-          {
-            "code": "VNSC",
-            "role": "Super Checker",
-            "action": "Review đợt 2",
-            "desc": "Kiểm tra chất lượng lớp 2, rà soát lại kết quả đợt 1."
-          },
-          {
-            "code": "SubPL",
-            "role": "Sub Project Leader",
-            "action": "Duyệt tổng lần 1",
-            "desc": "Rà soát tổng thể chất lượng và độ nhất quán của lô dữ liệu."
-          },
-          {
-            "code": "PL",
-            "role": "Project Leader",
-            "action": "Duyệt tổng lần cuối",
-            "desc": "Phê duyệt cuối cùng trước khi giao cho khách hàng."
-          }
-        ],
-        "delivery_label": "Giao hàng cho khách hàng",
-        "pass_label": "Đạt",
-        "fail_label": "Chưa đạt → trả lại sửa",
-        "loop_label": "Xoay vòng qua các lớp cho đến khi đạt",
-        "principles_title": "Nguyên tắc kiểm soát chất lượng",
-        "principles": [
-          {
-            "title": "Nhiều lớp độc lập",
-            "text": "Người làm và người kiểm tra là các vai trò riêng biệt."
-          },
-          {
-            "title": "Sửa lỗi theo vòng lặp",
-            "text": "Lỗi được trả lại đúng lớp để sửa và kiểm tra lại."
-          },
-          {
-            "title": "Chuẩn hóa và đào tạo",
-            "text": "Hướng dẫn thống nhất và đào tạo trước khi làm thực tế."
-          },
-          {
-            "title": "Phản hồi từ khách hàng",
-            "text": "Giao hàng trung gian để nhận phản hồi sớm."
-          }
-        ],
-        "flow_image": "services_quality_flow",
-        "principles_image": "services_quality_principles",
-        "flow_caption": "",
-        "flow_title": "Quy trình kiểm soát chất lượng"
-      },
       "tabs": {
         "modalities": "Loại dữ liệu",
         "usecases": "Ứng dụng"
@@ -557,28 +490,6 @@
           ]
         }
       ],
-      "workflow": {
-        "title": "Cách chúng tôi làm việc",
-        "lead": "Mỗi dự án đi qua 4 chặng rõ ràng, phối hợp chặt chẽ giữa khách hàng, BPO Nhật Bản và BPO Việt Nam.",
-        "steps": [
-          {
-            "title": "Tiếp nhận & đo đạc",
-            "text": "Nhận yêu cầu, đo đạc thử khối lượng và độ khó, thống nhất đơn hàng với khách hàng."
-          },
-          {
-            "title": "Thể chế & đào tạo",
-            "text": "Lập đội ngũ, chuẩn bị môi trường làm việc, kickoff và đào tạo theo hướng dẫn của dự án."
-          },
-          {
-            "title": "Thực hiện & kiểm tra",
-            "text": "Gán nhãn và kiểm tra qua nhiều lớp; giao hàng trung gian để nhận phản hồi (FB) từ khách hàng."
-          },
-          {
-            "title": "Giao hàng & rút kinh nghiệm",
-            "text": "Giao hàng lần cuối, nghiệm thu và tổng kết kinh nghiệm cho dự án sau."
-          }
-        ]
-      },
       "usecases": {
         "title": "Dữ liệu sau khi gán nhãn dùng để làm gì?",
         "items": [
@@ -599,11 +510,6 @@
             "text": "Điểm đặc trưng cơ thể giúp ước lượng tư thế và chuyển động."
           }
         ]
-      },
-      "security": {
-        "title": "Bảo mật thông tin",
-        "text": "Thông tin của khách hàng được bảo vệ nghiêm ngặt thông qua các quy định về an ninh thông tin của công ty.",
-        "image": "services_security_image"
       },
       "cta": {
         "title": "Bạn cần dữ liệu học cho AI?",
@@ -680,9 +586,18 @@
       "status": "Sắp ra mắt",
       "message": "Chúng tôi đang chuẩn bị thông tin về dịch vụ Data Engineering. Vui lòng quay lại sau hoặc liên hệ để được tư vấn trực tiếp.",
       "gallery": [
-        { "image": "services_data_engineering_01", "caption": "" },
-        { "image": "services_data_engineering_02", "caption": "" },
-        { "image": "services_data_engineering_03", "caption": "" }
+        {
+          "image": "services_data_engineering_01",
+          "caption": ""
+        },
+        {
+          "image": "services_data_engineering_02",
+          "caption": ""
+        },
+        {
+          "image": "services_data_engineering_03",
+          "caption": ""
+        }
       ]
     }
   },
@@ -723,169 +638,75 @@
           "text": "Đã hoàn thành hơn 235 dự án cùng các doanh nghiệp lớn tại Nhật Bản."
         }
       ],
-      "levels": [
-        {
-          "id": "overall",
-          "tone": "red",
-          "label": "Cấp quản lý tổng thể",
-          "nodes": [
-            {
-              "role": "Manager"
-            }
-          ]
-        },
-        {
-          "id": "support",
-          "tone": "orange",
-          "label": "Cấp quản lý/hỗ trợ các dự án",
-          "nodes": [
-            {
-              "role": "Sub TeamLead"
-            },
-            {
-              "role": "PMO"
-            }
-          ]
-        },
-        {
-          "id": "pm",
-          "tone": "yellow",
-          "label": "Cấp quản lý dự án",
-          "nodes": [
-            {
-              "role": "Project Leader",
-              "code": "PL"
-            },
-            {
-              "role": "Project Leader",
-              "code": "PL"
-            },
-            {
-              "role": "Project Leader",
-              "code": "PL"
-            }
-          ]
-        },
-        {
-          "id": "pm_support",
-          "tone": "green",
-          "label": "Cấp hỗ trợ quản lý dự án",
-          "nodes": [
-            {
-              "role": "Sub Project Leader",
-              "code": "SubPL"
-            }
-          ]
-        },
-        {
-          "id": "qc2",
-          "tone": "blue",
-          "label": "Cấp kiểm tra chất lượng lớp 2",
-          "nodes": [
-            {
-              "role": "Super Checker",
-              "code": "VNSC"
-            },
-            {
-              "role": "Super Checker",
-              "code": "VNSC"
-            }
-          ]
-        },
-        {
-          "id": "qc1",
-          "tone": "slate",
-          "label": "Cấp kiểm tra chất lượng lớp 1",
-          "nodes": [
-            {
-              "role": "Checker",
-              "code": "VNC"
-            },
-            {
-              "role": "Checker",
-              "code": "VNC"
-            },
-            {
-              "role": "Checker",
-              "code": "VNC"
-            },
-            {
-              "role": "Checker",
-              "code": "VNC"
-            }
-          ]
-        },
-        {
-          "id": "annotation",
-          "tone": "purple",
-          "label": "Cấp chú thích",
-          "nodes": [
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            },
-            {
-              "role": "Annotator",
-              "code": "VNA"
-            }
-          ]
-        }
-      ],
-      "links_note": "Connections (see docs/reference/slide17_org_chart.png): Manager -> Sub TeamLead and PMO; PMO -> 3 Project Leaders; Sub Project Leader sits below the Project Leader row; Sub Project Leader -> 2 Super Checkers; each Super Checker -> 2 Checkers; each Checker -> 2 Annotators.",
       "image": "why_bpo_org_image"
     },
     "principles": {
       "title": "Nguyên tắc của chúng tôi",
       "items": [
-        { "title": "Chất lượng là ưu tiên hàng đầu", "text": "Chúng tôi luôn đặt chất lượng và độ chính xác lên hàng đầu." },
-        { "title": "Giữ vững cam kết", "text": "Chúng tôi thực hiện đúng những gì đã cam kết, đúng thời hạn và theo các tiêu chuẩn đã thống nhất." },
-        { "title": "Chủ động", "text": "Chúng tôi nhận diện vấn đề sớm và hành động trước khi chúng trở thành trở ngại." },
-        { "title": "Xây dựng niềm tin", "text": "Chúng tôi đề cao sự minh bạch, trung thực và niềm tin lâu dài với khách hàng." },
-        { "title": "Cùng nhau phát triển", "text": "Chúng tôi đồng hành như một đối tác, cùng tạo ra giá trị và phát triển với khách hàng." }
+        {
+          "title": "Chất lượng là ưu tiên hàng đầu",
+          "text": "Chúng tôi luôn đặt chất lượng và độ chính xác lên hàng đầu."
+        },
+        {
+          "title": "Giữ vững cam kết",
+          "text": "Chúng tôi thực hiện đúng những gì đã cam kết, đúng thời hạn và theo các tiêu chuẩn đã thống nhất."
+        },
+        {
+          "title": "Chủ động",
+          "text": "Chúng tôi nhận diện vấn đề sớm và hành động trước khi chúng trở thành trở ngại."
+        },
+        {
+          "title": "Xây dựng niềm tin",
+          "text": "Chúng tôi đề cao sự minh bạch, trung thực và niềm tin lâu dài với khách hàng."
+        },
+        {
+          "title": "Cùng nhau phát triển",
+          "text": "Chúng tôi đồng hành như một đối tác, cùng tạo ra giá trị và phát triển với khách hàng."
+        }
       ]
     },
     "workflow": {
       "title": "Hoạt động của chúng tôi",
       "lead": "Mỗi dự án trải qua 4 giai đoạn rõ ràng, với sự phối hợp chặt chẽ giữa khách hàng và BRYCEN BPO.",
       "steps": [
-        { "title": "Tiếp nhận & đo đạc", "text": "Nhận yêu cầu, đo đạc thử khối lượng và độ khó, thống nhất đơn hàng với khách hàng." },
-        { "title": "Thể chế & đào tạo", "text": "Lập đội ngũ, chuẩn bị môi trường làm việc, kickoff và đào tạo theo hướng dẫn của dự án." },
-        { "title": "Thực hiện & kiểm tra", "text": "Gán nhãn và kiểm tra qua nhiều lớp; giao hàng trung gian để nhận phản hồi (FB) từ khách hàng." },
-        { "title": "Giao hàng & rút kinh nghiệm", "text": "Giao hàng lần cuối, nghiệm thu và tổng kết kinh nghiệm cho dự án sau." }
+        {
+          "title": "Tiếp nhận & đo đạc",
+          "text": "Nhận yêu cầu, đo đạc thử khối lượng và độ khó, thống nhất đơn hàng với khách hàng."
+        },
+        {
+          "title": "Thể chế & đào tạo",
+          "text": "Lập đội ngũ, chuẩn bị môi trường làm việc, kickoff và đào tạo theo hướng dẫn của dự án."
+        },
+        {
+          "title": "Thực hiện & kiểm tra",
+          "text": "Gán nhãn và kiểm tra qua nhiều lớp; giao hàng trung gian để nhận phản hồi (FB) từ khách hàng."
+        },
+        {
+          "title": "Giao hàng & rút kinh nghiệm",
+          "text": "Giao hàng lần cuối, nghiệm thu và tổng kết kinh nghiệm cho dự án sau."
+        }
       ]
     },
     "quality": {
       "title": "Kiểm soát chất lượng của chúng tôi",
       "lead": "Dữ liệu chỉ đến tay khách hàng sau khi đã đi qua 5 lớp làm và duyệt. Nếu một lớp phát hiện lỗi, dữ liệu được trả lại để sửa rồi xoay vòng qua các lớp cho đến khi đạt yêu cầu.",
       "principles": [
-        { "title": "Nhiều lớp độc lập", "text": "Người làm và người kiểm tra là các vai trò riêng biệt." },
-        { "title": "Sửa lỗi theo vòng lặp", "text": "Lỗi được trả lại đúng lớp để sửa và kiểm tra lại." },
-        { "title": "Chuẩn hóa và đào tạo", "text": "Hướng dẫn thống nhất và đào tạo trước khi làm thực tế." },
-        { "title": "Phản hồi từ khách hàng", "text": "Giao hàng trung gian để nhận phản hồi sớm." }
+        {
+          "title": "Nhiều lớp độc lập",
+          "text": "Người làm và người kiểm tra là các vai trò riêng biệt."
+        },
+        {
+          "title": "Sửa lỗi theo vòng lặp",
+          "text": "Lỗi được trả lại đúng lớp để sửa và kiểm tra lại."
+        },
+        {
+          "title": "Chuẩn hóa và đào tạo",
+          "text": "Hướng dẫn thống nhất và đào tạo trước khi làm thực tế."
+        },
+        {
+          "title": "Phản hồi từ khách hàng",
+          "text": "Giao hàng trung gian để nhận phản hồi sớm."
+        }
       ],
       "flow_image": "why_bpo_quality_flow",
       "flow_caption": ""
@@ -898,231 +719,6 @@
     "process": {
       "title": "Quy trình vận hành",
       "lead": "Quy trình làm việc giữa BPO BRYCEN VIETNAM và khách hàng, từ khi nhận yêu cầu đến khi nghiệm thu.",
-      "lanes": [
-        "Khách hàng",
-        "BPO (JP)",
-        "BPO (VN)"
-      ],
-      "phases": [
-        "Giai đoạn đầu",
-        "Giai đoạn giữa",
-        "Giai đoạn cuối"
-      ],
-      "nodes": [
-        {
-          "id": "e1",
-          "lane": 0,
-          "phase": 0,
-          "text": "Yêu cầu"
-        },
-        {
-          "id": "e2",
-          "lane": 1,
-          "phase": 0,
-          "text": "Tiếp nhận"
-        },
-        {
-          "id": "e3",
-          "lane": 2,
-          "phase": 0,
-          "text": "Tiếp nhận"
-        },
-        {
-          "id": "e4",
-          "lane": 2,
-          "phase": 0,
-          "text": "Đo đạc"
-        },
-        {
-          "id": "e5",
-          "lane": 1,
-          "phase": 0,
-          "text": "Đo đạc"
-        },
-        {
-          "id": "e6",
-          "lane": 0,
-          "phase": 0,
-          "text": "Đặt hàng"
-        },
-        {
-          "id": "e7",
-          "lane": 1,
-          "phase": 0,
-          "text": "Nhận order"
-        },
-        {
-          "id": "e8",
-          "lane": 2,
-          "phase": 0,
-          "text": "Nhận order"
-        },
-        {
-          "id": "e9",
-          "lane": 2,
-          "phase": 0,
-          "text": "Xây dựng thể chế"
-        },
-        {
-          "id": "m1",
-          "lane": 2,
-          "phase": 1,
-          "text": "Kickoff"
-        },
-        {
-          "id": "m2",
-          "lane": 2,
-          "phase": 1,
-          "text": "Xây dựng môi trường làm việc"
-        },
-        {
-          "id": "m3",
-          "lane": 2,
-          "phase": 1,
-          "text": "Training"
-        },
-        {
-          "id": "m4",
-          "lane": 2,
-          "phase": 1,
-          "text": "Làm thực tế"
-        },
-        {
-          "id": "m5",
-          "lane": 1,
-          "phase": 1,
-          "text": "Kiểm định chất lượng"
-        },
-        {
-          "id": "m6",
-          "lane": 1,
-          "phase": 1,
-          "text": "Giao hàng trung gian"
-        },
-        {
-          "id": "m7",
-          "lane": 0,
-          "phase": 1,
-          "text": "Kiểm định chất lượng"
-        },
-        {
-          "id": "m8",
-          "lane": 0,
-          "phase": 1,
-          "text": "Gửi FB"
-        },
-        {
-          "id": "m9",
-          "lane": 1,
-          "phase": 1,
-          "text": "Gửi FB"
-        },
-        {
-          "id": "f1",
-          "lane": 2,
-          "phase": 2,
-          "text": "Nhìn nhận, rút kinh nghiệm dự án"
-        },
-        {
-          "id": "f2",
-          "lane": 1,
-          "phase": 2,
-          "text": "Giao hàng lần cuối"
-        },
-        {
-          "id": "f3",
-          "lane": 0,
-          "phase": 2,
-          "text": "Nghiệm thu"
-        }
-      ],
-      "edges": [
-        [
-          "e1",
-          "e2"
-        ],
-        [
-          "e2",
-          "e3"
-        ],
-        [
-          "e3",
-          "e4"
-        ],
-        [
-          "e4",
-          "e5"
-        ],
-        [
-          "e5",
-          "e6"
-        ],
-        [
-          "e6",
-          "e7"
-        ],
-        [
-          "e7",
-          "e8"
-        ],
-        [
-          "e8",
-          "e9"
-        ],
-        [
-          "e9",
-          "m1"
-        ],
-        [
-          "m1",
-          "m2"
-        ],
-        [
-          "m2",
-          "m3"
-        ],
-        [
-          "m3",
-          "m4"
-        ],
-        [
-          "m4",
-          "m5"
-        ],
-        [
-          "m5",
-          "m6"
-        ],
-        [
-          "m6",
-          "m7"
-        ],
-        [
-          "m7",
-          "m8"
-        ],
-        [
-          "m8",
-          "m9"
-        ],
-        [
-          "m9",
-          "m4"
-        ],
-        [
-          "m4",
-          "f1"
-        ],
-        [
-          "f1",
-          "f2"
-        ],
-        [
-          "f2",
-          "f3"
-        ]
-      ],
-      "edge_note": "Edge m9->m4 is the feedback loop back to production. Layout reference: docs/reference/slide18_operating_flow.png",
       "image": "why_bpo_process_image",
       "actors": {
         "customer": "Khách hàng",
@@ -1202,12 +798,6 @@
       "title": "Thành tựu",
       "text": "5 năm liên tiếp đứng Top 1 thị trường Nhật Bản trong mảng tạo dữ liệu học AI và đang hướng tới năm thứ 6 liên tiếp.",
       "source": "Theo Fuji Chimera Research Institute",
-      "badges": [
-        "award_top1_01",
-        "award_top1_02",
-        "award_top1_03",
-        "achievements_award_image"
-      ],
       "headline": "#1",
       "headline_text": "Số 1 Nhật Bản",
       "image": "achievements_award_image"
@@ -1217,13 +807,6 @@
       "text": "Với vị thế số 1 nhiều năm liên tiếp, bộ phận đã hoàn thành tổng cộng 235 dự án cho các khách hàng lớn trong và ngoài Nhật Bản, trong đó có nhiều dự án dài hạn với đối tác chính SUBARU.",
       "stat_value": "235",
       "stat_label": "Dự án đã hoàn thành",
-      "customers": [
-        "customer_sony",
-        "subaru_logo",
-        "customer_denso",
-        "customer_afeela",
-        "customer_nikon"
-      ],
       "images": [
         "achievements_projects_01",
         "achievements_projects_02",
@@ -1242,50 +825,6 @@
       "title": "Định hướng phát triển",
       "text": "Phát triển hơn nữa mảng chú thích (annotation), không chỉ tại Nhật Bản mà còn mở rộng cả về quy mô lẫn chất lượng. Sắp tới, công ty tại Nhật sẽ mở rộng thị trường sang Mỹ để tìm kiếm cơ hội và khách hàng mới.",
       "image": "vision_direction_image"
-    },
-    "roadmap": {
-      "title": "Lộ trình phát triển",
-      "lead": "Phát triển hơn nữa mảng chú thích (annotation) về cả quy mô lẫn chất lượng, không chỉ trong nước Nhật mà trên phạm vi toàn cầu.",
-      "stages": [
-        {
-          "id": "sea",
-          "phase": "Hiện tại",
-          "featured": false,
-          "image": "vision_roadmap_sea",
-          "title": "Đông Nam Á",
-          "text": "Phát triển hoạt động tại khu vực Đông Nam Á, hiện tại gồm Việt Nam, Myanmar và Cambodia.",
-          "countries": [
-            {
-              "name": "Việt Nam",
-              "status": "current"
-            },
-            {
-              "name": "Myanmar",
-              "status": "current"
-            },
-            {
-              "name": "Cambodia",
-              "status": "current"
-            }
-          ]
-        },
-        {
-          "id": "usa",
-          "phase": "Sắp tới",
-          "featured": true,
-          "image": "vision_roadmap_usa",
-          "title": "Hoa Kỳ",
-          "text": "Sắp tới, công ty tại Nhật Bản sẽ mở rộng thị trường sang Mỹ để tìm kiếm những cơ hội và khách hàng mới."
-        },
-        {
-          "id": "eu",
-          "phase": "Tương lai xa hơn",
-          "featured": false,
-          "image": "vision_roadmap_eu",
-          "title": "Châu Âu (EU)",
-          "text": "Xa hơn nữa, hướng tới thị trường châu Âu để mở rộng phạm vi phục vụ khách hàng."
-        }
-      ]
     },
     "growth": {
       "title": "Lộ trình phát triển",
@@ -1339,13 +878,11 @@
       "address": "Địa chỉ",
       "email": "Email",
       "phone": "Điện thoại",
-      "form": "Gửi yêu cầu qua biểu mẫu",
       "hours": "Giờ làm việc",
       "map": "Bản đồ"
     },
     "hours": "",
     "facebook_link": "Mở trang Facebook của chúng tôi",
-    "note": "[CẦN BỔ SUNG] Slide thông tin liên hệ trong file PowerPoint đang để trống. Điền email, điện thoại, địa chỉ trong content/site.config.json.",
     "banner": "contact_banner",
     "response_note": "Chúng tôi sẽ phản hồi trong vòng 2 ngày làm việc.",
     "form": {

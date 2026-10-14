@@ -625,11 +625,12 @@
     "why_bpo.process.edges",
     "why_bpo.process.edge_note",
     "why_bpo.recruit",
-    "services.annotation.quality.image",
-    "services.annotation.quality.delivery_label",
-    "services.annotation.quality.pass_label",
-    "services.annotation.quality.fail_label",
-    "services.annotation.quality.loop_label",
+    "services.annotation.workflow",
+    "services.annotation.quality",
+    "services.annotation.security",
+    "services.annotation.tabs.workflow",
+    "services.annotation.tabs.quality",
+    "services.annotation.tabs.security",
     "contact.note",
     "contact.labels.form"
   ]
