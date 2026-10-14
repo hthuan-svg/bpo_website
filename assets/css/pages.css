@@ -2755,7 +2755,8 @@ a.contact-card__value {
   position: relative;
   isolation: isolate;
   display: grid;
-  min-height: max(40rem, 66.6667vw);
+  aspect-ratio: 16 / 9;
+  min-height: 0;
   align-items: center;
 }
 
@@ -2770,6 +2771,7 @@ a.contact-card__value {
   inset: 0;
   margin: 0;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
 }

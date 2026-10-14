@@ -32,6 +32,7 @@
 - [x] Why BRYCEN BPO follow-up: set Our Principles and Our quality control sections to gray backgrounds
 - [x] Why BRYCEN BPO follow-up: remove BPO Japan and identify BRYCEN BPO as Vietnam in the Our work introduction
 - [x] Why BRYCEN BPO follow-up: remove the Vietnam parenthetical from the Our work introduction in all languages
+- [x] Why BRYCEN BPO follow-up: make the Our Organization section follow the background image's 16:9 shape
 
 ## Đang làm — Revision 3 (cập nhật & tinh chỉnh theo từng trang)
 Chạy theo thứ tự. Mỗi bước: chat mới → kiểm tra Definition of done → `git commit`.
